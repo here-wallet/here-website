@@ -1,0 +1,263 @@
+.page
+	position: relative
+
+	&-background
+		height: 100%
+		background: #f3ebea
+		border-radius: 32px
+		display: block
+		position: absolute
+		z-index: -1
+		left: 88px
+		right: 88px
+
+.main-mobile
+	width: 100%
+	height: 500px
+	padding: 88px 24px 0
+	box-sizing: border-box
+	display: none
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+	& h1
+		margin: 0
+		font-weight: 800
+		font-size: 48px
+		line-height: 60px
+		text-align: center
+		color: #F3EBEA
+
+	@media (max-width: 480px)
+		display: flex
+	
+.main-mobile-near
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 16px
+
+	& p
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		color: #F3EBEA
+		margin: 0
+
+.main
+	display: flex
+	width: 100%
+	background: #2c3034
+	position: relative
+	@media (max-width: 480px)
+		display: none
+
+.main-left::before
+	content: ""
+	background: #FDBF1C
+	border-radius: 0 16px 0px 0
+	display: flex
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 72px
+
+	@media (max-width: 768px)
+		background: #FD84E3
+		border-radius: 0 16px 16px 0
+		height: 308px
+		right: 0
+		left: 0
+		top: 84px
+
+.main-left::after
+	content: ""
+	background: #FDBF1C
+	border-radius: 0 16px 0px 0
+	display: flex
+	position: absolute
+	top: 416px
+	left: 0
+	right: 0
+	height: 128px
+
+	@media (max-width: 768px)
+		background: rgba(253, 191, 28, 1)
+		border-radius: 0 16px 16px 0
+		height: 308px
+		right: 0
+		left: 0
+		top: 430px
+
+.main-left, .main-right
+	position: relative
+	height: 100%
+	flex: 1
+
+.main-right::before
+	content: ""
+	background: #FDBF1C
+	border-radius: 16px 0 0 0px
+	display: flex
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 380px
+
+	@media (max-width: 768px)
+		background: #FD84E3
+		border-radius: 16px 0 0 16px
+		height: 308px
+		right: 0
+		left: 0
+		top: 84px
+
+
+.main-right::after
+	content: ""
+	background: #FDBF1C
+	border-radius: 0px 0 0 16px
+	display: flex
+	position: absolute
+	top: 508px
+	left: 0
+	right: 0
+	height: 128px
+
+	@media (max-width: 768px)
+		background: rgba(253, 191, 28, 1)
+		border-radius: 16px 0 0 16px
+		height: 308px
+		right: 0
+		left: 0
+		top: 430px
+
+.main-center
+	max-width: 1176px
+	margin-top: 72px
+	display: flex
+	flex-wrap: wrap
+
+	@media (max-width: 768px)
+		max-width: 615px
+		margin-top: 112px
+
+.main-center div
+	width: 50%
+	@media (max-width: 768px)
+		width: 100%
+
+.main-header
+	background-color: #fd84e3
+	border-radius: 0px 16px
+	padding: 28px 20px
+	box-sizing: border-box
+	display: flex
+	align-items: center
+	height: 308px
+
+	& h1
+		font-weight: 800
+		font-size: 64px
+		line-height: 84px
+		font-feature-settings: "liga"off
+		color: #2c3034
+		
+		@media (max-width: 1024px)
+			font-size: 52px
+			line-height: 62px
+
+		@media (max-width: 768px)
+			text-align: center
+			color: #fff
+			width: 402px
+			margin: auto
+
+	@media (max-width: 768px)
+		background-color: transparent
+		padding: 0
+		height: fit-content
+		width: 100%
+
+.main-appclip
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 24px
+
+	p
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		color: #F3EBEA
+		width: 129px
+
+	img:first-child
+		width: 220px
+		@media (max-width: 1024px)
+			width: 160px
+
+		@media (max-width: 920px)
+			width: 130px
+
+	@media (max-width: 768px)
+		margin-top: 110px
+
+.main-near
+	background: #FDBF1C
+	border-radius: 0px 16px
+	padding: 16px 24px
+	box-sizing: border-box
+	height: 128px
+	margin-top: 164px
+	display: flex
+	align-items: center
+	padding-top: 80px
+	gap: 8px
+
+	p
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		color: #2C3034
+		margin: 0
+
+	@media (max-width: 768px)
+		display: none
+
+.main-stub
+	background: #FDBF1C
+	border-radius: 0px 0px 0px 16px
+	height: 128px
+	
+	@media (max-width: 768px)
+		display: none
+
+.main-scroll
+	background: #FD84E3
+	border-radius: 0px 16px 16px 16px
+	padding: 16px 24px
+	box-sizing: border-box
+	display: flex
+	align-items: flex-end
+	height: 128px
+
+	p
+		font-weight: 800
+		font-size: 32px
+		line-height: 40px
+		font-feature-settings: 'liga' off
+		margin: 0
+		color: #2C3034
+		@media (max-width: 768px)
+			display: block
+			margin: auto
+			text-align: center
+			color: #fff
+
+	@media (max-width: 768px)
+		background: transparent
+		margin-top: 100px

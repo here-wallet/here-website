@@ -1,0 +1,86 @@
+.secure-banner
+    width: fit-content
+    background: #2C3034
+    border-radius: 16px
+    display: flex
+    align-items: center
+    gap: 124px
+
+    @media (max-width: 1160px)
+        align-items: flex-start
+        gap: 22px
+    
+    @media (max-width: 700px)
+        flex-direction: column
+
+    &-socials
+        display: flex
+        height: 40px
+        gap: 26px
+        margin-top: 36px
+
+    &-socials a img
+        width: 40px
+        height: 40px
+
+    &-picture
+        width: 419px
+        object-fit: contain
+        margin-right: 40px
+        margin-top: 80px
+        margin-bottom: 45px
+
+        @media (max-width: 1160px)
+            width: 302px
+            height: 349px
+            margin-right: 22px
+            margin-top: 52px
+    
+        @media (max-width: 700px)
+            margin: auto
+
+    &-content
+        width: 50%
+        padding-left: 40px
+        padding-top: 40px
+        @media (max-width: 700px)
+            width: 70%
+
+    &-content h3
+        font-weight: 900
+        font-size: 40px
+        line-height: 50px
+        letter-spacing: 0.02em
+        color: #F3EBEA
+        @media (max-width: 1160px)
+            font-size: 32px
+            line-height: 40px
+
+    &-content p
+        font-weight: 500
+        font-size: 20px
+        line-height: 27px
+        color: #F3EBEA
+        @media (max-width: 1160px)
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+
+    &-link
+        font-weight: 500
+        font-size: 20px
+        line-height: 27px
+        color: #F3EBEA
+        margin-top: 107px
+        align-items: center
+        display: flex
+
+        @media (max-width: 1160px)
+            font-weight: 700
+            font-size: 16px
+            line-height: 22px
+            margin-top: 56px
+
+
+    &-link img
+        margin-left: 16px

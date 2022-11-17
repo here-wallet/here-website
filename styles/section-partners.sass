@@ -1,0 +1,40 @@
+.partners
+    padding-bottom: 64px
+
+    &-group
+        background: #EBDEDC
+        border-radius: 16px
+        padding: 24px
+        margin-bottom: 12px
+        overflow: hidden
+
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        box-sizing: border-box
+        padding-top: 100px
+        gap: 48px
+
+    &-group p
+        font-weight: 800
+        font-size: 28px
+        line-height: 38px
+        color: #2C3034
+        position: absolute
+        top: 0
+
+    &-group img
+        object-fit: contain
+        object-position: center
+
+    &-dex
+        margin-right: 12px
+
+.partners-dex,
+.partners-other
+    width: calc(50% - 56px)
+    display: inline-flex
+
+    @media (max-width: 1160px)
+        width: 100%
+        margin-right: 0

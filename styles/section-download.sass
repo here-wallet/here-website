@@ -1,0 +1,74 @@
+.download-banner
+    background: #EBDEDC
+    border-radius: 16px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    height: 343px
+    
+    @media (max-width: 1160px)
+        overflow: hidden
+            
+    @media (max-width: 800px)
+        align-items: center
+        background: transparent
+        justify-content: center
+        flex-direction: column
+        height: fit-content
+        text-align: center
+
+.download-banner>img
+    width: 327px
+    object-fit: contain
+
+    @media (max-width: 1160px) and (min-width: 800px)
+        margin-right: -42px
+
+    @media (max-width: 800px)
+        margin-top: 64px
+
+.download-banner-links
+    display: flex
+    gap: 16px
+    padding: 0 8px
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+.download-banner-text
+    display: flex
+    flex-direction: column
+    width: fit-content
+    box-sizing: border-box
+    justify-content: center
+    height: 100%
+    padding: 24px
+    @media (max-width: 800px)
+        padding: 0
+        
+    & p
+        font-weight: 800
+        font-size: 28px
+        line-height: 38px
+        color: #6B6661
+        margin-top: 0
+        margin-bottom: 50px
+
+    & p span
+        color: #2C3034
+
+.download-banner-qr
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 334px
+    @media (max-width: 1160px)
+        display: none
+
+    & p
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+        color: #2C3034

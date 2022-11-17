@@ -1,0 +1,44 @@
+.header
+    width: 100%
+    box-sizing: border-box
+    position: fixed
+    transition: 0.2s background
+    z-index: 10000
+
+    &-center
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0 20px
+        height: 72px
+        max-width: 1176px
+        box-sizing: border-box
+        margin: auto
+        @media (max-width: 768px)
+            max-width: 100%
+
+    &.active
+        background: #2C3034
+
+    & a
+        font-weight: 700
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+        padding: 4px 0
+
+    &-links
+        display: flex
+        align-items: center
+        gap: 28px
+        @media (max-width: 768px)
+            display: none
+
+    &-links a.active
+        color: rgba(247, 179, 2, 1)
+        border-bottom: 2px solid #F7B302
+
+
+    &-logo
+        width: 95px
+        z-index: 10
