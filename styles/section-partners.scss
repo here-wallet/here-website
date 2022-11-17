@@ -1,0 +1,39 @@
+.partners {
+    padding-bottom: 64px;
+}
+
+.partners-group {
+    background: #EBDEDC;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 100px;
+}
+
+.partners-group p {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
+    color: #2C3034;
+    position: absolute;
+    top: 0;
+}
+
+.partners-group img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.partners-dex {
+    margin-right: 12px;
+}
+
+.partners-dex,
+.partners-other {
+    width: calc(50% - 56px);
+    display: inline-block;
+}

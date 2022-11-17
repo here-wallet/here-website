@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    padding: 0 156px;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    transition: 0.2s background;
+    z-index: 10000;
+}
+
+.header.active {
+    background: #2C3034;
+}
+
+.header a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #F3EBEA;
+    padding: 4px 0;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.header-links a.active {
+    color: rgba(247, 179, 2, 1);
+    border-bottom: 2px solid #F7B302;
+}
+
+.header-logo {
+    width: 95px;
+    z-index: 10;
+}

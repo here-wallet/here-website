@@ -1,0 +1,137 @@
+.comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-title {
+    margin: 0 auto 90px;
+    display: block;
+}
+
+.comparison-table {
+    display: flex;
+    margin: auto;
+}
+
+.comparison-left {
+    width: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comparison-left .comparison-column {
+    background: rgba(235, 222, 220, 1);
+}
+
+.comparison-header {
+    height: 91px;
+    width: 100%;
+    background: rgba(235, 222, 220, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-left .comparison-header {
+    border-top-left-radius: 26px;
+    border-top: 1px solid rgba(210, 197, 195, 1);
+    border-left: 1px solid rgba(210, 197, 195, 1);
+}
+
+.comparison-left .comparison-header img {
+    width: 171px;
+    height: 45px;
+}
+
+.comparison-right .comparison-header {
+    border-top: 1px solid rgba(210, 197, 195, 1);
+}
+
+.comparison-right .comparison-header img {
+    border: 10px solid #2C3034;
+    background-color: #2C3034;
+    border-radius: 32px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    top: -18px;
+    width: 352px;
+}
+
+.comparison-right {
+    background: #2C3034;
+    border-radius: 28px;
+    width: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.comparison-right .comparison-column p {
+    font-weight: 800;
+    color: #71E767;
+}
+
+.comparison-column p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.comparison-column.green p {
+    color: #359C2C;
+}
+
+.comparison-column.red p {
+    color: #D63E3E;
+}
+
+.comparison-column-key {
+    display: none;
+}
+
+.comparison-column {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid rgba(150, 139, 136, 0.3);
+    box-sizing: border-box;
+}
+
+.comparison-keys {
+    border-top: 1px solid rgba(210, 197, 195, 1);
+    border-left: 1px solid rgba(210, 197, 195, 1);
+    background: rgba(235, 222, 220, 1);
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    box-sizing: border-box;
+    margin-top: 92px;
+}
+
+.comparison-keys-item {
+    height: 99px;
+    width: 328px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.comparison-keys-item+.comparison-keys-item {
+    border-top: 1px solid rgba(210, 197, 195, 1);
+}
+
+.comparison-keys-item p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    font-feature-settings: 'liga' off;
+    color: #6B6661;
+    margin: 0;
+    margin-left: 24px;
+}

@@ -1,0 +1,94 @@
+.features {
+    padding: 104px 64px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    width: 100%;
+}
+
+.feature h2 {
+    margin-bottom: 24px;
+}
+
+.feature-picture {
+    display: flex;
+    width: 50%;
+    height: 700px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-picture-bg {
+    width: 576px;
+    position: absolute;
+}
+
+.feature-picture-phone {
+    width: 490px;
+    z-index: 100;
+    object-fit: contain;
+}
+
+.feature-content {
+    width: 50%;
+}
+
+.feature-content h2 {
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 69px;
+    letter-spacing: 0.02em;
+    color: #2c3034;
+}
+
+.feature-content a {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #fd84e3;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.feature-content a img {
+    margin-left: 16px;
+}
+
+.feature-content ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature-content li {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #2c3034;
+    align-items: center;
+    display: flex;
+}
+
+.feature-content li::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: #fd84e3;
+    margin-right: 8px;
+}
