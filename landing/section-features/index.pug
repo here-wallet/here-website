@@ -1,0 +1,17 @@
+section.features
+    for feature in features    
+        .feature
+            .feature-picture
+                img.feature-picture-bg(src=feature.backPicture)
+                img.feature-picture-phone(src=feature.frontPicture)
+            .feature-content
+                h2
+                    | #{feature.title}
+                    span.dot .
+                ul
+                    for item in feature.items
+                        li #{item}
+            
+                a(href=feature.moreLink)
+                    | #{feature.moreLocale} 
+                    img(src='/assets/icons/link-arrow.svg')

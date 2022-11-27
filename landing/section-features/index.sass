@@ -1,0 +1,118 @@
+.features
+    padding: 104px 64px
+    overflow: hidden
+    @media (max-width: 768px)
+        padding: 48px 20px
+
+.feature
+    display: flex
+    align-items: center
+    gap: 96px
+    width: 100%
+
+    @media (max-width: 620px)
+        flex-direction: column-reverse
+        gap: 40px
+
+    &:nth-child(even)
+        flex-direction: row-reverse
+        @media (max-width: 620px)
+            flex-direction: column-reverse
+
+    & + & 
+        padding-top: 96px
+
+    & h2
+        margin-bottom: 24px
+
+    &-picture
+        display: flex
+        width: 50%
+        position: relative
+        align-items: center
+        justify-content: center
+        user-select: none
+
+    &-picture-bg
+        width: 576px
+        position: absolute
+        @media (max-width: 768px)
+            width: 360px
+
+    &-picture-phone
+        width: 490px
+        z-index: 100
+        object-fit: contain
+        @media (max-width: 768px)
+            width: 280px
+
+    &-content
+        width: 50%
+        @media (max-width: 620px)
+            width: 100%
+
+    &-content h2
+        font-weight: 900
+        font-size: 56px
+        line-height: 69px
+        letter-spacing: 0.02em
+        color: #2c3034
+        @media (max-width: 768px)
+            font-weight: 900
+            font-size: 32px
+            line-height: 40px
+
+    &-content a
+        font-family: "Manrope"
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 27px
+        color: #fd84e3
+        width: fit-content
+
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        margin-top: 40px
+
+        @media (max-width: 768px)
+            font-size: 16px
+            line-height: 22px
+
+    &-content a img
+        margin-left: 16px
+
+    &-content ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        gap: 8px
+
+    &-content li
+        font-weight: 600
+        font-size: 20px
+        line-height: 140%
+        color: #2c3034
+        align-items: flex-start
+        display: flex
+        
+        @media (max-width: 768px)
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            color: #2C3034
+
+    &-content li::before
+        content: ""
+        display: block
+        flex-shrink: 0
+        float: left
+        width: 12px
+        height: 12px
+        background: #fd84e3
+        margin-right: 8px
+        margin-top: 8px

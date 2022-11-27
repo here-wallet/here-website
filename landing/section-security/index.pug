@@ -1,0 +1,20 @@
+section.secure
+    h2
+        | #{security.title}
+        span.dot .
+    
+    .secure-banner
+        .secure-banner-content
+            h3= security.headline
+            p= security.text
+
+            .secure-banner-socials
+                for item in security.socials 
+                    a(href=item.link)
+                        img(src=item.icon)
+
+            a.secure-banner-link(href=security.moreLink)
+                | #{security.moreLocale}
+                img(src='/assets/icons/white.link.arrow.svg')
+        
+        img.secure-banner-picture(src='/assets/secure.png' alt='secure-banner')

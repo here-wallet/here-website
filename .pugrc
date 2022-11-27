@@ -1,0 +1,222 @@
+{
+  "locals": {
+    "common": {
+      "logoLight": "/assets/logo.light.png",
+      "logoDark": "/assets/logo.svg",
+      "supportEmail": "support@herewallet.app",
+      "termsLocale": "Privacy policy and Terms of Service",
+      "termsLink": "https://herewallet.app",
+      "appStore": "https://herewallet.app",
+      "socials": [
+        {
+          "icon": "/assets/icons/twitter.svg",
+          "link": "/assets/icons/twitter.svg"
+        },
+        {
+          "icon": "/assets/icons/discord.svg",
+          "link": "/assets/icons/discord.svg"
+        },
+        {
+          "icon": "/assets/icons/telegram.svg",
+          "link": "/assets/icons/telegram.svg"
+        },
+        {
+          "icon": "/assets/icons/near.svg",
+          "link": "/assets/icons/near.svg"
+        }
+      ]
+    },
+    "main": {
+        "title": "Your familiar finance app built on WEB3"
+    },
+    "features": [
+      {
+        "title": "Phone number transfers",
+        "moreLink": "",
+        "moreLocale": "Try it out",
+        "backPicture": "/landing/section-features/assets/orange.svg",
+        "frontPicture": "/landing/section-features/assets/transfers.png",
+        "items": [
+          "Pay your friends all over the world 0% commission",
+          "Transfer money even to those who don't have a wallet yet",
+          "No tax notice"
+        ]
+      },
+      {
+        "title": "Invest in crypto",
+        "moreLink": "",
+        "moreLocale": "Try it out",
+        "backPicture": "/landing/section-features/assets/pink.svg",
+        "frontPicture": "/landing/section-features/assets/invest.png",
+        "items": [
+          "Invest via transparent decentralized exchanges ",
+          "No paperwork needed to start investing",
+          "Buy one of the 20 most popular cryptocurrencies",
+          "Track your portfolio in an easy-to-use interface"
+        ]
+      },
+      {
+        "title": "Up to 10% APY with instant withdrawal",
+        "moreLink": "",
+        "moreLocale": "Try it out",
+        "backPicture": "/landing/section-features/assets/green.svg",
+        "frontPicture": "/landing/section-features/assets/overview.png",
+        "items": [
+          "Withdraw money at any time with 0% commission",
+          "Use only decentralized protocols to make profit"
+        ]
+      }
+    ],
+    "news": {
+      "title": "The latest news HERE",
+      "items": [
+        {
+          "picture": "/assets/news/hack.png",
+          "pictureAlt": "Text",
+          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
+          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
+          "linkLocale": "Read more",
+          "link": ""
+        },
+        {
+          "picture": "/assets/news/hack.png",
+          "pictureAlt": "Text",
+          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
+          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
+          "linkLocale": "Read more",
+          "link": ""
+        },
+        {
+          "picture": "/assets/news/hack.png",
+          "pictureAlt": "Text",
+          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
+          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
+          "linkLocale": "Read more",
+          "link": ""
+        }
+      ]
+    },
+    "comparison": [
+      {
+        "key": "Fee",
+        "venmo": {
+          "text": "0.3%",
+          "plus": false
+        },
+        "here": {
+          "text": "0%",
+          "plus": true
+        }
+      },
+      {
+        "key": "Transfer by phone/username",
+        "venmo": {
+          "text": "Yes",
+          "plus": true
+        },
+        "here": {
+          "text": "Yes",
+          "plus": true
+        }
+      },
+      {
+        "key": "Limits",
+        "venmo": {
+          "text": "Up to 2000$",
+          "plus": false
+        },
+        "here": {
+          "text": "No",
+          "plus": true
+        }
+      },
+      {
+        "key": "KYC/SSN",
+        "venmo": {
+          "text": "KYC/SSN",
+          "plus": false
+        },
+        "here": {
+          "text": "No KYC/SSN",
+          "plus": true
+        }
+      },
+      {
+        "key": "Tax",
+        "venmo": {
+          "plus": false
+        },
+        "here": {
+          "plus": true
+        }
+      },
+      {
+        "key": "Worldwide",
+        "venmo": {
+          "text": "Only US",
+          "plus": false
+        },
+        "here": {
+          "text": "Yes",
+          "plus": true
+        }
+      }
+    ],
+    "security": {
+      "title": "Securely store your money HERE",
+      "headline": "We keep your assets safe",
+      "text": "HERE Wallet is an open source non-custodial wallet which have passed security audit, don’t have KYC, main features are made on smart contracts and all data is encrypted.",
+      "moreLocale": "More about security",
+      "moreLink": "",
+      "socials": [
+        {
+          "icon": "/assets/icons/near.svg",
+          "link": "https://herewallet.app"
+        },
+        {
+          "icon": "/assets/icons/github.svg",
+          "link": "https://herewallet.app"
+        }
+      ]
+    },
+    "download": {
+      "title": "Download app",
+      "text": "<span>Download HERE</span> and let<br/>it be your alternative<br/>to usual banking",
+      "iosLink": "https://herewallet.app",
+      "androidLink": "https://herewallet.app",
+      "scanLocale": "Scan to start HERE"
+    },
+    "asks": {
+      "title": "In case you missed anything",
+      "items": [
+        {
+          "title": "When android?",
+          "text": "We are already making an Android version of the app. We plan to launch it in early 2023."
+        },
+        {
+          "title": "How to deposit/withdraw money in HERE Wallet?",
+          "text": [
+            "You can deposit/withdraw money in any cryptocurrency using card or Binance. Balance in HERE is USDC stablecoin, so you can withdraw it any way you are used to.",
+            "You can withdraw money to a Binance account or to a bank account. We partnered with Mercuryo to provide withdrawals to fiat with minimal fees."
+          ]
+        },
+        {
+          "title": "How long does it take to withdraw money?",
+          "text": "We do not block funds and withdraw them within 3-5 seconds after verification. Withdrawal to Binance usually takes one minute, withdrawal to a bank account takes about 12 hours, in rare cases up to three days."
+        },
+        {
+          "title": "Is it possible to send money to friends who don't have a wallet yet?",
+          "text": "Yes, it is possible to send money to anyone you want. If your friend doesn't have a HERE account, it can be created easily. Money can be received by clicking on the link in the SMS."
+        },
+        {
+          "title": "How to cash out money from the wallet?",
+          "text": "You can cash out using your nearest USDC exchanger for fiat currency."
+        },
+        {
+          "title": "Does HERE have a banking license?",
+          "text": "HERE uses USDC as the base currency, which is a stablecoin that requires each transaction to be signed with a private key for transfer. The private key is only stored locally on your device in encrypted form. No one can access it unless you say 12 words to recover it. The HERE team has no access to your money and does not process the transfers, they happen directly on the blockchain. That's why we don't need a banking license and HERE works without restrictions in all countries."
+        }
+      ]
+    }
+  }
+}

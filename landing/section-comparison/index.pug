@@ -1,0 +1,51 @@
+section.comparison
+    h2 
+        | WEB 2.0
+        img(src="./section-comparison/arrow.right.svg") 
+        span WEB 3.0
+        
+    .comparison-table
+        .comparison-keys
+            for item in comparison
+                .comparison-keys-item
+                    p= item.key 
+
+        .comparison-left
+            .comparison-header
+                img(src='/assets/venmo.png')
+
+            for item in comparison 
+                .comparison-column
+                    p.comparison-column-key= item.key
+                    if item.venmo.plus == true
+                        if item.venmo.text
+                            p.comparison-column-value.green= item.venmo.text
+                        else 
+                            img(src='/assets/icons/plus.svg')
+
+                    if item.venmo.plus == false
+                        if item.venmo.text
+                            p.comparison-column-value.red= item.venmo.text
+                        else 
+                            img(src='/assets/icons/minus.svg')
+
+
+        .comparison-right
+            .comparison-header
+                .comparison-header-badge
+                    img(src='/assets/logo.light.png')
+
+            for item in comparison 
+                .comparison-column
+                    p.comparison-column-key= item.key
+                    if item.here.plus == true
+                        if item.here.text
+                            p.comparison-column-value.green= item.here.text
+                        else 
+                            img(src='/assets/icons/plus.svg')
+
+                    if item.here.plus == false
+                        if item.here.text
+                            p.comparison-column-value.red= item.here.text
+                        else 
+                            img(src='/assets/icons/minus.svg')

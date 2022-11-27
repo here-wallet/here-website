@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(href="../assets/manrope/index.css", rel="stylesheet")
+        link(href="./index.sass", rel="stylesheet")
+        title HERE Wallet
+    body 
+        include header/index.pug
+        include section-main/index.pug
+
+        .page 
+            .page-background
+            include section-features/index.pug
+            include section-news/index.pug
+            include section-comparison/index.pug
+            include section-security/index.pug
+            include section-download/index.pug
+            include section-asks/index.pug
+            include section-partners/index.pug
+
+        include footer/index.pug
+        script(src="./index.js")

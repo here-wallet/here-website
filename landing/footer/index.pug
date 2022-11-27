@@ -1,0 +1,12 @@
+footer.footer
+    img.footer-logo(src='/assets/logo.svg')
+    a.footer-mail(href='maito:#{common.supportEmail}') 
+        | #{common.supportEmail}
+
+    .footer-socials
+        for item in common.socials 
+            a(href=item.link)
+                img(src=item.icon)
+            
+    a.footer-terms(href=common.termsLink)
+        | #{common.termsLocale}

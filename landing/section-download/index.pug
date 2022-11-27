@@ -1,0 +1,20 @@
+section.download
+    h2
+        | #{download.title}
+        span.dot .
+    
+    .download-banner
+        .download-banner-text
+            p !{download.text}
+            
+            .download-banner-links
+                a.here-button.here-button-orange(href=download.ios)
+                    img(src='/assets/icons/apple.svg')
+                    | App Store
+
+                a.here-button.here-button-pink(href=download.android) Android waitlist
+            
+        img(src='/assets/screens.png')
+        .download-banner-qr
+            img(src='/assets/appqr.dark.svg')
+            p= download.scanLocale

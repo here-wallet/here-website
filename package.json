@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "styles": "sass --watch --style=compressed styles/@index.scss:index.css",
-    "build": "sass --style=compressed index.css:index.css"
+    "build": "parcel build ./landing/index.pug",
+    "start": "parcel ./landing/index.pug"
   },
   "devDependencies": {
-    "sass": "^1.56.1"
+    "@parcel/transformer-pug": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0"
   }
 }

@@ -1,0 +1,156 @@
+.header
+    width: 100%
+    box-sizing: border-box
+    position: fixed
+    transition: 0.2s background
+    z-index: 10000
+
+    &-center
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0 20px
+        height: 72px
+        max-width: 1176px
+        box-sizing: border-box
+        margin: auto
+        @media (max-width: 768px)
+            max-width: 100%
+
+    &.active
+        background: #2C3034
+
+    &-link
+        width: fit-content
+        font-weight: 700
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+        padding: 4px 0
+
+    &-link.active
+        color: rgba(247, 179, 2, 1)
+        border-bottom: 2px solid #F7B302
+
+    &-waitlist
+        font-weight: 700
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+        @media (max-width: 768px)
+            display: none
+
+    &-links
+        display: flex
+        align-items: center
+        gap: 28px
+        @media (max-width: 768px)
+            display: none
+
+    &-logo
+        width: 95px
+        z-index: 10
+
+    &-action
+        background: #2C3034
+        border: 1px solid #FD84E3
+        box-shadow: 1.5px 1.5px 0px #FD84E3
+        border-radius: 8px
+        position: relative
+        box-sizing: border-box
+        width: 32px
+        height: 32px
+
+        display: none
+        @media (max-width: 768px)
+            display: block
+    
+        &::before
+            content: ""
+            display: block
+            transition: .2s all
+            transform-origin: center
+            background: #F3EBEA
+            border-radius: 2px
+            position: absolute
+            width: 20px
+            height: 2px
+            left: 5px
+            top: 11px
+        
+        &::after
+            content: ""
+            display: block
+            transition: .2s all
+            transform-origin: center
+            background: #F3EBEA
+            border-radius: 2px
+            position: absolute
+            width: 20px
+            height: 2px
+            left: 5px
+            top: 17px
+        
+    &-action.open
+        &::before
+            transform: rotate(45deg)
+            top: 14.5px
+            left: 5px
+                
+        &::after
+            transform: rotate(-45deg)
+            top: 14.5px
+            left: 5px
+
+    &-body
+        display: none
+        box-sizing: border-box
+        flex-direction: column
+        justify-content: space-between
+        background: #2C3034
+        height: 100vh
+        width: 100vw
+        padding: 16px
+        padding-bottom: 32px
+
+    &-body.open
+        display: flex
+
+    &-mobile-links
+        display: flex
+        flex-direction: column
+        gap: 28px
+
+    &-form
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+        & a, & button
+            width: 100%
+
+    &-form-hr
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 16px
+        width: 100%
+        font-weight: 500
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+    
+        &::before
+            content: ""
+            display: block
+            background: rgba(243, 235, 234, 0.6)
+            height: 1px
+            flex: 1
+
+        &::after
+            content: ""
+            display: block
+            background: rgba(243, 235, 234, 0.6)
+            height: 1px
+            flex: 1
