@@ -26,8 +26,37 @@
         }
       ]
     },
+    "header": {
+      "waitlistLocale": "Android waiting list",
+      "links": [
+        {
+          "text": "Home",
+          "link": "/"
+        },
+        {
+          "text": "How to use",
+          "link": "/howto"
+        },
+        {
+          "text": "NFT",
+          "link": "/nft"
+        },
+        {
+          "text": "Play to learn",
+          "link": "/playtolearn"
+        }
+      ]
+    },
     "main": {
-        "title": "Your familiar finance app built on WEB3"
+      "title": "Your familiar\nfinance app\nbuilt on WEB3",
+      "qrcode": "/assets/appqr.svg",
+      "qrcodeLocale": "Scan the code to open iOS app and get 0.5$",
+      "poweredbynear": "Powered by NEAR Protocol",
+      "scrolldown": "Scroll down to learn more"
+    },
+    "floatqr": {
+      "qrcode": "/assets/appqr.svg",
+      "qrcodeLocale": "Scan the code and get 0.5$"
     },
     "features": [
       {

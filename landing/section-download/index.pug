@@ -12,9 +12,11 @@ section.download
                     img(src='/assets/icons/apple.svg')
                     | App Store
 
-                a.here-button.here-button-pink(href=download.android) Android waitlist
+                a.here-button.pink.waitlist-button(href=download.android) 
+                    | Android waitlist
             
         img(src='/assets/screens.png')
         .download-banner-qr
-            img(src='/assets/appqr.dark.svg')
+            img(src='./section-download/assets/qrcode.svg')
+            img(src='./section-download/assets/arrow.svg')
             p= download.scanLocale

@@ -7,7 +7,7 @@ header.header
       a.header-link NFT
       a.header-link Play to learn
 
-    .header-waitlist
+    .header-waitlist.waitlist-button
       a Android waiting list
 
     button.header-action
@@ -19,9 +19,17 @@ header.header
       a.header-link NFT
       a.header-link Play to learn
 
-    .header-form 
+    .header-form
+      p.header-form-title
+        | Android waiting list
+        span .
+      
       input.here-input(placeholder="Phone number")
       button.here-button.light Submit 
       .header-form-hr Or
-      a.here-button.here-button-pink.light(href=common.appStore)
-        | Download on App Store 
+      a.here-button.pink.light(href=common.appStore)
+        | Download on App Store
+
+.float-qr
+  img(src=floatqr.qrcode)
+  p= floatqr.qrcodeLocale

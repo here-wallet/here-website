@@ -2,33 +2,28 @@ main.main
   .main-left
   .main-center
     .main-header
-      h1 
-        | Your familiar
-        br
-        | finance app
-        br
-        | built on WEB3
+      h1= main.title
       
     .main-appclip
-      img(src='/assets/appqr.svg')
+      img(src=main.qrcode)
       img(src='/assets/icons/arrow.left.svg')
-      p Scan the code to open iOS app and get 0.5$
+      p= main.qrcodeLocale
     .main-near
       img(src='/assets/icons/near-simple.svg')
-      p Powered by NEAR Protocol
+      p= main.poweredbynear
     .main-stub
     .main-bottom
     .main-scroll
-      p Scroll down to learn more
+      p= main.scrolldown
   .main-right
 
 main.main-mobile
-  h1 Your familiar finance app built on WEB3
+  h1= main.title
   .main-mobile-near
     img(src='/assets/icons/near-simple.light.svg')
-    p Powered by NEAR Protocol
+    p= main.poweredbynear
 
-  a.here-button.here-button-pink.light(href=common.appStore)
+  a.here-button.pink.light(href=common.appStore)
     | Download HERE
   
   img(src="./section-main/assets/arrow.svg", alt="arrow")

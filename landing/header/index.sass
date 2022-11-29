@@ -27,12 +27,14 @@
         line-height: 22px
         color: #F3EBEA
         padding: 4px 0
+        cursor: pointer
 
     &-link.active
         color: rgba(247, 179, 2, 1)
         border-bottom: 2px solid #F7B302
 
     &-waitlist
+        cursor: pointer
         font-weight: 700
         font-size: 16px
         line-height: 22px
@@ -52,6 +54,7 @@
         z-index: 10
 
     &-action
+        cursor: pointer
         background: #2C3034
         border: 1px solid #FD84E3
         box-shadow: 1.5px 1.5px 0px #FD84E3
@@ -130,6 +133,17 @@
         & a, & button
             width: 100%
 
+    &-form-title
+        margin: 0
+        font-weight: 700
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+
+    &-form-title span
+        color: rgba(253, 132, 227, 1)
+
+
     &-form-hr
         display: flex
         align-items: center
@@ -154,3 +168,41 @@
             background: rgba(243, 235, 234, 0.6)
             height: 1px
             flex: 1
+
+
+.float-qr
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 16px
+    gap: 16px
+
+    box-sizing: border-box
+    position: fixed
+    z-index: 1000
+    width: 112px
+    left: 20px
+
+    transition: 0.2s bottom
+    bottom: -200px
+
+    background: #2C3034
+    border-radius: 16px
+
+    @media (max-width: 780px)
+        display: none
+
+    &.active
+        bottom: 20px
+
+    img
+        width: 80px
+        height: 80px
+
+    p 
+        margin: 0
+        font-weight: 500
+        font-size: 14px
+        line-height: 19px
+        text-align: center
+        color: #F3EBEA

@@ -55,6 +55,8 @@ section
 	box-shadow: 4px 4px 0px #fff
 
 .here-button
+	cursor: pointer
+	font-family: 'Manrope'
 	box-sizing: border-box
 	display: flex
 	flex-direction: row
@@ -77,9 +79,15 @@ section
 	text-align: center
 	color: #2c3034
 	text-decoration: none
+	transition: 0.2s background
 
-	&-pink
-		background: #fd84e3
+	&:hover
+		background: #FDBE1B
+
+.here-button.pink
+	background: #fd84e3
+	&:hover
+		background: #FD9BE8
 
 .here-input
 	display: flex

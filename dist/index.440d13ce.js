@@ -1,6 +1,6 @@
 const page = document.getElementsByClassName("page-background")[0];
-const header = document.getElementsByClassName("header")[0];
 const news = document.getElementsByClassName("news")[0];
+const headerInstance = new HeaderComponent();
 const updateScroll = ()=>{
     let pad = window.innerWidth < 1600 ? 44 : 88;
     pad = window.innerWidth < 1200 ? 12 : pad;
@@ -9,7 +9,7 @@ const updateScroll = ()=>{
     let offset = Math.max(pad * (1 - scroll), 0);
     page.style.left = offset + "px";
     page.style.right = offset + "px";
-    header.classList.toggle("active", this.scrollY > 0);
+    headerInstance.header.classList.toggle("active", this.scrollY > 0);
     const { y: newsY , height: newsHeight  } = news.getBoundingClientRect();
     console.log(newsY, newsHeight, 1 - (newsY - 100) / (newsHeight + 100));
     let opacity = 1 - (newsY - 100) / newsHeight;
@@ -25,15 +25,15 @@ Array.from(document.querySelectorAll(".ask-block")).forEach((el)=>{
         el.style.height = el.classList.contains("open") ? `${91 + height}px` : "91px";
     });
 });
-const btn = document.querySelector(".header-action");
-const headerBody = document.querySelector(".header-body");
-let isOpen = false;
-btn.addEventListener("click", ()=>{
-    btn.classList.toggle("open");
-    headerBody.style.height = `${window.innerHeight - 72}px`;
-    headerBody.classList.toggle("open");
-    isOpen = !isOpen;
-    document.body.style.overflow = isOpen ? "hidden" : "";
+Array.from(document.querySelectorAll(".modal-wrap")).forEach((el)=>{
+    el.addEventListener("click", ()=>el.classList.toggle("open"));
+    el.querySelector(".modal-body").addEventListener("click", (e)=>e.stopPropagation());
+});
+Array.from(document.querySelectorAll(".wailtist-button")).forEach((el)=>{
+    el.addEventListener("click", ()=>{
+        headerBody.classList.add("open");
+        headerBody.querySelector("input")?.focus();
+    });
 });
 
 //# sourceMappingURL=index.440d13ce.js.map
