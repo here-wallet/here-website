@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "deploy": "npm run build && scp -r ./dist/* root@web.herewallet.app:/var/www/here-www",
     "build": "parcel build ./landing/index.pug",
     "start": "parcel ./landing/index.pug"
   },

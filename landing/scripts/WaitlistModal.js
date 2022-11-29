@@ -5,10 +5,18 @@ export class WaitlistModal {
     this.el = document.getElementById("waitlist-modal");
     this.provider = new WaitlistProvider("#waitlist-modal");
 
+    window.addEventListener('keydown', (e) => {
+      if (e.key === "Escape" && this.isOpen) this.close()
+    })
+  
     this.el.addEventListener("click", () => this.close());
     this.el
       .querySelector(".modal-body")
       .addEventListener("click", (e) => e.stopPropagation());
+  }
+
+  get isOpen() {
+    return this.el.classList.contains('open')
   }
 
   close() {
