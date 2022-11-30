@@ -65,24 +65,33 @@ updateScroll();
 const asks = Array.from(document.querySelectorAll(".ask-block"));
 asks.forEach((el) => {
   el.addEventListener("click", () => {
-    const { height } = el
-      .querySelector(".ask-block-body")
-      .getBoundingClientRect();
+    const header = el.querySelector(".ask-block-header");
+    const body = el.querySelector(".ask-block-body");
+    const headerBox = header.getBoundingClientRect();
 
     asks.forEach((ask) => {
       if (ask == el) return;
+      const header = ask.querySelector(".ask-block-header");
+      const box = header.getBoundingClientRect();
       ask.classList.remove("open");
-      ask.style.height = "91px";
+      ask.style.height = box.height + "px";
     });
 
-    el.classList.toggle("open");
-    el.style.height = el.classList.contains("open")
-      ? `${91 + height}px`
-      : "91px";
+    el.style.height = headerBox.height + "px";
+    body.style.display = "block";
+    setTimeout(() => {
+      const { height } = body.getBoundingClientRect();
+      el.classList.toggle("open");
+      el.style.height = el.classList.contains("open")
+        ? `${headerBox.height + height}px`
+        : headerBox.height + "px";
+    }, 10);
   });
 });
 
-const waitlistButtons = Array.from(document.querySelectorAll(".waitlist-button"))
+const waitlistButtons = Array.from(
+  document.querySelectorAll(".waitlist-button")
+);
 waitlistButtons.forEach((el) => {
   el.addEventListener("click", () => {
     if (window.innerWidth <= 778) {

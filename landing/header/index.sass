@@ -15,6 +15,7 @@
         box-sizing: border-box
         margin: auto
         @media (max-width: 768px)
+            background: #2C3034
             max-width: 100%
 
     &.active
@@ -28,10 +29,11 @@
         color: #F3EBEA
         padding: 4px 0
         cursor: pointer
-
-    &-link.active
-        color: rgba(247, 179, 2, 1)
-        border-bottom: 2px solid #F7B302
+        text-decoration: none
+        
+        &:first-child 
+            color: rgba(247, 179, 2, 1)
+            border-bottom: 2px solid #F7B302
 
     &-waitlist
         cursor: pointer
@@ -54,6 +56,7 @@
         z-index: 10
 
     &-action
+        z-index: 1
         cursor: pointer
         background: #2C3034
         border: 1px solid #FD84E3
@@ -115,9 +118,28 @@
         width: 100vw
         padding: 16px
         padding-bottom: 32px
+        padding-top: 72px
+    
+    &-body:focus-within
+        @media (max-width: 780px)
+            justify-content: flex-end
+            .header-form-hr, .header-mobile-links, .header-form a
+                display: none
+                
+            .header-form
+                position: fixed
+                bottom: 32px
+                right: 16px
+                left: 16px
+                width: calc(100vw - 32px)
 
     &-body.open
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
         display: flex
+        height: calc(var(--vh) * 100)
 
     &-mobile-links
         display: flex

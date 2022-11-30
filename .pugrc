@@ -5,7 +5,7 @@
       "logoDark": "/assets/logo.svg",
       "supportEmail": "support@herewallet.app",
       "termsLocale": "Privacy policy and Terms of Service",
-      "termsLink": "https://herewallet.app",
+      "termsLink": "/privacypolicy",
       "appStore": "https://herewallet.app",
       "socials": [
         {
@@ -43,7 +43,7 @@
         },
         {
           "text": "Play to learn",
-          "link": "/playtolearn"
+          "link": "/stemmy"
         }
       ]
     },

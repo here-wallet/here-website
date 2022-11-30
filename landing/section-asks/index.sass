@@ -5,9 +5,7 @@
     width: 100%
     cursor: pointer
     overflow: hidden
-
     transition: 0.2s height
-    height: 91px
 
     &+&
         margin-top: 12px
@@ -19,11 +17,11 @@
         transform: rotateZ(-180deg)
 
     &-header
-        height: 91px
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 0 24px
+        padding: 24px
+        gap: 16px
 
     &-header p
         margin: 0
@@ -44,4 +42,5 @@
 
     &-body
         padding: 0 24px 32px 24px
+        display: none
 

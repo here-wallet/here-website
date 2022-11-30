@@ -17,9 +17,9 @@ export class HeaderComponent {
     this.floatQr.classList.toggle("active", window.scrollY > 600);
     this.topButton.classList.toggle("active", window.scrollY > 600);
 
-    this.topButton.addEventListener('click', () => {
-      document.body.scrollIntoView({ behavior: "smooth" })
-    })
+    this.topButton.addEventListener("click", () => {
+      document.body.scrollIntoView({ behavior: "smooth" });
+    });
 
     window.addEventListener("scroll", () => {
       this.header.classList.toggle("active", window.scrollY > 0);
@@ -30,10 +30,30 @@ export class HeaderComponent {
 
   toggleModal = () => {
     this.btn.classList.toggle("open");
-    this.headerBody.style.height = `${window.innerHeight - 72}px`;
     this.headerBody.classList.toggle("open");
 
     this.isOpen = !this.isOpen;
     document.body.style.overflow = this.isOpen ? "hidden" : "";
   };
 }
+
+var customViewportCorrectionVariable = "vh";
+
+function setViewportProperty(doc) {
+  var prevClientHeight;
+  var customVar = "--" + (customViewportCorrectionVariable || "vh");
+  function handleResize() {
+    var clientHeight = doc.clientHeight;
+    if (clientHeight === prevClientHeight) return;
+    requestAnimationFrame(function updateViewportHeight() {
+      doc.style.setProperty(customVar, clientHeight * 0.01 + "px");
+      prevClientHeight = clientHeight;
+    });
+  }
+  handleResize();
+  return handleResize;
+}
+window.addEventListener(
+  "resize",
+  setViewportProperty(document.documentElement)
+);
