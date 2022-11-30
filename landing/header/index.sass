@@ -22,7 +22,7 @@
 
     &-link
         width: fit-content
-        font-weight: 700
+        font-weight: 800
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -35,7 +35,7 @@
 
     &-waitlist
         cursor: pointer
-        font-weight: 700
+        font-weight: 800
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -135,7 +135,7 @@
 
     &-form-title
         margin: 0
-        font-weight: 700
+        font-weight: 800
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -169,6 +169,31 @@
             height: 1px
             flex: 1
 
+.scroll-up
+    z-index: 1000
+    cursor: pointer
+    position: fixed
+    bottom: -200px
+    right: 20px
+    width: 48px
+    height: 48px
+    background: #F3EBEA
+    border: 1px solid #2C3034
+    border-radius: 16px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 12px
+    gap: 4px
+    
+    transition: 0.2s transform, 0.2s bottom
+
+    &.active
+        bottom: 20px
+
+    &:hover
+        transform: translateY(-4px)
 
 .float-qr
     display: flex

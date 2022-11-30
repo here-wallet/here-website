@@ -70,6 +70,9 @@
         line-height: 27px
         color: #fd84e3
         width: fit-content
+        padding: 4px 24px 4px 12px
+        margin: -4px -12px
+        transition: 0.2s background
 
         display: flex
         align-items: center
@@ -77,11 +80,18 @@
         text-decoration: none
         margin-top: 40px
 
+        &:hover
+            background: #EBDEDC
+            border-radius: 8px
+            img
+                transform: translateX(6px)
+
         @media (max-width: 768px)
             font-size: 16px
             line-height: 22px
 
     &-content a img
+        transition: 0.2s transform
         margin-left: 16px
 
     &-content ul

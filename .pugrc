@@ -48,7 +48,7 @@
       ]
     },
     "main": {
-      "title": "Your familiar\nfinance app\nbuilt on WEB3",
+      "title": "Your familiar<br/>finance app<br/>built on WEB3",
       "qrcode": "/assets/appqr.svg",
       "qrcodeLocale": "Scan the code to open iOS app and get 0.5$",
       "poweredbynear": "Powered by NEAR Protocol",

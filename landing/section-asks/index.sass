@@ -15,6 +15,9 @@
     &:hover
         background: #E6D7D5
 
+    &.open img
+        transform: rotateZ(-180deg)
+
     &-header
         height: 91px
         display: flex
@@ -28,6 +31,9 @@
         font-size: 20px
         line-height: 27px
         color: #2C3034
+
+    &-header img
+        transition: 0.35s transform
         
     &-body p
         margin: 0

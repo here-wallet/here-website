@@ -2,7 +2,7 @@ main.main
   .main-left
   .main-center
     .main-header
-      h1= main.title
+      h1 !{main.title}
       
     .main-appclip
       img(src=main.qrcode)
@@ -18,7 +18,7 @@ main.main
   .main-right
 
 main.main-mobile
-  h1= main.title
+  h1 !{main.title}
   .main-mobile-near
     img(src='/assets/icons/near-simple.light.svg')
     p= main.poweredbynear

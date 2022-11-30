@@ -1,11 +1,10 @@
 .news
     margin: 0
     max-width: 100%
-    background-color: #AF73E6
     background-image: url("/assets/pattern.svg")
-    padding: 104px 156px
+    padding: 104px 156px 160px
     @media (max-width: 1160px)
-        padding: 48px 20px
+        padding: 48px 20px 96px
 
     & h2
         color: #F3EBEA
@@ -22,6 +21,7 @@
         max-width: 362px
         background: #2C3034
         border-radius: 16px
+        border: 1px solid #2C3034
 
     &-item:last-child
         @media (max-width: 1160px)
@@ -34,7 +34,6 @@
         line-height: 25px
         color: #F3EBEA
         margin: 0
-
 
     &-item p
         font-style: normal
@@ -49,11 +48,9 @@
         padding: 16px
         padding-bottom: 20px
 
-
     &-item>img
         width: 100%
         object-fit: cover
-
 
     &-item a
         font-weight: 800
@@ -68,6 +65,9 @@
         text-decoration: none
         margin-top: 24px
 
+        &:hover img
+            transform: translateX(8px)
 
     &-item a img
+        transition: 0.2s transform
         margin-left: 8px

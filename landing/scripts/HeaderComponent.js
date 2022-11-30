@@ -4,6 +4,8 @@ export class HeaderComponent {
   provider = new WaitlistProvider(".header-form");
   header = document.querySelector(".header");
   floatQr = document.querySelector(".float-qr");
+  topButton = document.querySelector(".scroll-up");
+
   isOpen = false;
 
   constructor() {
@@ -13,10 +15,16 @@ export class HeaderComponent {
 
     this.header.classList.toggle("active", window.scrollY > 0);
     this.floatQr.classList.toggle("active", window.scrollY > 600);
+    this.topButton.classList.toggle("active", window.scrollY > 600);
+
+    this.topButton.addEventListener('click', () => {
+      document.body.scrollIntoView({ behavior: "smooth" })
+    })
 
     window.addEventListener("scroll", () => {
       this.header.classList.toggle("active", window.scrollY > 0);
       this.floatQr.classList.toggle("active", window.scrollY > 600);
+      this.topButton.classList.toggle("active", window.scrollY > 600);
     });
   }
 
