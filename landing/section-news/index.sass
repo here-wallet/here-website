@@ -1,7 +1,8 @@
 .news
     margin: 0
     max-width: 100%
-    background-image: url("/assets/pattern.svg")
+    background-image: url("/assets/Graphics/pattern.svg")
+    background-size: cover
     padding: 104px 156px 160px
     @media (max-width: 1160px)
         padding: 48px 20px 96px
@@ -18,16 +19,28 @@
             flex-direction: column
 
     &-item
-        max-width: 362px
+        display: block
+        width: 362px
         background: #2C3034
         border-radius: 16px
         border: 1px solid #2C3034
+        transition: 0.2s transform
+        cursor: pointer
+
+        @media (max-width: 620px)
+            width: 100%
+
+        &:hover
+            transform: scale(1.05)
+            a img
+                transform: translateX(8px)
 
     &-item:last-child
         @media (max-width: 1160px)
             display: none
 
     &-item h3
+        font-family: 'Manrope'
         font-style: normal
         font-weight: 800
         font-size: 18px
@@ -50,10 +63,12 @@
 
     &-item>img
         width: 100%
+        max-width: 362px
         object-fit: cover
-
+        height: 191px
+        
     &-item a
-        font-weight: 800
+        font-weight: 700
         font-size: 18px
         line-height: 25px
         color: #FD84E3

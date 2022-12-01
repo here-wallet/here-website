@@ -1,40 +1,57 @@
 .partners
     padding-bottom: 64px
+    display: flex
+    flex-direction: column
+    gap: 12px
 
     &-group
         background: #EBDEDC
         border-radius: 16px
         padding: 24px
-        margin-bottom: 12px
-        overflow: hidden
-
         display: flex
         flex-wrap: wrap
+        align-items: center
         position: relative
         box-sizing: border-box
         padding-top: 100px
         gap: 48px
 
+    &-wrap
+        display: flex
+        gap: 12px
+        @media (max-width: 1160px)
+            flex-direction: column
+
+        div
+            flex: 1
+
     &-group p
-        font-weight: 800
+        font-weight: 700
         font-size: 28px
         line-height: 38px
         color: #2C3034
         position: absolute
         top: 0
 
+    &-group a
+        transition: 0.2s transform
+        &:hover
+            transform: scale(1.05)
+
     &-group img
         object-fit: contain
         object-position: center
 
-    &-dex
-        margin-right: 12px
+    @media (max-width: 800px)
+        img
+            width: 40%
 
-.partners-dex,
-.partners-other
-    width: calc(50% - 56px)
-    display: inline-flex
+    @media (max-width: 400px)
+        &-group
+            gap: 24px
+            padding-top: 96px
 
-    @media (max-width: 1160px)
-        width: 100%
-        margin-right: 0
+        img
+            width: 80%
+            height: 48px
+            object-position: left center

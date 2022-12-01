@@ -1,12 +1,18 @@
 {
   "scripts": {
+    "fetch": "node ./fetch-data.js",
     "deploy": "npm run build && sh ./deploy.sh",
-    "build": "parcel build ./landing/index.pug",
-    "start": "parcel ./landing/index.pug"
+    "build": "npm run fetch && parcel build ./landing/index.pug",
+    "start": "npm run fetch && parcel ./landing/index.pug"
   },
+  "type": "module",
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.3.0"
   }
 }

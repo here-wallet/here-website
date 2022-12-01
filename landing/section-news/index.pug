@@ -3,11 +3,11 @@ section.news
   .news-list
     for item in news.items
         .news-item
-            img(src=item.picture alt=item.pictureAlt)
+            img(src=item.image)
             .news-item-content
-                h3= item.title
+                h3= item.header
                 p= item.text
 
                 a(href=item.link)
-                    | #{item.linkLocale}
+                    | Read more
                     img(src='/assets/icons/link-arrow.svg')

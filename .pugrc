@@ -9,20 +9,20 @@
       "appStore": "https://herewallet.app",
       "socials": [
         {
-          "icon": "/assets/icons/twitter.svg",
-          "link": "/assets/icons/twitter.svg"
+          "icon": "/assets/Socials/Twitter.svg",
+          "link": "https://twitter.com/here_wallet"
         },
         {
-          "icon": "/assets/icons/discord.svg",
-          "link": "/assets/icons/discord.svg"
+          "icon": "/assets/Socials/Discord.svg",
+          "link": "https://discord.gg/8Q3gw3gsD2"
         },
         {
-          "icon": "/assets/icons/telegram.svg",
-          "link": "/assets/icons/telegram.svg"
+          "icon": "/assets/Socials/Telegram.svg",
+          "link": "https://t.me/herewallet"
         },
         {
-          "icon": "/assets/icons/near.svg",
-          "link": "/assets/icons/near.svg"
+          "icon": "/assets/Socials/near.svg",
+          "link": "https://awesomenear.com/here-wallet"
         }
       ]
     },
@@ -44,18 +44,22 @@
         {
           "text": "Play to learn",
           "link": "/stemmy"
+        },
+        {
+          "text": "Documentation",
+          "link": "https://docs.herewallet.app/technology-description/readme"
         }
       ]
     },
     "main": {
       "title": "Your familiar<br/>finance app<br/>built on WEB3",
-      "qrcode": "/assets/appqr.svg",
+      "qrcode": "/assets/QR/qr.gold.svg",
       "qrcodeLocale": "Scan the code to open iOS app and get 0.5$",
       "poweredbynear": "Powered by NEAR Protocol",
       "scrolldown": "Scroll down to learn more"
     },
     "floatqr": {
-      "qrcode": "/assets/appqr.svg",
+      "qrcode": "/assets/QR/qr.gold.svg",
       "qrcodeLocale": "Scan the code and get 0.5$"
     },
     "features": [
@@ -63,8 +67,8 @@
         "title": "Phone number transfers",
         "moreLink": "",
         "moreLocale": "Try it out",
-        "backPicture": "/landing/section-features/assets/orange.svg",
-        "frontPicture": "/landing/section-features/assets/transfers.png",
+        "backPicture": "/assets/Graphics/orange.svg",
+        "frontPicture": "/assets/Screens/transfers.png",
         "items": [
           "Pay your friends all over the world 0% commission",
           "Transfer money even to those who don't have a wallet yet",
@@ -75,8 +79,8 @@
         "title": "Invest in crypto",
         "moreLink": "",
         "moreLocale": "Try it out",
-        "backPicture": "/landing/section-features/assets/pink.svg",
-        "frontPicture": "/landing/section-features/assets/invest.png",
+        "backPicture": "/assets/Graphics/pink.svg",
+        "frontPicture": "/assets/Screens/invest.png",
         "items": [
           "Invest via transparent decentralized exchanges ",
           "No paperwork needed to start investing",
@@ -88,8 +92,8 @@
         "title": "Up to 10% APY with instant withdrawal",
         "moreLink": "",
         "moreLocale": "Try it out",
-        "backPicture": "/landing/section-features/assets/green.svg",
-        "frontPicture": "/landing/section-features/assets/overview.png",
+        "backPicture": "/assets/Graphics/green.svg",
+        "frontPicture": "/assets/Screens/overview.png",
         "items": [
           "Withdraw money at any time with 0% commission",
           "Use only decentralized protocols to make profit"
@@ -100,28 +104,22 @@
       "title": "The latest news HERE",
       "items": [
         {
-          "picture": "/assets/news/hack.png",
-          "pictureAlt": "Text",
-          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
-          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
-          "linkLocale": "Read more",
-          "link": ""
+          "header": "News 1",
+          "text": "This is news 1",
+          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
+          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
         },
         {
-          "picture": "/assets/news/hack.png",
-          "pictureAlt": "Text",
-          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
-          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
-          "linkLocale": "Read more",
-          "link": ""
+          "header": "News 1",
+          "text": "This is news 1",
+          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
+          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
         },
         {
-          "picture": "/assets/news/hack.png",
-          "pictureAlt": "Text",
-          "title": "We are announcing winners of HERE Legendary NFTs contest 🥳",
-          "text": "NFTs will be sent to their .near wallets. Don’t feel bad, because there are other opportunities to get more right now...",
-          "linkLocale": "Read more",
-          "link": ""
+          "header": "News 1",
+          "text": "This is news 1",
+          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
+          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
         }
       ]
     },
@@ -199,20 +197,21 @@
       "moreLink": "",
       "socials": [
         {
-          "icon": "/assets/icons/near.svg",
-          "link": "https://herewallet.app"
+          "icon": "/assets/Socials/near.svg",
+          "link": "https://awesomenear.com/here-wallet"
         },
         {
-          "icon": "/assets/icons/github.svg",
-          "link": "https://herewallet.app"
+          "icon": "/assets/Socials/github.svg",
+          "link": "https://github.com/here-wallet"
         }
       ]
     },
     "download": {
       "title": "Download app",
       "text": "<span>Download HERE</span> and let<br/>it be your alternative<br/>to usual banking",
-      "iosLink": "https://herewallet.app",
-      "androidLink": "https://herewallet.app",
+      "qrcode": "/assets/QR/qr.black.svg",
+      "picture": "/assets/Screens/screens.png",
+      "iosLink": "https://appstore.herewallet.app/site",
       "scanLocale": "Scan to start HERE"
     },
     "asks": {

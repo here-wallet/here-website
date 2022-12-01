@@ -23,7 +23,6 @@ const animatePage = () => {
   const offset = step * pad;
   pageBg.style.left = offset + "px";
   pageBg.style.right = offset + "px";
-  pageBg.style.top = -(pad - offset) + "px";
 };
 
 const news = document.getElementsByClassName("news")[0];
@@ -101,3 +100,16 @@ waitlistButtons.forEach((el) => {
     }
   });
 });
+
+
+
+
+const newsItems = Array.from(
+  document.querySelectorAll(".news-item")
+);
+newsItems.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.querySelector('a')?.click()
+  });
+});
+
