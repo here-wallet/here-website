@@ -41,9 +41,10 @@
     &-group img
         object-fit: contain
         object-position: center
+        width: 100%
 
     @media (max-width: 800px)
-        img
+        a
             width: 40%
 
     @media (max-width: 400px)
@@ -51,7 +52,9 @@
             gap: 24px
             padding-top: 96px
 
-        img
+        img 
+            object-position: left center
+
+        a
             width: 80%
             height: 48px
-            object-position: left center

@@ -1,7 +1,7 @@
 {
   "locals": {
     "common": {
-      "logoLight": "/assets/logo.light.png",
+      "logoLight": "/assets/logo.light.svg",
       "logoDark": "/assets/logo.svg",
       "supportEmail": "support@herewallet.app",
       "termsLocale": "Privacy policy and Terms of Service",
