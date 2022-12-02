@@ -1,12 +1,15 @@
 export class WaitlistProvider {
-  constructor(selector) {
+  constructor(selector, onSubmit) {
+    this.onSubmit = onSubmit;
     this.root = document.querySelector(selector);
     this.input = this.root.querySelector("input");
-    this.button = this.root.querySelector("button");
+    this.button = this.root.querySelector(".here-button");
+    this.button.disabled = true;
 
     const mask = "+X (XXX) XXX-XX-XXXX".split("");
     this.input.addEventListener("input", (e) => {
       const numbers = this.input.value.replace(/\D/g, "").split("");
+      this.button.disabled = numbers.length < 6;
 
       let result = "";
       for (let i = 0; i < mask.length; i++) {
@@ -29,11 +32,16 @@ export class WaitlistProvider {
     });
   }
 
-  async submit(phone) {
-    const res = await fetch({
-      method: "POST",
-      url: "https://api.herewallet.app/v1/waitlist",
-      body: JSON.stringify({ phone }),
-    });
+  async submit(phone_number) {
+    this.onSubmit();
+    this.input.value = "";
+
+    const res = await fetch(
+      "https://api.herewallet.app/api/v1/web/android_whitelist",
+      {
+        method: "POST",
+        body: JSON.stringify({ phone_number }),
+      }
+    );
   }
 }

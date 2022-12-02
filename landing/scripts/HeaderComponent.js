@@ -1,3 +1,4 @@
+import { successModal } from "./WaitlistModal";
 import { WaitlistProvider } from "./WaitlistProvider";
 
 export class HeaderComponent {
@@ -26,6 +27,10 @@ export class HeaderComponent {
       this.floatQr.classList.toggle("active", window.scrollY > 600);
       this.topButton.classList.toggle("active", window.scrollY > 600);
     });
+
+    this.provider.onSubmit = () => {
+      successModal.open();
+    };
   }
 
   toggleModal = () => {

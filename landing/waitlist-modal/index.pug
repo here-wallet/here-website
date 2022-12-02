@@ -1,6 +1,20 @@
 #waitlist-modal.modal-wrap
     .modal-body
+        button.modal-close 
+            img(src="/assets/icons/close.svg")
+        
         h2 Android waiting list
         p Android version will be released in February. Enter your phone number to get early access
         input.here-input(placeholder="Phone number")
         button.here-button Submit
+
+#success-modal.modal-wrap
+    .modal-body
+        button.modal-close 
+            img(src="/assets/icons/close.svg")
+
+        img(src="/assets/Graphics/success.png", height="148px")
+        p 
+            | Thank you for submitting.
+            br
+            | We will send you a message after the release.

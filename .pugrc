@@ -34,19 +34,19 @@
           "link": "/"
         },
         {
-          "text": "How to use",
-          "link": "/howto"
-        },
-        {
           "text": "NFT",
           "link": "/nft"
+        },
+        {
+          "text": "How to use",
+          "link": "/howto"
         },
         {
           "text": "Play to learn",
           "link": "/stemmy"
         },
         {
-          "text": "Documentation",
+          "text": "Docs",
           "link": "https://docs.herewallet.app/technology-description/readme"
         }
       ]
