@@ -21,17 +21,23 @@
     &-item
         display: block
         width: 362px
+        height: 408px
         background: #2C3034
         border-radius: 16px
         border: 1px solid #2C3034
         transition: 0.2s transform
         cursor: pointer
 
+        display: flex
+        flex-direction: column
+
         @media (max-width: 620px)
             width: 100%
 
         &:hover
-            transform: scale(1.05)
+            transform: scale(1.02)
+            a
+                background: rgba(255, 255, 255, 0.1)
             a img
                 transform: translateX(8px)
 
@@ -56,19 +62,23 @@
         color: #F3EBEA
         margin-top: 12px
 
-
     &-item-content
         padding: 16px
         padding-bottom: 20px
+        display: flex
+        flex-direction: column
+        flex: 1
 
     &-item>img
         width: 100%
         max-width: 362px
         object-fit: cover
+        border-top-left-radius: 16px
+        border-top-right-radius: 16px
         height: 191px
         
     &-item a
-        font-weight: 700
+        font-weight: 600
         font-size: 18px
         line-height: 25px
         color: #FD84E3
@@ -78,10 +88,17 @@
         align-items: center
         justify-content: center
         text-decoration: none
-        margin-top: 24px
+        margin-top: auto
 
-        &:hover img
-            transform: translateX(8px)
+        border-radius: 12px
+        transition: 0.2s background
+        padding: 4px 18px 4px 10px
+        margin-left: -8px
+
+        &:hover 
+            background: rgba(255, 255, 255, 0.1)
+            img
+                transform: translateX(8px)
 
     &-item a img
         transition: 0.2s transform
