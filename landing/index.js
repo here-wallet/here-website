@@ -101,15 +101,15 @@ waitlistButtons.forEach((el) => {
   });
 });
 
-
-
-
-const newsItems = Array.from(
-  document.querySelectorAll(".news-item")
-);
+const newsItems = Array.from(document.querySelectorAll(".news-item"));
 newsItems.forEach((el) => {
   el.addEventListener("click", () => {
-    el.querySelector('a')?.click()
+    el.querySelector("a")?.click();
   });
 });
 
+const secureBanner = document.querySelector(".secure-banner");
+secureBanner?.addEventListener("click", (e) => {
+  if (e.target.tag === "a") return;
+  secureBanner.querySelector(".secure-banner-link")?.click();
+});

@@ -4,6 +4,7 @@
     border-radius: 16px
     display: flex
     align-items: center
+    cursor: pointer
     gap: 124px
 
     @media (max-width: 1160px)
@@ -46,6 +47,9 @@
         @media (max-width: 700px)
             margin: auto
 
+    &:hover &-link
+        background: rgba(255, 255, 255, 0.1)
+
     &:hover &-picture
         transform: scale(1.1) translateX(-16px)
 		
@@ -87,12 +91,12 @@
         font-size: 18px
         line-height: 25px
         color: #FD84E3
-        trasnsition: 0.2s background
         padding: 4px 12px
         margin: -4px -12px
         width: fit-content
         text-decoration: none
         border-radius: 12px
+        transition: 0.2s background
 
         margin-top: 107px
         align-items: center

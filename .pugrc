@@ -6,7 +6,7 @@
       "supportEmail": "support@herewallet.app",
       "termsLocale": "Privacy policy and Terms of Service",
       "termsLink": "/privacypolicy",
-      "appStore": "https://herewallet.app",
+      "appStore": "https://appstore.herewallet.app/site",
       "socials": [
         {
           "icon": "/assets/Socials/Twitter.svg",
