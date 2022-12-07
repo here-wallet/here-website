@@ -54,13 +54,13 @@
     "main": {
       "title": "Your familiar<br/>finance app<br/>built on WEB3",
       "qrcode": "/assets/QR/qr.gold.svg",
-      "qrcodeLocale": "Scan the code to open iOS app and get 0.5$",
+      "qrcodeLocale": "Scan to<br />start HERE",
       "poweredbynear": "Powered by NEAR Protocol",
       "scrolldown": "Scroll down to learn more"
     },
     "floatqr": {
       "qrcode": "/assets/QR/qr.gold.svg",
-      "qrcodeLocale": "Scan the code and get 0.5$"
+      "qrcodeLocale": "Scan to<br />start HERE"
     },
     "features": [
       {
@@ -70,8 +70,8 @@
         "backPicture": "/assets/Graphics/orange.svg",
         "frontPicture": "/assets/Screens/transfers.png",
         "items": [
-          "Pay your friends all over the world 0% commission",
-          "Transfer money even to those who don't have a wallet yet",
+          "Pay your friends all over the world<br/>0% commission",
+          "Transfer money even to those who<br/>don't have a wallet yet",
           "No tax notice"
         ]
       },
@@ -82,10 +82,10 @@
         "backPicture": "/assets/Graphics/pink.svg",
         "frontPicture": "/assets/Screens/invest.png",
         "items": [
-          "Invest via transparent decentralized exchanges ",
           "No paperwork needed to start investing",
-          "Buy one of the 20 most popular cryptocurrencies",
-          "Track your portfolio in an easy-to-use interface"
+          "Invest via transparent decentralized<br/>exchanges",
+          "Buy one of the 20 most popular<br/>cryptocurrencies",
+          "Track your portfolio in an <br/> easy-to-use interface"
         ]
       },
       {
@@ -95,8 +95,8 @@
         "backPicture": "/assets/Graphics/green.svg",
         "frontPicture": "/assets/Screens/overview.png",
         "items": [
-          "Withdraw money at any time with 0% commission",
-          "Use only decentralized protocols to make profit"
+          "Withdraw money at any time with 0%<br/>commission",
+          "Use only decentralized protocols to<br/>make profit"
         ]
       }
     ],
@@ -104,22 +104,22 @@
       "title": "The latest news HERE",
       "items": [
         {
-          "header": "News 1",
-          "text": "This is news 1",
-          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
-          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
+          "header": "Tonic DEX",
+          "text": "Now you can buy and sell FT on DEX right HERE! 💸🤝. We have the cheapest exchange fees thanks to our partnership with @tonicdex and the use of orderbooks!",
+          "image": "https://pbs.twimg.com/media/FiruRUKUUAAJCCt?format=jpg&name=4096x4096",
+          "url": "https://twitter.com/here_wallet/status/1597351046396801024"
         },
         {
-          "header": "News 1",
-          "text": "This is news 1",
-          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
-          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
+          "header": "App CLip is live",
+          "text": "Now you can create a wallet instantly without installing the app. It is enough to scan the QR code.",
+          "image": "https://pbs.twimg.com/media/Fi-BYeBXEAM3cgA?format=jpg&name=large",
+          "url": "https://twitter.com/here_wallet/status/1598642291886940161"
         },
         {
-          "header": "News 1",
-          "text": "This is news 1",
-          "image": "https://wwww.herewallet.app/transfers.a13a0535.png",
-          "url": "https://wwww.herewallet.app/transfers.a13a0535.png"
+          "header": "How to use NEAR on your phone",
+          "text": "Available to (L)Earn on 6 (six) languages!",
+          "image": "https://pbs.twimg.com/media/FiaqY4sWAAEo3bX?format=jpg&name=large",
+          "url": "https://twitter.com/LearnNear/status/1596151053736722435"
         }
       ]
     },
@@ -194,7 +194,7 @@
       "headline": "We keep your assets safe",
       "text": "HERE Wallet is an open source non-custodial wallet which have passed security audit, don’t have KYC, main features are made on smart contracts and all data is encrypted.",
       "moreLocale": "More about security",
-      "moreLink": "",
+      "moreLink": "https://docs.herewallet.app/technology-description/readme/security",
       "socials": [
         {
           "icon": "/assets/Socials/near.svg",
