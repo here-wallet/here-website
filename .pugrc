@@ -64,13 +64,13 @@
     },
     "features": [
       {
-        "title": "Phone number transfers",
+        "title": "Transfers via phone number",
         "moreLink": "",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Graphics/orange.svg",
         "frontPicture": "/assets/Screens/transfers.png",
         "items": [
-          "Pay your friends all over the world<br/>0% commission",
+          "Pay your friends all over the world<br/>with 0% fee",
           "Transfer money even to those who<br/>don't have a wallet yet",
           "No tax notice"
         ]
@@ -82,10 +82,10 @@
         "backPicture": "/assets/Graphics/pink.svg",
         "frontPicture": "/assets/Screens/invest.png",
         "items": [
-          "No paperwork needed to start investing",
-          "Invest via transparent decentralized<br/>exchanges",
+          "No paperwork is needed to start investing",
+          "Invest through transparent decentralized<br/>exchanges",
           "Buy one of the 20 most popular<br/>cryptocurrencies",
-          "Track your portfolio in an <br/> easy-to-use interface"
+          "Keep track of your portfolio with an<br/>easy-to-use interface"
         ]
       },
       {
@@ -95,8 +95,8 @@
         "backPicture": "/assets/Graphics/green.svg",
         "frontPicture": "/assets/Screens/overview.png",
         "items": [
-          "Withdraw money at any time with 0%<br/>commission",
-          "Use only decentralized protocols to<br/>make profit"
+          "Withdraw money at any time with a 0% fee",
+          "Use only decentralized protocols to make profit"
         ]
       }
     ],
