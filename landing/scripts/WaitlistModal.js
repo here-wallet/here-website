@@ -8,9 +8,8 @@ export class WaitlistModal extends HereModal {
     super("waitlist-modal")
     this.provider = new WaitlistProvider("#waitlist-modal");
     this.provider.onSubmit = () => {
-      console.log('fu')
-      this.close()
-      successModal.open()
-    }
+      this.close();
+      successModal.open();
+    };
   }
 }

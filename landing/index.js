@@ -1,5 +1,36 @@
 import { HeaderComponent } from "./scripts/HeaderComponent";
 import { WaitlistModal } from "./scripts/WaitlistModal";
+import {
+  QRCode,
+  lightQR,
+  darkQR,
+} from "@here-wallet/core/build/qrcode-strategy";
+
+const qr = new QRCode({
+  ...lightQR,
+  size: 220,
+  value: "https://appstore.herewallet.app/site",
+});
+
+document.querySelector(".qrcode-main").appendChild(qr.canvas);
+
+const qrSecond = new QRCode({
+  ...darkQR,
+  size: 168,
+  fill: {
+    type: "linear-gradient",
+    position: [0, 0, 1, 1],
+    colorStops: [
+      [0, "#34302C"],
+      [0.3, "#FD84E3"],
+      [0.85, "#34302C"],
+    ],
+  },
+  value: "https://appstore.herewallet.app/site",
+});
+
+document.querySelector(".qr-second").appendChild(qrSecond.canvas);
+
 
 const waitlistModal = new WaitlistModal();
 const headerInstance = new HeaderComponent();

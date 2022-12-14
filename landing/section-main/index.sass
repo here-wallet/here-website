@@ -25,7 +25,12 @@
 
 	@media (max-width: 480px)
 		display: flex
-	
+
+	@media (max-width: 420px)
+		& h1
+			font-size: 32px
+			line-height: 48px
+
 .main-mobile-near
 	display: flex
 	align-items: center
@@ -156,17 +161,17 @@
 
 	& h1
 		font-weight: 800
-		font-size: 64px
-		line-height: 84px
+		font-size: 56px
+		line-height: 64px
 		color: #2c3034
 		
 		@media (max-width: 1024px)
-			font-size: 52px
-			line-height: 62px
+			font-size: 48px
+			line-height: 56px
 
 		@media (max-width: 768px)
-			font-size: 64px
-			line-height: 84px
+			font-size: 42px
+			line-height: 64px
 			text-align: center
 			color: #fff
 			width: 402px
@@ -190,7 +195,7 @@
 		font-size: 16px
 		line-height: 22px
 		color: #F3EBEA
-		width: 129px
+		max-width: 129px
 
 	img:first-child
 		width: 220px

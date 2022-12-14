@@ -11,27 +11,19 @@ html(lang="en")
         link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild3139-6663-4364-b339-326261363738/152.png')
         link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild3139-6663-4364-b339-326261363738/152.png')
 
-        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Mali:wght@700&display=swap" rel="stylesheet")
+
         link(href="../assets/manrope/index.css", rel="stylesheet")
         link(href="./index.sass", rel="stylesheet")
-        title HERE Wallet
+        title HERE Santa Token
     body 
-        include header/index.pug
-        +header("/")
+        include ../landing/header/index.pug
+        +header("/santa", "#fff")
 
-        include section-main/index.pug
-
-        .page 
-            .page-background
-            include section-features/index.pug
-            include section-news/index.pug
-            include section-comparison/index.pug
-            include section-security/index.pug
-            include section-download/index.pug
-            include section-asks/index.pug
-            include section-partners/index.pug
-
-        include footer/index.pug
-        include waitlist-modal/index.pug
-
+        include ./main.pug
+        include ../landing/footer/index.pug
+        include ../landing/waitlist-modal/index.pug
+    
         script(type="module", src="./index.js")

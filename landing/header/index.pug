@@ -1,30 +1,47 @@
-header.header
-  .header-center
-    img.header-logo(src='/assets/logo.svg' alt='logo')
-    .header-links
-      for item in header.links
-        a.header-link(href=item.link)= item.text
-
-    .header-waitlist.waitlist-button
-      a Android waiting list
-
-    button.header-action
-
-  .header-body 
-    .header-mobile-links
-      for item in header.links
-        a.header-link(href=item.link)= item.text
+mixin header(active, useWhite)
+  header.header
+    .header-center
+      a(href="/")
+        img.header-logo(src='/assets/logo.svg' alt='logo')
       
-    .header-form
-      p.header-form-title
-        | Android waiting list
-        span .
-      
-      input.here-input(placeholder="Phone number")
-      button.here-button.light Submit 
-      .header-form-hr Or
-      a.here-button.pink.light(href=common.appStore)
-        | Download on App Store
+      .header-links
+        for item in header.links
+          if active == item.link
+            if useWhite
+              a.header-link.active-white(href=item.link) !{item.text}
+            else 
+              a.header-link.active(href=item.link) !{item.text}
+
+          else
+            a.header-link(href=item.link) !{item.text}
+
+      .header-waitlist.waitlist-button
+        a Android waiting list
+
+      button.header-action
+
+    .header-body
+      .header-mobile-links
+        for item in header.links
+          if active == item.link
+            if useWhite
+              a.header-link.active-white(href=item.link) !{item.text}
+            else 
+              a.header-link.active(href=item.link) !{item.text}
+
+          else
+            a.header-link(href=item.link) !{item.text}
+        
+      .header-form
+        p.header-form-title
+          | Android waiting list
+          span .
+        
+        input.here-input(placeholder="Phone number")
+        button.here-button.light Submit 
+        .header-form-hr Or
+        a.here-button.pink.light(href=common.appStore)
+          | Download on App Store
 
 .float-qr
   img(src=floatqr.qrcode)
