@@ -1,5 +1,6 @@
 import { successModal } from "./WaitlistModal";
 import { WaitlistProvider } from "./WaitlistProvider";
+import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
 
 export class HeaderComponent {
   provider = new WaitlistProvider(".header-form");
@@ -21,6 +22,10 @@ export class HeaderComponent {
     this.topButton.addEventListener("click", () => {
       document.body.scrollIntoView({ behavior: "smooth" });
     });
+
+    const value = "https://appstore.herewallet.app/site";
+    const qr = new QRCode({ ...lightQR, size: 80, value });
+    this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
 
     window.addEventListener("scroll", () => {
       this.header.classList.toggle("active", window.scrollY > 0);

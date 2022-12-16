@@ -28,11 +28,18 @@ const santaAmountInput =
   santaForm.querySelector<HTMLInputElement>(".amount-input")!;
 const santaButton = santaForm.querySelector<HTMLButtonElement>("button")!;
 
-santaButton.disabled = true;
+santaPhoneInput.value = localStorage.getItem("phone") ?? "";
+santaAmountInput.value = localStorage.getItem("amount") ?? "";
+
+santaButton.disabled =
+  isNaN(+formatAmount(santaAmountInput.value)) ||
+  !validatePhone(santaPhoneInput.value);
+
 santaAmountInput.addEventListener("input", (e) => {
   santaButton.disabled =
     isNaN(+formatAmount(santaAmountInput.value)) ||
     !validatePhone(santaPhoneInput.value);
+  localStorage.setItem("phone", santaAmountInput.value);
 });
 
 santaPhoneInput.addEventListener("input", (e) => {
@@ -42,6 +49,7 @@ santaPhoneInput.addEventListener("input", (e) => {
   santaButton.disabled =
     isNaN(+formatAmount(santaAmountInput.value)) ||
     !validatePhone(santaPhoneInput.value);
+  localStorage.setItem("phone", santaPhoneInput.value);
 });
 
 const run = async () => {
@@ -63,7 +71,7 @@ const run = async () => {
       const account = new Account(accountId, wallet, provider);
       const phoneNumber = formatPhone(santaPhoneInput.value);
       const amount = formatAmount(santaAmountInput.value);
-      await account.sendMoney(phoneNumber, amount, "Happy New Year!");
+      await account.sendSanta(phoneNumber, amount, "Happy New Year!");
     } else {
       modal.show();
     }

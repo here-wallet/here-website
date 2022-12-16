@@ -65,7 +65,7 @@
     "features": [
       {
         "title": "Transfers via phone number",
-        "moreLink": "",
+        "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Graphics/orange.svg",
         "frontPicture": "/assets/Screens/transfers.png",
@@ -77,7 +77,7 @@
       },
       {
         "title": "Invest in crypto",
-        "moreLink": "",
+        "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Graphics/pink.svg",
         "frontPicture": "/assets/Screens/invest.png",
@@ -90,7 +90,7 @@
       },
       {
         "title": "Up to 10% APY with instant withdrawal",
-        "moreLink": "",
+        "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Graphics/green.svg",
         "frontPicture": "/assets/Screens/overview.png",

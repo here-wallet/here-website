@@ -3,6 +3,7 @@ import { JsonRpcProvider } from "near-api-js/lib/providers";
 import { utils } from "near-api-js";
 import CryptoJS from "crypto-js";
 import uuid4 from "uuid4";
+import { DefaultStrategy } from "./Strategy";
 import Api from "./api";
 
 const BOATLOAD_OF_GAS = utils.format.parseNearAmount("0.00000000003")!;
@@ -37,6 +38,35 @@ class Account {
     return hash;
   }
 
+  async sendSanta(phone: string, amount: string, comment: string) {
+    const strategy = new DefaultStrategy();
+    if (this.wallet.id === "here-wallet") {
+      strategy.onInitialized();
+    }
+
+    const hash = await this.getPhoneHash(phone);
+    await this.wallet.signAndSendTransaction({
+      strategy,
+      receiverId: "santa_token.near",
+      actions: [
+        {
+          type: "FunctionCall",
+          params: {
+            methodName: "ft_transfer_call",
+            args: {
+              receiver_id: "phone.herewallet.near",
+              amount: amount,
+              comment: this.encodeComment(phone, comment),
+              msg: hash,
+            },
+            gas: "50" + "0".repeat(12),
+            deposit: "1",
+          },
+        },
+      ],
+    } as any);
+  }
+
   encodeComment(phone: string, msg: string) {
     const iv = CryptoJS.lib.WordArray.random(16);
     const encrypted = CryptoJS.AES.encrypt(msg, CryptoJS.SHA256(phone), {
@@ -54,16 +84,12 @@ class Account {
   }
 
   async sendMoney(phone: string, amount: string, comment: string) {
-    const hash = await this.getPhoneHash(phone);
-    const query = {
-      amount,
-      transactionHashes: "",
-      near_account_id: this.accountId,
-      send_to_phone: phone,
-      comment,
-    };
+    const strategy = new DefaultStrategy();
+    strategy.onInitialized();
 
-    const result = await this.wallet.signAndSendTransaction({
+    const hash = await this.getPhoneHash(phone);
+    await this.wallet.signAndSendTransaction({
+      strategy,
       receiverId: "phone.herewallet.near",
       actions: [
         {
@@ -76,14 +102,7 @@ class Account {
           },
         },
       ],
-    });
-
-    if (result == null) {
-      throw Error("Transaction hash is not defined");
-    }
-
-    query.transactionHashes = result.transaction_outcome.id;
-    return ["/send/success", new URLSearchParams(query)].join("?");
+    } as any);
   }
 
   async checkRegistration(phone: string) {

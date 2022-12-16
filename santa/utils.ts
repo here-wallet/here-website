@@ -5,7 +5,7 @@ export const validatePhone = (phone: string) => {
 
 export const formatPhone = (phone: string) => {
   if (phone === "+") return "";
-  return "+" + phone.replaceAll(/[\-\(\) \+]/g, "");
+  return phone.replaceAll(/[\-\(\) \+]/g, "");
 };
 
 export const formatAmount = (amt: string) => {
