@@ -1,0 +1,68 @@
+.main
+    h1 
+        | Reveal Santa
+        br
+        | Tokens HERE
+    
+    button.connect-wallet 
+        | Connect wallet
+
+    .sponsors
+        p Sponsored by: 
+        img(src="/assets/santa_drop/a24.svg")
+        img(src="/assets/santa_drop/tonic.svg")
+        img(src="/assets/santa_drop/paras.svg")
+
+.loading-screen.none
+    .lds-ring
+        div
+        div
+        div
+        div
+    
+.no-gifts.none
+    h1 
+        | We haven’t found 
+        br
+        | santa tokens in
+        br
+        | your account
+    a.learn-more(href="https://herewallet.app") Learn more about contest
+    a.support-link Experience problems? Contact support
+
+.gifts-screen.none
+    .cards
+        .gift-card.token-card
+            .backside
+                p TAP to open
+            .frontside 
+                p.tokens 3
+                p.tokens-label NEAR
+                p.description Assets have been transferred to your account
+        
+        .gift-card.apy-card
+            .backside
+                p TAP to open
+            .frontside 
+                p.apy +0.17
+                p.apy-name APY
+                p.description Rare prize. Bonus APY for a year. APY in your profile will be updated in couple days.
+
+        .gift-card.nft-card
+            .backside
+                p TAP to open
+            .frontside 
+                img.nft
+                p.description Sign in here to learn more about NFT bonuses.
+
+
+    button.connect-wallet.logout-button Logout
+
+    .gift-info
+        p.estimated-price 
+            | Estimated price ≈ 
+            span 25$
+    
+        .sponsored
+            | Your prizes are sponsored by:
+            img(src="/assets/santa_drop/a24.svg")

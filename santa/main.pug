@@ -4,14 +4,14 @@
         br
         | a Christmas miracle
 
-    //- .statistics
-    //-     .statistics-item 
-    //-         p.statistics-item-header TOTAL STT Sent
-    //-         p.statistics-item-number 234,546
+    .statistics
+        .statistics-item
+            p.statistics-item-header TOTAL Tokens
+            p.statistics-item-number.hide#total-sent 1000
 
-    //-     .statistics-item 
-    //-         p.statistics-item-header TOTAL Holders
-    //-         p.statistics-item-number 1546
+        .statistics-item 
+            p.statistics-item-header TOTAL Earn
+            p.statistics-item-number.hide#total-earn 1000
 
     img.santa-logo(src="/assets/santa/santa.svg")
 
@@ -26,16 +26,32 @@
 
         .info-list-item 
             .info-list-item-number 3
-            p Tokens increase when you gift them, 50 STT are generated for each gift.
+            p 
+                | Gift more than 50 STT 
+                br
+                | to a new user to get 
+                br
+                | 75 STT back.
 
     .gift-now 
         h2 100 STT ~ 1$
 
         .gift-now-form 
             h3 Gift now!
-            input.amount-input.here-input(placeholder="Amount (SANTA)" min="0" max="100" type="number")
-            input.phone-input.here-input(placeholder="Phone number")
-            button Open transaction to sign →
+            p Gift Santa Tokens here if you have them
+            .input-wrap.none
+                input.amount-input.here-input(placeholder="Amount (SANTA)" min="0" max="100" type="number")
+                span.max
+            
+            .input-wrap.none
+                input.phone-input.here-input(placeholder="Phone number")
+            
+            button Login to wallet →
+
+            a(href="https://medium.com/@nearhere/santa-tokens-proof-of-good-4de55eece1d0").gift-now-form-error.none
+                | You don’t have STT on your account.
+                br
+                | Click here to participate in a contest
 
     .sponsors
         h2 Sponsors

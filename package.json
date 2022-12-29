@@ -1,9 +1,9 @@
 {
   "scripts": {
     "fetch": "node ./fetch-data.js",
-    "deploy": "npm run build && sh ./deploy.sh",
-    "build": "npm run fetch && parcel build ./landing/index.pug ./santa/index.pug",
-    "start": "npm run fetch && parcel ./landing/index.pug ./santa/index.pug"
+    "deploy": "rm -rf build && npm run build && sh ./deploy.sh",
+    "build": "npm run fetch && parcel build ./landing/index.pug ./santa/index.pug ./gifts/index.pug",
+    "start": "npm run fetch && parcel ./landing/index.pug ./santa/index.pug ./gifts/index.pug"
   },
   "type": "module",
   "devDependencies": {
@@ -19,17 +19,17 @@
     "process": "^0.11.10"
   },
   "dependencies": {
-    "@here-wallet/core": "^0.1.3",
-    "@near-wallet-selector/core": "^7.3.0",
-    "@near-wallet-selector/here-wallet": "^7.3.0",
-    "@near-wallet-selector/ledger": "^7.3.0",
-    "@near-wallet-selector/math-wallet": "^7.3.0",
-    "@near-wallet-selector/meteor-wallet": "^7.3.0",
-    "@near-wallet-selector/modal-ui-js": "^7.3.0",
-    "@near-wallet-selector/my-near-wallet": "^7.3.0",
-    "@near-wallet-selector/near-wallet": "^7.3.0",
-    "@near-wallet-selector/nightly": "^7.3.0",
-    "@near-wallet-selector/sender": "^7.3.0",
+    "@here-wallet/core": "file:../here-wallet-core",
+    "@near-wallet-selector/core": "^7.4.0",
+    "@near-wallet-selector/here-wallet": "^7.4.0",
+    "@near-wallet-selector/ledger": "^7.4.0",
+    "@near-wallet-selector/math-wallet": "^7.4.0",
+    "@near-wallet-selector/meteor-wallet": "^7.4.0",
+    "@near-wallet-selector/modal-ui-js": "^7.4.0",
+    "@near-wallet-selector/my-near-wallet": "^7.4.0",
+    "@near-wallet-selector/near-wallet": "^7.4.0",
+    "@near-wallet-selector/nightly": "^7.4.0",
+    "@near-wallet-selector/sender": "^7.4.0",
     "bn.js": "^5.2.1",
     "crypto-js": "^4.1.1",
     "near-api-js": "^0.44.2",

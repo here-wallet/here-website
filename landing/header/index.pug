@@ -1,7 +1,7 @@
 mixin header(active, useWhite)
   header.header
     .header-center
-      a(href="/")
+      a(href="/", style="display: flex")
         img.header-logo(src='/assets/logo.svg' alt='logo')
       
       .header-links
@@ -14,9 +14,13 @@ mixin header(active, useWhite)
 
           else
             a.header-link(href=item.link) !{item.text}
-
-      .header-waitlist.waitlist-button
-        a Android waiting list
+      .header-right
+        for item in header.socials
+          a.social-link(href=item.link)
+            img(src=item.icon)
+          
+        .header-waitlist.waitlist-button
+          a Android waiting list
 
       button.header-action
 

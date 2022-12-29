@@ -28,6 +28,16 @@
     },
     "header": {
       "waitlistLocale": "Android waiting list",
+      "socials": [
+        {
+          "icon": "/assets/Socials/Twitter-light.svg",
+          "link": "https://twitter.com/here_wallet"
+        },
+        {
+          "icon": "/assets/Socials/Discord-light.svg",
+          "link": "https://discord.gg/8Q3gw3gsD2"
+        }
+      ],
       "links": [
         {
           "text": "Home",

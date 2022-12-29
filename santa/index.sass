@@ -7,6 +7,13 @@ body
     background-color: #E06262
     position: relative
 
+.hide
+    opacity: 0
+    transform: translateY(12px)
+
+.none
+    display: none
+
 body::before
     display: block
     content: ""
@@ -49,19 +56,23 @@ footer
 
 .santa-logo
     max-width: 566px
+    height: 694px
     width: 100%
+    @media (max-width: 720px)
+        max-height: 566px
+        height: 100%
 
 .statistics
-    max-width: 600px
+    max-width: 800px
     width: 100%
     margin-top: 56px
     display: flex
     align-items: center
-    justify-content: center
     flex-wrap: wrap
-    gap: 32px
+    gap: 64px
 
     &-item
+        flex: 1
         display: flex
         flex-direction: column
         justify-content: center
@@ -84,12 +95,13 @@ footer
         font-size: 80px
         line-height: 104px
         font-feature-settings: 'liga' off
+        transition: 0.5s opacity, 0.5s transform
         color: #F3EBEA
         margin: 0
         @media (max-width: 720px)
             font-size: 56px
             line-height: 80px
-    
+
 .info-list
     margin-top: 56px
     display: flex
@@ -167,6 +179,7 @@ footer
     justify-content: center
     align-items: center
     box-sizing: border-box
+    position: relative
 
     @media (max-width: 720px)
         border-radius: 64px
@@ -186,22 +199,64 @@ footer
         font-feature-settings: 'liga' off
         color: #2C3034
         margin: 0
-        margin-bottom: 48px
+
         @media (max-width: 720px)
             font-size: 40px
-        
+
+    p
+        font-family: 'Manrope'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 25px
+        text-align: center
+        color: #6B6661
+        margin: 0
+        margin-top: 12px
+        margin-bottom: 48px
+
     input
         max-width: 416px
         width: 100%
         box-sizing: border-box
+        -moz-appearance: textfield
 
-    input + input
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    .input-wrap + .input-wrap
         margin-top: 12px
+        margin-bottom: 32px
+
+    .input-wrap
+        position: relative
+        max-width: 416px
+        width: 100%
+        span
+            font-family: 'Manrope'
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            color: #6B6661
+            position: absolute
+            right: 16px
+            top: 17px
+
+    a
+        margin-top: 8px
+        font-family: 'Manrope'
+        font-style: normal
+        font-weight: 700
+        font-size: 14px
+        line-height: 19px
+        text-align: center
+        color: #D63E3E
 
     button
         max-width: 416px
         width: 100%
-        margin-top: 32px
         background: #2C3034
         border-radius: 32px
         font-family: 'Manrope'
@@ -238,7 +293,7 @@ footer
         margin: 0
         @media (max-width: 720px)
             font-size: 40px
-        
+
     &-row
         margin-top: 84px
         display: flex

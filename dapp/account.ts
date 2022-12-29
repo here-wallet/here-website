@@ -1,9 +1,9 @@
 import { Wallet } from "@near-wallet-selector/core";
+import { DefaultStrategy } from "@here-wallet/core/build/strategy";
 import { JsonRpcProvider } from "near-api-js/lib/providers";
 import { utils } from "near-api-js";
 import CryptoJS from "crypto-js";
 import uuid4 from "uuid4";
-import { DefaultStrategy } from "./Strategy";
 import Api from "./api";
 
 const BOATLOAD_OF_GAS = utils.format.parseNearAmount("0.00000000003")!;

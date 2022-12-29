@@ -8,7 +8,6 @@
     &-center
         display: flex
         align-items: center
-        justify-content: space-between
         padding: 0 20px
         height: 72px
         max-width: 1176px
@@ -42,18 +41,44 @@
         color: #fff
         border-bottom: 2px solid #fff
 
+    &-right
+        margin-left: auto
+        align-items: center
+        display: flex
+        gap: 16px
+
+    .social-link
+        display: flex
+        transition: 0.2s opacity
+        @media (max-width: 920px)
+            display: none
+        &:hover
+            opacity: 0.8
+
     &-waitlist
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0 16px
         cursor: pointer
         font-weight: 600
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
+        border: 1px solid #F3EBEA
+        transition: 0.2s background
+        border-radius: 24px
+        height: 40px
+        &:hover
+            background: rgba(255, 255, 255, .1)
+
         @media (max-width: 768px)
             display: none
 
     &-links
         display: flex
         align-items: center
+        margin-left: 64px
         gap: 28px
         @media (max-width: 768px)
             display: none
