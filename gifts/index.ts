@@ -91,18 +91,23 @@ const renderCards = (data) => {
     document.querySelector<HTMLImageElement>(".sponsored img")!;
   sponsorImage.src = getSponsor(data.sponsor);
 
-  const nftCard = document.querySelector(".nft-card")!;
+  const nftCard = document.querySelector<HTMLAnchorElement>(".nft-card")!;
   const nftImage = document.querySelector<HTMLImageElement>(".nft")!;
   nftCard.classList.toggle("none", data.nft == null);
+  nftCard.querySelector("a")!.href = data.nft_trx;
   nftImage.src = data.nft;
 
+  const tokenCard = document.querySelector<HTMLAnchorElement>(".token-card")!;
   const tokenNumber = document.querySelector(".tokens")!;
   const tokenLabel = document.querySelector(".tokens-label")!;
   tokenLabel.innerHTML = data.near != null ? "NEAR" : "USDC";
   tokenNumber.innerHTML = data.near || data.usdc;
+  tokenCard.querySelector("a")!.href = data.near_trx || data.usdc_trx;
 
+  const apyCard = document.querySelector<HTMLAnchorElement>(".apy-card")!;
   const apyLabel = document.querySelector(".apy")!;
   apyLabel.innerHTML = "+" + data.api;
+  apyCard.querySelector("a")!.href = data.api_trx;
 
   const estimatedPrice = document.querySelector(".estimated-price span")!;
   estimatedPrice.innerHTML = "&nbsp;" + data.estimated_prize + "$";
@@ -124,7 +129,9 @@ const run = async () => {
   };
 
   Array.from(document.querySelectorAll(".gift-card")).forEach((card) => {
-    card.addEventListener("click", () => card.classList.toggle("open"));
+    card.addEventListener("click", () => {
+      card.classList.add("open");
+    });
   });
 
   const connectWallet = document.querySelector(".connect-wallet")!;

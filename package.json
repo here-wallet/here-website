@@ -1,7 +1,7 @@
 {
   "scripts": {
     "fetch": "node ./fetch-data.js",
-    "deploy": "rm -rf build && npm run build && sh ./deploy.sh",
+    "deploy": "rm -rf description && npm run build && sh ./deploy.sh",
     "build": "npm run fetch && parcel build ./landing/index.pug ./santa/index.pug ./gifts/index.pug",
     "start": "npm run fetch && parcel ./landing/index.pug ./santa/index.pug ./gifts/index.pug"
   },
