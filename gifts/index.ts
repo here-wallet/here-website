@@ -86,7 +86,7 @@ const signOut = () => {
   showScreen(mainScreen);
 };
 
-const renderCards = (data) => {
+const renderCards = (data: any) => {
   const sponsorImage =
     document.querySelector<HTMLImageElement>(".sponsored img")!;
   sponsorImage.src = getSponsor(data.sponsor);

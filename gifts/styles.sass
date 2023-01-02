@@ -133,7 +133,7 @@ body
         color: #FFFFFF
         margin: 0
 
-.loading-screen, .no-gifts
+.loading-screen
     position: fixed
     top: 0
     left: 0
@@ -148,18 +148,34 @@ body
 .loading-screen
     background: rgba(0, 0, 0, 0.6)
 
+.no-gifts 
+    padding: 100px 10%
+    min-height: 100vh
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: rgba(0, 0, 0, 0.9)
+
 .no-gifts h1 
     font-family: 'Mali'
     font-weight: 700
-    font-size: 64px
-    line-height: 83px
+    font-size: 48px
     text-align: center
     text-transform: uppercase
     color: #FFFFFF
-    margin-top: auto
+
+.no-gifts p
+    font-family: 'Mali'
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
 
 .no-gifts .learn-more
-    margin-top: 48px
     width: 272px
     height: 64px
     box-sizing: border-box
