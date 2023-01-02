@@ -43,7 +43,6 @@ const getGifts = async (token: string) => {
     method: "POST",
   });
 
-  if (res.ok === false) return null;
   return await res.json();
 };
 
@@ -70,11 +69,14 @@ const noGiftsScreen = document.querySelector<HTMLDivElement>(".no-gifts")!;
 const loadingScreen =
   document.querySelector<HTMLDivElement>(".loading-screen")!;
 
-const showScreen = (screen: HTMLDivElement) => {
+const showScreen = (screen: HTMLDivElement, error?: string) => {
   mainScreen.classList.add("none");
   giftsScreen.classList.add("none");
   noGiftsScreen.classList.add("none");
   loadingScreen.classList.add("none");
+
+  const detail = noGiftsScreen.querySelector(".error-detail");
+  if (error && detail) detail.textContent = error;
 
   screen.style.opacity = "0";
   screen.classList.remove("none");
@@ -118,9 +120,12 @@ const run = async () => {
 
   const signIn = async (token: string) => {
     window.localStorage.setItem("token", token);
-    const data = await getGifts(token);
-    if (data == null) {
-      showScreen(noGiftsScreen);
+    const data = await getGifts(token).catch(() => ({
+      detail: "Check your internet connection",
+    }));
+
+    if (data.detail != null) {
+      showScreen(noGiftsScreen, data.detail);
       return;
     }
 
