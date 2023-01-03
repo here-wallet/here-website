@@ -151,8 +151,10 @@ const run = async () => {
     signIn(token);
   });
 
-  const logoutWallet = document.querySelector(".logout-button")!;
-  logoutWallet.addEventListener("click", () => signOut());
+  const logoutWallets = document.querySelectorAll(".logout-button")!;
+  logoutWallets.forEach((button) => {
+    button.addEventListener("click", () => signOut());
+  });
 
   const token = window.localStorage.getItem("token");
   if (token != null) signIn(token);
