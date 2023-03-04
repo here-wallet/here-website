@@ -19,6 +19,17 @@ export class HeaderComponent {
     this.floatQr.classList.toggle("active", window.scrollY > 600);
     this.topButton.classList.toggle("active", window.scrollY > 600);
 
+    // WTF? Links not working native on mobile???
+    [...this.headerBody.querySelectorAll("a")].forEach((el) =>
+      el.addEventListener("pointerdown", (e) => {
+        if (e.target instanceof HTMLElement) {
+          if (e.target.tagName === "A") {
+            window.location.assign(e.target.href);
+          }
+        }
+      })
+    );
+
     this.topButton.addEventListener("click", () => {
       document.body.scrollIntoView({ behavior: "smooth" });
     });
