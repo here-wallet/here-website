@@ -9,7 +9,7 @@ import {
 const qr = new QRCode({
   ...lightQR,
   size: 220,
-  value: "https://appstore.herewallet.app/site",
+  value: "https://download.herewallet.app",
 });
 
 document.querySelector(".qrcode-main").appendChild(qr.canvas);
@@ -26,7 +26,7 @@ const qrSecond = new QRCode({
       [0.85, "#34302C"],
     ],
   },
-  value: "https://appstore.herewallet.app/site",
+  value: "https://download.herewallet.app",
 });
 
 document.querySelector(".qr-second").appendChild(qrSecond.canvas);

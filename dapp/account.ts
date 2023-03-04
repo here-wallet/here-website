@@ -1,5 +1,4 @@
 import { Wallet } from "@near-wallet-selector/core";
-import { DefaultStrategy } from "@here-wallet/core/build/strategy";
 import { JsonRpcProvider } from "near-api-js/lib/providers";
 import { utils } from "near-api-js";
 import CryptoJS from "crypto-js";
@@ -39,14 +38,8 @@ class Account {
   }
 
   async sendSanta(phone: string, amount: string, comment: string) {
-    const strategy = new DefaultStrategy();
-    if (this.wallet.id === "here-wallet") {
-      strategy.onInitialized();
-    }
-
     const hash = await this.getPhoneHash(phone);
     await this.wallet.signAndSendTransaction({
-      strategy,
       receiverId: "santa_token.near",
       actions: [
         {
@@ -84,12 +77,8 @@ class Account {
   }
 
   async sendMoney(phone: string, amount: string, comment: string) {
-    const strategy = new DefaultStrategy();
-    strategy.onInitialized();
-
     const hash = await this.getPhoneHash(phone);
     await this.wallet.signAndSendTransaction({
-      strategy,
       receiverId: "phone.herewallet.near",
       actions: [
         {
@@ -103,22 +92,6 @@ class Account {
         },
       ],
     } as any);
-  }
-
-  async checkRegistration(phone: string) {
-    const hash = await this.getPhoneHash(phone);
-    const args = JSON.stringify({ phone: hash });
-
-    const res = await this.provider.query<any>({
-      request_type: "call_function",
-      account_id: process.env.REACT_APP_CONTRACT,
-      method_name: "get_account_id",
-      args_base64: Buffer.from(args).toString("base64"),
-      finality: "optimistic",
-    });
-
-    const data = JSON.parse(Buffer.from(res.result).toString());
-    return data;
   }
 
   async logout() {

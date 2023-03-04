@@ -23,7 +23,7 @@ export class HeaderComponent {
       document.body.scrollIntoView({ behavior: "smooth" });
     });
 
-    const value = "https://appstore.herewallet.app/site";
+    const value = "https://download.herewallet.app";
     const qr = new QRCode({ ...lightQR, size: 80, value });
     this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
 

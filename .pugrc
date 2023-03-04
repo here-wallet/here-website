@@ -52,8 +52,8 @@
           "link": "/howto"
         },
         {
-          "text": "Santa Token",
-          "link": "/santa"
+          "text": "Staking",
+          "link": "https://my.herewallet.app/stake"
         },
         {
           "text": "Docs",

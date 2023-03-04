@@ -144,6 +144,8 @@ const run = async () => {
     const sign = await here.signMessage({
       message: "Log in to receive Christmas gifts!",
       receiver: "HERE Santa",
+      // @ts-ignore
+      nonce: uuid4(),
     });
 
     showScreen(loadingScreen);
