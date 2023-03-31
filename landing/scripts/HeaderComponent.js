@@ -15,7 +15,7 @@ export class HeaderComponent {
     this.btn = this.header.querySelector(".header-action");
     this.btn.addEventListener("click", () => this.toggleModal());
 
-    this.header.classList.toggle("active", window.scrollY > 0);
+    this.header.classList.toggle("active", window.scrollY > 40);
     this.floatQr.classList.toggle("active", window.scrollY > 600);
     this.topButton.classList.toggle("active", window.scrollY > 600);
 
@@ -39,7 +39,7 @@ export class HeaderComponent {
     this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
 
     window.addEventListener("scroll", () => {
-      this.header.classList.toggle("active", window.scrollY > 0);
+      this.header.classList.toggle("active", window.scrollY > 40);
       this.floatQr.classList.toggle("active", window.scrollY > 600);
       this.topButton.classList.toggle("active", window.scrollY > 600);
     });

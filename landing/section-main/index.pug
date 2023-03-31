@@ -1,21 +1,19 @@
 main.main
-  .main-left
   .main-center
     .main-header
-      h1 !{main.title}
+      .main-header__left
+        img(src='/assets/logo-ottersec.svg')
+      .main-header__center
+        h1 !{main.title}
+        h3 !{main.subTitle}
+        p !{main.textTitle}
+      .main-header__right
+        .main-header__appclip
+          p !{main.qrcodeLocale}
+          span.qrcode-main
+          
       
-    .main-appclip
-      span(style="width: 220px").qrcode-main
-      img(src='/assets/icons/arrow.left.svg')
-      p !{main.qrcodeLocale}
-    .main-near
-      img(src='/assets/Socials/near-small.svg')
-      p= main.poweredbynear
-    .main-stub
-    .main-bottom
-    .main-scroll
-      p= main.scrolldown
-  .main-right
+      
 
 main.main-mobile
   h1 !{main.title}
@@ -27,3 +25,8 @@ main.main-mobile
     | Download HERE
   
   img(src="/assets/icons/arrow.down.white.svg", alt="arrow")
+
+.interface
+  for item in interface
+    .interface-item
+      img(src=item.image)

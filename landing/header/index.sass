@@ -1,13 +1,44 @@
-.header
+.preheader
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 2
     width: 100%
-    box-sizing: border-box
-    position: fixed
-    transition: 0.2s background
-    z-index: 10000
+    height: 40px
+    background-color: #232629
 
     &-center
         display: flex
         align-items: center
+        width: 1121px
+        margin: 0 auto
+        @media (max-width: 1150px)
+            width: 100%
+    
+    &__left
+        padding: 0 60px 0 0
+    
+    &_big-brain
+        margin: 0 18px 0 0
+
+    &__right
+        margin-left: auto
+        
+
+.header
+    width: 100%
+    box-sizing: border-box
+    position: absolute
+    top: 40px
+    transition: 0.2s background
+    z-index: 10000
+    &.active
+        position: fixed
+        top: 0
+    &-center
+        display: flex
+        align-items: center
+        justify-content: space-between
         padding: 0 20px
         height: 72px
         max-width: 1176px
@@ -22,7 +53,8 @@
 
     &-link
         width: fit-content
-        font-weight: 600
+        margin: 0 32px
+        font-weight: 700
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -42,11 +74,22 @@
         border-bottom: 2px solid #fff
 
     &-right
-        margin-left: auto
         align-items: center
         display: flex
         gap: 16px
 
+    .header-download
+        display: block
+        width: 226px
+        height: 40px
+        font-size: 16px
+        text-align: center
+        line-height: 40px
+        color: #fff
+        text-decoration: none
+        font-weight: 700
+        background-color: #414548
+        border-radius: 16px
     .social-link
         display: flex
         transition: 0.2s opacity
@@ -78,7 +121,6 @@
     &-links
         display: flex
         align-items: center
-        margin-left: 64px
         gap: 28px
         @media (max-width: 768px)
             display: none

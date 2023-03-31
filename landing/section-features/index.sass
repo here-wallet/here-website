@@ -1,4 +1,9 @@
+.margin-minus
+    position: relative
+    z-index: 2
+    margin: -180px auto 0
 .features
+    margin: 0 auto 0
     padding: 104px 64px
     overflow: hidden
     @media (max-width: 768px)
@@ -13,11 +18,21 @@
     @media (max-width: 620px)
         flex-direction: column-reverse
         gap: 40px
+    .feature-picture-phone
+        img
+            width: 100%
+        
+        .no-slider
+            z-index: 2
 
     &:nth-child(even)
         flex-direction: row-reverse
         @media (max-width: 620px)
             flex-direction: column-reverse
+
+    &:nth-child(2) .feature-picture-phone
+        width: 320px
+        margin-top: -30px
 
     & + & 
         padding-top: 96px
@@ -32,10 +47,13 @@
         align-items: center
         justify-content: center
         user-select: none
-
+        
     &-picture-bg
         width: 576px
         position: absolute
+        z-index: 1
+        @media (max-width: 1100px)
+            width: 500px
         @media (max-width: 768px)
             width: 360px
 
@@ -43,6 +61,8 @@
         width: 490px
         z-index: 100
         object-fit: contain
+        @media (max-width: 1100px)
+            width: 414px
         @media (max-width: 768px)
             width: 280px
 
@@ -53,7 +73,7 @@
 
     &-content h2
         font-weight: 900
-        font-size: 56px
+        font-size: 54px
         line-height: 69px
         letter-spacing: 0.02em
         color: #2c3034
@@ -126,3 +146,38 @@
         background: #fd84e3
         margin-right: 8px
         margin-top: 8px
+
+// Slider
+.slider
+    position: relative
+    z-index: 2
+
+.slides
+    position: relative
+    z-index: 2
+    height: 300px
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        transition: opacity 1s ease-in-out
+
+        &.active
+            opacity: 1
+
+.pagination
+    position: relative
+    z-index: 3
+    text-align: center
+    & span
+        display: inline-block
+        width: 8px
+        height: 8px
+        margin: 0 4px
+        border: none
+        background-color: #D9CDCB
+        cursor: pointer
+        &.active
+            background-color: #FD84E3

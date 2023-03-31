@@ -8,7 +8,7 @@ import {
 
 const qr = new QRCode({
   ...lightQR,
-  size: 220,
+  size: 128,
   value: "https://download.herewallet.app",
 });
 
@@ -78,7 +78,7 @@ const animateFeaturesParalax = () => {
     feature.style.transition = "0.1s transform";
     feature.style.transform = `translateY(${Math.max(
       0,
-      box.top / 6 - offset
+      box.top / 9 - offset
     )}px)`;
   });
 };
@@ -144,3 +144,59 @@ secureBanner?.addEventListener("click", (e) => {
   if (e.target.tag === "a") return;
   secureBanner.querySelector(".secure-banner-link")?.click();
 });
+
+
+function slider(sliderElement) {
+  const slides = sliderElement.querySelectorAll('.slides img');
+  const pagination = sliderElement.querySelector('.pagination');
+
+  let currentSlide = 0;
+  let slideInterval;
+
+  function startSlider() {
+    slides[0].classList.add('active');
+    slideInterval = setInterval(nextSlide, 3000);
+  }
+
+  function pauseSlider() {
+    clearInterval(slideInterval);
+  }
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+    updatePagination(sliderElement);
+  }
+
+  function previousSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    updatePagination(sliderElement);
+  }
+
+  function updatePagination(sliderElement) {
+    const pagination = sliderElement.querySelector('.pagination');
+    pagination.innerHTML = '';
+    for (let i = 0; i < slides.length; i++) {
+      const span = document.createElement('span');
+      if (i === currentSlide) {
+        span.classList.add('active');
+      }
+      span.addEventListener('click', () => {
+        pauseSlider();
+        slides[currentSlide].classList.remove('active');
+        currentSlide = i;
+        slides[currentSlide].classList.add('active');
+        updatePagination(sliderElement);
+      });
+      pagination.appendChild(span);
+    }
+  }
+
+  startSlider();
+  updatePagination(sliderElement);
+}
+
+document.querySelectorAll('.slider').forEach(sliderElement => slider(sliderElement));

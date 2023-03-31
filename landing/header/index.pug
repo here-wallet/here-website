@@ -15,12 +15,8 @@ mixin header(active, useWhite)
           else
             a.header-link(href=item.link) !{item.text}
       .header-right
-        for item in header.socials
-          a.social-link(href=item.link)
-            img(src=item.icon)
-          
-        .header-waitlist.waitlist-button
-          a Android waiting list
+        for item in header.downloads
+          a.header-download(href=item.link) !{item.text}
 
       button.header-action
 
@@ -46,6 +42,14 @@ mixin header(active, useWhite)
         .header-form-hr Or
         a.here-button.pink.light(href=common.appStore)
           | Download on App Store
+
+.preheader
+  .preheader-center
+    .preheader__left.preheader-column
+      img.preheader_big-brain.preheader-logo(src='/assets/logo-big-brain.svg' alt='Big Brain')
+      img.preheader_near.preheader-logo(src='/assets/logo-near.svg' alt='Near')
+    .preheader__right.preheader-column
+      img.preheader_powered-by-near.preheader-logo(src='/assets/powered-by-near.svg' alt='Powered by Near')
 
 .float-qr
   .qrcode

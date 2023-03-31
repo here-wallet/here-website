@@ -1,3 +1,7 @@
+body
+	background-image: url(../assets/grid-perspective.svg)
+	background-position: 50% 0
+	background-repeat: no-repeat
 .main-mobile
 	width: 100%
 	height: 500px
@@ -46,226 +50,79 @@
 		margin: 0
 
 .main
-	display: flex
 	width: 100%
-	background: #2c3034
+	margin: 0 0 80px 0
 	position: relative
 	@media (max-width: 480px)
 		display: none
 
-.main-left::before
-	content: ""
-	background: #FDBF1C
-	border-radius: 0 16px 0px 0
-	display: flex
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	height: 72px
 
-	@media (max-width: 768px)
-		background: #FD84E3
-		border-radius: 0 16px 16px 0
-		height: 308px
-		right: 0
-		left: 0
-		top: 84px
-
-.main-left::after
-	content: ""
-	background: #FDBF1C
-	border-radius: 0 16px 0px 0
-	display: flex
-	position: absolute
-	top: 416px
-	left: 0
-	right: 0
-	height: 128px
-
-	@media (max-width: 768px)
-		background: rgba(253, 191, 28, 1)
-		border-radius: 0 16px 16px 0
-		height: 308px
-		right: 0
-		left: 0
-		top: 430px
-
-.main-left, .main-right
-	position: relative
-	height: 100%
-	flex: 1
-
-.main-right::before
-	content: ""
-	background: #FDBF1C
-	border-radius: 16px 0 0 0px
-	display: flex
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	height: 380px
-
-	@media (max-width: 768px)
-		background: #FD84E3
-		border-radius: 16px 0 0 16px
-		height: 308px
-		right: 0
-		left: 0
-		top: 84px
-
-
-.main-right::after
-	content: ""
-	background: #FDBF1C
-	border-radius: 0px 0 0 16px
-	display: flex
-	position: absolute
-	top: 508px
-	left: 0
-	right: 0
-	height: 128px
-
-	@media (max-width: 768px)
-		background: rgba(253, 191, 28, 1)
-		border-radius: 16px 0 0 16px
-		height: 308px
-		right: 0
-		left: 0
-		top: 430px
-
-.main-center
-	max-width: 1176px
-	margin-top: 72px
-	display: flex
-	flex-wrap: wrap
-
-	@media (max-width: 768px)
-		max-width: 615px
-		margin-top: 112px
-
-.main-center div
-	width: 50%
-	@media (max-width: 768px)
-		width: 100%
-
-.main-header
-	background-color: #fd84e3
-	border-radius: 0px 16px
-	padding: 28px 20px
-	box-sizing: border-box
-	display: flex
-	align-items: center
-	height: 308px
-
-	& h1
-		font-weight: 800
-		font-size: 56px
-		line-height: 64px
-		color: #2c3034
-		
-		@media (max-width: 1024px)
-			font-size: 48px
-			line-height: 56px
+	&-center
+		max-width: 1095px
+		margin: 72px auto 0 auto
+		flex-wrap: wrap
 
 		@media (max-width: 768px)
-			font-size: 42px
-			line-height: 64px
+			max-width: 615px
+			margin-top: 112px
+
+	&-header
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+		padding: 92px 0 0 0
+
+		&__left
+			padding: 0 0 0 8px
+			img
+				margin: 0 0 50px 0
+		&__center
 			text-align: center
-			color: #fff
-			width: 402px
-			margin: auto
-			margin-top: 16px
+			@mixin fontStyle
+				font-size: 80px
+				font-weight: 900
+				line-height: 1
+				text-transform: uppercase
+			h1
+				@include fontStyle
+				background: linear-gradient(90.02deg, #FDBE1D 18.72%, #FCA857 41.42%, #FC668B 61.68%, #C74AD5 79.52%)
+				color: transparent
+				background-clip: text
+				-webkit-background-clip: text
+			h3
+				@include fontStyle
+				margin: 0 0 18px 0
+				background: linear-gradient(180deg, #F3EBEA 55.15%, rgba(243, 235, 234, 0.6) 89.29%)
+				color: transparent
+				background-clip: text
+				-webkit-background-clip: text
 
-	@media (max-width: 768px)
-		background-color: transparent
-		padding: 0
-		height: fit-content
-		width: 100%
+			p
+				margin: 0
+				padding: 0
+				font-size: 20px
+				font-weight: 700
+				color: rgba(243,235,234, .6)
+			
+		&__appclip
+			p
+				font-size: 14px
+				color: rgba(243,235,234, .6)
+		
+.qrcode-main
+	display: block
+	width: 128px
+	margin: 0 0 10px 0
 
-.main-appclip
-	display: flex
-	align-items: center
-	justify-content: center
-	gap: 24px
-
-	p
-		font-weight: 600
-		font-size: 16px
-		line-height: 22px
-		color: #F3EBEA
-		max-width: 129px
-
-	img:first-child
-		width: 220px
-		@media (max-width: 1024px)
-			width: 160px
-
-		@media (max-width: 920px)
-			width: 130px
-
-		@media (max-width: 768px)
-			width: 200px
-
-	@media (max-width: 768px)
-		margin-top: 110px
-
-.main-near
-	background: #FDBF1C
-	border-radius: 0px 16px
-	padding: 16px 24px
-	box-sizing: border-box
-	height: 128px
-	margin-top: 164px
-	display: flex
-	align-items: center
-	padding-top: 80px
-	gap: 8px
-
-	p
-		font-weight: 700
-		font-size: 16px
-		line-height: 22px
-		color: #2C3034
-		margin: 0
-
-	@media (max-width: 768px)
-		display: none
-
-.main-stub
-	background: #FDBF1C
-	border-radius: 0px 0px 0px 16px
-	height: 128px
-	
-	@media (max-width: 768px)
-		display: none
-
-.main-scroll
-	background: #FD84E3
-	border-radius: 0px 16px 16px 16px
-	padding: 16px 24px
-	box-sizing: border-box
+.interface
 	display: flex
 	align-items: flex-end
-	height: 128px
+	justify-content: center
+	position: relative
+	z-index: 1
+	max-width: 1095px
+	margin: 0 auto
 
-	p
-		font-weight: 700
-		font-size: 32px
-		line-height: 40px
-		font-feature-settings: 'liga' off
-		margin: 0
-		color: #2C3034
-		@media (max-width: 768px)
-			display: block
-			margin: auto
-			text-align: center
-			color: #fff
-
-	@media (max-width: 768px)
-		background: transparent
-		margin-top: 100px
-		padding: 0
-		margin-bottom: -32px
-		height: fit-content
+	img
+		width: 308px

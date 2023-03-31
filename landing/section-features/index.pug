@@ -3,7 +3,16 @@ section.features
         .feature
             .feature-picture
                 img.feature-picture-bg(src=feature.backPicture)
-                img.feature-picture-phone(src=feature.frontPicture)
+                if Array.isArray(feature.frontPicture)
+                    div.slider
+                        div.slides.feature-picture-phone
+                            for pic in feature.frontPicture
+                                img(src=pic)
+                        div.pagination
+                else
+                    img.no-slider.feature-picture-phone(src=feature.frontPicture)
+                
+
             .feature-content
                 h2
                     | #{feature.title}

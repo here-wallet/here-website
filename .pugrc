@@ -40,7 +40,7 @@
       ],
       "links": [
         {
-          "text": "Home",
+          "text": "WEB Staking",
           "link": "/"
         },
         {
@@ -48,64 +48,84 @@
           "link": "/nft"
         },
         {
-          "text": "How to use",
-          "link": "/howto"
-        },
-        {
-          "text": "Staking",
-          "link": "https://my.herewallet.app/stake"
-        },
-        {
           "text": "Docs",
           "link": "https://docs.herewallet.app/technology-description/readme"
+        }
+      ],
+      "downloads": [
+        {
+          "text": "Download HERE",
+          "link": "#"
         }
       ]
     },
     "main": {
-      "title": "Explore web3 with the handy features of web2 financial apps",
+      "title": "Start using",
+      "subTitle": "Stop holding",
+      "textTitle": "Use onchain staking, games, DeFi directly from Binance balance",
       "qrcode": "/assets/QR/qr.gold.svg",
-      "qrcodeLocale": "Scan to<br />start HERE",
+      "qrcodeLocale": "Scan to start HERE",
       "poweredbynear": "Powered by NEAR Protocol",
       "scrolldown": "Scroll down to learn more"
     },
+    "interface": [
+      {
+        "title": "First screen",
+        "image": "/assets/Screens/interface-1.png"
+      },
+      {
+        "title": "Second screen",
+        "image": "/assets/Screens/interface-2.png"
+      },
+      {
+        "title": "Third screen",
+        "image": "/assets/Screens/interface-3.png"
+      }
+    ],
     "floatqr": {
       "qrcode": "/assets/QR/qr.gold.svg",
-      "qrcodeLocale": "Scan to<br />start HERE"
+      "qrcodeLocale": "Scan to start HERE"
     },
     "features": [
       {
-        "title": "Transfers via phone number",
+        "title": "Advanced analytics made simple",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
-        "backPicture": "/assets/Graphics/orange.svg",
-        "frontPicture": "/assets/Screens/transfers.png",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": [
+          "/assets/Screens/adv-analytics-1.png",
+          "/assets/Screens/up-to-1.png"
+        ],
         "items": [
-          "Pay your friends all over the world<br/>with 0% fee",
-          "Transfer money even to those who<br/>don't have a wallet yet",
-          "No tax notice"
+          "Portfolio change and distribution",
+          "24h change graph",
+          "Top grow, Top fall",
+          "News"
         ]
       },
       {
-        "title": "Invest in crypto",
+        "title": "On-chain Binance",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
-        "backPicture": "/assets/Graphics/pink.svg",
-        "frontPicture": "/assets/Screens/invest.png",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": [
+          "/assets/Screens/on-chain-1.png",
+          "/assets/Screens/adv-analytics-1.png"
+        ],
         "items": [
-          "No paperwork is needed to start investing",
-          "Invest through transparent decentralized<br/>exchanges",
-          "Buy one of the 20 most popular<br/>cryptocurrencies",
-          "Keep track of your portfolio with an<br/>easy-to-use interface"
+          "Stake NEAR flexible at 9.5%",
+          "Explore advanced analytics",
+          "Explore dApps of your ecosystem"
         ]
       },
       {
-        "title": "Up to 10% APY with instant withdrawal",
+        "title": "Up to 10.5% APY with instant withdrawal",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
-        "backPicture": "/assets/Graphics/green.svg",
-        "frontPicture": "/assets/Screens/overview.png",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": "/assets/Screens/up-to-1.png",
         "items": [
-          "Withdraw money at any time with a 0% fee",
+          "Withdraw money at any time with 0% commission",
           "Use only decentralized protocols to make profit"
         ]
       }
