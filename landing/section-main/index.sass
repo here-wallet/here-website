@@ -2,6 +2,11 @@ body
 	background-image: url(../assets/grid-perspective.svg)
 	background-position: 50% 0
 	background-repeat: no-repeat
+	@media (max-width: 900px)
+		background-size: 130% auto
+		background-position: 50% 40px
+	@media (max-width: 620px)
+		background-size: 200% auto
 .main-mobile
 	width: 100%
 	height: 500px
@@ -28,7 +33,6 @@ body
 		margin-bottom: -20px
 
 	@media (max-width: 480px)
-		display: flex
 
 	@media (max-width: 420px)
 		& h1
@@ -43,7 +47,7 @@ body
 	gap: 8px
 
 	& p
-		font-weight: 700
+		font-weight: 600
 		font-size: 16px
 		line-height: 22px
 		color: #F3EBEA
@@ -51,10 +55,12 @@ body
 
 .main
 	width: 100%
-	margin: 0 0 80px 0
+	margin: 0 0 56px 0
 	position: relative
-	@media (max-width: 480px)
-		display: none
+	@media (max-width: 900px)
+		margin: 0 0 72px 0
+	@media (max-width: 768px)
+		margin: 0 0 64px 0
 
 
 	&-center
@@ -72,24 +78,43 @@ body
 		align-items: flex-end
 		width: 100%
 		padding: 92px 0 0 0
-
+		@media (max-width: 1200px)
+			padding: 92px 24px 0 24px
+			box-sizing: border-box
+		@media (max-width: 900px)
+			padding: 64px 0 0 0
+		@media (max-width: 620px)
+			padding: 24px 0 0 0
 		&__left
 			padding: 0 0 0 8px
+			@media (max-width: 900px)
+				display: none
 			img
-				margin: 0 0 50px 0
+				margin: 0 0 80px 0
 		&__center
 			text-align: center
+			@media (max-width: 900px)
+				margin: 0 auto
+			
 			@mixin fontStyle
 				font-size: 80px
 				font-weight: 900
 				line-height: 1
 				text-transform: uppercase
+				@media (max-width: 900px)
+					font-size: 64px
+					line-height: 72px
+				@media (max-width: 620px)
+					font-size: 44px
+					line-height: 48px
 			h1
 				@include fontStyle
 				background: linear-gradient(90.02deg, #FDBE1D 18.72%, #FCA857 41.42%, #FC668B 61.68%, #C74AD5 79.52%)
 				color: transparent
 				background-clip: text
 				-webkit-background-clip: text
+				letter-spacing: 0.01em
+				font-feature-settings: 'liga' off
 			h3
 				@include fontStyle
 				margin: 0 0 18px 0
@@ -97,23 +122,55 @@ body
 				color: transparent
 				background-clip: text
 				-webkit-background-clip: text
+				letter-spacing: 0.01em
+				font-feature-settings: 'liga' off
 
 			p
-				margin: 0
+				max-width: 480px
+				margin: 0 auto
 				padding: 0
 				font-size: 20px
-				font-weight: 700
-				color: rgba(243,235,234, .6)
-			
+				font-weight: 600
+				letter-spacing: 0.01em
+				color: rgba(243, 235, 234, 0.6)
+				@media (max-width: 900px)
+					margin: 0 auto 48px auto
+				@media (max-width: 620px)
+					width: 320px
+					font-size: 14px
+		&-waitlist
+			display: none
+			padding: 13px 40px
+			font-weight: 700
+			font-size: 16px
+			line-height: 22px
+			text-align: center
+			font-feature-settings: 'liga' off, 'calt' off
+			color: #2C3034
+			background: #FD84E3
+			border: 1px solid #2C3034
+			box-shadow: 4px 4px 0px #fff
+			border-radius: 16px
+			cursor: pointer
+
+			@media (max-width: 900px)
+				display: inline-block
+			@media (max-width: 620px)
+				padding: 13px 20px
+
+		&__right
+			@media (max-width: 900px)
+				display: none
 		&__appclip
 			p
+				margin: 0 0 8px 0
 				font-size: 14px
 				color: rgba(243,235,234, .6)
 		
 .qrcode-main
 	display: block
 	width: 128px
-	margin: 0 0 10px 0
+	margin: 0 0 40px 0
 
 .interface
 	display: flex
@@ -123,6 +180,12 @@ body
 	z-index: 1
 	max-width: 1095px
 	margin: 0 auto
+	overflow: hidden
 
 	img
 		width: 308px
+		
+		@media (max-width: 900px)
+			width: 218px
+		@media (max-width: 620px)
+			width: 160px

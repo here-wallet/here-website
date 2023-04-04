@@ -1,16 +1,14 @@
 section.features
     for feature in features    
         .feature
-            .feature-picture
-                img.feature-picture-bg(src=feature.backPicture)
-                if Array.isArray(feature.frontPicture)
-                    div.slider
-                        div.slides.feature-picture-phone
-                            for pic in feature.frontPicture
-                                img(src=pic)
-                        div.pagination
-                else
-                    img.no-slider.feature-picture-phone(src=feature.frontPicture)
+            if Array.isArray(feature.frontPicture)
+                div.slider
+                    div.slides.feature-picture-phone
+                        for pic in feature.frontPicture
+                            img(src=pic)
+                    div.pagination
+            else
+                img.no-slider.feature-picture-phone(src=feature.frontPicture)
                 
 
             .feature-content

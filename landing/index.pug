@@ -29,17 +29,18 @@ html(lang="en")
 
         include section-main/index.pug
 
-        .page.margin-minus
-            .page-background
-            include section-features/index.pug
-            include section-news/index.pug
-            include section-comparison/index.pug
-            include section-security/index.pug
-            include section-download/index.pug
-            include section-asks/index.pug
-            include section-partners/index.pug
+        .page-minus
+            .page
+                .page-background
+                include section-features/index.pug
+                include section-news/index.pug
+                include section-comparison/index.pug
+                include section-security/index.pug
+                include section-download/index.pug
+                include section-asks/index.pug
+                include section-partners/index.pug
 
-        include footer/index.pug
-        include waitlist-modal/index.pug
+            include footer/index.pug
+            include waitlist-modal/index.pug
 
-        script(type="module", src="./index.js")
+            script(type="module", src="./index.js")

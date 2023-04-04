@@ -18,6 +18,9 @@ mixin header(active, useWhite)
         for item in header.downloads
           a.header-download(href=item.link) !{item.text}
 
+          .header-waitlist.waitlist-button
+            a !{waiting.title}
+
       button.header-action
 
     .header-body
@@ -34,14 +37,19 @@ mixin header(active, useWhite)
         
       .header-form
         p.header-form-title
-          | Android waiting list
+          | Binance waiting list
           span .
         
         input.here-input(placeholder="Phone number")
         button.here-button.light Submit 
-        .header-form-hr Or
-        a.here-button.pink.light(href=common.appStore)
+        .header-form-hr or
+        a.here-button.pink.light.appstore(href=common.appStore)
           | Download on App Store
+        a.here-button.sunyellow.light.appandroid(href=common.appAndroid)
+          | !{common.appAndroidTitle}
+        for item in header.downloads
+          a.header-download.apprandom(href=item.link) !{item.text}
+
 
 .preheader
   .preheader-center

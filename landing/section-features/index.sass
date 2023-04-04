@@ -1,10 +1,14 @@
-.margin-minus
+.page-minus
     position: relative
-    z-index: 2
+    z-index: 10001
     margin: -180px auto 0
+    @media (max-width: 900px)
+        margin: -132px auto 0
+    @media (max-width: 620px)
+        margin: -96px auto 0
 .features
     margin: 0 auto 0
-    padding: 104px 64px
+    padding: 104px 64px 0 64px
     overflow: hidden
     @media (max-width: 768px)
         padding: 48px 20px
@@ -12,13 +16,21 @@
 .feature
     display: flex
     align-items: center
-    gap: 96px
     width: 100%
+    margin: 0 0 164px 0
+    gap: 16px
+    @media (max-width: 620px)
+        margin: 0 0 64px 0
 
+    &:nth-child(2)
+        .dot
+            display: none
+        
     @media (max-width: 620px)
         flex-direction: column-reverse
         gap: 40px
     .feature-picture-phone
+        width: 100%
         img
             width: 100%
         
@@ -29,45 +41,24 @@
         flex-direction: row-reverse
         @media (max-width: 620px)
             flex-direction: column-reverse
-
-    &:nth-child(2) .feature-picture-phone
-        width: 320px
-        margin-top: -30px
-
-    & + & 
-        padding-top: 96px
+        
+    &:nth-child(odd)
+        & .feature-content
+            padding: 0 0 0 48px
+            @media (max-width: 620px)
+                padding: 0
 
     & h2
         margin-bottom: 24px
 
-    &-picture
-        display: flex
-        width: 50%
-        position: relative
-        align-items: center
-        justify-content: center
-        user-select: none
         
-    &-picture-bg
-        width: 576px
-        position: absolute
-        z-index: 1
-        @media (max-width: 1100px)
-            width: 500px
-        @media (max-width: 768px)
-            width: 360px
 
     &-picture-phone
-        width: 490px
+        width: 100%
         z-index: 100
-        object-fit: contain
-        @media (max-width: 1100px)
-            width: 414px
-        @media (max-width: 768px)
-            width: 280px
 
     &-content
-        width: 50%
+        width: calc( 50% - 8px )
         @media (max-width: 620px)
             width: 100%
 
@@ -99,7 +90,7 @@
         align-items: center
         justify-content: center
         text-decoration: none
-        margin-top: 40px
+        margin-top: 36px
 
         &:hover
             background: #EBDEDC
@@ -136,6 +127,8 @@
             line-height: 22px
             color: #2C3034
 
+    &-content li.active::before
+        background: #fd84e3
     &-content li::before
         content: ""
         display: block
@@ -143,33 +136,50 @@
         float: left
         width: 12px
         height: 12px
-        background: #fd84e3
         margin-right: 8px
         margin-top: 8px
+        background-color: #EAD3E5
 
 // Slider
 .slider
+    display: flex
     position: relative
     z-index: 2
+    width: calc( 50% - 8px )
+    align-items: center
+    justify-content: center
+    user-select: none
+    background-image: url(../assets/Screens/features-bg.svg)
+    background-size: 100% auto
+    background-position: 50%
+    @media (max-width: 620px)
+        width: 100%
 
 .slides
+    display: flex
     position: relative
-    z-index: 2
-    height: 300px
+    z-index: 1
+    width: 100%
+    overflow: hidden
 
     img
-        position: absolute
+        width: 100%
         top: 0
         left: 0
         opacity: 0
-        transition: opacity 1s ease-in-out
+        transform: translateX(-100%)
+        transition: opacity 1s ease-in-out, transform 0.8s cubic-bezier(0.2, 1, .55, 1.15)
 
         &.active
             opacity: 1
+            transform: translateX(0%)
 
 .pagination
-    position: relative
+    position: absolute
     z-index: 3
+    bottom: 36px
+    left: 50%
+    transform: translate(-50%, 0)
     text-align: center
     & span
         display: inline-block
