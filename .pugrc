@@ -7,6 +7,8 @@
       "termsLocale": "Privacy policy and Terms of Service",
       "termsLink": "/privacypolicy",
       "appStore": "https://appstore.herewallet.app/site",
+      "appAndroidTitle": "Download on Google Play",
+      "appAndroid": "https://play.google.com/store/apps/details?id=com.herewallet",
       "socials": [
         {
           "icon": "/assets/Socials/Twitter.svg",
@@ -40,8 +42,12 @@
       ],
       "links": [
         {
-          "text": "WEB Staking",
+          "text": "Home",
           "link": "/"
+        },
+        {
+          "text": "WEB Staking",
+          "link": "https://my.herewallet.app/stake"
         },
         {
           "text": "NFT",
@@ -55,14 +61,14 @@
       "downloads": [
         {
           "text": "Download HERE",
-          "link": "#"
+          "link": "https://download.herewallet.app/site"
         }
       ]
     },
     "main": {
       "title": "Start using",
       "subTitle": "Stop holding",
-      "textTitle": "Use onchain staking, games, DeFi directly from Binance balance",
+      "textTitle": "Join the waitlist to use onchain staking, games, DeFi directly from Binance balance",
       "qrcode": "/assets/QR/qr.gold.svg",
       "qrcodeLocale": "Scan to start HERE",
       "poweredbynear": "Powered by NEAR Protocol",
@@ -93,8 +99,10 @@
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
-          "/assets/Screens/adv-analytics-1.png",
-          "/assets/Screens/up-to-1.png"
+          "/assets/sliders/1-1.png",
+          "/assets/sliders/1-2.png",
+          "/assets/sliders/1-3.png",
+          "/assets/sliders/1-4.png"
         ],
         "items": [
           "Portfolio change and distribution",
@@ -109,8 +117,8 @@
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
-          "/assets/Screens/on-chain-1.png",
-          "/assets/Screens/adv-analytics-1.png"
+          "/assets/sliders/2-1.png",
+          "/assets/sliders/2-2.png"
         ],
         "items": [
           "Stake NEAR flexible at 9.5%",
@@ -123,7 +131,10 @@
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
-        "frontPicture": "/assets/Screens/up-to-1.png",
+        "frontPicture": [
+          "/assets/sliders/3-1.png",
+          "/assets/sliders/3-2.png"
+        ],
         "items": [
           "Withdraw money at any time with 0% commission",
           "Use only decentralized protocols to make profit"
@@ -243,6 +254,11 @@
       "picture": "/assets/Screens/screens.png",
       "iosLink": "https://appstore.herewallet.app/site",
       "scanLocale": "Scan to start HERE"
+    },
+    "waiting": {
+      "title": "Binance waitlist",
+      "titleMobile": "Join Binance waitlist",
+      "link": "Scan to start HERE"
     },
     "asks": {
       "title": "In case you missed anything",
