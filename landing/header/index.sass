@@ -14,15 +14,25 @@
         margin: 0 auto
         @media (max-width: 1150px)
             width: 100%
+            padding: 0 24px
+        @media (max-width: 620px)
+            padding: 0 16px
     
     &__left
         padding: 0 60px 0 0
+        @media (max-width: 900px)
+            order: 2
+            margin-left: auto
+            padding: 0
     
     &_big-brain
         margin: 0 18px 0 0
 
     &__right
         margin-left: auto
+        @media (max-width: 900px)
+            order: 1
+            margin: 0
         
 
 .header
@@ -31,26 +41,29 @@
     position: absolute
     top: 40px
     transition: 0.2s background
-    z-index: 10000
+    z-index: 10002
     &.active
         position: fixed
         top: 0
+        z-index: 10003
     &-center
         display: flex
         align-items: center
-        justify-content: space-between
-        padding: 0 20px
+        padding: 0 24px
         height: 72px
         max-width: 1176px
         box-sizing: border-box
         margin: auto
         @media (max-width: 768px)
-            background: #2C3034
             max-width: 100%
+        @media (max-width: 620px)
+            padding: 0 16px
 
     &.active
         background: #2C3034
-
+        & .header-body.open
+            top: 0
+            height: 100vh
     &-link
         width: fit-content
         margin: 0 32px
@@ -64,6 +77,8 @@
         transition: 0.2s opacity
         &:hover
             opacity: 0.8
+        @media (max-width: 900px)
+            margin: 0 0 0 8px
         
     &-link.active
         color: rgba(247, 179, 2, 1)
@@ -74,13 +89,14 @@
         border-bottom: 2px solid #fff
 
     &-right
+        margin-left: auto
         align-items: center
         display: flex
         gap: 16px
 
-    .header-download
+    &-download
         display: block
-        width: 226px
+        width: 172px
         height: 40px
         font-size: 16px
         text-align: center
@@ -90,10 +106,20 @@
         font-weight: 700
         background-color: #414548
         border-radius: 16px
+        &:hover
+            background-color: #35393B
+
+        @media (max-width: 900px)
+            width: auto
+            background-color: transparent
+            font-size: 14px
+            &:hover
+                background-color: transparent
+
     .social-link
         display: flex
         transition: 0.2s opacity
-        @media (max-width: 920px)
+        @media (max-width: 900px)
             display: none
         &:hover
             opacity: 0.8
@@ -102,27 +128,28 @@
         display: flex
         align-items: center
         justify-content: center
-        padding: 0 16px
+        width: 172px
         cursor: pointer
-        font-weight: 600
+        font-weight: 700
         font-size: 16px
         line-height: 22px
-        color: #F3EBEA
-        border: 1px solid #F3EBEA
+        color: #2C3034
+        background-color: #F3EBEA
         transition: 0.2s background
-        border-radius: 24px
+        border-radius: 16px
         height: 40px
+        white-space: nowrap
         &:hover
-            background: rgba(255, 255, 255, .1)
-
-        @media (max-width: 768px)
+            color: #5D666F
+        @media (max-width: 900px)
             display: none
+            
 
     &-links
         display: flex
         align-items: center
-        gap: 28px
-        @media (max-width: 768px)
+        margin-left: 64px
+        @media (max-width: 900px)
             display: none
 
     &-logo
@@ -140,10 +167,13 @@
         box-sizing: border-box
         width: 32px
         height: 32px
+        margin-left: 32px
 
         display: none
-        @media (max-width: 768px)
+        @media (max-width: 900px)
             display: block
+        @media (max-width: 620px)
+            margin-left: 24px
     
         &::before
             content: ""
@@ -188,7 +218,6 @@
         flex-direction: column
         justify-content: space-between
         background: #2C3034
-        height: 100vh
         width: 100vw
         padding: 16px
         padding-bottom: 32px
@@ -209,16 +238,20 @@
 
     &-body.open
         position: fixed
-        top: 0
+        top: 40px
         left: 0
         right: 0
         display: flex
-        height: calc(var(--vh) * 100)
+        /* height: calc(var(--vh) * 100% - 40px) */
+        /* height: calc(100vh - 40px) */
+        bottom: 0
 
     &-mobile-links
         display: flex
         flex-direction: column
         gap: 28px
+        @media (max-width: 900px)
+            gap: 24px
 
     &-form
         width: 100%
@@ -250,6 +283,8 @@
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
+        @media (max-width: 900px)
+            margin: 22px 0
     
         &::before
             content: ""
@@ -266,7 +301,7 @@
             flex: 1
 
 .scroll-up
-    z-index: 1000
+    z-index: 10002
     cursor: pointer
     position: fixed
     bottom: -200px
@@ -300,7 +335,7 @@
 
     box-sizing: border-box
     position: fixed
-    z-index: 1000
+    z-index: 10002
     width: 112px
     left: 20px
 
@@ -327,3 +362,8 @@
         line-height: 19px
         text-align: center
         color: #F3EBEA
+
+.appstore, .appandroid, .apprandom
+    display: none
+.app-show
+    display: inline-block

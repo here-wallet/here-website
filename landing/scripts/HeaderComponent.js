@@ -13,7 +13,7 @@ export class HeaderComponent {
   constructor() {
     this.headerBody = this.header.querySelector(".header-body");
     this.btn = this.header.querySelector(".header-action");
-    this.btn.addEventListener("click", () => this.toggleModal());
+    this.btn.addEventListener("click", () => this.toggleModalBody());
 
     this.header.classList.toggle("active", window.scrollY > 40);
     this.floatQr.classList.toggle("active", window.scrollY > 600);
@@ -52,6 +52,15 @@ export class HeaderComponent {
   toggleModal = () => {
     this.btn.classList.toggle("open");
     this.headerBody.classList.toggle("open");
+    document.body.classList.toggle("body_margin");
+
+    this.isOpen = !this.isOpen;
+    document.body.style.overflow = this.isOpen ? "hidden" : "";
+  };
+  toggleModalBody = () => {
+    this.btn.classList.toggle("open");
+    this.headerBody.classList.toggle("open");
+    document.body.classList.toggle("body_margin");
 
     this.isOpen = !this.isOpen;
     document.body.style.overflow = this.isOpen ? "hidden" : "";

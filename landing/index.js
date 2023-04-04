@@ -146,12 +146,36 @@ secureBanner?.addEventListener("click", (e) => {
 });
 
 
+
+
+
+
+
 function slider(sliderElement) {
   const slides = sliderElement.querySelectorAll('.slides img');
+  const featureContent = sliderElement.closest('.feature').querySelector('.feature-content');
   const pagination = sliderElement.querySelector('.pagination');
+  const featureContentlistItems = featureContent.querySelectorAll('.feature-content li');
 
   let currentSlide = 0;
   let slideInterval;
+
+
+  // При клике на кнопку пагинации
+  pagination.querySelectorAll('span').forEach(function (span) {
+    span.addEventListener('click', function () {
+      // Найти индекс текущей кнопки
+      const currentIndex = Array.prototype.indexOf.call(pagination.children, this);
+      // Переключить соответствующий элемент списка на активный
+      featureContentlistItems.forEach(function (item, index) {
+        if (index === currentIndex) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    });
+  });
 
   function startSlider() {
     slides[0].classList.add('active');
@@ -164,20 +188,29 @@ function slider(sliderElement) {
 
   function nextSlide() {
     slides[currentSlide].classList.remove('active');
+    featureContentlistItems[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
-    updatePagination(sliderElement);
+    featureContentlistItems[currentSlide].classList.add('active');
+    updatePagination();
+    slides.forEach(slide => {
+      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
   }
 
   function previousSlide() {
     slides[currentSlide].classList.remove('active');
+    featureContentlistItems[currentSlide].classList.remove('active');
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
-    updatePagination(sliderElement);
+    featureContentlistItems[currentSlide].classList.add('active');
+    updatePagination();
+    slides.forEach(slide => {
+      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
   }
 
-  function updatePagination(sliderElement) {
-    const pagination = sliderElement.querySelector('.pagination');
+  function updatePagination() {
     pagination.innerHTML = '';
     for (let i = 0; i < slides.length; i++) {
       const span = document.createElement('span');
@@ -189,14 +222,27 @@ function slider(sliderElement) {
         slides[currentSlide].classList.remove('active');
         currentSlide = i;
         slides[currentSlide].classList.add('active');
-        updatePagination(sliderElement);
+        updatePagination();
+        slides.forEach(slide => {
+          slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
       });
       pagination.appendChild(span);
     }
   }
-
   startSlider();
-  updatePagination(sliderElement);
+  updatePagination();
 }
 
 document.querySelectorAll('.slider').forEach(sliderElement => slider(sliderElement));
+
+if (/Android/.test(navigator.userAgent)) {
+  const element = document.querySelector('.appandroid');
+  element.classList.add('app-show');
+} else if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream) {
+  const element = document.querySelector('.appstore');
+  element.classList.add('app-show');
+} else {
+  const element = document.querySelector('.apprandom');
+  element.classList.add('app-show');
+}
