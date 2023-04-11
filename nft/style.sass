@@ -1,0 +1,453 @@
+@font-face
+	font-family: 'CabinetGrotesk-Variable'
+	src: url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff') format('woff'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.ttf') format('truetype')
+	font-weight: 100 900
+	font-display: block
+	font-style: normal
+
+*,
+*:before,
+*:after
+	padding: 0
+	margin: 0
+	border: 0
+	vertical-align: baseline
+	box-sizing: border-box
+:focus,
+:active
+	outline: none
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, img
+	display: block
+
+input,
+button,
+textarea
+	font-family: inherit
+	background-color: transparent
+input::-ms-clear
+	display: none
+button
+	display: inline-block
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+a
+	text-decoration: none
+	&:visited
+		text-decoration: none
+	&:hover
+		text-decoration: none
+
+ul
+	li
+		list-style-type: none
+
+img
+	vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+	font-style: inherit
+	font-weight: 400
+h1
+	font-size: 64px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 52px
+h2
+	font-size: 62px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 48px
+h3
+	font-size: 40px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 32px
+h4
+	font-size: 28px
+	font-weight: 900
+p
+	line-height: 1.35
+
+
+html, body
+	height: 100%
+	width: 100%
+	line-height: 1
+	font-weight: 300
+	font-size: 16px
+	-ms-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	font-family: 'Manrope',Arial,sans-serif
+	color: #2c3034
+	background-color: #f3ebea
+body
+	padding: 80px 0 0 0
+	@media (max-width: 980px)
+		padding: 0
+.color
+	&_blue
+		color: rgb(76, 140, 224)
+	&_red
+		color: rgb(235, 75, 75)
+	&_pink
+		color: rgb(255, 143, 216)
+	&_violet
+		color: rgb(143, 57, 219)
+.center-block
+	max-width: 1160px
+	margin: 0 auto
+	@media (max-width: 1200px)
+		padding: 0 20px
+
+.btn
+	display: inline-block
+	height: 40px
+	padding: 0 30px
+	font-size: 14px
+	font-weight: 700
+	line-height: 40px
+	border: 1px solid #2c3034
+	border-radius: 16px
+	&_transparent
+		margin: 0 10px 0 0
+		color: #2c3034
+	&_download
+		color: #f3ebea
+		background-color: #2c3034
+	&_maxheight
+		height: 56px
+		line-height: 56px
+		font-size: 16px
+
+.header
+	display: flex
+	align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	max-width: 100%
+	margin: 0 auto 10px auto
+	padding: 0 40px
+	background-color: #f3ebea
+	@media (max-width: 1200px)
+		padding: 0 10px
+	@media (max-width: 980px)
+		display: none
+	
+	&-logo
+		width: 80px
+		img
+			width: 100%
+
+	&-menu
+		width: calc( 100% - 720px )
+		flex-grow: 1
+		margin: 0 0 0 30px
+		ul
+			display: flex
+			flex-wrap: wrap
+			li
+				margin: 0 30px 0 0
+				line-height: 21px
+				a
+					font-weight: 600
+					color: #2c3034
+
+	&-right
+		display: flex
+		align-items: center
+		width: 610px
+		margin: 0 0 0 auto
+	&-social
+		display: flex
+		a
+			margin: 0 10px 0 0
+			svg
+				width: 30px
+				height: 30px
+			img
+				width: 30px
+				height: 30px
+	&-btn
+		margin: 0 0 0 40px
+
+.header.active
+	@media (max-width: 980px)
+		display: block
+		position: relative
+		width: 100%
+		padding: 100px 20px
+		text-align: center
+	.header-logo
+		@media (max-width: 980px)
+			width: 80px
+			margin: 0 auto 40px auto
+	.header-menu
+		@media (max-width: 980px)
+			width: 100%
+			margin: 0
+		ul
+			@media (max-width: 980px)
+				display: block
+				margin: 0 0 60px 0
+			li
+				@media (max-width: 980px)
+					margin: 0 0 20px 0
+	.header-right
+		@media (max-width: 980px)
+			justify-content: center
+			display: block
+			width: 100%
+	.header-social
+		@media (max-width: 980px)
+			justify-content: center
+			margin: 0 0 24px 0
+	.header-btn
+		@media (max-width: 980px)
+			margin: 0
+		@media (max-width: 760px)
+			display: block
+		
+		.btn
+			@media (max-width: 760px)
+				display: block
+				margin: 0 0 20px 0
+
+
+
+.menu-mobile__burger
+	display: none
+	position: absolute
+	top: 20px
+	right: 20px
+	width: 28px
+	height: 20px
+	transition: .5s ease-in-out
+	cursor: pointer
+	@media (max-width: 980px)
+		display: block
+	&.active
+		z-index: 2
+	& span
+		background-color: #2c3034
+		display: block
+		position: absolute
+		width: 100%
+		opacity: 1
+		left: 0
+		transition: .25s ease-in-out
+		height: 3px
+	
+	& span:nth-child(1)
+		top: 0px
+	& span:nth-child(2)
+		top: 8px
+	& span:nth-child(3)
+		top: 8px
+	& span:nth-child(4)
+		top: 16px
+
+	&.active span:nth-child(1)
+		top: 8px
+		width: 0%
+		left: 50%
+	&.active span:nth-child(2)
+		-webkit-transform: rotate(45deg)
+		transform: rotate(45deg)
+	&.active span:nth-child(3)
+		-webkit-transform: rotate(-45deg)
+		transform: rotate(-45deg)
+	&.active span:nth-child(4)
+		top: 8px
+		width: 0%
+		left: 50%
+	
+.main-menu
+	ul
+		display: flex
+
+
+.main
+	display: flex
+	align-items: center
+	margin-bottom: 100px
+	@media (max-width: 980px)
+		display: block
+		max-width: 620px
+		margin: 0 auto
+		padding: 100px 20px 0 20px
+	&-left
+		width: calc( 100% - 500px )
+		@media (max-width: 1200px)
+			width: 610px
+		@media (max-width: 980px)
+			width: 100%
+			margin: 0 0 40px 0
+		h1
+			margin: 0 0 40px 0
+			&::after
+				content: "!"
+				font-size: 64px
+				color: rgb(253, 132, 227)
+		
+		p
+			margin: 0 0 40px 0
+			font-size: 18px
+			font-weight: 600
+	&-right
+		width: 480px
+		@media (max-width: 1200px)
+			width: 350px
+			padding: 80px 0 0 0
+		@media (max-width: 980px)
+			width: 100%
+			padding: 0 0 145px 0
+		@media (max-width: 760px)
+			padding: 0 0 80px 0
+
+.img-launched
+	width: 100%
+	@media (max-width: 980px)
+		display: none
+
+	&_mobile
+		display: none
+		@media (max-width: 980px)
+			display: flex
+			justify-content: space-between
+		img
+			width: calc(33.3333% - 10px)
+
+.benefits
+	width: 100%
+	padding: 135px 0
+	background-color: #ff87dd
+	text-align: center
+	@media (max-width: 980px)
+		padding: 80px 0 1px 0
+	h2
+		margin: 0 0 80px 0
+	&-features
+		display: flex
+		justify-content: space-between
+		@media (max-width: 980px)
+			display: block
+		&__column
+			max-width: 310px
+			@media (max-width: 980px)
+				max-width: 620px
+				margin: 0 auto 80px auto
+			h4
+				margin: 0 0 30px 0
+			p
+				font-size: 18px
+				font-weight: 600
+
+.types
+	padding: 135px 0
+	@media (max-width: 980px)
+		padding: 80px 0
+	&__prev
+		margin: 0 0 150px 0
+		text-align: center
+		@media (max-width: 980px)
+			max-width: 620px
+			margin: 0 auto 80px auto
+		h2
+			margin: 0 0 50px 0
+			@media (max-width: 980px)
+				margin: 0 0 20px 0
+		p
+			font-size: 18px
+			font-weight: 600
+	
+	&-item
+		display: flex
+		width: 100%
+		margin: 0 0 180px 0
+		@media (max-width: 980px)
+			display: block
+			max-width: 620px
+			margin: 0 auto 100px auto
+		&__5
+			margin: 0
+		&__content
+			width: calc(100% - 660px)
+			padding: 0 40px 0 0
+			@media (max-width: 980px)
+				width: 100%
+				margin: 0 0 40px 0
+				padding: 0
+			h3
+				margin: 0 0 15px 0
+			p
+				font-size: 18px
+				line-height: 28px
+				font-weight: 600
+
+			ul
+				padding: 0 0 0 20px
+				li
+					list-style: disc
+					font-size: 18px
+					line-height: 28px
+					font-weight: 600
+
+		&__img
+			max-width: 660px
+			img
+				width: 100%
+
+
+.footer
+	padding: 105px 0 158px 0
+	background-color: #2c3034
+	text-align: center
+	@media (max-width: 980px)
+		padding: 40px 0
+	&-logo
+		width: 318px
+		margin: 0 auto
+		@media (max-width: 980px)
+			width: 252px
+		img
+			width: 100%
+	
+	&-email
+		margin: 0 0 72px 0
+		a
+			color: #f3ebea
+			font-weight: 500
+	
+	&-social
+		margin: 0 0 40px 0
+		ul
+			display: flex
+			justify-content: center
+			li
+				margin: 0 8px
+				a
+					display: block
+					width: 40px
+					height: 40px
+					img
+						width: 100%
+	&-copy
+		max-width: 800px
+		margin: 0 auto
+		p
+			color: #c0c1c2
+			font-weight: 500
+			a
+				color: rgb(253, 132, 227)
