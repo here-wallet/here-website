@@ -19,6 +19,7 @@
             padding: 0 16px
     
     &__left
+        display: flex
         padding: 0 60px 0 0
         @media (max-width: 900px)
             order: 2
@@ -29,11 +30,25 @@
         margin: 0 18px 0 0
 
     &__right
+        display: flex
+        align-items: center
         margin-left: auto
         @media (max-width: 900px)
             order: 1
             margin: 0
-        
+        @media (max-width: 680px)
+            margin: 0 20px 0 0
+    .partnership
+        margin: 0 40px 0 0
+        font-size: 12px
+        font-weight: 500
+        text-decoration: underline
+        color: rgba(243, 235, 234, 0.6)
+        @media (max-width: 680px)
+            display: none
+        &:hover
+            text-decoration: none
+            color: rgba(243, 235, 234, 1)
 
 .header
     width: 100%

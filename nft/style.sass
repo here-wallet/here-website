@@ -1,3 +1,4 @@
+@import "../landing/common/base.sass"
 @font-face
 	font-family: 'CabinetGrotesk-Variable'
 	src: url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff') format('woff'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.ttf') format('truetype')
@@ -77,7 +78,6 @@ h4
 p
 	line-height: 1.35
 
-
 html, body
 	height: 100%
 	width: 100%
@@ -90,10 +90,7 @@ html, body
 	font-family: 'Manrope',Arial,sans-serif
 	color: #2c3034
 	background-color: #f3ebea
-body
-	padding: 80px 0 0 0
-	@media (max-width: 980px)
-		padding: 0
+
 .color
 	&_blue
 		color: rgb(76, 140, 224)
@@ -130,158 +127,11 @@ body
 		font-size: 16px
 
 .header
+	background-color: #232629
+.main-nft
 	display: flex
 	align-items: center
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	max-width: 100%
-	margin: 0 auto 10px auto
-	padding: 0 40px
-	background-color: #f3ebea
-	@media (max-width: 1200px)
-		padding: 0 10px
-	@media (max-width: 980px)
-		display: none
-	
-	&-logo
-		width: 80px
-		img
-			width: 100%
-
-	&-menu
-		width: calc( 100% - 720px )
-		flex-grow: 1
-		margin: 0 0 0 30px
-		ul
-			display: flex
-			flex-wrap: wrap
-			li
-				margin: 0 30px 0 0
-				line-height: 21px
-				a
-					font-weight: 600
-					color: #2c3034
-
-	&-right
-		display: flex
-		align-items: center
-		width: 610px
-		margin: 0 0 0 auto
-	&-social
-		display: flex
-		a
-			margin: 0 10px 0 0
-			svg
-				width: 30px
-				height: 30px
-			img
-				width: 30px
-				height: 30px
-	&-btn
-		margin: 0 0 0 40px
-
-.header.active
-	@media (max-width: 980px)
-		display: block
-		position: relative
-		width: 100%
-		padding: 100px 20px
-		text-align: center
-	.header-logo
-		@media (max-width: 980px)
-			width: 80px
-			margin: 0 auto 40px auto
-	.header-menu
-		@media (max-width: 980px)
-			width: 100%
-			margin: 0
-		ul
-			@media (max-width: 980px)
-				display: block
-				margin: 0 0 60px 0
-			li
-				@media (max-width: 980px)
-					margin: 0 0 20px 0
-	.header-right
-		@media (max-width: 980px)
-			justify-content: center
-			display: block
-			width: 100%
-	.header-social
-		@media (max-width: 980px)
-			justify-content: center
-			margin: 0 0 24px 0
-	.header-btn
-		@media (max-width: 980px)
-			margin: 0
-		@media (max-width: 760px)
-			display: block
-		
-		.btn
-			@media (max-width: 760px)
-				display: block
-				margin: 0 0 20px 0
-
-
-
-.menu-mobile__burger
-	display: none
-	position: absolute
-	top: 20px
-	right: 20px
-	width: 28px
-	height: 20px
-	transition: .5s ease-in-out
-	cursor: pointer
-	@media (max-width: 980px)
-		display: block
-	&.active
-		z-index: 2
-	& span
-		background-color: #2c3034
-		display: block
-		position: absolute
-		width: 100%
-		opacity: 1
-		left: 0
-		transition: .25s ease-in-out
-		height: 3px
-	
-	& span:nth-child(1)
-		top: 0px
-	& span:nth-child(2)
-		top: 8px
-	& span:nth-child(3)
-		top: 8px
-	& span:nth-child(4)
-		top: 16px
-
-	&.active span:nth-child(1)
-		top: 8px
-		width: 0%
-		left: 50%
-	&.active span:nth-child(2)
-		-webkit-transform: rotate(45deg)
-		transform: rotate(45deg)
-	&.active span:nth-child(3)
-		-webkit-transform: rotate(-45deg)
-		transform: rotate(-45deg)
-	&.active span:nth-child(4)
-		top: 8px
-		width: 0%
-		left: 50%
-	
-.main-menu
-	ul
-		display: flex
-
-
-.main
-	display: flex
-	align-items: center
-	margin-bottom: 100px
+	margin: 110px auto 100px auto
 	@media (max-width: 980px)
 		display: block
 		max-width: 620px
@@ -451,3 +301,6 @@ body
 			font-weight: 500
 			a
 				color: rgb(253, 132, 227)
+
+@import "../landing/header"
+@import "../landing/waitlist-modal"

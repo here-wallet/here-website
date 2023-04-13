@@ -6,59 +6,25 @@ html(lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title HERE NFT Collection
 		meta(name="description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
-		link(href="style.css", rel="stylesheet")
+		link(href="style.sass", rel="stylesheet")
 		link(href="http://herewallet.app/nft", rel="canonical")
 		meta(property="og:url", content="http://herewallet.app/nft")
 		meta(property="og:title", content="HERE NFT Collection")
 		meta(property="og:description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
 		meta(name="format-detection", content="telephone=no")
-
 		link(href="https://fonts.googleapis.com", rel="preconnect")
 		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
-		script(type="module", src="index.js")
 	body
-		.menu-mobile__burger
-			span
-			span
-			span
-			span
-		.header
-			.header-logo
-				a(href="/")
-					img(src="images/logo-nft.png", alt="Logo NFT")
-			.header-menu.main-menu
-				ul
-					li
-						a(href='/') Main
-					li
-						a(href='/howto') How to use
-					li
-						a(href='https://herewallet.app/nft') HERE NFT
-					li
-						a(href='/stemmy/en') Play to learn
-			.header-right
-				.header-social
-					a(href="https://t.me/herewallet", target="_blank", rel="nofollow")
-						include images/tme.svg
-					a(href="https://twitter.com/here_wallet", target="_blank", rel="nofollow")
-						include images/twitter.svg
-					a(href="https://discord.gg/8Q3gw3gsD2", target="_blank", rel="nofollow")
-						img(src="https://static.tildacdn.com/tild3832-3937-4736-a565-386639373830/Frame_147_4.png", alt="website icon")
-					a(href="https://awesomenear.com/here-wallet", target="_blank", rel="nofollow")
-						img(src="https://static.tildacdn.com/tild3434-3034-4332-a263-666662616432/Vector_1.png", alt="website icon")
-					a(href="https://medium.com/@nearhere", target="_blank", rel="nofollow")
-						include images/medium.svg
-				.header-btn
-					a(href="https://docs.herewallet.app/technology-description/readme", target="_blank").btn.btn_transparent Documentation
-					a(href="https://appstore.herewallet.app/site", target="_blank").btn.btn_download Download iOS app
-
-		.main.center-block
-			.main-left
+		include ../landing/header/index.pug
+		+header("/")
+		
+		.main-nft.center-block
+			.main-nft-left
 				h1 Here NFT launched
 				p Get NFT to earn +1% APY in HERE Wallet
-				a(href='https://appstore.herewallet.app/site').btn.btn_download.btn_maxheight Download iOS app
-			.main-right
+				a(href='https://www.tradeport.xyz/near/collection/nft.herewallet.near?tab=marketview').btn.btn_download.btn_maxheight Explore NFTs
+			.main-nft-right
 				img(src='images/1-4-14.png' alt='NFT').img-launched
 				.img-launched_mobile
 					img(src='images/1_3.png' alt='NFT')
@@ -152,3 +118,6 @@ html(lang="en")
 				.footer-copy
 					p Copyright 2022 HERE Wallet, Inc. 8 The Green Suite #4655 Dover, DE 19901.
 					p All rights reserved. <a href="https://herewallet.app/privacypolicy/" target="_blank">Privacy policy and Terms of Service</a>
+
+		include ../landing/waitlist-modal/index.pug
+		script(type="module", src="index.js")

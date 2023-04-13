@@ -34,6 +34,7 @@ mixin header(active, useWhite)
 
           else
             a.header-link(href=item.link) !{item.text}
+        a(href=common.partnershipLink).header-link !{common.partnership}
         
       .header-form
         p.header-form-title
@@ -57,6 +58,7 @@ mixin header(active, useWhite)
       img.preheader_big-brain.preheader-logo(src='/assets/logo-big-brain.svg' alt='Big Brain')
       img.preheader_near.preheader-logo(src='/assets/logo-near.svg' alt='Near')
     .preheader__right.preheader-column
+      a(href=common.partnershipLink).partnership !{common.partnership}
       img.preheader_powered-by-near.preheader-logo(src='/assets/powered-by-near.svg' alt='Powered by Near')
 
 .float-qr
