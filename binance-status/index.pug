@@ -1,0 +1,66 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title HERE NFT Collection
+		meta(name="description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
+		link(href="style.sass", rel="stylesheet")
+		link(href="http://herewallet.app/nft", rel="canonical")
+		meta(property="og:url", content="http://herewallet.app/nft")
+		meta(property="og:title", content="HERE NFT Collection")
+		meta(property="og:description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
+		meta(name="format-detection", content="telephone=no")
+		link(href="https://fonts.googleapis.com", rel="preconnect")
+		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+	body.white
+		include ../landing/header/index.pug
+		+header("/")
+		
+		.header-status
+			.header-status__title
+				h1 Binance waitlist
+				p Earn 4$ for connect.
+				p Only for the first 1000 activations.
+				.header-status__links.desktop-view
+					a(href="https://medium.com/@nearhere/here-binance-connect-and-earn-4-aab88341fe1e").here-button.here-button-orange Learn more
+					.here-button.pink.waitlist-join Join waitlist
+			.header-status__date.date-block
+				.date-block__top
+					.date-block__column
+						span Accounts with&nbsp;access
+						strong 48
+					.date-block__column
+						span Accounts in&nbsp;waitlist
+						strong 256
+					.date-block__column
+						span Prizes distributed
+						strong $192
+				.date-block__bottom
+					.date-block__timer-text Every 24h we unlock the feature to 10 users
+					.date-block__timer-counter.timer
+						.timer__items.timer__days
+						span.timer__pointer :
+						.timer__items.timer__hours
+						span.timer__pointer :
+						.timer__items.timer__minutes
+						span.timer__pointer :
+						.timer__items.timer__seconds
+			.header-status__links.mobile-view
+				a(href="https://medium.com/@nearhere/here-binance-connect-and-earn-4-aab88341fe1e").here-button.here-button-orange Learn more
+				.here-button.pink.waitlist-button Join waitlist
+		.list-block
+			h2 Users with unlocked feature
+			.list-block__table
+		
+
+		.nonlist-block
+			h2 Top 50. 10 to be unlocked.
+			.nonlist-block__table
+
+
+		include ../landing/waitlist-modal/index.pug
+		include ../landing/waitlist-join/index.pug
+		script(type="module", src="index.js")

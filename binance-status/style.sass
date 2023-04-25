@@ -1,0 +1,599 @@
+@import "../landing/common/base.sass"
+@font-face
+	font-family: 'CabinetGrotesk-Variable'
+	src: url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff') format('woff'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.ttf') format('truetype')
+	font-weight: 100 900
+	font-display: block
+	font-style: normal
+
+*,
+*:before,
+*:after
+	padding: 0
+	margin: 0
+	border: 0
+	vertical-align: baseline
+	box-sizing: border-box
+:focus,
+:active
+	outline: none
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, img
+	display: block
+
+input,
+button,
+textarea
+	font-family: inherit
+	background-color: transparent
+input::-ms-clear
+	display: none
+button
+	display: inline-block
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+a
+	text-decoration: none
+	&:visited
+		text-decoration: none
+	&:hover
+		text-decoration: none
+
+ul
+	li
+		list-style-type: none
+
+img
+	vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+	font-style: inherit
+	font-weight: 400
+h1
+	font-size: 64px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 52px
+h2
+	font-size: 62px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 48px
+h3
+	font-size: 40px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 32px
+h4
+	font-size: 28px
+	font-weight: 900
+p
+	line-height: 1.35
+
+html, body
+	height: 100%
+	width: 100%
+	line-height: 1
+	font-weight: 300
+	font-size: 16px
+	-ms-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	font-family: 'Manrope',Arial,sans-serif
+	color: #2c3034
+	background-color: #f3ebea
+
+.color
+	&_blue
+		color: rgb(76, 140, 224)
+	&_red
+		color: rgb(235, 75, 75)
+	&_pink
+		color: rgb(255, 143, 216)
+	&_violet
+		color: rgb(143, 57, 219)
+.center-block
+	max-width: 1160px
+	margin: 0 auto
+	@media (max-width: 1200px)
+		padding: 0 20px
+
+.btn
+	display: inline-block
+	height: 40px
+	padding: 0 30px
+	font-size: 14px
+	font-weight: 700
+	line-height: 40px
+	border: 1px solid #2c3034
+	border-radius: 16px
+	&_transparent
+		margin: 0 10px 0 0
+		color: #2c3034
+	&_download
+		color: #f3ebea
+		background-color: #2c3034
+	&_maxheight
+		height: 56px
+		line-height: 56px
+		font-size: 16px
+
+.white
+	.header
+		&-link
+			color: #2C3034
+
+		&-download
+			background-color: transparent
+			border: 1px #414548 solid
+			color: #414548
+			&:hover
+				color: #5d666f
+				background-color: transparent
+			@media (max-width: 900px)
+				border: 0
+		&-waitlist
+			background-color: #2C3034
+			border: 0
+			color: #fff
+			&:hover
+				background-color: #35393b
+				color: #fff
+		
+		&.active
+			.header-link
+				color: #fff
+			.link-logo
+				img
+					display: block
+			
+			.header-download
+				color: #fff
+				background-color: #414548
+				border: 0
+				@media (max-width: 900px)
+					background-color: transparent
+				&:hover
+					background-color: #35393b
+			.header-waitlist
+				color: #2c3034
+				background-color: #fff
+				&:hover
+					color: #5d666f
+		&-body.open
+			.header-download
+				color: #fff
+
+	.link-logo
+		width: 95px
+		height: 21px
+		background-image: url(./../assets/logo-black.svg)
+		img
+			display: none
+	
+	.header-body
+		.header-link
+			color: #fff
+
+.header-status
+	display: flex
+	width: 1120px
+	max-width: 100%
+	margin: 158px auto 120px auto
+	@media (max-width: 1150px)
+		width: 100%
+		padding: 0 24px
+	@media (max-width: 900px)
+		align-items: center
+	@media (max-width: 760px)
+		display: block
+		margin: 94px auto 0 auto
+		text-align: center
+	&__title
+		width: 53%
+		@media (max-width: 900px)
+			width: 40%
+		@media (max-width: 760px)
+			width: 100%
+			margin: 0 0 40px 0
+		h1
+			margin: 0 0 16px 0
+			font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+			font-size: 104px
+			line-height: 112px
+			text-transform: uppercase
+			font-weight: 900
+			letter-spacing: 0.02em
+			text-shadow: 0px 0px 16px rgba(253, 161, 93, 0.1)
+			@media (max-width: 900px)
+				font-size: 56px
+				line-height: 1
+			@media (max-width: 760px)
+				font-size: 64px
+				line-height: 70px
+		p
+			margin: 0
+			font-weight: 600
+			font-size: 18px
+			line-height: 25px
+			color: #6B6661
+			text-shadow: 0px 0px 16px rgba(253, 161, 93, 0.1)
+	&__links
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding: 40px 0 0 0
+		.here-button-orange
+			margin: 0 20px 0 0
+			@media (max-width: 900px)
+				margin: 0 0 20px 0
+			@media (max-width: 760px)
+				margin: 0
+.mobile-view
+	display: none
+	@media (max-width: 760px)
+		display: flex
+		justify-content: space-between
+		margin: 0 0 80px 0
+	
+	.here-button
+		@media (max-width: 760px)
+			width: 160px
+
+.desktop-view
+	@media (max-width: 760px)
+		display: none
+
+.date-block
+	width: 47%
+	padding: 16px 0 0 0
+	@media (max-width: 900px)
+		width: 60%
+		padding: 0
+	@media (max-width: 760px)
+		width: 100%
+	&__top
+		display: flex
+		justify-content: space-between
+		margin: 0 0 8px 0
+		@media (max-width: 900px)
+			margin: 0 0 32px 0
+		@media (max-width: 760px)
+			margin: 0 0 8px 0
+	&__column
+		width: calc( 33.3333% - 5px )
+		padding: 24px 0
+		text-align: center
+		border-radius: 8px
+		@media (max-width: 760px)
+			padding: 12px 0
+		&:nth-child(1)
+			background: rgba(253, 191, 30, 0.2)
+			border: 1px solid #FDBF1E
+		&:nth-child(2)
+			background: rgba(2, 88, 247, 0.15)
+			border: 1px solid #0258F7
+		&:nth-child(3)
+			background: #CCDBD8
+			border: 1px solid #087164
+		span
+			display: block
+			width: 120px
+			margin: 0 auto 16px auto
+			font-size: 18px
+			font-weight: 800
+			color: #6B6661
+			@media (max-width: 900px)
+				font-size: 16px
+			@media (max-width: 760px)
+				max-width: 100px
+				margin: 0 auto 8px auto
+				font-size: 14px
+				line-height: 19px
+				font-weight: 500
+		strong
+			display: block
+			font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+			font-size: 64px
+			font-weight: 900
+			color: #2C3034
+			letter-spacing: 0.01em
+			@media (max-width: 900px)
+				font-size: 32px
+			@media (max-width: 760px)
+				font-size: 28px
+				line-height: 34px
+	&__bottom
+		padding: 40px 0
+		background: rgba(253, 132, 227, 0.2)
+		border: 1px solid #FD84E3
+		border-radius: 8px
+		text-align: center
+		@media (max-width: 760px)
+			padding: 16px 0
+	&__timer-text
+		display: block
+		margin: 0 0 4px 0
+		font-size: 18px
+		line-height: 25px
+		text-shadow: 0px 0px 16px rgba(253, 161, 93, 0.1)
+		font-weight: 800
+		color: #6B6661
+		@media (max-width: 760px)
+			font-size: 14px
+			font-weight: 500
+	&__timer-counter
+		display: block
+		font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+		font-size: 64px
+		line-height: 72px
+		text-transform: uppercase
+		font-feature-settings: 'liga' off
+		font-weight: 900
+		color: #2C3034
+		letter-spacing: 0.01em
+		@media (max-width: 900px)
+			font-size: 40px
+			line-height: 50px
+.timer
+	display: flex
+	align-items: center
+	justify-content: center
+	&__items
+		letter-spacing: 0.01em
+
+.list-block
+	width: 1120px
+	max-width: 100%
+	margin: 0 auto 80px auto
+	h2
+		margin: 0 0 24px 0
+		font-weight: 900
+		font-size: 40px
+		line-height: 50px
+		text-align: center
+		font-feature-settings: 'liga' off
+		color: #2C3034
+		@media (max-width: 760px)
+			padding: 0 16px
+	&__table
+		display: flex
+		flex-wrap: wrap
+		@media (max-width: 900px)
+			padding: 0 24px
+		@media (max-width: 760px)
+			padding: 0 16px
+	
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		width: calc( 33.3333% - 14px )
+		margin: 0 20px 8px 0
+		padding: 16px 12px
+		border-radius: 8px
+		background: #EBDEDC
+		border: 1px solid #D9CDCB
+		@media (max-width: 900px)
+			width: calc( 50% - 4px )
+		@media (max-width: 760px)
+			width: 100%
+		&:nth-child(3n)
+			margin: 0 0 8px 0
+		&:nth-child(odd)
+			@media (max-width: 900px)
+				margin: 0 8px 8px 0
+			@media (max-width: 760px)
+				margin: 0 0 8px 0
+		&:nth-child(even)
+			@media (max-width: 900px)
+				margin: 0 0 8px 0
+			@media (max-width: 760px)
+				margin: 0 0 8px 0
+		&:nth-child(1)
+			background-color: #CCDBD8
+			border: 1px solid #087164
+		&:nth-child(2)
+			background-color: #CCDBD8
+			border: 1px solid #087164
+			@media (max-width: 760px)
+				background-color: rgba(2, 88, 247, 0.15)
+				border: 1px solid #0258F7
+		&:nth-child(3)
+			background-color: #CCDBD8
+			border: 1px solid #087164
+			@media (max-width: 760px)
+				background-color: rgba(253, 191, 30, 0.2)
+				border: 1px solid #FDBF1E
+		&:nth-child(4)
+			background-color: rgba(2, 88, 247, 0.15)
+			border: 1px solid #0258F7
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+		&:nth-child(5)
+			background-color: rgba(2, 88, 247, 0.15)
+			border: 1px solid #0258F7
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+		&:nth-child(6)
+			background-color: rgba(2, 88, 247, 0.15)
+			border: 1px solid #0258F7
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+		&:nth-child(7)
+			background-color: rgba(253, 191, 30, 0.2)
+			border: 1px solid #FDBF1E
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+		&:nth-child(8)
+			background-color: rgba(253, 191, 30, 0.2)
+			border: 1px solid #FDBF1E
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+		&:nth-child(9)
+			background-color: rgba(253, 191, 30, 0.2)
+			border: 1px solid #FDBF1E
+			@media (max-width: 760px)
+				background: #EBDEDC
+				border: 1px solid #D9CDCB
+
+	&__1
+		width: 158px
+		font-weight: 500
+		font-size: 16px
+		line-height: 22px
+		color: #2C3034
+		overflow: hidden
+		text-overflow: ellipsis
+	&__2
+		flex-grow: 1
+		font-weight: 700
+		font-size: 16px
+		text-align: center
+		line-height: 22px
+		font-feature-settings: 'liga' off, 'calt' off
+		color: #087164
+
+	&__3
+		display: flex
+		align-items: center
+		flex: none
+		margin: 0 14px 0 0
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		font-feature-settings: 'liga' off, 'calt' off
+		color: #087164
+		&:after
+			content: ""
+			display: block
+			width: 20px
+			height: 20px
+			margin: 0 0 0 4px
+			background-image: url(./images/coin.png)
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: 100% auto
+
+
+	&__4
+		width: 24px
+		a
+			display: block
+			width: 24px
+			height: 24px
+			background-image: url(./images/link.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 100% auto
+.list-block__view .list-block__1
+	color: #6B6661
+.list-block__view .list-block__3
+	color: #6B6661
+	&:after
+		background-image: url(./images/coin-gray.png)
+.list-block__view .list-block__4
+	a
+		background-image: url(./images/link-gray.png)
+		background-size: 21px auto
+
+
+.nonlist-block
+	width: 1120px
+	max-width: 100%
+	margin: 0 auto
+	padding: 0 0 80px 0
+	h2
+		margin: 0 0 24px 0
+		font-weight: 900
+		font-size: 40px
+		line-height: 50px
+		text-align: center
+		font-feature-settings: 'liga' off
+		color: #2C3034
+		@media (max-width: 760px)
+			padding: 0 16px
+
+	&__table
+		display: flex
+		flex-wrap: wrap
+		@media (max-width: 900px)
+			padding: 0 24px
+		@media (max-width: 760px)
+			padding: 0 16px
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		width: calc( 33.3333% - 14px )
+		margin: 0 20px 8px 0
+		padding: 16px 32px 16px 12px
+		border-radius: 8px
+		background: #EBDEDC
+		border: 1px solid #D9CDCB
+		@media (max-width: 900px)
+			width: calc( 50% - 4px )
+		@media (max-width: 760px)
+			width: 100%
+
+		&:nth-child(odd)
+			@media (max-width: 900px)
+				margin: 0 8px 8px 0
+			@media (max-width: 760px)
+				margin: 0 0 8px 0
+		&:nth-child(even)
+			@media (max-width: 900px)
+				margin: 0 0 8px 0
+			@media (max-width: 760px)
+				margin: 0 0 8px 0
+
+		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10)
+			background: #CCDBD8
+			border: 1px solid #087164
+		&:nth-child(11), &:nth-child(12), &:nth-child(13), &:nth-child(14), &:nth-child(15)
+			background: rgba(253, 191, 30, 0.2)
+			border: 1px solid #FDBF1E
+
+
+	&__0
+		flex: none
+		width: 28px
+		font-weight: 500
+	&__1
+		flex-grow: 1
+		font-weight: 500
+	&__2
+		display: flex
+		align-items: center
+		font-weight: 500
+		&:after
+			content: ""
+			display: block
+			width: 20px
+			height: 20px
+			margin: 0 0 0 6px
+			background-image: url(./images/score.png)
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: 100% auto
+
+	&:nth-child(3n)
+		margin: 0 0 8px 0
+
+
+
+
+	
+@import "../landing/header"
+@import "../landing/waitlist-modal"

@@ -58,6 +58,10 @@
         {
           "text": "Docs",
           "link": "https://docs.herewallet.app/technology-description/readme"
+        },
+        {
+          "text": "Binance status",
+          "link": "/binance-status"
         }
       ],
       "downloads": [
