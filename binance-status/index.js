@@ -1,36 +1,3 @@
-export class WaitlistProvider {
-	constructor(selector, onSubmit) {
-		this.onSubmit = onSubmit;
-		this.root = document.querySelector(selector);
-		this.input = this.root.querySelector("input");
-		this.button = this.root.querySelector(".here-button");
-		this.button.disabled = true;
-
-		this.input.addEventListener("input", (e) => {
-			const { value, isValid } = maskedPhone(this.input.value);
-			this.button.disabled = !isValid;
-			this.input.value = value;
-		});
-
-		this.button.addEventListener("click", async () => {
-			await this.submit(this.input.value);
-		});
-	}
-
-	async submit(phone_number) {
-		this.onSubmit();
-		this.input.value = "";
-
-		const res = await fetch(
-			"https://api.herewallet.app/api/v1/web/android_whitelist",
-			{
-				method: "POST",
-				body: JSON.stringify({ phone_number }),
-			}
-		);
-	}
-}
-
 import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
 
 export class HeaderComponent {
@@ -119,14 +86,47 @@ window.addEventListener(
 	setViewportProperty(document.documentElement)
 );
 
+// Form Logics
+export class WaitlistProvider {
+	constructor(selector, onSubmit) {
+		this.onSubmit = onSubmit;
+		this.root = document.querySelector(selector);
+		this.input = this.root.querySelector("input");
+		this.button = this.root.querySelector(".here-button");
+		this.button.disabled = true;
 
+		this.input.addEventListener("input", (e) => {
+			const { value, isValid } = maskedPhone(this.input.value);
+			this.button.disabled = !isValid;
+			this.input.value = value;
+		});
+
+		this.button.addEventListener("click", async () => {
+			await this.submit(this.input.value);
+		});
+	}
+
+	async submit(phone_number) {
+		this.onSubmit();
+		this.input.value = "";
+
+		const res = await fetch(
+			"https://api.herewallet.app/api/v1/web/android_whitelist",
+			{
+				method: "POST",
+				body: JSON.stringify({ phone_number }),
+			}
+		);
+	}
+}
+
+// HereModal
 export class HereModal {
 	constructor(id) {
 		this.el = document.getElementById(id);
 		window.addEventListener("keydown", (e) => {
 			if (e.key === "Escape" && this.isOpen) this.close();
 		});
-
 		this.el.addEventListener("pointerdown", () => this.close());
 		this.el
 			.querySelector(".modal-close")
@@ -135,11 +135,9 @@ export class HereModal {
 			.querySelector(".modal-body")
 			.addEventListener("pointerdown", (e) => e.stopPropagation());
 	}
-
 	get isOpen() {
 		return this.el.classList.contains("open");
 	}
-
 	close() {
 		this.el.classList.remove("open");
 		document.body.style.overflow = "";
@@ -148,7 +146,6 @@ export class HereModal {
 			el.style.paddingRight = "";
 		});
 	}
-
 	open() {
 		this.el.classList.add("open");
 		this.el.querySelector("input")?.focus();
@@ -167,17 +164,13 @@ function getScrollbarWidth() {
 	outer.style.overflow = "scroll"; // forcing scrollbar to appear
 	outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
 	document.body.appendChild(outer);
-
 	// Creating inner element and placing it in the container
 	const inner = document.createElement("div");
 	outer.appendChild(inner);
-
 	// Calculating difference between container's full width and the child width
 	const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
-
 	// Removing temporary elements from the DOM
 	outer.parentNode.removeChild(outer);
-
 	return scrollbarWidth;
 }
 
@@ -203,7 +196,6 @@ export const maskedPhone = (value) => {
 	return { value: result, isValid };
 };
 
-
 export const successModal = new HereModal('success-modal')
 
 export class WaitlistModal extends HereModal {
@@ -217,7 +209,18 @@ export class WaitlistModal extends HereModal {
 	}
 }
 
+export class WaitlistJoin extends HereModal {
+	constructor() {
+		super("waitlist-join")
+		this.provider = new WaitlistProvider("#waitlist-join");
+		this.provider.onSubmit = () => {
+			this.close();
+			successModal.open();
+		};
+	}
+}
 
+const waitlistJoin = new WaitlistJoin();
 const waitlistModal = new WaitlistModal();
 const headerInstance = new HeaderComponent();
 
@@ -226,7 +229,7 @@ const smoothstep = (min, max, value) => {
 	return x * x * (3 - 2 * x);
 };
 
-
+// Wait List Modal
 const waitlistButtons = Array.from(
 	document.querySelectorAll(".waitlist-button")
 );
@@ -240,30 +243,14 @@ waitlistButtons.forEach((el) => {
 	});
 });
 
-const waitlistBinance = Array.from(
-	document.querySelectorAll(".waitlist-binance")
+// Wait List Join
+const waitlistButtonJoin = Array.from(
+	document.querySelectorAll(".waitlist-button-join")
 );
-waitlistBinance.forEach((el) => {
+waitlistButtonJoin.forEach((el) => {
 	el.addEventListener("click", () => {
-		if (window.innerWidth <= 778) {
-			headerInstance.toggleModal();
-		} else {
-			waitlistBinance.open();
-		}
+		waitlistJoin.open();
 	});
-});
-
-const newsItems = Array.from(document.querySelectorAll(".news-item"));
-newsItems.forEach((el) => {
-	el.addEventListener("click", () => {
-		el.querySelector("a")?.click();
-	});
-});
-
-const secureBanner = document.querySelector(".secure-banner");
-secureBanner?.addEventListener("click", (e) => {
-	if (e.target.tag === "a") return;
-	secureBanner.querySelector(".secure-banner-link")?.click();
 });
 
 
@@ -376,7 +363,7 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 				nonlistDIVcount.classList.add(`nonlist-block__col`, `nonlist-block__0`);
 				countnonblock = countnonblock + 1;
 				nonlistDIVcount.textContent = countnonblock;
-
+				
 				// UserName
 				const nonlistDIVusername = document.createElement('div');
 				nonlistDIVusername.classList.add(`nonlist-block__col`, `nonlist-block__1`);
@@ -394,4 +381,9 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 				containerNonlist.appendChild(nonlistDIVWrapper);
 			}
 		});
+
+		const waitDiv = document.querySelector('.ac-waitlist');
+		waitDiv.innerHTML = `${countnonblock}`;
+		const withaccessDiv = document.querySelector('.ac-withaccess');
+		withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock}`;
 	});
