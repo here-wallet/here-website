@@ -126,6 +126,20 @@ html, body
 		line-height: 56px
 		font-size: 16px
 
+.three-dots
+	display: flex
+	justify-content: center
+	position: relative
+	margin: 12px 0 20px 0
+	&:before, &:after, & span
+		content: ""
+		display: inline-block
+		width: 8px
+		height: 8px
+		margin: 2px
+		background-color: #D9CDCB
+		border-radius: 50%
+
 .white
 	.header
 		&-link
@@ -171,6 +185,12 @@ html, body
 		&-body.open
 			.header-download
 				color: #fff
+		
+		.header-waitlist, .header-form-title, .header-form-title
+			display: none
+		.header-body.open
+			.here-input, .here-input ~ button.here-button.light
+				display: none
 
 	.link-logo
 		width: 95px
@@ -527,36 +547,25 @@ html, body
 			padding: 0 16px
 
 	&__table
-		display: flex
-		flex-wrap: wrap
+		columns: 3
+		column-gap: 20px
 		@media (max-width: 900px)
+			columns: 2
 			padding: 0 24px
 		@media (max-width: 760px)
+			columns: 1
 			padding: 0 16px
 	&__wrapper
 		display: flex
 		justify-content: space-between
-		width: calc( 33.3333% - 14px )
-		margin: 0 20px 8px 0
+		width: 100%
+		margin: 0 0 8px 0
 		padding: 16px 32px 16px 12px
 		border-radius: 8px
 		background: #EBDEDC
 		border: 1px solid #D9CDCB
-		@media (max-width: 900px)
-			width: calc( 50% - 4px )
 		@media (max-width: 760px)
 			width: 100%
-
-		&:nth-child(odd)
-			@media (max-width: 900px)
-				margin: 0 8px 8px 0
-			@media (max-width: 760px)
-				margin: 0 0 8px 0
-		&:nth-child(even)
-			@media (max-width: 900px)
-				margin: 0 0 8px 0
-			@media (max-width: 760px)
-				margin: 0 0 8px 0
 
 		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10)
 			background: #CCDBD8
@@ -594,7 +603,20 @@ html, body
 	&:nth-child(3n)
 		margin: 0 0 8px 0
 
-
+.block-link
+	display: block
+	width: 343px
+	margin: 0 auto
+	padding: 16px 0
+	text-align: center
+	border: 1px solid #2C3034
+	border-radius: 24px
+	font-weight: 700
+	font-size: 16px
+	line-height: 22px
+	text-align: center
+	font-feature-settings: 'liga' off, 'calt' off
+	color: #2C3034
 
 
 	

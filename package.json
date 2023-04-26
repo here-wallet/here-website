@@ -2,8 +2,8 @@
   "scripts": {
     "fetch": "node ./fetch-data.js",
     "deploy": "rm -rf description && npm run build && sh ./deploy.sh",
-    "build": "npm run fetch && parcel build ./binance-status/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug",
-    "start": "npm run fetch && parcel ./binance-status/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug"
+    "build": "npm run fetch && parcel build ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug",
+    "start": "npm run fetch && parcel ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug"
   },
   "type": "module",
   "devDependencies": {
