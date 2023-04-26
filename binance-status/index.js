@@ -343,9 +343,12 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 
 				const listDIVhash = document.createElement('div');
 				listDIVhash.classList.add(`list-block__col`, `list-block__4`);
-				const listDIVhashLink = document.createElement('a');
-				listDIVhashLink.href = 'https://explorer.near.org/transactions/' + item.transaction_hash;
-				listDIVhash.appendChild(listDIVhashLink);
+				if (Boolean(item.transaction_hash)) {
+					const listDIVhashLink = document.createElement('a');
+					listDIVhashLink.href = 'https://explorer.near.org/transactions/' + item.transaction_hash;
+					listDIVhash.appendChild(listDIVhashLink);
+				} else {
+				}
 
 				listDIVWrapper.appendChild(listDIVusername);
 				listDIVWrapper.appendChild(listDIVstatus);
