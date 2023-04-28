@@ -380,9 +380,12 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 		const waitDiv2 = document.querySelector('.nonlist-block__link');
 		const withaccessDiv = document.querySelector('.ac-withaccess');
 		const withaccessDiv2 = document.querySelector('.list-block__link');
+		const prizesDistributed = document.querySelector('.prizes-distributed');
 
 		waitDiv.innerHTML = `${countnonblock_full}`;
 		withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock_full}`;
 		waitDiv2.innerHTML = `Click to see all ` + `${countnonblock_full}` + ` users`;
 		withaccessDiv2.innerHTML = `Click to see all ` + withaccessDiv.innerHTML + ` users`;
+		const prizesDistributedCount = (`${waitlist.length}` - `${countnonblock_full}`)*4;
+		prizesDistributed.innerHTML = `$` + prizesDistributedCount;
 	});
