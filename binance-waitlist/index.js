@@ -105,13 +105,18 @@ export class WaitlistProvider {
 			this.button.disabled = !isValid;
 			this.input.value = value;
 		});
-
+		this.input.addEventListener("keydown", async (e) => {
+			if (e.key === "Enter" && this.input.value.trim() !== "") {
+				await this.submit(this.input.value);
+			}
+		});
 		this.button.addEventListener("click", async () => {
 			await this.submit(this.input.value);
 		});
 	}
 
 	async submit(user_name) {
+		console.log(JSON.stringify(user_name));
 		this.onSubmit();
 		this.input.value = "";
 
@@ -179,40 +184,7 @@ function getScrollbarWidth() {
 	return scrollbarWidth;
 }
 
-export const maskedPhone = (value) => {
-	const mask = "+X (XXX) XXX-XX-XXXX".split("");
-
-	const numbers = value.replace(/\D/g, "").split("");
-	const isValid = numbers.length >= 6;
-
-	let result = "";
-	for (let i = 0; i < mask.length; i++) {
-		if (numbers.length == 0) break;
-		const char = mask[i];
-		if ([" ", "(", ")", "+", "-"].includes(char)) {
-			if (numbers.length) result += char;
-			else break;
-			continue;
-		}
-
-		result += numbers.shift();
-	}
-
-	return { value: result, isValid };
-};
-
 export const successModal = new HereModal('success-modal')
-
-export class WaitlistModal extends HereModal {
-	constructor() {
-		super("waitlist-modal")
-		this.provider = new WaitlistProvider("#waitlist-modal");
-		this.provider.onSubmit = () => {
-			this.close();
-			successModal.open();
-		};
-	}
-}
 
 export class WaitlistJoin extends HereModal {
 	constructor() {
@@ -226,7 +198,6 @@ export class WaitlistJoin extends HereModal {
 }
 
 const waitlistJoin = new WaitlistJoin();
-const waitlistModal = new WaitlistModal();
 const headerInstance = new HeaderComponent();
 
 const smoothstep = (min, max, value) => {
