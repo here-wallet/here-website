@@ -87,8 +87,8 @@ window.addEventListener(
 );
 
 function maskedUserName(inputValue) {
-	const value = inputValue.replace(/[^a-zA-Z0-9_.-]/g, ''); // remove non-alphabetic characters
-	const isValid = value.length >= 3; // check if user name is at least 3 characters long
+	const value = inputValue.replace(/[^a-zA-Z0-9_.-]/g, '');
+	const isValid = value.length >= 2 && (/^[A-HJ-NP-Za-km-z1-9]*$/.test(value) || /^[0-9a-z]+.near/.test(value));
 	return { value, isValid };
 }
 // Form Logics
