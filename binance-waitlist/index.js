@@ -88,7 +88,7 @@ window.addEventListener(
 
 function maskedUserName(inputValue) {
 	const value = inputValue.replace(/[^a-zA-Z0-9_.-]/g, '');
-	const isValid = value.length >= 2 && (/^[A-HJ-NP-Za-km-z1-9]*$/.test(value) || /^[0-9a-z]+.near/.test(value));
+	const isValid = value.length >= 2 && (/^[A-Fa-f0-9]+$/.test(value) || /^[0-9a-z]+.near/.test(value));
 	return { value, isValid };
 }
 // Form Logics
@@ -327,12 +327,13 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 
 					// Hash Link
 					const listDIVhash = document.createElement('div');
-					listDIVhash.classList.add(`list-block__col`, `list-block__4`);
 					if (Boolean(item.transaction_hash)) {
+						listDIVhash.classList.add(`list-block__col`, `list-block__4`);
 						const listDIVhashLink = document.createElement('a');
 						listDIVhashLink.href = 'https://explorer.near.org/transactions/' + item.transaction_hash;
 						listDIVhash.appendChild(listDIVhashLink);
 					} else {
+						listDIVhash.classList.add(`list-block__col`, `list-block__4`, `list-block__grey`);
 					}
 
 					// Output
