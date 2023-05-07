@@ -282,111 +282,135 @@ document.addEventListener('DOMContentLoaded', function () {
 	timerId = setInterval(countdownTimer, 1000);
 });
 
-fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
-	.then(response => response.json())
-	.then(data => {
-		const container = document.querySelector('.list-block__table');
-		const containerNonlist = document.querySelector('.nonlist-block__table');
-		const waitlist = data.waitlist;
-		let countnonblock = 0;
-		let countnonblock_full = 0;
-		let countnonblock_deep = 0;
-		waitlist.forEach((item, i) => {
-			if ((item.status === 2) || (item.status === 1)) {
-				if (countnonblock_deep < 15) {
-					countnonblock_deep = countnonblock_deep + 1			
-					const listDIVWrapper = document.createElement('div');
-					
-					// Global Deep or View
-					if (item.status == 2) {
-						listDIVWrapper.classList.add(`list-block__wrapper`,`list-block__deep`);
-					} else if (item.status == 1) {
-						listDIVWrapper.classList.add(`list-block__wrapper`, `list-block__view`);
-					}
+fetch("https://api.herewallet.app/api/v1/web/binance_whitelist")
+  .then((response) => response.json())
+  .then((data) => {
+    const container = document.querySelector(".list-block__table");
+    const containerNonlist = document.querySelector(".nonlist-block__table");
+    const waitlist = data.waitlist;
+    let countnonblock = 0;
+    let countnonblock_full = 0;
+    let countnonblock_deep = 0;
+    waitlist.forEach((item, i) => {
+      if (item.status === 2 || item.status === 1) {
+        if (countnonblock_deep < 15) {
+          countnonblock_deep = countnonblock_deep + 1;
+          const listDIVWrapper = document.createElement("div");
 
-					// User name
-					const listDIVusername = document.createElement('div');
-					listDIVusername.classList.add(`list-block__col`, `list-block__1`);
-					listDIVusername.textContent = item.username;
+          // Global Deep or View
+          if (item.status == 2) {
+            listDIVWrapper.classList.add(
+              `list-block__wrapper`,
+              `list-block__deep`
+            );
+          } else if (item.status == 1) {
+            listDIVWrapper.classList.add(
+              `list-block__wrapper`,
+              `list-block__view`
+            );
+          }
 
-					// Deep or View
-					const listDIVstatus = document.createElement('div');
-					listDIVstatus.classList.add(`list-block__col`, `list-block__2`);
-					if (item.status == 2) {
-						listDIVstatus.textContent = 'Deep'
-					} else if (item.status == 1) {
-						listDIVstatus.textContent = 'View'
-					}
+          // User name
+          const listDIVusername = document.createElement("div");
+          listDIVusername.classList.add(`list-block__col`, `list-block__1`);
+          listDIVusername.textContent = item.username;
 
-					// Bounty with replace ABC
-					const listDIVcoin = document.createElement('div');
-					const listDIVcoinStr = item.bounty;
-					const listDIVcoinDgt = listDIVcoinStr.replace(/\D/g, "");
-					listDIVcoin.classList.add(`list-block__col`, `list-block__3`);
-					listDIVcoin.textContent = listDIVcoinDgt;
+          // Deep or View
+          const listDIVstatus = document.createElement("div");
+          listDIVstatus.classList.add(`list-block__col`, `list-block__2`);
+          if (item.status == 2) {
+            listDIVstatus.textContent = "Deep";
+          } else if (item.status == 1) {
+            listDIVstatus.textContent = "View";
+          }
 
-					// Hash Link
-					const listDIVhash = document.createElement('div');
-					if (Boolean(item.transaction_hash)) {
-						listDIVhash.classList.add(`list-block__col`, `list-block__4`);
-						const listDIVhashLink = document.createElement('a');
-						listDIVhashLink.href = 'https://explorer.near.org/transactions/' + item.transaction_hash;
-						listDIVhash.appendChild(listDIVhashLink);
-					} else {
-						listDIVhash.classList.add(`list-block__col`, `list-block__4`, `list-block__grey`);
-					}
+          // Bounty with replace ABC
+          const listDIVcoin = document.createElement("div");
+          const listDIVcoinStr = item.bounty;
+          const listDIVcoinDgt = listDIVcoinStr.replace(/\D/g, "");
+          listDIVcoin.classList.add(`list-block__col`, `list-block__3`);
+          listDIVcoin.textContent = listDIVcoinDgt;
 
-					// Output
-					listDIVWrapper.appendChild(listDIVusername);
-					listDIVWrapper.appendChild(listDIVstatus);
-					listDIVWrapper.appendChild(listDIVcoin);
-					listDIVWrapper.appendChild(listDIVhash);
+          // Hash Link
+          const listDIVhash = document.createElement("div");
+          if (Boolean(item.transaction_hash)) {
+            listDIVhash.classList.add(`list-block__col`, `list-block__4`);
+            const listDIVhashLink = document.createElement("a");
+            listDIVhashLink.href =
+              "https://explorer.near.org/transactions/" + item.transaction_hash;
+            listDIVhash.appendChild(listDIVhashLink);
+          } else {
+            listDIVhash.classList.add(
+              `list-block__col`,
+              `list-block__4`,
+              `list-block__grey`
+            );
+          }
 
-					container.appendChild(listDIVWrapper);
-				}
-			} else {
-				countnonblock_full = countnonblock_full + 1;
+          // Output
+          listDIVWrapper.appendChild(listDIVusername);
+          listDIVWrapper.appendChild(listDIVstatus);
+          listDIVWrapper.appendChild(listDIVcoin);
+          listDIVWrapper.appendChild(listDIVhash);
 
-				if (countnonblock < 48) {
-					// DIV Wrapper
-					const nonlistDIVWrapper = document.createElement('div');
-					nonlistDIVWrapper.classList.add(`nonlist-block__wrapper`);
+          container.appendChild(listDIVWrapper);
+        }
+      } else {
+        countnonblock_full = countnonblock_full + 1;
 
-					// Count
-					const nonlistDIVcount = document.createElement('div');
-					nonlistDIVcount.classList.add(`nonlist-block__col`, `nonlist-block__0`);
-					countnonblock = countnonblock + 1;
-					nonlistDIVcount.textContent = countnonblock;
+        if (countnonblock < 48) {
+          // DIV Wrapper
+          const nonlistDIVWrapper = document.createElement("div");
+          nonlistDIVWrapper.classList.add(`nonlist-block__wrapper`);
 
-					// UserName
-					const nonlistDIVusername = document.createElement('div');
-					nonlistDIVusername.classList.add(`nonlist-block__col`, `nonlist-block__1`);
-					nonlistDIVusername.textContent = item.username;
+          // Count
+          const nonlistDIVcount = document.createElement("div");
+          nonlistDIVcount.classList.add(
+            `nonlist-block__col`,
+            `nonlist-block__0`
+          );
+          countnonblock = countnonblock + 1;
+          nonlistDIVcount.textContent = countnonblock;
 
-					// Score
-					const nonlistDIVscore = document.createElement('div');
-					nonlistDIVscore.classList.add(`nonlist-block__col`, `nonlist-block__2`);
-					nonlistDIVscore.textContent = item.score;
+          // UserName
+          const nonlistDIVusername = document.createElement("div");
+          nonlistDIVusername.classList.add(
+            `nonlist-block__col`,
+            `nonlist-block__1`
+          );
+          nonlistDIVusername.textContent = item.username;
 
-					// Output
-					nonlistDIVWrapper.appendChild(nonlistDIVcount);
-					nonlistDIVWrapper.appendChild(nonlistDIVusername);
-					nonlistDIVWrapper.appendChild(nonlistDIVscore);
-					containerNonlist.appendChild(nonlistDIVWrapper);
-				} else {}
-			}
-		});
+          // Score
+          const nonlistDIVscore = document.createElement("div");
+          nonlistDIVscore.classList.add(
+            `nonlist-block__col`,
+            `nonlist-block__2`
+          );
+          nonlistDIVscore.textContent = item.score;
 
-		const waitDiv = document.querySelector('.ac-waitlist');
-		const waitDiv2 = document.querySelector('.nonlist-block__link');
-		const withaccessDiv = document.querySelector('.ac-withaccess');
-		const withaccessDiv2 = document.querySelector('.list-block__link');
-		const prizesDistributed = document.querySelector('.prizes-distributed');
+          // Output
+          nonlistDIVWrapper.appendChild(nonlistDIVcount);
+          nonlistDIVWrapper.appendChild(nonlistDIVusername);
+          nonlistDIVWrapper.appendChild(nonlistDIVscore);
+          containerNonlist.appendChild(nonlistDIVWrapper);
+        } else {
+        }
+      }
+    });
 
-		waitDiv.innerHTML = `${countnonblock_full}`;
-		withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock_full}`;
-		waitDiv2.innerHTML = `Click to see all ` + `${countnonblock_full}` + ` users`;
-		withaccessDiv2.innerHTML = `Click to see all ` + withaccessDiv.innerHTML + ` users`;
-		const prizesDistributedCount = (`${waitlist.length}` - `${countnonblock_full}`)*4;
-		prizesDistributed.innerHTML = `$` + prizesDistributedCount;
-	});
+    const waitDiv = document.querySelector(".ac-waitlist");
+    const waitDiv2 = document.querySelector(".nonlist-block__link");
+    const withaccessDiv = document.querySelector(".ac-withaccess");
+    const withaccessDiv2 = document.querySelector(".list-block__link");
+    const prizesDistributed = document.querySelector(".prizes-distributed");
+
+    waitDiv.innerHTML = `${countnonblock_full}`;
+    withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock_full}`;
+    waitDiv2.innerHTML =
+      `Click to see all ` + `${countnonblock_full}` + ` users`;
+    withaccessDiv2.innerHTML =
+      `Click to see all ` + withaccessDiv.innerHTML + ` users`;
+    const prizesDistributedCount =
+      (`${waitlist.length}` - `${countnonblock_full}`) * 4;
+    prizesDistributed.innerHTML = `$` + prizesDistributedCount;
+  });
