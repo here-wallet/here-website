@@ -390,3 +390,31 @@ fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 		const prizesDistributedCount = (`${waitlist.length}` - `${countnonblock_full}`)*4;
 		prizesDistributed.innerHTML = `$` + prizesDistributedCount;
 	});
+
+
+const asks = Array.from(document.querySelectorAll(".ask-block"));
+asks.forEach((el) => {
+	el.addEventListener("click", () => {
+		const header = el.querySelector(".ask-block-header");
+		const body = el.querySelector(".ask-block-body");
+		const headerBox = header.getBoundingClientRect();
+
+		asks.forEach((ask) => {
+			if (ask == el) return;
+			const header = ask.querySelector(".ask-block-header");
+			const box = header.getBoundingClientRect();
+			ask.classList.remove("open");
+			ask.style.height = box.height + "px";
+		});
+
+		el.style.height = headerBox.height + "px";
+		body.style.display = "block";
+		setTimeout(() => {
+			const { height } = body.getBoundingClientRect();
+			el.classList.toggle("open");
+			el.style.height = el.classList.contains("open")
+				? `${headerBox.height + height}px`
+				: headerBox.height + "px";
+		}, 10);
+	});
+});

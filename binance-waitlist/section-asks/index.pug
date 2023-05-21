@@ -1,0 +1,13 @@
+section.asks
+    h2
+        | FAQ
+        span.dot .
+
+    for item in asks.items
+        .ask-block
+            .ask-block-header
+                p= item.title
+                img(src='../assets/icons/arrow-down.svg')
+            
+            .ask-block-body
+                p= item.text
