@@ -3,11 +3,11 @@ section.asks
         | FAQ
         span.dot .
 
-    for item in asks.items
+    for item in asksbin.items
         .ask-block
             .ask-block-header
-                p= item.title
+                p !{item.title}
                 img(src='../assets/icons/arrow-down.svg')
             
             .ask-block-body
-                p= item.text
+                p !{item.text}

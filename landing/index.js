@@ -1,6 +1,7 @@
 import { HeaderComponent } from "./scripts/HeaderComponent";
 import { WaitlistModal } from "./scripts/WaitlistModal";
 import { SliderFeatures } from "./section-features/index";
+import { SliderBinance } from "./section-binance/index";
 import {
   QRCode,
   lightQR,
@@ -129,6 +130,16 @@ waitlistButtons.forEach((el) => {
     } else {
       waitlistModal.open();
     }
+  });
+});
+
+// Wait List Join
+const waitlistButtonJoin = Array.from(
+  document.querySelectorAll(".waitlist-button-join")
+);
+waitlistButtonJoin.forEach((el) => {
+  el.addEventListener("click", () => {
+    waitlistJoin.open();
   });
 });
 

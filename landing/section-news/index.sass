@@ -21,7 +21,7 @@
     &-item
         display: block
         width: 362px
-        height: 408px
+        height: 438px
         background: #2C3034
         border-radius: 16px
         border: 1px solid #2C3034
@@ -55,6 +55,13 @@
         margin: 0
 
     &-item p
+        display: -webkit-box
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        text-overflow: ellipsis
+        width: 100%
+        height: 68px
+        overflow: hidden
         font-style: normal
         font-weight: 500
         font-size: 16px

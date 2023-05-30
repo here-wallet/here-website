@@ -270,10 +270,6 @@
       "title": "In case you missed anything",
       "items": [
         {
-          "title": "When android?",
-          "text": "We are already making an Android version of the app. We plan to launch it in early 2023."
-        },
-        {
           "title": "How to deposit/withdraw money in HERE Wallet?",
           "text": [
             "You can deposit/withdraw money in any cryptocurrency using card or Binance. Balance in HERE is USDC stablecoin, so you can withdraw it any way you are used to.",
@@ -285,16 +281,33 @@
           "text": "We do not block funds and withdraw them within 3-5 seconds after verification. Withdrawal to Binance usually takes one minute, withdrawal to a bank account takes about 12 hours, in rare cases up to three days."
         },
         {
-          "title": "Is it possible to send money to friends who don't have a wallet yet?",
-          "text": "Yes, it is possible to send money to anyone you want. If your friend doesn't have a HERE account, it can be created easily. Money can be received by clicking on the link in the SMS."
-        },
-        {
           "title": "How to cash out money from the wallet?",
           "text": "You can cash out using your nearest USDC exchanger for fiat currency."
+        }
+      ]
+    },
+    "asksbin": {
+      "title": "In case you missed anything",
+      "items": [
+        {
+          "title": "What is Binance connect?",
+          "text": [
+            "The idea is to use money from the balance of the exchange onchain. When you connect Binance, you create an api key that lets you quickly move assets between the exchange and your crypto wallet. Now you can remove fees from staking, use dApps, and store money safely. And at the same time use the exchange for cheap swaps and withdrawals to fiat."
+          ]
         },
         {
-          "title": "Does HERE have a banking license?",
-          "text": "HERE uses USDC as the base currency, which is a stablecoin that requires each transaction to be signed with a private key for transfer. The private key is only stored locally on your device in encrypted form. No one can access it unless you say 12 words to recover it. The HERE team has no access to your money and does not process the transfers, they happen directly on the blockchain. That's why we don't need a banking license and HERE works without restrictions in all countries."
+          "title": "Is Binance connect safe?",
+          "text": "We have prepared an article that explains why Binance connect is safe. Take a look: <a href=\"https://medium.com/@nearhere/binance-connect-security-5193df4ce0c3\" target=\"_blank\">https://medium.com/@nearhere/binance-connect-security-5193df4ce0c3</a>"
+        },
+        {
+          "title": "Why should I connect Binance?",
+          "text": [
+            "<ul class=\"ask-list\"><li>Stake onchain with a freeze of 3 days instead of 120 days on Binance</li><li>If Binance goes bankrupt as FTX, you keep your money</li><li>You don't pay commissions for using dApps and you do it without intermediaries</li><li>The first 1,000 users to make a deep Binance connection (not view only) will receive 4 USDT</li></ul>"
+          ]
+        },
+        {
+          "title": "How can I report bugs?",
+          "text": "You can send bugs to our support in telegram (<a href=\"https://t.me/heresupport\" target=\"_blank\">t.me/heresupport</a>) or to our discord channel (<a href=\"https://discord.com/channels/996424467628703836/1098134885538996254\" target=\"_blank\">https://discord.com/channels/996424467628703836/1098134885538996254</a>)"
         }
       ]
     }

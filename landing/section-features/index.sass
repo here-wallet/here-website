@@ -158,17 +158,15 @@
 .slides
     display: flex
     position: relative
-    z-index: 1
+    z-index: 3
     width: 100%
     overflow: hidden
 
     img
         width: 100%
-        top: 0
-        left: 0
         opacity: 0
         transform: translateX(-100%)
-        transition: opacity 1s ease-in-out, transform 0.8s cubic-bezier(0.2, 1, .55, 1.15)
+        transition: opacity 1s ease-in-out, transform .8s cubic-bezier(.4, 1, .55, 1.05)
         &.active
             opacity: 1
             transform: translateX(0%)

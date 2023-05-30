@@ -4,13 +4,13 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		title HERE NFT Collection
-		meta(name="description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
+		title Binance waitlist HERE
+		meta(name="description", content="Every day we unlock the Binance connect for 10 users, join waiting list and keep track of your progress")
 		link(href="style.sass", rel="stylesheet")
 		link(href="http://herewallet.app/nft", rel="canonical")
 		meta(property="og:url", content="http://herewallet.app/nft")
-		meta(property="og:title", content="HERE NFT Collection")
-		meta(property="og:description", content="HERE Early user NFTs launch and a competition with 1000 NFTs as a reward")
+		meta(property="og:title", content="Binance waitlist HERE")
+		meta(property="og:description", content="Every day we unlock the Binance connect for 10 users, join waiting list and keep track of your progress")
 		meta(name="format-detection", content="telephone=no")
 		link(href="https://fonts.googleapis.com", rel="preconnect")
 		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
@@ -20,6 +20,13 @@ html(lang="en")
 		link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild3139-6663-4364-b339-326261363738/152.png')
 		link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild3139-6663-4364-b339-326261363738/152.png')
 		link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild3139-6663-4364-b339-326261363738/152.png')
+		// Google tag (gtag.js)
+		script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-J76SQ67RJB');
 	body.white
 		include ../landing/header/index.pug
 		+header("/")
