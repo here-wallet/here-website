@@ -1,9 +1,9 @@
 import { successModal } from "./WaitlistModal";
-import { WaitlistProvider } from "./WaitlistProvider";
+import { WaitlistProviderUserName } from "./WaitlistProviderUserName";
 import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
 
 export class HeaderComponent {
-  provider = new WaitlistProvider(".header-form");
+  provider = new WaitlistProviderUserName(".header-form");
   header = document.querySelector(".header");
   floatQr = document.querySelector(".float-qr");
   topButton = document.querySelector(".scroll-up");

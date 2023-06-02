@@ -1,0 +1,366 @@
+@keyframes popBigImg
+	0%
+		transform: scale(0)
+		opacity: 0
+	70%
+		transform: scale(1.1)
+		opacity: 1
+	100%
+		transform: scale(1)
+		opacity: 1
+@keyframes logoScale
+	0%
+		transform: scale(0)
+		opacity: 0
+	60%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
+		opacity: 1
+@keyframes lowText
+	0%
+		top: 50%
+		left: 50%
+		font-weight: 900
+		font-size: 40px
+		line-height: 50px
+		font-feature-settings: 'liga' off
+		transform: translate(-50%, -50%) scale(1)
+	100%
+		position: absolute
+		line-height: 27px
+		font-weight: 500
+		color: #6B6661
+		text-decoration-line: line-through
+		font-feature-settings: 'liga' off
+		transform: translate(-40px, 37px) scale(0.5)
+@keyframes lowText2_1
+	0%
+		transform: translate(-50%, -50%) scale(1)
+	100%
+		opacity: 0
+		font-size: 20px
+		line-height: 27px
+		font-weight: 500
+		color: #6B6661
+		font-feature-settings: 'liga' off
+		transform: translate(-50%, 76px) scale(0.5)
+@keyframes lowText2_2
+	0%
+		transform: translate(-50%, -50%) scale(1)
+		font-family: 'Manrope'
+		font-size: 40px
+		line-height: 50px
+	100%
+		font-weight: 500
+		font-size: 20px
+		line-height: 27px
+		text-align: center
+		text-decoration-line: line-through
+		font-feature-settings: 'liga' off
+		transform: translate(-50%, 76px)
+		opacity: 1
+@keyframes popTexSlide
+	0%
+		top: 40px
+	70%
+		top: 134px
+	100%
+		top: 132px
+	
+.binance-here
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 auto 64px auto
+	@media (max-width: 750px)
+		margin: 0 auto 48px auto
+	&__binance
+		width: 53px
+		@media (max-width: 750px)
+			width: 36px
+	&__x
+		width: 24px
+		margin: 0 20px
+		@media (max-width: 750px)
+			width: 12px
+			margin: 0 12px
+	&__here
+		height: 40px
+		@media (max-width: 750px)
+			height: 32px
+	&__switch
+		position: relative
+		z-index: 1
+		width: 60px
+		height: 32px
+		margin: 0 0 0 20px
+		background: #D9CDCB
+		border-radius: 16px
+		transition: background 1s linear
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: 6px
+			left: 6px
+			z-index: 2
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-color: #FFFFFF
+			transition: all 0.15s linear
+		&.action
+			background: linear-gradient(89.36deg, #FDD65F -76.04%, #FCA857 -10.53%, #FC668B 47.97%, #C74AD5 99.46%), #2C3034
+			transition: background 1s linear
+			&::before
+				left: 34px
+				transition: all 0.15s linear
+.binance-features
+	display: flex
+	gap: 16px
+	position: relative
+	margin: 0 0 32px 0
+	@media (max-width: 1000px)
+		flex-wrap: wrap
+		gap: 20px
+		margin: 0 0 16px 0
+	&__wrapper
+		h2
+			margin: 0 auto 32px auto
+			
+	&__item
+		position: relative
+		width: calc( 33.3333% - 11px )
+		margin: 0 0 64px 0
+		@media (max-width: 1000px)
+			width: calc( 50% - 10px )
+		@media (max-width: 750px)
+			width: 100%
+		
+		&:nth-child(3)
+			@media (max-width: 1000px)
+				width: 100%
+
+				.binance-features__item-front
+					justify-content: center
+			.binance-features__item-top
+				@media (max-width: 1000px)
+					width: 148px
+					margin: 0 18px
+			.binance-features__item-top p
+				@media (max-width: 1000px)
+					margin: 0
+			.binance-features__item-bottom
+				@media (max-width: 1000px)
+					width: auto
+					margin: 0 28px
+					padding: 0
+				@media (max-width: 750px)
+					text-align: left
+
+
+			
+		&-front
+			display: flex
+			align-items: center
+			justify-content: space-around
+			position: relative
+			z-index: 2
+			height: 168px
+			padding: 0 16px 0 0
+			background: #EBDEDC
+			border: 1px solid #D2C5C3
+			border-radius: 24px
+		&-top
+			position: relative
+			width: 217px
+			height: 100%
+			@media (max-width: 1000px)
+				justify-content: center
+			p
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				margin: 0
+				font-family: CabinetGrotesk
+				font-weight: 900
+				font-size: 40px
+				line-height: 50px
+				font-feature-settings: 'liga' off
+				white-space: nowrap
+
+		&-img
+			display: none
+			margin: 18px 0 0 28px
+			transform: scale(0)
+			opacity: 0
+
+		&:nth-child(2)
+			.binance-features__item-img
+				margin: 28px 0 0 40px
+
+		&-bottom
+			width: calc( 100% - 217px )
+			p
+				margin: 0
+				font-weight: 600
+				font-size: 18px
+				line-height: 25px
+				font-feature-settings: 'liga' off
+				color: #2C3034
+		&-und
+			position: absolute
+			top: 40px
+			left: 0
+			right: 0
+			z-index: 1
+			padding: 40px 0 0 0
+			background: #2C3034
+			border: 1px solid #2C3034
+			border-radius: 0px 0px 24px 24px
+			p
+				font-weight: 600
+				font-size: 20px
+				line-height: 27px
+				text-align: center
+				font-feature-settings: 'liga' off
+				color: #EBDEDC
+		&.action
+			.binance-features__item-front
+				transition: all 0.15s linear
+			.binance-features__item-img
+				display: block
+				width: 148px
+				height: 110px
+				animation: popBigImg 0.9s forwards
+				
+			&:nth-child(2) .binance-features__item-img
+				animation-delay: 0.2s
+			&:nth-child(3) .binance-features__item-img
+				animation-delay: 0.35s
+			
+			.binance-features__item-und
+				animation: popTexSlide 0.9s forwards
+			&:nth-child(2) .binance-features__item-und
+				animation-delay: 0.2s
+			&:nth-child(3) .binance-features__item-und
+				animation-delay: 0.35s
+
+			.binance-features__item-top p
+				margin: 0
+				animation: lowText 0.9s forwards
+			&:nth-child(2) .binance-features__item-top p
+				animation-delay: 0.2s
+			&:nth-child(3) .binance-features__item-img
+				animation-delay: 0.35s
+				@media (max-width: 1000px)
+					margin: 18px 0 0 0
+
+
+
+
+
+.binance-features-2
+	display: flex
+	gap: 16px
+	@media (max-width: 750px)
+		display: block
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		position: relative
+		width: calc( 50% - 8px )
+		height: 243px
+		background: #EBDEDC
+		border: 1px solid #D2C5C3
+		border-radius: 24px
+		text-align: center
+		overflow: hidden
+		&.action
+			.binance-features-2__logos
+				animation: logoScale 0.8s forwards
+				animation-delay: 0.70s
+			p.binance-features-2__und-logo
+				animation: lowText2_1 0.7s forwards
+				animation-delay: 0.70s
+			p.binance-features-2__hidden
+				animation: lowText2_2 0.5s forwards
+				animation-delay: 0.72s
+			&:nth-child(2) p
+				animation-delay: 0.9s
+			.binance-features-2__text
+				animation: logoScale 0.7s forwards
+				animation-delay: 0.9s
+				@media (max-width: 1000px)
+					font-size: 28px
+					line-height: 35px
+		@media (max-width: 750px)
+			width: 100%
+			margin: 0 0 8px 0
+	&__logos
+		display: flex
+		gap: 28px
+		margin: 0 0 0 -16px
+		padding: 40px 0
+		opacity: 0
+		@media (max-width: 1000px)
+			gap: 8px
+		img
+			width: 58px
+			height: 58px
+		
+	&__text
+		opacity: 0
+		padding: 16px 0 16px 0
+		font-family: CabinetGrotesk
+		font-style: normal
+		font-weight: 900
+		font-size: 40px
+		line-height: 50px
+		text-align: center
+		font-feature-settings: 'liga' off
+		color: #2C3034
+	h3
+		position: absolute
+		top: 28px
+		width: 100%
+		font-weight: 600
+		font-size: 18px
+		text-align: center
+		line-height: 25px
+		font-feature-settings: 'liga' off
+		color: #2C3034
+	&__und-logo
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		max-width: 320px
+		transform: translate(-50%, -50%)
+		margin: 0
+		font-family: CabinetGrotesk
+		font-weight: 900
+		font-size: 40px
+		line-height: 50px
+		text-align: center
+		font-feature-settings: 'liga' off
+		color: #2C3034
+	&__hidden
+		opacity: 0
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		max-width: 100%
+		transform: translate(-50%, -50%)
+		margin: 0
+		font-family: 'Manrope'
+		font-size: 40px
+		line-height: 50px
+		text-align: center
+		text-decoration-line: line-through
+		font-feature-settings: 'liga' off
+		color: #6B6661

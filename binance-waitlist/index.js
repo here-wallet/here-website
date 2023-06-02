@@ -282,135 +282,141 @@ document.addEventListener('DOMContentLoaded', function () {
 	timerId = setInterval(countdownTimer, 1000);
 });
 
-fetch("https://api.herewallet.app/api/v1/web/binance_whitelist")
-  .then((response) => response.json())
-  .then((data) => {
-    const container = document.querySelector(".list-block__table");
-    const containerNonlist = document.querySelector(".nonlist-block__table");
-    const waitlist = data.waitlist;
-    let countnonblock = 0;
-    let countnonblock_full = 0;
-    let countnonblock_deep = 0;
-    waitlist.forEach((item, i) => {
-      if (item.status === 2 || item.status === 1) {
-        if (countnonblock_deep < 15) {
-          countnonblock_deep = countnonblock_deep + 1;
-          const listDIVWrapper = document.createElement("div");
 
-          // Global Deep or View
-          if (item.status == 2) {
-            listDIVWrapper.classList.add(
-              `list-block__wrapper`,
-              `list-block__deep`
-            );
-          } else if (item.status == 1) {
-            listDIVWrapper.classList.add(
-              `list-block__wrapper`,
-              `list-block__view`
-            );
-          }
+fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
+	.then(response => response.json())
+	.then(data => {
+		const container = document.querySelector('.list-block__table');
+		const containerNonlist = document.querySelector('.nonlist-block__table');
+		const waitlist = data.waitlist;
+		let countnonblock = 0;
+		let countnonblock_full = 0;
+		let countnonblock_deep = 0;
+		waitlist.forEach((item, i) => {
+			if ((item.status === 2) || (item.status === 1)) {
+				if (countnonblock_deep < 15) {
+					countnonblock_deep = countnonblock_deep + 1			
+					const listDIVWrapper = document.createElement('div');
+					
+					// Global Deep or View
+					if (item.status == 2) {
+						listDIVWrapper.classList.add(`list-block__wrapper`,`list-block__deep`);
+					} else if (item.status == 1) {
+						listDIVWrapper.classList.add(`list-block__wrapper`, `list-block__view`);
+					}
 
-          // User name
-          const listDIVusername = document.createElement("div");
-          listDIVusername.classList.add(`list-block__col`, `list-block__1`);
-          listDIVusername.textContent = item.username;
+					// User name
+					const listDIVusername = document.createElement('div');
+					listDIVusername.classList.add(`list-block__col`, `list-block__1`);
+					listDIVusername.textContent = item.username;
 
-          // Deep or View
-          const listDIVstatus = document.createElement("div");
-          listDIVstatus.classList.add(`list-block__col`, `list-block__2`);
-          if (item.status == 2) {
-            listDIVstatus.textContent = "Deep";
-          } else if (item.status == 1) {
-            listDIVstatus.textContent = "View";
-          }
+					// Deep or View
+					const listDIVstatus = document.createElement('div');
+					listDIVstatus.classList.add(`list-block__col`, `list-block__2`);
+					if (item.status == 2) {
+						listDIVstatus.textContent = 'Deep'
+					} else if (item.status == 1) {
+						listDIVstatus.textContent = 'View'
+					}
 
-          // Bounty with replace ABC
-          const listDIVcoin = document.createElement("div");
-          const listDIVcoinStr = item.bounty;
-          const listDIVcoinDgt = listDIVcoinStr.replace(/\D/g, "");
-          listDIVcoin.classList.add(`list-block__col`, `list-block__3`);
-          listDIVcoin.textContent = listDIVcoinDgt;
+					// Bounty with replace ABC
+					const listDIVcoin = document.createElement('div');
+					const listDIVcoinStr = item.bounty;
+					const listDIVcoinDgt = listDIVcoinStr.replace(/\D/g, "");
+					listDIVcoin.classList.add(`list-block__col`, `list-block__3`);
+					listDIVcoin.textContent = listDIVcoinDgt;
 
-          // Hash Link
-          const listDIVhash = document.createElement("div");
-          if (Boolean(item.transaction_hash)) {
-            listDIVhash.classList.add(`list-block__col`, `list-block__4`);
-            const listDIVhashLink = document.createElement("a");
-            listDIVhashLink.href =
-              "https://explorer.near.org/transactions/" + item.transaction_hash;
-            listDIVhash.appendChild(listDIVhashLink);
-          } else {
-            listDIVhash.classList.add(
-              `list-block__col`,
-              `list-block__4`,
-              `list-block__grey`
-            );
-          }
+					// Hash Link
+					const listDIVhash = document.createElement('div');
+					if (Boolean(item.transaction_hash)) {
+						listDIVhash.classList.add(`list-block__col`, `list-block__4`);
+						const listDIVhashLink = document.createElement('a');
+						listDIVhashLink.href = 'https://explorer.near.org/transactions/' + item.transaction_hash;
+						listDIVhash.appendChild(listDIVhashLink);
+					} else {
+						listDIVhash.classList.add(`list-block__col`, `list-block__4`, `list-block__grey`);
+					}
 
-          // Output
-          listDIVWrapper.appendChild(listDIVusername);
-          listDIVWrapper.appendChild(listDIVstatus);
-          listDIVWrapper.appendChild(listDIVcoin);
-          listDIVWrapper.appendChild(listDIVhash);
+					// Output
+					listDIVWrapper.appendChild(listDIVusername);
+					listDIVWrapper.appendChild(listDIVstatus);
+					listDIVWrapper.appendChild(listDIVcoin);
+					listDIVWrapper.appendChild(listDIVhash);
 
-          container.appendChild(listDIVWrapper);
-        }
-      } else {
-        countnonblock_full = countnonblock_full + 1;
+					container.appendChild(listDIVWrapper);
+				}
+			} else {
+				countnonblock_full = countnonblock_full + 1;
 
-        if (countnonblock < 48) {
-          // DIV Wrapper
-          const nonlistDIVWrapper = document.createElement("div");
-          nonlistDIVWrapper.classList.add(`nonlist-block__wrapper`);
+				if (countnonblock < 48) {
+					// DIV Wrapper
+					const nonlistDIVWrapper = document.createElement('div');
+					nonlistDIVWrapper.classList.add(`nonlist-block__wrapper`);
 
-          // Count
-          const nonlistDIVcount = document.createElement("div");
-          nonlistDIVcount.classList.add(
-            `nonlist-block__col`,
-            `nonlist-block__0`
-          );
-          countnonblock = countnonblock + 1;
-          nonlistDIVcount.textContent = countnonblock;
+					// Count
+					const nonlistDIVcount = document.createElement('div');
+					nonlistDIVcount.classList.add(`nonlist-block__col`, `nonlist-block__0`);
+					countnonblock = countnonblock + 1;
+					nonlistDIVcount.textContent = countnonblock;
 
-          // UserName
-          const nonlistDIVusername = document.createElement("div");
-          nonlistDIVusername.classList.add(
-            `nonlist-block__col`,
-            `nonlist-block__1`
-          );
-          nonlistDIVusername.textContent = item.username;
+					// UserName
+					const nonlistDIVusername = document.createElement('div');
+					nonlistDIVusername.classList.add(`nonlist-block__col`, `nonlist-block__1`);
+					nonlistDIVusername.textContent = item.username;
 
-          // Score
-          const nonlistDIVscore = document.createElement("div");
-          nonlistDIVscore.classList.add(
-            `nonlist-block__col`,
-            `nonlist-block__2`
-          );
-          nonlistDIVscore.textContent = item.score;
+					// Score
+					const nonlistDIVscore = document.createElement('div');
+					nonlistDIVscore.classList.add(`nonlist-block__col`, `nonlist-block__2`);
+					nonlistDIVscore.textContent = item.score;
 
-          // Output
-          nonlistDIVWrapper.appendChild(nonlistDIVcount);
-          nonlistDIVWrapper.appendChild(nonlistDIVusername);
-          nonlistDIVWrapper.appendChild(nonlistDIVscore);
-          containerNonlist.appendChild(nonlistDIVWrapper);
-        } else {
-        }
-      }
-    });
+					// Output
+					nonlistDIVWrapper.appendChild(nonlistDIVcount);
+					nonlistDIVWrapper.appendChild(nonlistDIVusername);
+					nonlistDIVWrapper.appendChild(nonlistDIVscore);
+					containerNonlist.appendChild(nonlistDIVWrapper);
+				} else {}
+			}
+		});
 
-    const waitDiv = document.querySelector(".ac-waitlist");
-    const waitDiv2 = document.querySelector(".nonlist-block__link");
-    const withaccessDiv = document.querySelector(".ac-withaccess");
-    const withaccessDiv2 = document.querySelector(".list-block__link");
-    const prizesDistributed = document.querySelector(".prizes-distributed");
+		const waitDiv = document.querySelector('.ac-waitlist');
+		const waitDiv2 = document.querySelector('.nonlist-block__link');
+		const withaccessDiv = document.querySelector('.ac-withaccess');
+		const withaccessDiv2 = document.querySelector('.list-block__link');
+		const prizesDistributed = document.querySelector('.prizes-distributed');
 
-    waitDiv.innerHTML = `${countnonblock_full}`;
-    withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock_full}`;
-    waitDiv2.innerHTML =
-      `Click to see all ` + `${countnonblock_full}` + ` users`;
-    withaccessDiv2.innerHTML =
-      `Click to see all ` + withaccessDiv.innerHTML + ` users`;
-    const prizesDistributedCount =
-      (`${waitlist.length}` - `${countnonblock_full}`) * 4;
-    prizesDistributed.innerHTML = `$` + prizesDistributedCount;
-  });
+		waitDiv.innerHTML = `${countnonblock_full}`;
+		withaccessDiv.innerHTML = `${waitlist.length}` - `${countnonblock_full}`;
+		waitDiv2.innerHTML = `Click to see all ` + `${countnonblock_full}` + ` users`;
+		withaccessDiv2.innerHTML = `Click to see all ` + withaccessDiv.innerHTML + ` users`;
+		const prizesDistributedCount = (`${waitlist.length}` - `${countnonblock_full}`)*4;
+		prizesDistributed.innerHTML = `$` + prizesDistributedCount;
+	});
+
+
+const asks = Array.from(document.querySelectorAll(".ask-block"));
+asks.forEach((el) => {
+	el.addEventListener("click", () => {
+		const header = el.querySelector(".ask-block-header");
+		const body = el.querySelector(".ask-block-body");
+		const headerBox = header.getBoundingClientRect();
+
+		asks.forEach((ask) => {
+			if (ask == el) return;
+			const header = ask.querySelector(".ask-block-header");
+			const box = header.getBoundingClientRect();
+			ask.classList.remove("open");
+			ask.style.height = box.height + "px";
+		});
+
+		el.style.height = headerBox.height + "px";
+		body.style.display = "block";
+		setTimeout(() => {
+			const { height } = body.getBoundingClientRect();
+			el.classList.toggle("open");
+			el.style.height = el.classList.contains("open")
+				? `${headerBox.height + height}px`
+				: headerBox.height + "px";
+		}, 10);
+	});
+});
+

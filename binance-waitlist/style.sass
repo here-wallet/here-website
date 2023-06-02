@@ -196,13 +196,17 @@ html, body
 		width: 95px
 		height: 21px
 		background-image: url(./../assets/logo-black.svg)
+		z-index: 10
 		img
 			display: none
 	
 	.header-body
 		.header-link
 			color: #fff
-
+.body_margin
+	.link-logo
+		img
+			display: block
 .header-status
 	display: flex
 	width: 1120px
@@ -573,6 +577,6 @@ html, body
 	color: #2C3034
 
 
-	
+@import "section-asks"
 @import "../landing/header"
 @import "../landing/waitlist-modal"

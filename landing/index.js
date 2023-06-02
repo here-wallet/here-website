@@ -1,5 +1,7 @@
 import { HeaderComponent } from "./scripts/HeaderComponent";
 import { WaitlistModal } from "./scripts/WaitlistModal";
+import { SliderFeatures } from "./section-features/index";
+import { SliderBinance } from "./section-binance/index";
 import {
   QRCode,
   lightQR,
@@ -30,7 +32,6 @@ const qrSecond = new QRCode({
 });
 
 document.querySelector(".qr-second").appendChild(qrSecond.canvas);
-
 
 const waitlistModal = new WaitlistModal();
 const headerInstance = new HeaderComponent();
@@ -132,6 +133,16 @@ waitlistButtons.forEach((el) => {
   });
 });
 
+// Wait List Join
+const waitlistButtonJoin = Array.from(
+  document.querySelectorAll(".waitlist-button-join")
+);
+waitlistButtonJoin.forEach((el) => {
+  el.addEventListener("click", () => {
+    waitlistJoin.open();
+  });
+});
+
 const newsItems = Array.from(document.querySelectorAll(".news-item"));
 newsItems.forEach((el) => {
   el.addEventListener("click", () => {
@@ -150,92 +161,6 @@ secureBanner?.addEventListener("click", (e) => {
 
 
 
-
-function slider(sliderElement) {
-  const slides = sliderElement.querySelectorAll('.slides img');
-  const featureContent = sliderElement.closest('.feature').querySelector('.feature-content');
-  const pagination = sliderElement.querySelector('.pagination');
-  const featureContentlistItems = featureContent.querySelectorAll('.feature-content li');
-
-  let currentSlide = 0;
-  let slideInterval;
-
-
-  // При клике на кнопку пагинации
-  pagination.querySelectorAll('span').forEach(function (span) {
-    span.addEventListener('click', function () {
-      // Найти индекс текущей кнопки
-      const currentIndex = Array.prototype.indexOf.call(pagination.children, this);
-      // Переключить соответствующий элемент списка на активный
-      featureContentlistItems.forEach(function (item, index) {
-        if (index === currentIndex) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    });
-  });
-
-  function startSlider() {
-    slides[0].classList.add('active');
-    slideInterval = setInterval(nextSlide, 3000);
-  }
-
-  function pauseSlider() {
-    clearInterval(slideInterval);
-  }
-
-  function nextSlide() {
-    slides[currentSlide].classList.remove('active');
-    featureContentlistItems[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-    featureContentlistItems[currentSlide].classList.add('active');
-    updatePagination();
-    slides.forEach(slide => {
-      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
-    });
-  }
-
-  function previousSlide() {
-    slides[currentSlide].classList.remove('active');
-    featureContentlistItems[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    featureContentlistItems[currentSlide].classList.add('active');
-    updatePagination();
-    slides.forEach(slide => {
-      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
-    });
-  }
-
-  function updatePagination() {
-    pagination.innerHTML = '';
-    for (let i = 0; i < slides.length; i++) {
-      const span = document.createElement('span');
-      if (i === currentSlide) {
-        span.classList.add('active');
-      }
-      span.addEventListener('click', () => {
-        pauseSlider();
-        slides[currentSlide].classList.remove('active');
-        currentSlide = i;
-        slides[currentSlide].classList.add('active');
-        updatePagination();
-        slides.forEach(slide => {
-          slide.style.transform = `translateX(-${currentSlide * 100}%)`;
-        });
-      });
-      pagination.appendChild(span);
-    }
-  }
-  startSlider();
-  updatePagination();
-}
-
-document.querySelectorAll('.slider').forEach(sliderElement => slider(sliderElement));
-
 if (/Android/.test(navigator.userAgent)) {
   const element = document.querySelector('.appandroid');
   element.classList.add('app-show');
@@ -246,3 +171,54 @@ if (/Android/.test(navigator.userAgent)) {
   const element = document.querySelector('.apprandom');
   element.classList.add('app-show');
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+  var headerNote = document.querySelector('.header-note');
+  var closeButton = document.querySelector('.header-note__close');
+
+  // Check if the header-note should be shown
+  var isHeaderNoteClosed = (document.cookie.indexOf('headerNoteClosed') !== -1) || (localStorage.getItem('headerNoteClosed') === 'true');
+
+  if (!isHeaderNoteClosed) {
+    var scrollHandler = function () {
+      if (window.scrollY >= 300) {
+        headerNote.classList.add('open');
+      } else {
+        headerNote.classList.remove('open');
+      }
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+
+    // Close the header-note when the close button is clicked
+    closeButton.addEventListener('click', function () {
+      headerNote.classList.remove('open');
+      document.cookie = 'headerNoteClosed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+      localStorage.setItem('headerNoteClosed', 'true');
+
+      // Remove the scroll event listener after closing the header-note
+      window.removeEventListener('scroll', scrollHandler);
+    });
+  } else {
+    headerNote.classList.remove('open');
+    document.cookie = 'headerNoteClosed=true; expires=Fri, 31 Dec 2000 23:59:59 GMT; path=/';
+    localStorage.removeItem('headerNoteClosed');
+  }
+});
+
+
+var imageloop = document.querySelector('.how-work__mobile-img');
+// Set the initial state of the image
+var isEnlarged = false;
+// Add a click event listener to the image
+imageloop.addEventListener('click', function () {
+  if (!isEnlarged) {
+    // Enlarge the image
+    imageloop.classList.add('enlarged');
+  } else {
+    // Reset the image size
+    imageloop.classList.remove('enlarged');
+  }
+  // Toggle the state
+  isEnlarged = !isEnlarged;
+});

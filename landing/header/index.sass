@@ -49,14 +49,17 @@
         &:hover
             text-decoration: none
             color: rgba(243, 235, 234, 1)
-
+.body_margin .header
+    @media (max-width: 900px)
+        position: absolute
+        top: 40px
 .header
     width: 100%
     box-sizing: border-box
-    position: absolute
-    top: 40px
+    position: relative
     transition: 0.2s background
     z-index: 10002
+    
     &.active
         position: fixed
         top: 0
@@ -382,3 +385,49 @@
     display: none
 .app-show
     display: inline-block
+
+.header-note
+    padding: 10px 0
+    background-color: #FD84E3
+    @media (max-width: 620px)
+        box-sizing: border-box
+        position: fixed
+        left: 16px
+        bottom: 64px
+        z-index: 10002
+        width: calc(100% - 32px)
+        padding: 12px 48px 12px 16px
+        border: 1px solid #2C3034
+        box-shadow: 4px 4px 0px #2C3034
+        border-radius: 12px
+        opacity: 0
+        transition: all 0.5s
+        &.open
+            opacity: 1
+    &__close
+        content: ""
+        display: block
+        position: absolute
+        right: 16px
+        top: calc( 50% - 10px )
+        width: 21px
+        height: 21px
+        background-image: url(../assets/icons/close-round.svg)
+        background-position: 50%
+        background-repeat: no-repeat
+        background-size: 100% auto
+    p
+        margin: 0
+        font-weight: 700
+        font-size: 14px
+        line-height: 20px
+        text-align: center
+        color: #2C3034
+        @media (max-width: 620px)
+            text-align: left
+        a
+            color: #2C3034
+            text-decoration: underline
+            white-space: nowrap
+            &:hover
+                text-decoration: none
