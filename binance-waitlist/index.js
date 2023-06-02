@@ -282,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	timerId = setInterval(countdownTimer, 1000);
 });
 
+
 fetch('https://dev.herewallet.app/api/v1/web/binance_whitelist')
 	.then(response => response.json())
 	.then(data => {
@@ -418,3 +419,4 @@ asks.forEach((el) => {
 		}, 10);
 	});
 });
+
