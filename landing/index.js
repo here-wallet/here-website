@@ -1,7 +1,7 @@
 import { HeaderComponent } from "./scripts/HeaderComponent";
 import { WaitlistModal } from "./scripts/WaitlistModal";
-import { SliderFeatures } from "./section-features/index";
-import { SliderBinance } from "./section-binance/index";
+import "./section-features/index";
+import "./section-binance/index";
 import {
   QRCode,
   lightQR,
@@ -155,10 +155,6 @@ secureBanner?.addEventListener("click", (e) => {
   if (e.target.tag === "a") return;
   secureBanner.querySelector(".secure-banner-link")?.click();
 });
-
-
-
-
 
 
 if (/Android/.test(navigator.userAgent)) {
