@@ -120,9 +120,11 @@ asks.forEach((el) => {
   });
 });
 
+// Wait List Join
 const waitlistButtons = Array.from(
   document.querySelectorAll(".waitlist-button")
 );
+// Switch Between ModalForm and MiniForm-in-MenuToggle
 waitlistButtons.forEach((el) => {
   el.addEventListener("click", () => {
     if (window.innerWidth <= 778) {
@@ -133,15 +135,6 @@ waitlistButtons.forEach((el) => {
   });
 });
 
-// Wait List Join
-const waitlistButtonJoin = Array.from(
-  document.querySelectorAll(".waitlist-button-join")
-);
-waitlistButtonJoin.forEach((el) => {
-  el.addEventListener("click", () => {
-    waitlistJoin.open();
-  });
-});
 
 const newsItems = Array.from(document.querySelectorAll(".news-item"));
 newsItems.forEach((el) => {
@@ -156,11 +149,6 @@ secureBanner?.addEventListener("click", (e) => {
   secureBanner.querySelector(".secure-banner-link")?.click();
 });
 
-
-
-
-
-
 if (/Android/.test(navigator.userAgent)) {
   const element = document.querySelector('.appandroid');
   element.classList.add('app-show');
@@ -174,7 +162,7 @@ if (/Android/.test(navigator.userAgent)) {
 
 window.addEventListener('DOMContentLoaded', function () {
   var headerNote = document.querySelector('.header-note');
-  var closeButton = document.querySelector('.header-note__close');
+  var closeButtonNote = document.querySelector('.header-note__close');
 
   // Check if the header-note should be shown
   var isHeaderNoteClosed = (document.cookie.indexOf('headerNoteClosed') !== -1) || (localStorage.getItem('headerNoteClosed') === 'true');
@@ -191,7 +179,7 @@ window.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', scrollHandler);
 
     // Close the header-note when the close button is clicked
-    closeButton.addEventListener('click', function () {
+    closeButtonNote.addEventListener('click', function () {
       headerNote.classList.remove('open');
       document.cookie = 'headerNoteClosed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
       localStorage.setItem('headerNoteClosed', 'true');

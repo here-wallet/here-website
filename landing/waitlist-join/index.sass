@@ -32,7 +32,7 @@
     left: 0
     right: 0
     bottom: 0
-    z-index: 10000
+    z-index: 30005
     padding: 16px
 
     &.open
@@ -55,12 +55,9 @@
         opacity: 0.5
 
 .modal-body
-    display: flex
     position: relative
     background: #F3EBEA
     border-radius: 16px
-    flex-direction: column
-    align-items: center
     padding: 32px
     width: 480px
     animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
@@ -72,25 +69,32 @@
         text-align: center
         font-feature-settings: 'liga' off
         color: #2C3034
-        margin: 0
+        margin: 0 0 8px 0
 
     p
+        margin: 0 0 32px 0
         font-weight: 600
         font-size: 18px
         line-height: 25px
         text-align: center
         color: #6B6661
-        margin: 0
-        margin-top: 8px
 
+.form-block
+    position: relative
     input
-        margin-top: 32px
         box-sizing: border-box
         width: 100%
-
+        margin: 0 0 12px 0
+    .error-valid
+        display: none
+        margin: 0
+        padding: 0 16px
+        font-size: 14px
+        color: #D63E3E
     .here-button
-        margin-top: 16px
         width: 100%
+        margin: 16px 0 0 0
+        cursor: pointer
 
 #success-modal
     .modal-body

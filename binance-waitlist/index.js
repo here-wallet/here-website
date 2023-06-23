@@ -1,203 +1,8 @@
 import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
+import { HeaderComponent } from "../landing/scripts/HeaderComponent";
+import { WaitlistModal } from "../landing/scripts/WaitlistModal";
 
-export class HeaderComponent {
-	provider = new WaitlistProvider(".header-form");
-	header = document.querySelector(".header");
-	floatQr = document.querySelector(".float-qr");
-	topButton = document.querySelector(".scroll-up");
-
-	isOpen = false;
-
-	constructor() {
-		this.headerBody = this.header.querySelector(".header-body");
-		this.btn = this.header.querySelector(".header-action");
-		this.btn.addEventListener("click", () => this.toggleModalBody());
-
-		this.header.classList.toggle("active", window.scrollY > 40);
-		this.floatQr.classList.toggle("active", window.scrollY > 600);
-		this.topButton.classList.toggle("active", window.scrollY > 600);
-
-		// WTF? Links not working native on mobile???
-		[...this.headerBody.querySelectorAll("a")].forEach((el) =>
-			el.addEventListener("pointerdown", (e) => {
-				if (e.target instanceof HTMLElement) {
-					if (e.target.tagName === "A") {
-						window.location.assign(e.target.href);
-					}
-				}
-			})
-		);
-
-		this.topButton.addEventListener("click", () => {
-			document.body.scrollIntoView({ behavior: "smooth" });
-		});
-
-		const value = "https://download.herewallet.app";
-		const qr = new QRCode({ ...lightQR, size: 80, value });
-		this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
-
-		window.addEventListener("scroll", () => {
-			this.header.classList.toggle("active", window.scrollY > 40);
-			this.floatQr.classList.toggle("active", window.scrollY > 600);
-			this.topButton.classList.toggle("active", window.scrollY > 600);
-		});
-
-		this.provider.onSubmit = () => {
-			successModal.open();
-		};
-	}
-
-	toggleModal = () => {
-		this.btn.classList.toggle("open");
-		this.headerBody.classList.toggle("open");
-		document.body.classList.toggle("body_margin");
-
-		this.isOpen = !this.isOpen;
-		document.body.style.overflow = this.isOpen ? "hidden" : "";
-	};
-	toggleModalBody = () => {
-		this.btn.classList.toggle("open");
-		this.headerBody.classList.toggle("open");
-		document.body.classList.toggle("body_margin");
-
-		this.isOpen = !this.isOpen;
-		document.body.style.overflow = this.isOpen ? "hidden" : "";
-	};
-}
-
-var customViewportCorrectionVariable = "vh";
-
-function setViewportProperty(doc) {
-	var prevClientHeight;
-	var customVar = "--" + (customViewportCorrectionVariable || "vh");
-	function handleResize() {
-		var clientHeight = doc.clientHeight;
-		if (clientHeight === prevClientHeight) return;
-		requestAnimationFrame(function updateViewportHeight() {
-			doc.style.setProperty(customVar, clientHeight * 0.01 + "px");
-			prevClientHeight = clientHeight;
-		});
-	}
-	handleResize();
-	return handleResize;
-}
-window.addEventListener(
-	"resize",
-	setViewportProperty(document.documentElement)
-);
-
-function maskedUserName(inputValue) {
-	const value = inputValue.replace(/[^a-zA-Z0-9_.-]/g, '');
-	const isValid = value.length >= 2 && (/^[A-Fa-f0-9]+$/.test(value) || /^[0-9a-z]+.near/.test(value));
-	return { value, isValid };
-}
-// Form Logics
-export class WaitlistProvider {
-	constructor(selector, onSubmit) {
-		this.onSubmit = onSubmit;
-		this.root = document.querySelector(selector);
-		this.input = this.root.querySelector("input");
-		this.button = this.root.querySelector(".here-button");
-		this.button.disabled = true;
-
-		this.input.addEventListener("input", (e) => {
-			const { value, isValid } = maskedUserName(this.input.value); // modify to use the maskedUserName function
-			this.button.disabled = !isValid;
-			this.input.value = value;
-		});
-		this.input.addEventListener("keydown", async (e) => {
-			if (e.key === "Enter" && this.input.value.trim() !== "") {
-				await this.submit(this.input.value);
-			}
-		});
-		this.button.addEventListener("click", async () => {
-			await this.submit(this.input.value);
-		});
-	}
-
-	async submit(user_name) {
-		console.log(JSON.stringify(user_name));
-		this.onSubmit();
-		this.input.value = "";
-
-		const res = await fetch(
-			"https://api.herewallet.app/api/v1/web/android_whitelist",
-			{
-				method: "POST",
-				body: JSON.stringify({ user_name }),
-			}
-		);
-	}
-}
-
-// HereModal
-export class HereModal {
-	constructor(id) {
-		this.el = document.getElementById(id);
-		window.addEventListener("keydown", (e) => {
-			if (e.key === "Escape" && this.isOpen) this.close();
-		});
-		this.el.addEventListener("pointerdown", () => this.close());
-		this.el
-			.querySelector(".modal-close")
-			.addEventListener("click", () => this.close());
-		this.el
-			.querySelector(".modal-body")
-			.addEventListener("pointerdown", (e) => e.stopPropagation());
-	}
-	get isOpen() {
-		return this.el.classList.contains("open");
-	}
-	close() {
-		this.el.classList.remove("open");
-		document.body.style.overflow = "";
-		document.body.style.paddingRight = "";
-		document.body.querySelectorAll(".header").forEach((el) => {
-			el.style.paddingRight = "";
-		});
-	}
-	open() {
-		this.el.classList.add("open");
-		this.el.querySelector("input")?.focus();
-		document.body.style.overflow = "hidden";
-		document.body.style.paddingRight = getScrollbarWidth() + "px";
-		document.body.querySelectorAll(".header").forEach((el) => {
-			el.style.paddingRight = getScrollbarWidth() + "px";
-		});
-	}
-}
-
-function getScrollbarWidth() {
-	// Creating invisible container
-	const outer = document.createElement("div");
-	outer.style.visibility = "hidden";
-	outer.style.overflow = "scroll"; // forcing scrollbar to appear
-	outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-	document.body.appendChild(outer);
-	// Creating inner element and placing it in the container
-	const inner = document.createElement("div");
-	outer.appendChild(inner);
-	// Calculating difference between container's full width and the child width
-	const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
-	// Removing temporary elements from the DOM
-	outer.parentNode.removeChild(outer);
-	return scrollbarWidth;
-}
-
-export const successModal = new HereModal('success-modal')
-
-export class WaitlistJoin extends HereModal {
-	constructor() {
-		super("waitlist-join")
-		this.provider = new WaitlistProvider("#waitlist-join");
-		this.provider.onSubmit = () => {
-			this.close();
-			successModal.open();
-		};
-	}
-}
-
-const waitlistJoin = new WaitlistJoin();
+const waitlistModal = new WaitlistModal();
 const headerInstance = new HeaderComponent();
 
 const smoothstep = (min, max, value) => {
@@ -205,10 +10,11 @@ const smoothstep = (min, max, value) => {
 	return x * x * (3 - 2 * x);
 };
 
-// Wait List Modal
+// Wait List Join
 const waitlistButtons = Array.from(
 	document.querySelectorAll(".waitlist-button")
 );
+// Switch Between ModalForm and MiniForm-in-MenuToggle
 waitlistButtons.forEach((el) => {
 	el.addEventListener("click", () => {
 		if (window.innerWidth <= 778) {
@@ -216,16 +22,6 @@ waitlistButtons.forEach((el) => {
 		} else {
 			waitlistModal.open();
 		}
-	});
-});
-
-// Wait List Join
-const waitlistButtonJoin = Array.from(
-	document.querySelectorAll(".waitlist-button-join")
-);
-waitlistButtonJoin.forEach((el) => {
-	el.addEventListener("click", () => {
-		waitlistJoin.open();
 	});
 });
 
@@ -241,6 +37,40 @@ if (/Android/.test(navigator.userAgent)) {
 	element.classList.add('app-show');
 }
 
+
+window.addEventListener('DOMContentLoaded', function () {
+	var headerNote = document.querySelector('.header-note');
+	var closeButton = document.querySelector('.header-note__close');
+
+	// Check if the header-note should be shown
+	var isHeaderNoteClosed = (document.cookie.indexOf('headerNoteClosed') !== -1) || (localStorage.getItem('headerNoteClosed') === 'true');
+
+	if (!isHeaderNoteClosed) {
+		var scrollHandler = function () {
+			if (window.scrollY >= 300) {
+				headerNote.classList.add('open');
+			} else {
+				headerNote.classList.remove('open');
+			}
+		};
+
+		window.addEventListener('scroll', scrollHandler);
+
+		// Close the header-note when the close button is clicked
+		closeButton.addEventListener('click', function () {
+			headerNote.classList.remove('open');
+			document.cookie = 'headerNoteClosed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+			localStorage.setItem('headerNoteClosed', 'true');
+
+			// Remove the scroll event listener after closing the header-note
+			window.removeEventListener('scroll', scrollHandler);
+		});
+	} else {
+		headerNote.classList.remove('open');
+		document.cookie = 'headerNoteClosed=true; expires=Fri, 31 Dec 2000 23:59:59 GMT; path=/';
+		localStorage.removeItem('headerNoteClosed');
+	}
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 	// id таймера

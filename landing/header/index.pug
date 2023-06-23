@@ -37,12 +37,13 @@ mixin header(active, useWhite)
         a(href=common.partnershipLink).header-link !{common.partnership}
         
       .header-form
-        p.header-form-title
-          | Binance waiting list
-          span .
-        
-        input.here-input(placeholder="Near username")
-        button.here-button.light Submit 
+        .form-block
+          p.header-form-title
+            | Binance waiting list
+            span .
+          input.here-input-nick(placeholder="Near username")
+          .error-valid.error-valid_mobi
+          button.here-button Submit
         .header-form-hr or
         a.here-button.pink.light.appstore(href=common.appStore)
           | Download on App Store

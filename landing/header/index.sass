@@ -53,17 +53,18 @@
     @media (max-width: 900px)
         position: absolute
         top: 40px
+        z-index: 100000
 .header
     width: 100%
     box-sizing: border-box
     position: relative
     transition: 0.2s background
-    z-index: 10002
+    z-index: 10001
     
     &.active
         position: fixed
         top: 0
-        z-index: 10003
+        z-index: 10002
     &-center
         display: flex
         align-items: center
@@ -96,7 +97,7 @@
         &:hover
             opacity: 0.8
         @media (max-width: 900px)
-            margin: 0 0 0 8px
+            margin: 0
         
     &-link.active
         color: rgba(247, 179, 2, 1)
@@ -263,13 +264,14 @@
         /* height: calc(var(--vh) * 100% - 40px) */
         /* height: calc(100vh - 40px) */
         bottom: 0
-
+        .header-form
+            gap: 0
     &-mobile-links
         display: flex
         flex-direction: column
         gap: 28px
         @media (max-width: 900px)
-            gap: 24px
+            gap: 16px
 
     &-form
         width: 100%
@@ -281,7 +283,7 @@
             width: 100%
 
     &-form-title
-        margin: 0
+        margin: 16px 0 12px 0
         font-weight: 700
         font-size: 16px
         line-height: 22px
@@ -302,7 +304,7 @@
         line-height: 22px
         color: #F3EBEA
         @media (max-width: 900px)
-            margin: 22px 0
+            margin: 12px 0
     
         &::before
             content: ""
@@ -387,6 +389,7 @@
     display: inline-block
 
 .header-note
+    position: relative
     padding: 10px 0
     background-color: #FD84E3
     @media (max-width: 620px)
@@ -404,9 +407,11 @@
         transition: all 0.5s
         &.open
             opacity: 1
+            .header-note__close
+                display: block
     &__close
         content: ""
-        display: block
+        display: none
         position: absolute
         right: 16px
         top: calc( 50% - 10px )
@@ -416,6 +421,7 @@
         background-position: 50%
         background-repeat: no-repeat
         background-size: 100% auto
+        cursor: pointer
     p
         margin: 0
         font-weight: 700

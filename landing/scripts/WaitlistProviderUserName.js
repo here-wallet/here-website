@@ -7,20 +7,25 @@ export class WaitlistProviderUserName {
     this.root = document.querySelector(selector);
     this.input = this.root.querySelector("input");
     this.button = this.root.querySelector(".here-button");
-    this.button.disabled = true;
 
-    this.input.addEventListener("input", (e) => {
-      const { value, isValid } = maskedUserName(this.input.value); // modify to use the maskedUserName function
-      this.button.disabled = !isValid;
+
+    this.button.addEventListener("click", async (e) => {
+      const { value, isValid, error } = maskedUserName(this.input.value);
       this.input.value = value;
+
+      const errorElement = this.root.querySelector(".error-valid");
+      if (!isValid) {
+        errorElement.textContent = error;
+        errorElement.style.display = "block";
+      } else {
+        errorElement.style.display = "none";
+        await this.submit(this.input.value);
+      }
     });
     this.input.addEventListener("keydown", async (e) => {
       if (e.key === "Enter" && this.input.value.trim() !== "") {
         await this.submit(this.input.value);
       }
-    });
-    this.button.addEventListener("click", async () => {
-      await this.submit(this.input.value);
     });
   }
 
