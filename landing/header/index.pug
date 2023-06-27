@@ -37,12 +37,13 @@ mixin header(active, useWhite)
         a(href=common.partnershipLink).header-link !{common.partnership}
         
       .header-form
-        p.header-form-title
-          | Binance waiting list
-          span .
-        
-        input.here-input(placeholder="Near username")
-        button.here-button.light Submit 
+        .form-block
+          p.header-form-title
+            | Binance waiting list
+            span .
+          input.here-input-nick(placeholder="Near username")
+          .error-valid.error-valid_mobi
+          button.here-button Submit
         .header-form-hr or
         a.here-button.pink.light.appstore(href=common.appStore)
           | Download on App Store
@@ -61,7 +62,7 @@ mixin header(active, useWhite)
       a(href=common.partnershipLink).partnership !{common.partnership}
       img.preheader_powered-by-near.preheader-logo(src='/assets/powered-by-near.svg' alt='Powered by Near')
 .header-note
-  p Join our bi-weekly community call on Saturdays! <a href="#">Click here to join</a>
+  p Join our bi-weekly community call on Saturdays! <a href="https://discord.gg/vHetwCjkFe" target="_blank">Click here to join</a>
   span.header-note__close
 .float-qr
   .qrcode

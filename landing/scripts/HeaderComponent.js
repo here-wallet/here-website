@@ -3,7 +3,7 @@ import { WaitlistProviderUserName } from "./WaitlistProviderUserName";
 import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
 
 export class HeaderComponent {
-  provider = new WaitlistProviderUserName(".header-form");
+  provider = new WaitlistProviderUserName(".form-block");
   header = document.querySelector(".header");
   floatQr = document.querySelector(".float-qr");
   topButton = document.querySelector(".scroll-up");
@@ -13,7 +13,7 @@ export class HeaderComponent {
   constructor() {
     this.headerBody = this.header.querySelector(".header-body");
     this.btn = this.header.querySelector(".header-action");
-    this.btn.addEventListener("click", () => this.toggleModalBody());
+    this.btn.addEventListener("click", () => this.toggleModal());
 
     this.header.classList.toggle("active", window.scrollY > 40);
     this.floatQr.classList.toggle("active", window.scrollY > 600);
@@ -50,14 +50,6 @@ export class HeaderComponent {
   }
 
   toggleModal = () => {
-    this.btn.classList.toggle("open");
-    this.headerBody.classList.toggle("open");
-    document.body.classList.toggle("body_margin");
-
-    this.isOpen = !this.isOpen;
-    document.body.style.overflow = this.isOpen ? "hidden" : "";
-  };
-  toggleModalBody = () => {
     this.btn.classList.toggle("open");
     this.headerBody.classList.toggle("open");
     document.body.classList.toggle("body_margin");
