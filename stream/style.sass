@@ -1,0 +1,54 @@
+body {
+  background: #1E1E1E;
+  overflow: hidden;
+}
+
+#progress {
+  position: absolute;
+  width: 595px;
+  height: 81px;
+  margin-left: calc(-595px/2);
+  
+  left: 50%;
+  bottom: 50px;
+  background: #494949;
+  border-radius: 64px;
+  overflow: hidden;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+#line {
+  background: #FF7A00;
+  border-radius: 64px 0px 0px 64px;
+  height: 100%;
+  transition: 0.2s width;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#header {
+  position: absolute;
+  font-family: 'Cabinet Grotesk';
+  position: absolute;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  bottom: 140px;
+  margin-left: -10px;
+}
+
+#stat {
+  font-family: 'Cabinet Grotesk';
+  position: absolute;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #fff;
+  z-index: 1000;
+}
