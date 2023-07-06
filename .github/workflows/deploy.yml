@@ -30,4 +30,4 @@ jobs:
 
     - name: Deploy via SFTP
       run: |
-        sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -o StrictHostKeyChecking=no fedor_deployer@my.herewallet.app:/here-www <<< $'put -r dist/.'
+        sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -o StrictHostKeyChecking=no fedor_deployer@my.herewallet.app:/here-www <<< $'put -r dist/*'
