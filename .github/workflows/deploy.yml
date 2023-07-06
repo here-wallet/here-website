@@ -25,9 +25,14 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: Install SSH client
-      run: sudo apt-get install sshpass
+     - name: Install SSH client
+      run: sudo apt-get install openssh-client -y
 
-    - name: Deploy via SFTP
+    - name: SCP files
       run: |
-        sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -o StrictHostKeyChecking=no fedor_deployer@my.herewallet.app:/here-www <<< $'put -r dist/'
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./howto/* root@web.herewallet.app:/var/www/here/www/howto
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./stemmy/* root@web.herewallet.app:/var/www/here/www/stemmy
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./privacypolicy/* root@web.herewallet.app:/var/www/here/www/privacypolicy
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./nft/* root@web.herewallet.app:/var/www/here/www/nft
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./dist/* root@web.herewallet.app:/var/www/here/www
+        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./dist/landing/* root@web.herewallet.app:/var/www/here/www/landing
