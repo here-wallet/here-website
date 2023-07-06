@@ -2,8 +2,8 @@
   "scripts": {
     "fetch": "node ./fetch-data.js",
     "deploy": "npm run build && sh ./deploy.sh",
-    "build": "parcel build ./stream/index.pug ./binance-waitlist/index.pug ./binance-status/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug",
-    "start": "parcel ./stream/index.pug ./binance-waitlist/index.pug ./binance-status/index.pug ./nft/index.pug ./landing/index.pug ./santa/index.pug ./gifts/index.pug"
+    "build": "parcel build ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug",
+    "start": "parcel ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug"
   },
   "type": "module",
   "devDependencies": {
