@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: yarn build
 
-     - name: Install SSH client
+    - name: Install SSH client
       run: sudo apt-get install openssh-client -y
 
     - name: SCP files
