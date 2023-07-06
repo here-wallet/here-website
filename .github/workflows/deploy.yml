@@ -25,14 +25,16 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: Install SSH client
-      run: sudo apt-get install openssh-client -y
+   - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: SCP files
       run: |
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./howto/* root@web.herewallet.app:/var/www/here/www/howto
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./stemmy/* root@web.herewallet.app:/var/www/here/www/stemmy
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./privacypolicy/* root@web.herewallet.app:/var/www/here/www/privacypolicy
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./nft/* root@web.herewallet.app:/var/www/here/www/nft
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./dist/* root@web.herewallet.app:/var/www/here/www
-        scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./dist/landing/* root@web.herewallet.app:/var/www/here/www/landing
+        scp -o StrictHostKeyChecking=no -r ./howto/* root@web.herewallet.app:/var/www/here/www/howto
+        scp -o StrictHostKeyChecking=no -r ./stemmy/* root@web.herewallet.app:/var/www/here/www/stemmy
+        scp -o StrictHostKeyChecking=no -r ./privacypolicy/* root@web.herewallet.app:/var/www/here/www/privacypolicy
+        scp -o StrictHostKeyChecking=no -r ./nft/* root@web.herewallet.app:/var/www/here/www/nft
+        scp -o StrictHostKeyChecking=no -r ./dist/* root@web.herewallet.app:/var/www/here/www
+        scp -o StrictHostKeyChecking=no -r ./dist/landing/* root@web.herewallet.app:/var/www/here/www/landing
