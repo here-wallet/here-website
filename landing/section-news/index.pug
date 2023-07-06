@@ -6,7 +6,10 @@ section.news
             img(src=item.image)
             .news-item-content
                 h3= item.header
-                p= item.text
+                p
+                  each line in item.text.split('\n') 
+                    | #{line}
+                    br
 
                 a(href=item.url)
                     | Read more
