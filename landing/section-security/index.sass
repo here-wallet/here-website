@@ -10,7 +10,7 @@
     @media (max-width: 1160px)
         align-items: flex-start
         gap: 22px
-    
+
     @media (max-width: 700px)
         flex-direction: column
 
@@ -22,7 +22,7 @@
 
     &-socials a
         transition: 0.3s opacity
-    
+
     &-socials a:hover
         opacity: 0.7
 
@@ -43,7 +43,7 @@
             height: 349px
             margin-right: 22px
             margin-top: 52px
-    
+
         @media (max-width: 700px)
             margin: auto
 
@@ -52,7 +52,11 @@
 
     &:hover &-picture
         transform: scale(1.1) translateX(-16px)
-		
+
+    &:hover .secure-banner-link
+        img
+            transform: translateX(4px)
+
     @media (max-width: 768px)
         &:hover &-picture
             transform: scale(1.1) translateX(-4px)
@@ -85,12 +89,11 @@
             line-height: 22px
 
     &-link
-        font-family: 'Manrope'
         font-style: normal
-        font-weight: 600
+        font-weight: 700
         font-size: 18px
         line-height: 25px
-        color: #FD84E3
+        color: #FFFFFF
         padding: 4px 12px
         margin: -4px -12px
         width: fit-content

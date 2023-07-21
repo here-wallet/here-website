@@ -39,7 +39,8 @@ export class HeaderComponent {
     this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
 
     window.addEventListener("scroll", () => {
-      this.header.classList.toggle("active", window.scrollY > 40);
+      const threshold = window.innerWidth <= 620 ? 40 : 80;
+      this.header.classList.toggle("active", window.scrollY > threshold);
       this.floatQr.classList.toggle("active", window.scrollY > 600);
       this.topButton.classList.toggle("active", window.scrollY > 600);
     });

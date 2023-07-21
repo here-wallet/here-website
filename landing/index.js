@@ -7,6 +7,12 @@ import {
   lightQR,
   darkQR,
 } from "@here-wallet/core/build/qrcode-strategy";
+import whiteHereLogo from '../assets/logo-white.svg'
+import blackHereLogo from '../assets/logo-black.svg'
+import whiteX from "../assets/icons/icon-x-white.svg"
+import blackX from "../assets/icons/icon-x.svg"
+import whiteBinanceLogo from "../assets/icons/icon-binance-white.svg"
+import blackBinanceLogo from "../assets/icons/icon-binance-black.svg"
 
 const qr = new QRCode({
   ...lightQR,
@@ -24,7 +30,7 @@ const qrSecond = new QRCode({
     position: [0, 0, 1, 1],
     colorStops: [
       [0, "#34302C"],
-      [0.3, "#FD84E3"],
+      [0.3, "#525252"],
       [0.85, "#34302C"],
     ],
   },
@@ -57,19 +63,36 @@ const animatePage = () => {
   pageBg.style.right = offset + "px";
 };
 
-const news = document.getElementsByClassName("news")[0];
-const newsTitle = news.querySelector("h2");
-const animateNewsBackground = () => {
-  const { y: newsY } = news.getBoundingClientRect();
+const binanceSection = document.querySelector(".binance-features__wrapper");
+const binanceTitle = binanceSection.querySelector("h2");
+const animateBinanceBackground = () => {
+  const { y: binanceY } = binanceSection.getBoundingClientRect();
+  const windowWidth = window.innerWidth;
   const opacity =
-    newsY <= -180
-      ? 1 - smoothstep(-180, -600, newsY)
-      : smoothstep(500, 100, newsY);
+    windowWidth < 750
+      ? (binanceY <= -450 ? 1 - smoothstep(-450, -860, binanceY) : smoothstep(700, 150, binanceY))
+      : (binanceY <= -180 ? 1 - smoothstep(-180, -600, binanceY) : smoothstep(900, 300, binanceY));
   const color = `rgba(175, 115, 230, ${opacity})`;
   page.style.backgroundColor = color;
-  newsTitle.style.color = opacity > 0.5 ? "#f3ebea" : "#2c3034";
-  newsTitle.style.transition = "0.3s color";
+  const logo = document.querySelector(".binance-here__here");
+  const x = document.querySelector(".binance-here__x");
+  const binanceLogo = document.querySelector(".binance-here__binance");
+  logo.src = opacity > 0.75 ? whiteHereLogo : blackHereLogo
+  x.src = opacity > 0.75 ? whiteX : blackX
+  binanceLogo.src = opacity > 0.75 ? whiteBinanceLogo : blackBinanceLogo
+  binanceTitle.style.color = opacity > 0.75 ? "#FFFFFF" : "#2c3034";
 };
+
+const mapBinanceSectionWithActions = (opacity) => {
+  if (opacity > 0.7) {
+    const actionBtn = document.querySelector('.binance-here__switch');
+    const actionItems = document.querySelectorAll('.binance-features__item, .binance-features-2__item');
+    actionBtn.classList.add("action");
+    actionItems.forEach(function (item) {
+      item.classList.add("action");
+    });
+  }
+}
 
 const features = document.querySelectorAll(".feature-picture-phone");
 const animateFeaturesParalax = () => {
@@ -79,14 +102,14 @@ const animateFeaturesParalax = () => {
     feature.style.transition = "0.1s transform";
     feature.style.transform = `translateY(${Math.max(
       0,
-      box.top / 9 - offset
+      box.top / 15 - offset
     )}px)`;
   });
 };
 
 const updateScroll = () => {
   animatePage();
-  animateNewsBackground();
+  animateBinanceBackground();
   animateFeaturesParalax();
 };
 

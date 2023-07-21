@@ -21,9 +21,10 @@ html(lang="en")
         link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
         link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
         link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
-       
+
         // Google tag (gtag.js)
         script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+
         script.
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -31,7 +32,6 @@ html(lang="en")
             gtag('config', 'G-J76SQ67RJB');
 
         link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
-        link(href="../assets/manrope/index.css", rel="stylesheet")
         link(href="./index.sass", rel="stylesheet")
     body 
         include header/index.pug
@@ -43,11 +43,11 @@ html(lang="en")
             .page
                 .page-background
                 include section-features/index.pug
-                include section-news/index.pug
                 include section-binance/index.pug
                 include section-howwork/index.pug
                 include section-security/index.pug
                 include section-download/index.pug
+                include section-news/index.pug
                 include section-asks/index.pug
                 include section-partners/index.pug
 

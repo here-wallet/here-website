@@ -1,5 +1,7 @@
 section.news
-  h2 #{news.title}
+  h2
+    | !{news.title}
+    span.dot .
   .news-list
     for item in news.items
         .news-item
@@ -13,4 +15,4 @@ section.news
 
                 a(href=item.url)
                     | Read more
-                    img(src='/assets/icons/link-arrow.svg')
+                    img(src='/assets/icons/link-arrow-white.svg')

@@ -25,7 +25,7 @@
     &:nth-child(2)
         .dot
             display: none
-        
+
     @media (max-width: 620px)
         flex-direction: column-reverse
         gap: 40px
@@ -33,7 +33,7 @@
         width: 100%
         img
             width: 100%
-        
+
         .no-slider
             z-index: 2
 
@@ -41,7 +41,7 @@
         flex-direction: row-reverse
         @media (max-width: 620px)
             flex-direction: column-reverse
-        
+
     &:nth-child(odd)
         & .feature-content
             padding: 0 0 0 48px
@@ -50,8 +50,6 @@
 
     & h2
         margin-bottom: 24px
-
-        
 
     &-picture-phone
         width: 100%
@@ -74,12 +72,11 @@
             line-height: 40px
 
     &-content a
-        font-family: "Manrope"
         font-style: normal
-        font-weight: 600
+        font-weight: 700
         font-size: 20px
         line-height: 27px
-        color: #fd84e3
+        color: #2c3034
         width: fit-content
         padding: 4px 24px 4px 12px
         margin: -4px -12px
@@ -120,7 +117,7 @@
         color: #2c3034
         align-items: flex-start
         display: flex
-        
+
         @media (max-width: 768px)
             font-weight: 500
             font-size: 16px
@@ -140,7 +137,6 @@
         margin-top: 8px
         background-color: #EAD3E5
 
-// Slider
 .slider
     display: flex
     position: relative
@@ -166,7 +162,7 @@
         width: 100%
         opacity: 0
         transform: translateX(-100%)
-        transition: opacity 1s ease-in-out, transform .8s cubic-bezier(.4, 1, .55, 1.05)
+        transition: opacity .8s ease-in, transform .8s cubic-bezier(.4, 1, .55, 1.05)
         &.active
             opacity: 1
             transform: translateX(0%)

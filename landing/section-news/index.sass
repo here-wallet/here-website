@@ -1,14 +1,11 @@
 .news
     margin: 0
     max-width: 100%
-    //background-image: url("/assets/Graphics/pattern.svg")
+    background-image: url("/assets/Graphics/pattern.svg")
     background-size: cover
-    padding: 104px 156px 160px
+    padding: 140px 156px 0
     @media (max-width: 1160px)
         padding: 48px 20px 96px
-
-    & h2
-        color: #F3EBEA
 
     &-list
         display: flex
@@ -24,7 +21,6 @@
         height: 420px
         background: #2C3034
         border-radius: 16px
-        border: 1px solid #2C3034
         transition: 0.2s transform
         cursor: pointer
 
@@ -39,16 +35,16 @@
             a
                 background: rgba(255, 255, 255, 0.1)
             a img
-                transform: translateX(8px)
+                transform: translateX(4px)
 
     &-item:last-child
         @media (max-width: 1160px)
             display: none
 
     &-item h3
-        font-family: 'Manrope'
+        font-family: 'Inter'
         font-style: normal
-        font-weight: 800
+        font-weight: 700
         font-size: 18px
         line-height: 25px
         color: #F3EBEA
@@ -63,7 +59,7 @@
         width: 100%
         overflow: hidden
         font-style: normal
-        font-weight: 500
+        font-weight: 400
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -75,6 +71,8 @@
         display: flex
         flex-direction: column
         flex: 1
+        p
+            font-weight: 400 !important
 
     &-item>img
         width: 100%
@@ -83,12 +81,12 @@
         border-top-left-radius: 16px
         border-top-right-radius: 16px
         height: 191px
-        
+
     &-item a
         font-weight: 600
         font-size: 18px
         line-height: 25px
-        color: #FD84E3
+        color: #FFFFFF
         width: fit-content
 
         display: flex
@@ -102,10 +100,10 @@
         padding: 4px 18px 4px 10px
         margin-left: -8px
 
-        &:hover 
+        &:hover
             background: rgba(255, 255, 255, 0.1)
             img
-                transform: translateX(8px)
+                transform: translateX(4px)
 
     &-item a img
         transition: 0.2s transform
