@@ -1,6 +1,17 @@
 .how-work
+	padding-top: 140px
 	@media (max-width: 1000px)
 		padding: 0 16px
+	h2
+		margin-bottom: 12px
+	p
+		font-weight: 500
+		font-size: 20px
+		text-align: center
+		max-width: 640px
+		margin: 0 auto
+		margin-bottom: 70px
+		color: #2C3034
 	&__cover
 		display: flex
 		position: relative
@@ -10,7 +21,6 @@
 		img
 			width: 100%
 			border-radius: 16px
-			border: 2px #2C3034 solid
 		@media (max-width: 750px)
 			display: block
 			width: 100%
@@ -65,7 +75,7 @@
 		width: 272px
 		padding: 28px 0
 		font-size: 16px
-		font-weight: 700
+		font-weight: 600
 		line-height: 22px
 		text-align: center
 		font-feature-settings: 'liga' off, 'calt' off
@@ -78,13 +88,13 @@
 			padding: 12px 0
 	&__pink-block
 		display: flex
-		align-items: center
+		align-items: start
 		justify-content: center
 		position: relative
 		width: 272px
 		padding: 28px 0
 		font-size: 16px
-		font-weight: 700
+		font-weight: 600
 		line-height: 22px
 		text-align: center
 		font-feature-settings: 'liga' off, 'calt' off
@@ -98,6 +108,7 @@
 		&::before
 			content: ""
 			display: inline-block
+			padding-right: 10px
 			width: 24px
 			height: 24px
 			background-image: url(../assets/icons/start-staking.svg)
@@ -135,10 +146,12 @@
 			position: absolute
 			top: -80px
 			width: 100%
-			font-weight: 600
+			font-weight: 700
 			font-size: 18px
 			line-height: 25px
 			text-align: center
+			color: #2C3034
+			line-height: 22px
 			@media (max-width: 1180px)
 				font-size: 14px
 				line-height: 19px
@@ -153,13 +166,13 @@
 		@media (max-width: 1180px)
 			width: 140px
 	&__arrow-top
+		color: #2C3034
 		position: absolute
 		top: -40px
 		width: 100%
 		font-size: 18px
-		font-weight: 600
+		font-weight: 700
 		text-align: center
-		line-height: 25px
 		@media (max-width: 1180px)
 			font-size: 14px
 			line-height: 19px
@@ -167,8 +180,7 @@
 		position: absolute
 		top: 40px
 		width: 100%
-		font-family: 'Cabinet Grotesk'
-		font-style: normal
+		font-family: CabinetGrotesk, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
 		font-weight: 800
 		font-size: 32px
 		line-height: 40px
@@ -178,7 +190,11 @@
 			font-size: 20px
 			line-height: 25px
 	&__arrow-bottom_red
+		font-weight: 800
 		color: #D63E3E
+	&__arrow-bottom_green
+		font-weight: 800
+		color: #087164
 	&__right
 		display: flex
 		flex-wrap: wrap
@@ -188,7 +204,7 @@
 			gap: 12px
 		@media (max-width: 750px)
 			display: none
-	
+
 	.logo-wallet
 		display: block
 		position: relative

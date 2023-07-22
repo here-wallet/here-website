@@ -40,8 +40,28 @@ function slider(sliderElement) {
 		slides[currentSlide].classList.add('active');
 		featureContentlistItems[currentSlide].classList.add('active');
 		updatePagination();
-		slides.forEach(slide => {
-			slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+		slides.forEach((slide, index) => {
+			if (currentSlide === 0) {
+				if (index === slides.length - 1) {
+					slide.style.transform = `translateX(-${(index + 1) * 100}%)`;
+				} else if (index === 0) {
+					setTimeout(() => {
+						slide.style.transition = 'none'
+						slide.style.opacity = '0'
+						slide.style.transform = `translateX(100%)`;
+					}, 10)
+					setTimeout(() => {
+						slide.style.transition = 'opacity .8s ease-in, transform .8s cubic-bezier(.4, 1, .55, 1.05)'
+						slide.style.opacity = '1';
+						slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+					}, 200);
+				}
+				else {
+					slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+				}
+			} else {
+				slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+			}
 		});
 	}
 

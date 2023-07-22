@@ -7,6 +7,7 @@ actionBtn.addEventListener("click", function () {
   actionBtn.classList.toggle("action");
   actionItems.forEach(function (item) {
     item.classList.toggle("action");
+    item.classList.add("reverse");
   });
 });
 
@@ -21,7 +22,7 @@ const handler = (data) => {
 
 let observer = new IntersectionObserver(handler, {
   root: null,
-  rootMargin: "0px",
+  rootMargin: '0px',
   threshold: 0.25,
 });
 observer.observe(container);

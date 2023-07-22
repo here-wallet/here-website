@@ -10,4 +10,14 @@ section.asks
                 img(src='/assets/icons/arrow-down.svg')
             
             .ask-block-body
-                p= item.text
+                - var isTextArray = Array.isArray(item.text)
+                    if isTextArray
+                        ul
+                            for text in item.text
+                                li= text
+                    else 
+                        p
+                            - var textLink = item.link?.substring(0, 20) + '...'
+                            | #{item.text}
+                            if item.link
+                                a(href=item.link)= textLink

@@ -17,7 +17,7 @@
             padding: 0 24px
         @media (max-width: 620px)
             padding: 0 16px
-    
+
     &__left
         display: flex
         padding: 0 60px 0 0
@@ -25,7 +25,7 @@
             order: 2
             margin-left: auto
             padding: 0
-    
+
     &_big-brain
         margin: 0 18px 0 0
 
@@ -60,9 +60,9 @@
     position: relative
     transition: 0.2s background
     z-index: 10001
-    
+
     &.active
-        position: fixed
+        position: sticky
         top: 0
         z-index: 10002
     &-center
@@ -85,8 +85,8 @@
             height: 100vh
     &-link
         width: fit-content
-        margin: 0 16px
-        font-weight: 700
+        margin: 0 36px
+        font-weight: 600
         font-size: 16px
         line-height: 22px
         color: #F3EBEA
@@ -98,7 +98,7 @@
             opacity: 0.8
         @media (max-width: 900px)
             margin: 0
-        
+
     &-link.active
         color: rgba(247, 179, 2, 1)
         border-bottom: 2px solid #F7B302
@@ -122,7 +122,7 @@
         line-height: 40px
         color: #fff
         text-decoration: none
-        font-weight: 700
+        font-weight: 600
         background-color: #414548
         border-radius: 16px
         &:hover
@@ -149,7 +149,7 @@
         justify-content: center
         width: 172px
         cursor: pointer
-        font-weight: 700
+        font-weight: 600
         font-size: 16px
         line-height: 22px
         color: #2C3034
@@ -162,7 +162,6 @@
             color: #5D666F
         @media (max-width: 900px)
             display: none
-            
 
     &-links
         display: flex
@@ -193,7 +192,7 @@
             display: block
         @media (max-width: 620px)
             margin-left: 24px
-    
+
         &::before
             content: ""
             display: block
@@ -206,7 +205,7 @@
             height: 2px
             left: 5px
             top: 11px
-        
+
         &::after
             content: ""
             display: block
@@ -219,13 +218,13 @@
             height: 2px
             left: 5px
             top: 17px
-        
+
     &-action.open
         &::before
             transform: rotate(45deg)
             top: 14.5px
             left: 5px
-                
+
         &::after
             transform: rotate(-45deg)
             top: 14.5px
@@ -241,13 +240,13 @@
         padding: 16px
         padding-bottom: 32px
         padding-top: 72px
-    
+
     &-body:focus-within
         @media (max-width: 780px)
             justify-content: flex-end
             .header-form-hr, .header-mobile-links, .header-form a
                 display: none
-                
+
             .header-form
                 position: fixed
                 bottom: 32px
@@ -292,7 +291,6 @@
     &-form-title span
         color: rgba(253, 132, 227, 1)
 
-
     &-form-hr
         display: flex
         align-items: center
@@ -305,7 +303,7 @@
         color: #F3EBEA
         @media (max-width: 900px)
             margin: 12px 0
-    
+
         &::before
             content: ""
             display: block
@@ -337,7 +335,7 @@
     justify-content: center
     padding: 12px
     gap: 4px
-    
+
     transition: 0.2s transform, 0.2s bottom
 
     &.active
@@ -375,7 +373,7 @@
         width: 80px
         height: 80px
 
-    p 
+    p
         margin: 0
         font-weight: 500
         font-size: 14px
@@ -406,7 +404,6 @@
         opacity: 0
         transition: all 0.5s
         &.open
-            opacity: 1
             .header-note__close
                 display: block
     &__close
@@ -424,7 +421,7 @@
         cursor: pointer
     p
         margin: 0
-        font-weight: 700
+        font-weight: 600
         font-size: 14px
         line-height: 20px
         text-align: center
