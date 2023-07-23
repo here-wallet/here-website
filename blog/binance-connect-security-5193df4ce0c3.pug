@@ -1,0 +1,88 @@
+
+doctype
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Binance connect. Security. 🔒
+        meta(name="description", content="Blog HERE")
+
+        meta(name="og:title", content="Binance connect. Security. 🔒")
+        meta(name="og:description", content="Binance connect. Security. 🔒")
+        meta(name="og:url", content="http://herewallet.app/blog/binance-connect-security-5193df4ce0c3")
+        meta(name="og:image", content="https://storage.herewallet.app/download.jpg")
+        meta(name="twitter:card", content="summary_large_image")
+        meta(name="twitter:image", content="https://storage.herewallet.app/download.jpg")
+        meta(name="telegram_channel", content="herewallet")
+        link(rel='shortcut icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico' type='image/x-icon')
+        link(href="style.sass", rel="stylesheet")
+        link(href="http://herewallet.app/blog/binance-connect-security-5193df4ce0c3", rel="canonical")
+        meta(name="format-detection", content="telephone=no")
+        link(href="https://fonts.googleapis.com", rel="preconnect")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+        
+        link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+        link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+        link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+
+        // Google tag (gtag.js)
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J76SQ67RJB');
+        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(href="./style.sass", rel="stylesheet")
+    body.white
+        include ../landing/header/index.pug
+        +header("/blog")
+        
+        section.post
+            
+            .post-header
+                .parameters
+                    .tag(id="Tutorials")
+                        | Tutorials
+                    .point
+                    .time-to-read 
+                        | 14 min
+                h1.post-title
+                    | Binance connect. Security. 🔒
+                .post-date
+                    | June 28, 2023
+
+            .post-content
+                p.text Intro
+                p.text
+                    | To move funds between Binance and crypto wallet uses 
+                    a(href="https://www.binance.com/en/blog/community/how-to-use-an-api-key-securely-5-tips-from-binance-8638066848800196896#:~:text=API%20keys%20enable%20users%20to,on%20behalf%20of%20the%20user.") API key
+                    | , which the user creates during connection.
+                p.text To prevent loss or freezing funds we take a lot of security measures. In this article, will discuss the main of them.
+                img(src="https://cdn-images-1.medium.com/max/7680/1*9ZHsW37urweu-Y-2A8iyDg.jpeg")
+                h3 📦 Keys storing
+                p.text
+                    | The first level of security is an API key storage. It never transferred to a backend and is only stored on the phone. On iPhones, API key is stored in 
+                    a(href="https://support.apple.com/en-us/HT204085") Apple keychain
+                    |  — safe storage which has never been hacked, even on stolen iPhones.
+                h3 ☑️ White list of addresses
+                p.text
+                    | With API key you can transfer money only between Binance and your crypto wallet. If the key is lost but you keep 
+                    a(href="https://worldcoin.org/articles/what-is-seed-phrase") seed phrase
+                    |  safe, an intruder will only be able to transfer money between your accounts, but won’t be able to withdraw it.
+                h3 📨 Proxy server
+                p.text All requests to Binance could pass only from one IP address — via HERE proxy server. Requests can’t be changed as they are signed with a secret API key which is stored locally on the phone.
+                p.text However, as the requests can come only from one IP address, we can skip a request if it looks suspicious to us. Our proxy server monitors daily limits and does not let suspicious transactions through.
+                h3 👨‍💻 Team
+                p.text
+                    | HERE is a US company that is subject to regulation. Any breach of the user agreement or exposure of user funds will result in serious consequences for the team. We are reassured on all counts and designed the product so as not to touch users’ money in any way. All updates are reviewed by our CTO and we go through security 
+                    a(href="https://docs.herewallet.app/technology-description/readme/security-audit") *audits
+                    | * as the project evolves.
+                p.text
+                    | This is only part of the security measures we take, but the most important thing you can do is to** keep the 
+                    a(href="https://worldcoin.org/articles/what-is-seed-phrase") seed phrase
+                    |  safe**. We take care of the rest 🤝
+
+    

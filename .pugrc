@@ -59,6 +59,10 @@
         {
           "text": "Docs",
           "link": "https://docs.herewallet.app/technology-description/readme"
+        },
+        {
+          "text": "Blog",
+          "link": "/blog"
         }
       ],
       "downloads": [
@@ -339,6 +343,45 @@
           "text": "Yes. You can change your seed phrase. Go to settings -> passphrase -> generate new passphrase"
         }
       ]
-    }
+    },
+    "blogs": [
+      {
+        "title": "How to Use Binance with No VPN",
+        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "tag": "Education",
+        "text": "Using Binance in the US without a VPN might seem challenging, but...",
+        "timeToRead": "9",
+        "date": "Dec 23, 2023",
+        "href": "article_1"
+      },
+      {
+        "title": "How to Use Binance with No VPN (1)",
+        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "tag": "Company",
+        "text": "To begin, you'll need to link your Binance account with the HERE Wallet app.",
+        "timeToRead": "4",
+        "date": "May 10, 2023",
+        "href": "article_2"
+      },
+      {
+        "title": "Binance connect. Security. 🔒",
+        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "tag": "Tutorials",
+        "text": "To move funds between Binance and crypto wallet uses ...",
+        "timeToRead": "14",
+        "date": "June 28, 2023",
+        "href": "binance-connect-security-5193df4ce0c3"
+      },
+      {
+        "title": "First NEAR based mobile wallet — HERE is on TestFlight",
+        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "tag": "Company",
+        "text": "The first mobile wallet for NEAR — HERE Wallet — has been launched in TestFlight.",
+        "timeToRead": "22",
+        "date": "Jul 24, 2023",
+        "href": "first-near-based-mobile-wallet-here-is-on-testflight-89d13b8bbc9a"
+      }
+    ],
+    "urla": "landing"
   }
 }

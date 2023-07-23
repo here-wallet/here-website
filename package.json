@@ -2,10 +2,10 @@
   "scripts": {
     "fetch": "node ./fetch-data.js",
     "deploy": "npm run build && sh ./deploy.sh",
-    "build": "parcel build ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug",
-    "start": "parcel ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug"
+    "build": "parcel build ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug",
+    "start": "parcel ./stream/index.pug ./binance-waitlist/index.pug ./nft/index.pug ./landing/index.pug ./blog/*.pug"
   },
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
@@ -32,6 +32,8 @@
     "@near-wallet-selector/sender": "^7.9.0",
     "bn.js": "^5.2.1",
     "crypto-js": "^4.1.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-front-matter": "^0.2.3",
     "near-api-js": "^0.44.2",
     "uuid4": "^2.0.3"
   }
