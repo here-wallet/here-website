@@ -15,7 +15,6 @@ html(lang="en")
         meta(name="twitter:image", content="https://storage.herewallet.app/download.jpg")
         meta(name="telegram_channel", content="herewallet")
         link(rel='shortcut icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico' type='image/x-icon')
-        link(href="style.sass", rel="stylesheet")
         link(href=`http://herewallet.app/blog/${metadata.href}`, rel="canonical")
         meta(name="format-detection", content="telephone=no")
         link(href="https://fonts.googleapis.com", rel="preconnect")
@@ -33,10 +32,12 @@ html(lang="en")
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-J76SQ67RJB');
+
+        link(href="style.sass", rel="stylesheet")
         link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
-        link(href="style.css", rel="stylesheet")
+
     body.white
-        include ./landing/header/index.pug
+        include ../landing/header/index.pug
         +header("/blog")
         
         section.post
