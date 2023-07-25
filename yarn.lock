@@ -924,6 +924,13 @@
     "normalize-path" "^3.0.0"
     "picomatch" "^2.0.4"
 
+"argparse@^1.0.10":
+  "integrity" "sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg=="
+  "resolved" "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz"
+  "version" "1.0.10"
+  dependencies:
+    "sprintf-js" "~1.0.2"
+
 "argparse@^2.0.1":
   "integrity" "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
   "resolved" "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz"
@@ -938,6 +945,13 @@
   "integrity" "sha512-TaTivMB6pYI1kXwrFlEhLeGfOqoDNdTxjCdwRfFFkEA30Eu+k48W34nlok2EYWJfFFzqaEmichdNM7th6M5HNw=="
   "resolved" "https://registry.npmjs.org/assert-never/-/assert-never-1.2.1.tgz"
   "version" "1.2.1"
+
+"autolinker@^3.11.0":
+  "integrity" "sha512-JiYl7j2Z19F9NdTmirENSUUIIL/9MytEWtmzhfmsKPCp9E+G35Y0UNCMoM9tFigxT59qSc8Ml2dlZXOCVTYwuA=="
+  "resolved" "https://registry.npmjs.org/autolinker/-/autolinker-3.16.2.tgz"
+  "version" "3.16.2"
+  dependencies:
+    "tslib" "^2.3.0"
 
 "babel-walk@3.0.0-canary-5":
   "integrity" "sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw=="
@@ -2164,6 +2178,14 @@
   "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
   "version" "0.13.11"
 
+"remarkable@^2.0.1":
+  "integrity" "sha512-YJyMcOH5lrR+kZdmB0aJJ4+93bEojRZ1HGDn9Eagu6ibg7aVZhc3OWbbShRid+Q5eAfsEqWxpe+g5W5nYNfNiA=="
+  "resolved" "https://registry.npmjs.org/remarkable/-/remarkable-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "argparse" "^1.0.10"
+    "autolinker" "^3.11.0"
+
 "require-directory@^2.1.1":
   "integrity" "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q=="
   "resolved" "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
@@ -2212,10 +2234,10 @@
   "resolved" "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
 
-"sass@^1.38.0":
-  "integrity" "sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.58.3.tgz"
-  "version" "1.58.3"
+"sass@^1.38.0", "sass@^1.64.1":
+  "integrity" "sha512-16rRACSOFEE8VN7SCgBu1MpYCyN7urj9At898tyzdXFhC+a+yOX5dXwAR7L8/IdPJ1NB8OYoXmD55DM30B2kEQ=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.64.1.tgz"
+  "version" "1.64.1"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
     "immutable" "^4.0.0"
@@ -2278,6 +2300,11 @@
   "integrity" "sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw=="
   "resolved" "https://registry.npmjs.org/split-on-first/-/split-on-first-1.1.0.tgz"
   "version" "1.1.0"
+
+"sprintf-js@~1.0.2":
+  "integrity" "sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g=="
+  "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
+  "version" "1.0.3"
 
 "srcset@4", "srcset@4.0.0":
   "integrity" "sha512-wvLeHgcVHKO8Sc/H/5lkGreJQVeYMm9rlmt8PuR1xE31rIuXhuzznUUqAt8MqLhB3MqJdFzlNAfpcWnxiFUcPw=="
@@ -2409,7 +2436,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.1.0", "tslib@^2.4.0":
+"tslib@^2.1.0", "tslib@^2.3.0", "tslib@^2.4.0":
   "integrity" "sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.5.0.tgz"
   "version" "2.5.0"
