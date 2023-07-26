@@ -30,11 +30,18 @@
     "@near-wallet-selector/near-wallet": "^7.9.0",
     "@near-wallet-selector/nightly": "^7.9.0",
     "@near-wallet-selector/sender": "^7.9.0",
+    "@parcel/transformer-pug": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
     "bn.js": "^5.2.1",
     "crypto-js": "^4.1.1",
     "markdown-it": "^13.0.1",
     "markdown-it-front-matter": "^0.2.3",
     "near-api-js": "^0.44.2",
+    "parcel": "^2.8.0",
+    "parse-md": "^2.0.5",
+    "remarkable": "^2.0.1",
+    "remarkable-meta": "^1.0.1",
+    "sass": "^1.64.1",
     "uuid4": "^2.0.3"
   }
 }
