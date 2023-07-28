@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/cabinet-grotesk')
 @import "../landing/common/base.sass"
 @import "../landing/header"
+@import "../landing/footer"
 // @font-face
 //     // font-family: 'CabinetGrotesk-Variable'
 //     // font-weight: 100 900
@@ -43,8 +44,26 @@ a
         text-decoration: none
 
 ul
+    padding-bottom: 32px
+    padding-left: 28px
     li
-        list-style-type: none
+        color: #2c3034
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
+
+ol
+    padding-bottom: 32px
+    padding-left: 28px
+    li
+        color: #2c3034
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
 
 img
     vertical-align: top
@@ -93,17 +112,29 @@ html, body
     -webkit-text-size-adjust: 100%
     font-family: 'Inter',Arial,sans-serif
     color: #2c3034
-    background-color: #f3ebea
+    // background-color: #f3ebea
 
 section
     margin-top: 40px
     @media (max-width: 1160px)
         padding: 0 24px
 
+.page
+    &-background
+        border-radius: 0 0 32px 32px
+        position: absolute
+        top: -154px
+        width: 100%
+        height: calc( 100% + 154px )
+        left: 0
+
 .white
     .header
         &-link
-            color: #2C3034
+            color: rgb(44, 48, 52)
+            margin: 0 24px
+            &.active
+                border-color: #2c3034
 
         &-download
             @media (max-width: 900px)
@@ -135,6 +166,7 @@ section
             color: #fff
 
 .blog
+    padding-bottom: 64px
     &-tags
         display: none
         @media (max-width: 540px)
@@ -266,8 +298,20 @@ section
     background-color: #FDBF1E
 
 .post
+    max-width: 704px
+    margin-left: 140px
+    @media (max-width: 900px)
+        margin-left: 0
+    // @media (max-width: 1000px)
+    //     padding: 0 16px
     &-content
         padding-top: 32px
+
+    h1
+        font-size: 64px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
 
     &-header
         .time-to-read
@@ -277,7 +321,7 @@ section
             font-weight: 400
             line-height: 20px
             color: #2C3034
-    .text
+    p
         padding-bottom: 32px
         font-family: Inter
         font-size: 18px
@@ -292,6 +336,23 @@ section
     h2,
     h3
         padding-bottom: 16px
+
+    h2
+        font-family: Cabinet Grotesk
+        font-size: 32px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+
+    h3
+        font-family: Cabinet Grotesk
+        font-size: 32px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+
+    strong
+        font-weight: 900
 
     a
         font-family: Inter

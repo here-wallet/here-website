@@ -43,6 +43,7 @@
     "markdown-it-front-matter": "^0.2.3",
     "near-api-js": "^0.44.2",
     "npm-watch": "^0.11.0",
+    "parse-md": "^2.0.5",
     "remarkable": "^2.0.1",
     "sass": "^1.64.1",
     "uuid4": "^2.0.3"

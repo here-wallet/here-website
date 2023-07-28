@@ -1,10 +1,10 @@
 -----
 title: How to Use Binance with No VPN
-cover: https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4
-tag: Education
-text: Using Binance in the US without a VPN might seem challenging, but...
-timeToRead: 9
-date: Dec 23, 2023
+cover: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57acd837-e6da-4bec-86d9-961cabc94511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230707T015117Z&X-Amz-Expires=3600&X-Amz-Signature=5d1ae6e204b23568182c040cdd86566bb8bd639cab3c114a222688f8f9861876&X-Amz-SignedHeaders=host&x-id=GetObject
+timeToRead: 5 min
+tag: Tutorial
+text: Using Binance in the US without a VPN might seem challenging...
+date: Jul 27, 2023
 -----
 
 

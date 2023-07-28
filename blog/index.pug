@@ -44,34 +44,37 @@ html(lang="en")
 		include ../landing/header/index.pug
 		+header("/blog")
 		
-		section.blog
-			.blog-tags
-				.tag#Company Company
-				.tag#Education Education
-				.tag#Tutorials Tutorials
-			h1
-				| NEWS 
-				br
-				| ARE HERE
-			.subtitle 
-				p.subtitle__text
-					| Stay updated on our most recent stories and announcements!
+		.page-minus
+			.page
+				.page-background
+				section.blog
+					.blog-tags
+						.tag#Company Company
+						.tag#Education Education
+						.tag#Tutorials Tutorials
+					h1
+						| NEWS 
+						br
+						| ARE HERE
+					.subtitle 
+						p.subtitle__text
+							| Stay updated on our most recent stories and announcements!
+					.blog-list
+						for blog in blogs
+							.blog-item
+								img(src=blog.cover)
+								.blog-item-content
+									.parameters 
+										.tag(id=blog.tag)
+											| #{blog.tag}
+										.point
+										.time-to-read 
+											| #{blog.timeToRead} min read
+									a(href=`/blog/${blog.href}`) #{blog.title}
+									p
+										each line in blog.text.split('\n') 
+											| #{line}
+											br
 
-			.blog-list
-				for blog in blogs
-					.blog-item
-						img(src=blog.cover)
-						.blog-item-content
-							.parameters 
-								.tag(id=blog.tag)
-									| #{blog.tag}
-								.point
-								.time-to-read 
-									| #{blog.timeToRead} min
-							a(href=`/blog/${blog.href}`) #{blog.title}
-							p
-								each line in blog.text.split('\n') 
-									| #{line}
-									br
-			
+			include ../landing/footer/index.pug
 			script(type="module", src="./index.js")

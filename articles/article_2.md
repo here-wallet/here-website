@@ -1,10 +1,10 @@
 -----
 title: How to Use Binance with No VPN (1)
-cover: https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4
-tag: Company
-text: To begin, you'll need to link your Binance account with the HERE Wallet app.
-timeToRead: 4
-date: May 10, 2023
+cover: https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR
+timeToRead: 5 min
+tag: Tutorial
+text: Using Binance in the US without a VPN might seem challenging...
+date: Jul 27, 2023
 -----
 
 

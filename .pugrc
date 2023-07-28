@@ -346,40 +346,58 @@
     },
     "blogs": [
       {
+        "title": "10000 NFTS Giveaway 🍾",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "timeToRead": "2 min",
+        "tag": "Tutorial",
+        "text": "After adding web wallet account exports, we launched a small giveaway...",
+        "date": "Jul 28, 2023",
+        "href": "10000-nfts-giveaway-7e1d8c53eb6d"
+      },
+      {
         "title": "How to Use Binance with No VPN",
-        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-        "tag": "Education",
-        "text": "Using Binance in the US without a VPN might seem challenging, but...",
-        "timeToRead": "9",
-        "date": "Dec 23, 2023",
+        "cover": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57acd837-e6da-4bec-86d9-961cabc94511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230707T015117Z&X-Amz-Expires=3600&X-Amz-Signature=5d1ae6e204b23568182c040cdd86566bb8bd639cab3c114a222688f8f9861876&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "timeToRead": "5 min",
+        "tag": "Tutorial",
+        "text": "Using Binance in the US without a VPN might seem challenging...",
+        "date": "Jul 27, 2023",
         "href": "article_1"
       },
       {
         "title": "How to Use Binance with No VPN (1)",
-        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-        "tag": "Company",
-        "text": "To begin, you'll need to link your Binance account with the HERE Wallet app.",
-        "timeToRead": "4",
-        "date": "May 10, 2023",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "timeToRead": "5 min",
+        "tag": "Tutorial",
+        "text": "Using Binance in the US without a VPN might seem challenging...",
+        "date": "Jul 27, 2023",
         "href": "article_2"
       },
       {
-        "title": "Binance connect. Security. 🔒",
-        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-        "tag": "Tutorials",
-        "text": "To move funds between Binance and crypto wallet uses ...",
-        "timeToRead": "14",
-        "date": "June 28, 2023",
-        "href": "binance-connect-security-5193df4ce0c3"
+        "title": "Free swaps",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "timeToRead": "12 min",
+        "tag": "Tutorial",
+        "text": "With our vision to make user experience as easy as possible...",
+        "date": "Jul 27, 2023",
+        "href": "meet-free-swaps-in-here-wallet-2000-contest-f8e1c03df02d"
       },
       {
-        "title": "First NEAR based mobile wallet — HERE is on TestFlight",
-        "cover": "https://s3-alpha-sig.figma.com/img/0621/b14e/aff224c66201cdc82399220101822a37?Expires=1690761600&Signature=E3tfvM~gABb79iiYRqLsMsoDJ1gBRLSf0jlyoRZfaAhm2ChIQNPeRZzeC1t7Vblsxi0ZpqNh-J0svGgc9DJH~3FlvEC-IK8QFxTu8BcsWw4KpXp0tnDD2F6SvLO-c2b2MlQnNzRl93GBvt~VjIotku8b64eqbO6B2bIR88KKsaUo64RZrhlbZa~gtIid2hrQxxTMfcKgkvwDfxscqMs~AGUsUdERTz2fxnU5GJoJ7XnaPWgTEuI7VzAVTMhfqUGMrmJPmZKEY4LBfNTnUvSy9iJE6lPfUQ35VAo3m-mMlc74qYwl3edOthj~ehqgTHZ96~fcvGIiZxf9k~qdcjLBwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "title": "New Santa",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "timeToRead": "12 min",
         "tag": "Company",
-        "text": "The first mobile wallet for NEAR — HERE Wallet — has been launched in TestFlight.",
-        "timeToRead": "22",
+        "text": "With our vision to make user experience as easy as possible...",
+        "date": "Jul 27, 2023",
+        "href": "santa-tokens-proof-of-good-4de55eece1d0"
+      },
+      {
+        "title": "Web 3!",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "timeToRead": "22 min",
+        "tag": "Company",
+        "text": "WEB3 has a big challenge to create a decentralized space that will...",
         "date": "Jul 24, 2023",
-        "href": "first-near-based-mobile-wallet-here-is-on-testflight-89d13b8bbc9a"
+        "href": "web2-web3-transfers-via-phone-number-new-contest-f767a3adf556"
       }
     ]
   }

@@ -39,18 +39,25 @@ html(lang="en")
     body.white
         include ../landing/header/index.pug
         +header("/blog")
-        
-        section.post
-            .post-header
-                .parameters
-                    .tag(id=metadata.tag)
-                        | #{metadata.tag}
-                    .point
-                    .time-to-read 
-                        | #{metadata.timeToRead} min
-                h1.post-title
-                    | #{metadata.title}
-                .post-date
-                    | #{metadata.date}
-            .post-content
-                != content
+
+        .page-minus
+            .page
+                .page-background
+                section
+                    .post
+                        .post-header
+                            .parameters
+                                .tag(id=metadata.tag)
+                                    | #{metadata.tag}
+                                .point
+                                .time-to-read 
+                                    | #{metadata.timeToRead} min read
+                            h1.post-title
+                                | #{metadata.title}
+                            .post-date
+                                | #{metadata.date}
+                        .post-content
+                            != content
+
+            include ../landing/footer/index.pug
+            script(type="module", src="./index.js")
