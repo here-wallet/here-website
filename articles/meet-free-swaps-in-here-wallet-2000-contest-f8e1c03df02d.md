@@ -1,15 +1,11 @@
 -----
-title: Free swaps
+title: Meet free swaps in HERE Wallet + $2000 contest
 cover: https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR
 timeToRead: 12 min
-tag: Tutorial
+tag: Tutorials
 text: With our vision to make user experience as easy as possible...
 date: Jul 27, 2023
 -----
-
-# Meet free swaps in HERE Wallet + $2000 contest
-
-
 
 With our vision to make user experience as easy as possible and make all web3 features available in one app, we are so happy to announce that now you can swap tokens in HERE Wallet. Our main partner for this is **Tonic** DEX and **we decided to make 0% fees for the swaps.**
 

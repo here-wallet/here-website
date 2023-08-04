@@ -1,13 +1,11 @@
 -----
-title: New Santa
+title: Santa tokens — proof of good
 cover: https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR
 timeToRead: 12 min
 tag: Company
 text: With our vision to make user experience as easy as possible...
 date: Jul 27, 2023
 -----
-
-# Santa tokens — proof of good
 
 Ho-ho-ho
 

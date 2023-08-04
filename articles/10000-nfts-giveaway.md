@@ -1,12 +1,11 @@
 -----
 title: 10000 NFTS Giveaway 🍾
 cover: https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR
-tag: near,giveaway
-text: After adding web wallet account exports, we launched a small giveaway
 timeToRead: 2 min
-date: 25.07.2023
+tag: Tutorials
+text: After adding web wallet account exports, we launched a small giveaway...
+date: Jul 28, 2023
 -----
-
 
 After adding web wallet account exports, we launched a small giveaway
 

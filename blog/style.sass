@@ -64,6 +64,8 @@ ol
         font-style: normal
         font-weight: 500
         line-height: 28px
+        &::marker
+            font-weight: 900
 
 img
     vertical-align: top
@@ -112,7 +114,6 @@ html, body
     -webkit-text-size-adjust: 100%
     font-family: 'Inter',Arial,sans-serif
     color: #2c3034
-    // background-color: #f3ebea
 
 section
     margin-top: 40px
@@ -120,11 +121,11 @@ section
         padding: 0 24px
 
 .page
+    padding-bottom: 140px
     &-background
         border-radius: 0 0 32px 32px
         position: absolute
         top: -154px
-        width: 100%
         height: calc( 100% + 154px )
         left: 0
 
@@ -328,6 +329,7 @@ section
         font-style: normal
         font-weight: 500
         line-height: 28px
+
     img
         width: 100%
         border-radius: 16px
@@ -360,3 +362,33 @@ section
         font-style: normal
         font-weight: 500
         line-height: 28px
+
+    blockquote
+        position: relative
+        margin: 32px 0 64px 0
+        p
+            text-align: center
+            font-family: Inter
+            font-size: 22px
+            font-style: normal
+            font-weight: 500
+            line-height: 32px
+            padding: 28px 0
+            &::after
+                content: ''
+                position: absolute
+                background-color: #2C3034
+                width: 120px
+                height: 1px
+                top: 0
+                left: 50%
+                transform: translate(-50%, 0)
+            &::before
+                content: ''
+                position: absolute
+                background-color: #2C3034
+                width: 120px
+                height: 1px
+                bottom: 0
+                left: 50%
+                transform: translate(-50%, 0)

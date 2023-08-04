@@ -64,12 +64,12 @@ html(lang="en")
 							.blog-item
 								img(src=blog.cover)
 								.blog-item-content
-									.parameters 
+									.parameters
 										.tag(id=blog.tag)
 											| #{blog.tag}
 										.point
 										.time-to-read 
-											| #{blog.timeToRead} min read
+											| #{blog.timeToRead} read
 									a(href=`/blog/${blog.href}`) #{blog.title}
 									p
 										each line in blog.text.split('\n') 

@@ -1,13 +1,11 @@
 -----
-title: Web 3!
+title: WEB2 -> WEB3 Transfers via phone number + new contest
 cover: https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR
 timeToRead: 22 min
 tag: Company
 text: WEB3 has a big challenge to create a decentralized space that will...
 date: Jul 24, 2023
 -----
-
-# WEB2 -> WEB3: Transfers via phone number + new contest
 
 WEB3 has a big challenge to create a decentralized space that will be much better than WEB2!! There is a big problem of attracting users from WEB2 to WEB3. How to do it as easily as possible?
 
