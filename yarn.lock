@@ -108,9 +108,9 @@
   dependencies:
     "@lezer/common" "^0.15.0"
 
-"@lmdb/lmdb-win32-x64@2.7.11":
-  "integrity" "sha512-BJwkHlSUgtB+Ei52Ai32M1AOMerSlzyIGA/KC4dAGL+GGwVMdwG8HGCOA2TxP3KjhbgDPMYkv7bt/NmOmRIFng=="
-  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-win32-x64/-/lmdb-win32-x64-2.7.11.tgz"
+"@lmdb/lmdb-darwin-arm64@2.7.11":
+  "integrity" "sha512-r6+vYq2vKzE+vgj/rNVRMwAevq0+ZR9IeMFIqcSga+wMtMdXQ27KqQ7uS99/yXASg29bos7yHP3yk4x6Iio0lw=="
+  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.7.11.tgz"
   "version" "2.7.11"
 
 "@meteorwallet/sdk@^0.6.0":
@@ -130,9 +130,9 @@
     "@lezer/lr" "^0.15.4"
     "json5" "^2.2.1"
 
-"@msgpackr-extract/msgpackr-extract-win32-x64@3.0.1":
-  "integrity" "sha512-2gqEM4ybMpI51HPOiYgI63n9UDF7qvwZB2w92RQJQVb27gLUeUtTL7kJx/NpZvuNC4dcPJDY7kU7p5GWZ6Z5Qw=="
-  "resolved" "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-win32-x64/-/msgpackr-extract-win32-x64-3.0.1.tgz"
+"@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.1":
+  "integrity" "sha512-5o52DqsMswZhfFIsuqLYUXlSpYdwpTyPxGNdByvuWKp2ZMFkI2qne9FAbsYWkLYKTY0b5OnuFRasvGO4VwZhJw=="
+  "resolved" "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-darwin-arm64/-/msgpackr-extract-darwin-arm64-3.0.1.tgz"
   "version" "3.0.1"
 
 "@near-wallet-selector/core@^7.9.0", "@near-wallet-selector/core@7.9.0":
@@ -809,9 +809,9 @@
     "chalk" "^4.1.0"
     "nullthrows" "^1.1.1"
 
-"@parcel/watcher-win32-x64@2.2.0":
-  "integrity" "sha512-JqGW0RJ61BkKx+yYzIURt9s53P7xMVbv0uxYPzAXLBINGaFmkIKSuUPyBVfy8TMbvp93lvF4SPBNDzVRJfvgOw=="
-  "resolved" "https://registry.npmjs.org/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.2.0.tgz"
+"@parcel/watcher-darwin-arm64@2.2.0":
+  "integrity" "sha512-cJl0UZDcodciy3TDMomoK/Huxpjlkkim3SyMgWzjovHGOZKNce9guLz2dzuFwfObBFCjfznbFMIvAZ5syXotYw=="
+  "resolved" "https://registry.npmjs.org/@parcel/watcher-darwin-arm64/-/watcher-darwin-arm64-2.2.0.tgz"
   "version" "2.2.0"
 
 "@parcel/watcher@^2.0.7":
@@ -847,9 +847,9 @@
     "@parcel/utils" "2.9.3"
     "nullthrows" "^1.1.1"
 
-"@swc/core-win32-x64-msvc@1.3.71":
-  "integrity" "sha512-Pcw7fFirpaBOZsU8fhO48ZCb7NxIjuLnLRPrHqWQ4Mapx1+w9ZNdGya2DKP9n8EAiUrJO20WDsrBNMT2MQSWkA=="
-  "resolved" "https://registry.npmjs.org/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.3.71.tgz"
+"@swc/core-darwin-arm64@1.3.71":
+  "integrity" "sha512-xOm0hDbcO2ShwQu1CjLtq3fwrG9AvhuE0s8vtBc8AsamYExHmR8bo6GQHJUtfPG1FVPk5a8xoQSd1fs09FQjLg=="
+  "resolved" "https://registry.npmjs.org/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.71.tgz"
   "version" "1.3.71"
 
 "@swc/core@^1.3.36":
@@ -1573,6 +1573,11 @@
   dependencies:
     "fetch-blob" "^3.1.2"
 
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
+
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
   "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -1825,9 +1830,9 @@
     "is-promise" "^2.0.0"
     "promise" "^7.0.1"
 
-"lightningcss-win32-x64-msvc@1.21.5":
-  "integrity" "sha512-A8cSi8lUpBeVmoF+DqqW7cd0FemDbCuKr490IXdjyeI+KL8adpSKUs8tcqO0OXPh1EoDqK7JNkD/dELmd4Iz5g=="
-  "resolved" "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.21.5.tgz"
+"lightningcss-darwin-arm64@1.21.5":
+  "integrity" "sha512-z05hyLX85WY0UfhkFUOrWEFqD69lpVAmgl3aDzMKlIZJGygbhbegqb4PV8qfUrKKNBauut/qVNPKZglhTaDDxA=="
+  "resolved" "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.21.5.tgz"
   "version" "1.21.5"
 
 "lightningcss@^1.16.1":

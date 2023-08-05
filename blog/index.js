@@ -4,6 +4,13 @@
 // const waitlistModal = new WaitlistModal();
 // const headerInstance = new HeaderComponent();
 
+const allLinks = document.querySelectorAll(".post-content a");
+if (allLinks) {
+    allLinks.forEach(link => {
+        link.setAttribute("target", "_blank");
+    });
+}
+
 function formatDateToISO(dateString) {
     const [day, month, year] = dateString.split('.');
     return `${year}-${month}-${day}`;

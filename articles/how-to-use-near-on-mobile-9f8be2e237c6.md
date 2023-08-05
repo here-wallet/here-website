@@ -1,7 +1,7 @@
 -----
 title: How to use NEAR on Mobile
 cover: https://cdn-images-1.medium.com/max/2320/1*CeH0hw0NMCdgmYIXlXKgFw.png
-tag: near,tutorial
+tag: tutorial
 text: A breakdown of how to use the NEAR ecosystem from a cell phone
 timeToRead: 5 min
 date: 15.01.2023

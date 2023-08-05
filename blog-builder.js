@@ -33,6 +33,17 @@ const generateHtml = async () => {
   }
 };
 
+function formatDateToISO(dateString) {
+  const [day, month, year] = dateString.split('.');
+  return `${year}-${month}-${day}`;
+}
+
+const formatDate = (dateString) => {
+  const formattedDate = formatDateToISO(dateString);
+  const date = new Date(formattedDate);
+  return date
+}
+
 const buildBlogPreviews = async () => {
   const pug = JSON.parse(await fs.promises.readFile(".pugrc", "utf-8"));
   const blogPreviews = await Promise.all(
@@ -40,7 +51,7 @@ const buildBlogPreviews = async () => {
       if (path.extname(file) === ".md") {
         const mdFilePath = path.join(mdFilesDir, file);
         const mdContent = await fs.promises.readFile(mdFilePath, "utf-8");
-        const { metadata } = parseMD(mdContent)
+        const { metadata } = parseMD(mdContent);
         metadata.href = `${path.basename(
           mdFilePath,
           path.extname(mdFilePath)
@@ -50,12 +61,15 @@ const buildBlogPreviews = async () => {
       return null;
     })
   );
-  const filteredBlogPreviews = blogPreviews.filter(
-    (article) => article !== null
-  );
-  pug.locals.blogs = filteredBlogPreviews;
+
+  const filteredAndSortedBlogPreviews = blogPreviews
+    .filter((article) => article !== null)
+    .sort((a, b) => formatDate(b.date) - formatDate(a.date));
+
+  pug.locals.blogs = filteredAndSortedBlogPreviews;
   await fs.promises.writeFile(".pugrc", JSON.stringify(pug, null, 2));
 };
+
 
 buildBlogPreviews();
 generateHtml();

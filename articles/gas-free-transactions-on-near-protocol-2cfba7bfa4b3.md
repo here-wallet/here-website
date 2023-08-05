@@ -1,7 +1,7 @@
 -----
 title: Gas-free transactions on NEAR Protocol
 cover: https://cdn-images-1.medium.com/max/5760/1*Tv5Iw-O9Xv6s1egcBja08w.jpeg
-tag: near,wallet
+tag: near
 text: Gas fees represent the charge that users must pay for processing their transactions on the blockchain. But what if there was a way to do transactions without paying for gas?
 timeToRead: 5 min
 date: 03.07.2023
@@ -35,4 +35,5 @@ In addition, even though HERE RPC pays for gas, it cannot under any circumstance
 1. **Support for economic inclusion: **Some users may experience difficulties in acquiring cryptocurrency due to geographical or economic barriers.
 
 **Autor**: [Petr Volnov](https://twitter.com/p_volnov)
-** HERE Wallet:** [Google Play / App Store](http://download.herewallet.app/medium)
+
+**HERE Wallet:** [Google Play / App Store](http://download.herewallet.app/medium)

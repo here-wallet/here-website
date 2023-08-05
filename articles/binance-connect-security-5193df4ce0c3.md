@@ -1,7 +1,7 @@
 -----
 title: Binance connect. Security. 🔒
 cover: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9ZHsW37urweu-Y-2A8iyDg.jpeg
-tag: binance,wallet
+tag: binance
 text: To prevent loss or freezing funds we take a lot of security measures. In this article, will discuss the main of them.
 timeToRead: 5 min
 date: 03.07.2023
