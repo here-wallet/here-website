@@ -23,10 +23,10 @@ After adding web wallet account exports, we launched a small giveaway
 
 
 Join our community:
-> [***Discord](https://discord.gg/AfB5cvtFXH)***
-> [***Twitter](https://twitter.com/here_wallet)***
-> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
-> [***Telegram](https://t.me/herewallet)***
-> [***Telegram chat](https://t.me/herewalletchat)***
-> [***Medium](https://medium.com/@nearhere)***
-> [***Website](https://herewallet.app/)***
+> [**Discord](https://discord.gg/AfB5cvtFXH)**
+> [**Twitter](https://twitter.com/here_wallet)**
+> [**AwesomeNEAR](https://awesomenear.com/here-wallet)**
+> [**Telegram](https://t.me/herewallet)**
+> [**Telegram chat](https://t.me/herewalletchat)**
+> [**Medium](https://medium.com/@nearhere)**
+> [**Website](https://herewallet.app/)**
