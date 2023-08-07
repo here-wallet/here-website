@@ -142,15 +142,13 @@ NEAR is available with usernames instead of addresses. Usually, they cost 0.1 $N
 ## **How to use dApps**
 
 1. Select HERE Wallet from the list of applications on the website
-
-1. Scan the QR code with your phone’s native camera
-
-1. You will be redirected to the app. Click “Confirm”
+2. Scan the QR code with your phone’s native camera
+3. You will be redirected to the app. Click “Confirm”
 
 ![](https://cdn-images-1.medium.com/max/2674/1*6R07KW2AGWt5rG6kFnVYFg.png)
 
 Join our community:
-> [***Discord](https://discord.com/invite/8Q3gw3gsD2)***
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
 > [***Twitter](https://twitter.com/here_wallet)***
 > [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
 > [***Telegram](https://t.me/herewallet)***

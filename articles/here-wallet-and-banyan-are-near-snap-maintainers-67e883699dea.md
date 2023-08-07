@@ -15,3 +15,12 @@ MetaMask has awarded a grant to HERE Wallet and BANYAN. The funding is specifica
 NEAR-SNAP, the application under development, aims to harness the innovative Snap system offered by MetaMask. This system allows developers to safely expand the functionalities of MetaMask, integrating new features and enhancing user experience. With the development of NEAR-SNAP, users will be able to seamlessly manage NEAR tokens and sign transactions for NEAR-based decentralized applications (dApps) directly through MetaMask, resulting in a more streamlined and secure web3 experience.
 
 Further details about the development progress and the official launch date of NEAR-SNAP will be shared in the coming weeks.
+
+Join our community:
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
+> [***Twitter](https://twitter.com/here_wallet)***
+> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
+> [***Telegram](https://t.me/herewallet)***
+> [***Telegram chat](https://t.me/herewalletchat)***
+> [***Medium](https://medium.com/@nearhere)***
+> [***Website](https://herewallet.app/)***

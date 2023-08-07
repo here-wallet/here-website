@@ -32,3 +32,12 @@ However, as the requests can come only from one IP address, we can skip a reques
 HERE is a US company that is subject to regulation. Any breach of the user agreement or exposure of user funds will result in serious consequences for the team. We are reassured on all counts and designed the product so as not to touch users’ money in any way. All updates are reviewed by our CTO and we go through security [audits](https://docs.herewallet.app/technology-description/readme/security-audit) as the project evolves.
 
 This is only part of the security measures we take, but the most important thing you can do is to keep the seed phrase safe. We take care of the rest 🤝
+
+Join our community:
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
+> [***Twitter](https://twitter.com/here_wallet)***
+> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
+> [***Telegram](https://t.me/herewallet)***
+> [***Telegram chat](https://t.me/herewalletchat)***
+> [***Medium](https://medium.com/@nearhere)***
+> [***Website](https://herewallet.app/)***

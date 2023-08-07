@@ -33,13 +33,19 @@ Score is a rating of activity in the app. It is attached to an account and canno
 ## How to earn a score?
 
 1. Open [app](https://download.herewallet.app/): **+5** (one per day)
-
-1. Make swap: **+20** (one per day)
-
-1. Start stake: **+100**
-
-1. Invite friend with balance: **+150**
-
-1. Join #into channel at [discord](https://dd.herewallet.app/) and make into: **+50**
+2. Make swap: **+20** (one per day)
+3. Start stake: **+100**
+4. Invite friend with balance: **+150**
+5. Join #into channel at [discord](https://discord.gg/AfB5cvtFXH) and make into: **+50**
 
 More usecases soon
+
+
+Join our community:
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
+> [***Twitter](https://twitter.com/here_wallet)***
+> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
+> [***Telegram](https://t.me/herewallet)***
+> [***Telegram chat](https://t.me/herewalletchat)***
+> [***Medium](https://medium.com/@nearhere)***
+> [***Website](https://herewallet.app/)***
