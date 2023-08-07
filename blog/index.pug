@@ -1,0 +1,80 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Blog HERE
+		meta(name="description", content="Blog HERE")
+		
+		meta(name="og:title", content="Blog HERE")
+		meta(name="og:description", content="Blog HERE")
+		meta(name="og:url", content="http://herewallet.app/blog")
+		meta(name="og:image", content="https://storage.herewallet.app/download.jpg")
+		meta(name="twitter:card", content="summary_large_image")
+		meta(name="twitter:image", content="https://storage.herewallet.app/download.jpg")
+		meta(name="telegram_channel", content="herewallet")
+
+		link(rel='shortcut icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico' type='image/x-icon')
+
+		link(href="style.sass", rel="stylesheet")
+		link(href="http://herewallet.app/blog", rel="canonical")
+		meta(name="format-detection", content="telephone=no")
+		link(href="https://fonts.googleapis.com", rel="preconnect")
+		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+		
+		link(rel='apple-touch-icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		
+		// Google tag (gtag.js)
+		script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-J76SQ67RJB');
+
+		link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+		link(href="./style.sass", rel="stylesheet")
+
+	body.white
+		include ../landing/header/index.pug
+		+header("/blog")
+		
+		.page-minus
+			.page
+				.page-background
+				section.blog
+					.blog-tags
+						.tag#Company Company
+						.tag#Education Education
+						.tag#Tutorials Tutorials
+					h1
+						| NEWS 
+						br
+						| ARE HERE
+					.subtitle 
+						p.subtitle__text
+							| Stay updated on our most recent stories and announcements!
+					.blog-list
+						for blog in blogs
+							.blog-item
+								img(src=blog.cover)
+								.blog-item-content
+									.parameters
+										.tag(id=blog.tag)
+											| #{blog.tag}
+										.point
+										.time-to-read 
+											| #{blog.timeToRead} read
+									a(href=`/blog/${blog.href}`) #{blog.title}
+									p
+										each line in blog.text.split('\n') 
+											| #{line}
+											br
+
+			include ../landing/footer/index.pug
+			script(type="module", src="./index.js")

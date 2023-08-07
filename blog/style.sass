@@ -1,0 +1,412 @@
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk')
+@import "../landing/common/base.sass"
+@import "../landing/header"
+@import "../landing/footer"
+// @font-face
+//     // font-family: 'CabinetGrotesk-Variable'
+//     // font-weight: 100 900
+//     font-display: block
+//     font-style: normal
+
+*,
+*:before,
+*:after
+    padding: 0
+    margin: 0
+    border: 0
+    vertical-align: baseline
+    box-sizing: border-box
+:focus,
+:active
+    outline: none
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, img
+    display: block
+
+input,
+button,
+textarea
+    font-family: inherit
+    background-color: transparent
+input::-ms-clear
+    display: none
+button
+    display: inline-block
+    cursor: pointer
+    &::-moz-focus-inner
+        padding: 0
+        border: 0
+a
+    text-decoration: none
+    &:visited
+        text-decoration: none
+    &:hover
+        text-decoration: none
+
+ul
+    padding-bottom: 32px
+    padding-left: 28px
+    li
+        color: #2c3034
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
+
+ol
+    padding-bottom: 32px
+    padding-left: 28px
+    li
+        color: #2c3034
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
+        &::marker
+            font-weight: 900
+
+img
+    vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+    font-style: inherit
+    font-weight: 400
+h1
+    font-family: Cabinet Grotesk
+    font-size: 64px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    @media (max-width: 760px)
+        font-size: 52px
+h2
+    font-size: 62px
+    font-weight: 900
+    @media (max-width: 760px)
+        font-size: 48px
+h3
+    font-size: 40px
+    font-weight: 900
+    @media (max-width: 760px)
+        font-size: 32px
+h4
+    font-size: 28px
+    font-weight: 900
+p
+    line-height: 1.35
+
+html, body
+    height: 100%
+    width: 100%
+    line-height: 1
+    font-weight: 300
+    font-size: 16px
+    -ms-text-size-adjust: 100%
+    -moz-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+    font-family: 'Inter',Arial,sans-serif
+    color: #2c3034
+
+section
+    margin-top: 40px
+    @media (max-width: 1160px)
+        padding: 0 24px
+
+.page
+    padding-bottom: 140px
+    &-background
+        border-radius: 0 0 32px 32px
+        position: absolute
+        top: -154px
+        height: calc( 100% + 154px )
+        left: 0
+
+.white
+    .header
+        &-link
+            color: rgb(44, 48, 52)
+            margin: 0 24px
+            &.active
+                border-color: #2c3034
+
+        &-download
+            @media (max-width: 900px)
+                color: #414548
+        &.active
+            .header-link
+                color: #fff
+        &-body.open
+            .header-download
+                color: #fff
+
+        .header-waitlist, .header-form-title, .header-form-title
+            display: none
+        .header-body.open
+            .here-input, .here-input ~ button.here-button.light
+                display: none
+
+    .link-logo
+        width: 95px
+        height: 21px
+        background-image: url(../assets/logo-black.svg)
+        background-size: 100%
+        background-repeat: no-repeat
+        img
+            display: none
+
+    .header-body
+        .header-link
+            color: #fff
+
+.blog
+    padding-bottom: 64px
+    &-tags
+        display: none
+        @media (max-width: 540px)
+            display: flex
+            gap: 5px
+            padding-bottom: 20px
+    h1
+        text-align: center
+        font-size: 64px !important
+        @media (max-width: 540px)
+            text-align: start
+        br
+            display: none
+            @media (max-width: 540px)
+                display: block
+    .subtitle
+        display: flex
+        justify-content: center
+        text-align: center
+        padding-top: 20px
+        .subtitle__text
+            max-width: 300px
+            font-size: 18px
+            font-weight: 500
+            line-height: 28px
+        @media (max-width: 540px)
+            text-align: start
+            justify-content: start
+    &-list
+        padding-top: 40px
+        display: flex
+        gap: 15px
+        flex-wrap: wrap
+        justify-content: center
+        @media (max-width: 620px)
+            flex-direction: column
+
+    &-item
+        min-height: 403px
+        max-width: 362.68px
+        display: block
+        background: #EBDEDC
+        border-radius: 16px
+        transition: 0.2s transform
+        cursor: pointer
+
+        display: flex
+        flex-direction: column
+
+        &:hover
+            transform: scale(1.02)
+
+        @media (max-width: 789px)
+            width: 100%
+            max-width: 100%
+            &:hover
+                transform: none
+
+    &-item a
+        font-family: Inter
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: 32px
+        color: #2C3034
+
+    &-item p
+        padding-top: 12px
+        font-family: Inter
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        line-height: 22px
+
+    &-item-content
+        padding: 24px 16px
+        display: flex
+        flex-direction: column
+        flex: 1
+        p
+            font-weight: 400 !important
+
+    &-item>img
+        width: 100%
+        max-width: 100%
+        object-fit: cover
+        border-top-left-radius: 16px
+        border-top-right-radius: 16px
+        height: 191px
+
+.parameters
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 12px
+    padding-bottom: 16px
+
+.tag
+    font-family: Inter
+    font-size: 14px
+    font-style: normal
+    font-weight: 500
+    line-height: 20px
+    display: flex
+    padding: 4px 12px
+    border-radius: 8px
+    text-transform: capitalize
+    background-color: #fd84e3
+
+.point
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    background-color: #6B6661
+
+.time-to-read
+    font-family: Inter
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 16px
+    color: #6B6661
+
+#Tutorials
+    background-color: #85D3C9
+
+#Company
+    background-color: #95A7E8
+
+#Education
+    background-color: #FDBF1E
+
+#binance
+    background-color: #FDBF1E
+
+#near
+    background-color: #95A7E8
+
+#wallet
+    background-color: #85D3C9
+
+#tutorial
+    background-color: #fd84e3
+
+#news
+    background-color: #85D3C9
+
+.post
+    max-width: 704px
+    margin-left: 140px
+    @media (max-width: 900px)
+        margin-left: 0
+    // @media (max-width: 1000px)
+    //     padding: 0 16px
+    &-content
+        padding-top: 32px
+
+    h1
+        font-size: 64px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+
+    &-header
+        .time-to-read
+            font-family: Inter
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 20px
+            color: #2C3034
+    p
+        padding-bottom: 32px
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
+
+    img
+        width: 100%
+        border-radius: 16px
+        padding-bottom: 32px
+    h1,
+    h2,
+    h3
+        padding-bottom: 16px
+
+    h2
+        font-family: Cabinet Grotesk
+        font-size: 32px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+
+    h3
+        font-family: Cabinet Grotesk
+        font-size: 32px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+
+    strong
+        font-weight: 900
+
+    a
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 28px
+        color: #fd84e3
+
+    blockquote
+        position: relative
+        margin: 32px 0 64px 0
+        p
+            text-align: center
+            font-family: Inter
+            font-size: 22px
+            font-style: normal
+            font-weight: 500
+            line-height: 32px
+            padding: 28px 0
+            &::after
+                content: ''
+                position: absolute
+                background-color: #2C3034
+                width: 120px
+                height: 1px
+                top: 0
+                left: 50%
+                transform: translate(-50%, 0)
+            &::before
+                content: ''
+                position: absolute
+                background-color: #2C3034
+                width: 120px
+                height: 1px
+                bottom: 0
+                left: 50%
+                transform: translate(-50%, 0)

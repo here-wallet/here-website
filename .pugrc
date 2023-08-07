@@ -59,6 +59,10 @@
         {
           "text": "Docs",
           "link": "https://docs.herewallet.app/technology-description/readme"
+        },
+        {
+          "text": "Blog",
+          "link": "/blog"
         }
       ],
       "downloads": [
@@ -339,6 +343,80 @@
           "text": "Yes. You can change your seed phrase. Go to settings -> passphrase -> generate new passphrase"
         }
       ]
-    }
+    },
+    "blogs": [
+      {
+        "title": "How to use Binance with No VPN",
+        "cover": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57acd837-e6da-4bec-86d9-961cabc94511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230707T015117Z&X-Amz-Expires=3600&X-Amz-Signature=5d1ae6e204b23568182c040cdd86566bb8bd639cab3c114a222688f8f9861876&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "tag": "binance",
+        "text": "Using Binance in the US without a VPN might seem challenging, but with the integration of Binance and the HERE Wallet app, you can conveniently access and manage your cryptocurrencies.",
+        "timeToRead": "2 min",
+        "date": "03.08.2023",
+        "href": "how-to-use-binance-with-no-vpn"
+      },
+      {
+        "title": "HERE NFT Mutations",
+        "cover": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Uv3nGXLdCx6F25EF57GSEQ.jpeg",
+        "tag": "near",
+        "text": "99 mutation potions are available. Each potion has the power to transform a single HERE Early user NFT, providing a once-in-a-lifetime opportunity",
+        "timeToRead": "5 min",
+        "date": "01.08.2023",
+        "href": "here-nft-mutations"
+      },
+      {
+        "title": "10000 NFTS Giveaway 🍾",
+        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
+        "tag": "near",
+        "text": "After adding web wallet account exports, we launched a small giveaway",
+        "timeToRead": "2 min",
+        "date": "25.07.2023",
+        "href": "10000-nfts-giveaway"
+      },
+      {
+        "title": "Binance connect. Security. 🔒",
+        "cover": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9ZHsW37urweu-Y-2A8iyDg.jpeg",
+        "tag": "binance",
+        "text": "To prevent loss or freezing funds we take a lot of security measures. In this article, will discuss the main of them.",
+        "timeToRead": "5 min",
+        "date": "03.07.2023",
+        "href": "binance-connect-security"
+      },
+      {
+        "title": "Gas-free transactions on NEAR Protocol",
+        "cover": "https://cdn-images-1.medium.com/max/5760/1*Tv5Iw-O9Xv6s1egcBja08w.jpeg",
+        "tag": "near",
+        "text": "Gas fees represent the charge that users must pay for processing their transactions on the blockchain. But what if there was a way to do transactions without paying for gas?",
+        "timeToRead": "5 min",
+        "date": "03.07.2023",
+        "href": "gas-free-transactions-on-near-protocol"
+      },
+      {
+        "title": "HERE Wallet and BANYAN are NEAR-SNAP maintainers",
+        "cover": "https://storage.herewallet.app/media/metamask.png",
+        "tag": "news",
+        "text": "MetaMask has awarded a grant to HERE Wallet and BANYAN. The funding is specifically earmarked for the development of NEAR-SNAP",
+        "timeToRead": "3 min",
+        "date": "15.06.2023",
+        "href": "here-wallet-and-banyan-are-near-snap-maintainers"
+      },
+      {
+        "title": "HERE: Score",
+        "cover": "https://cdn-images-1.medium.com/max/5760/1*RParAv_olD7IPUSHqRgTbQ.png",
+        "tag": "wallet",
+        "text": "In this article, we’ll explain in detail what SCORE is, how to get it, and why you need it",
+        "timeToRead": "3 min",
+        "date": "03.06.2023",
+        "href": "here-score"
+      },
+      {
+        "title": "How to use NEAR on Mobile",
+        "cover": "https://cdn-images-1.medium.com/max/2320/1*CeH0hw0NMCdgmYIXlXKgFw.png",
+        "tag": "tutorial",
+        "text": "A breakdown of how to use the NEAR ecosystem from a cell phone",
+        "timeToRead": "5 min",
+        "date": "15.01.2023",
+        "href": "how-to-use-near-on-mobile"
+      }
+    ]
   }
 }
