@@ -7,16 +7,19 @@ html(lang="en")
 
         title #{metadata.title}
         
+        meta(name="description", content=metadata.text)
         meta(name="og:title", content=metadata.title)
         meta(name="og:description", content=metadata.text)
         meta(name="og:url", content=`http://herewallet.app/blog/${metadata.href}`)
-        meta(name="description", content=metadata.text)
         meta(name="og:image", content=metadata.cover)
 
         meta(name="twitter:card", content="summary_large_image")
-        meta(name="telegram_channel", content="herewallet")
+        meta(name="twitter:description", content=metadata.text)
+        meta(name="twitter:title", content=metadata.title)
         meta(name="twitter:image", content=metadata.cover)
+
         meta(name="format-detection", content="telephone=no")
+        meta(name="telegram_channel", content="herewallet")
 
         link(href=`http://herewallet.app/blog/${metadata.href}`, rel="canonical")
         link(href="https://fonts.googleapis.com", rel="preconnect")
