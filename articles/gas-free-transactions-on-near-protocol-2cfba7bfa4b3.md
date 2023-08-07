@@ -37,3 +37,12 @@ In addition, even though HERE RPC pays for gas, it cannot under any circumstance
 **Autor**: [Petr Volnov](https://twitter.com/p_volnov)
 
 **HERE Wallet:** [Google Play / App Store](http://download.herewallet.app/medium)
+
+Join our community:
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
+> [***Twitter](https://twitter.com/here_wallet)***
+> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
+> [***Telegram](https://t.me/herewallet)***
+> [***Telegram chat](https://t.me/herewalletchat)***
+> [***Medium](https://medium.com/@nearhere)***
+> [***Website](https://herewallet.app/)***

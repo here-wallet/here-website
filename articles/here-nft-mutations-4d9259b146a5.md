@@ -26,3 +26,11 @@ Mutations will be available on August 1st, hurry up and buy a potion to be ready
 
 [Download Wallet](https://download.herewallet.app/medium)
 
+Join our community:
+> [***Discord](https://discord.gg/AfB5cvtFXH)***
+> [***Twitter](https://twitter.com/here_wallet)***
+> [***AwesomeNEAR](https://awesomenear.com/here-wallet)***
+> [***Telegram](https://t.me/herewallet)***
+> [***Telegram chat](https://t.me/herewalletchat)***
+> [***Medium](https://medium.com/@nearhere)***
+> [***Website](https://herewallet.app/)***
