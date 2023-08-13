@@ -64,6 +64,13 @@ html(lang="en")
                                 | #{metadata.date}
                         .post-content
                             != content
+                            .subscribe-email-form
+                                p.title 
+                                    | Subscribe to get useful tutorials and updates!
+                                .form-box 
+                                    input(placeholder="Email" name="Email")
+                                    button
+                                        | Subscribe
 
             include ../landing/footer/index.pug
             script(type="module", src="./index.js")
