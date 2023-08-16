@@ -34,10 +34,10 @@ HERE is a US company that is subject to regulation. Any breach of the user agree
 This is only part of the security measures we take, but the most important thing you can do is to keep the seed phrase safe. We take care of the rest 🤝
 
 Join our community:
-> [**Discord](https://discord.gg/AfB5cvtFXH)**
-> [**Twitter](https://twitter.com/here_wallet)**
-> [**AwesomeNEAR](https://awesomenear.com/here-wallet)**
-> [**Telegram](https://t.me/herewallet)**
-> [**Telegram chat](https://t.me/herewalletchat)**
-> [**Medium](https://medium.com/@nearhere)**
-> [**Website](https://herewallet.app/)**
+> [**Discord**](https://discord.gg/AfB5cvtFXH)
+> [**Twitter**](https://twitter.com/here_wallet)
+> [**AwesomeNEAR**](https://awesomenear.com/here-wallet)
+> [**Telegram**](https://t.me/herewallet)
+> [**Telegram chat**](https://t.me/herewalletchat)
+> [**Medium**](https://medium.com/@nearhere)
+> [**Website**](https://herewallet.app/)

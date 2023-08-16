@@ -23,8 +23,8 @@ There are many reasons why people support projects — someone likes the product
 
 ### How to support HERE?
 
-1. Create gitcoin passport: https://passport.gitcoin.co/
-2. Add HERE to cart: https://gitcoin.herewallet.app
+1. Create gitcoin passport: [link](https://passport.gitcoin.co/)
+2. Add HERE to cart: [link](https://gitcoin.herewallet.app)
 3. Donate ✔️
 
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BMwr-R4OhYfAoLD27xcBRA.jpeg)
