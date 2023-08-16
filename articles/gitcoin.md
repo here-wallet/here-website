@@ -36,7 +36,7 @@ The grant is given to projects with the most donors, it’s cool if you can supp
 Everyone who will support HERE Wallet in this round please write to the [discord](https://dd.herewallet.app) channel #gitcoin
 
 
-**Gitcoin link:** https://gitcoin.herewallet.app
+**Gitcoin link:** [https://gitcoin.herewallet.app](https://gitcoin.herewallet.app)
 
 Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
