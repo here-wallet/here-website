@@ -1,9 +1,3 @@
-// const { HeaderComponent } = require("../landing/scripts/HeaderComponent");
-// const { WaitlistModal } = require("../landing/scripts/WaitlistModal");
-
-// const waitlistModal = new WaitlistModal();
-// const headerInstance = new HeaderComponent();
-
 const allLinks = document.querySelectorAll(".post-content a");
 if (allLinks) {
     allLinks.forEach(link => {
