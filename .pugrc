@@ -72,6 +72,47 @@
         }
       ]
     },
+    "mint-header": {
+      "waitlistLocale": "Android waiting list",
+      "socials": [
+        {
+          "icon": "/assets/Socials/Twitter-light.svg",
+          "link": "https://twitter.com/here_wallet"
+        },
+        {
+          "icon": "/assets/Socials/Discord-light.svg",
+          "link": "https://discord.gg/8Q3gw3gsD2"
+        }
+      ],
+      "links": [
+        {
+          "text": "Rewards",
+          "link": "/rewards"
+        },
+        {
+          "text": "Timeline",
+          "link": "/timeline"
+        },
+        {
+          "text": "NFT",
+          "link": "/nft"
+        },
+        {
+          "text": "Docs",
+          "link": "https://docs.herewallet.app/technology-description/readme"
+        },
+        {
+          "text": "Blog",
+          "link": "/blog"
+        }
+      ],
+      "downloads": [
+        {
+          "text": "Download HERE",
+          "link": "https://download.herewallet.app/site"
+        }
+      ]
+    },
     "main": {
       "title": "Make Binance",
       "subTitle": "Safe and simple",

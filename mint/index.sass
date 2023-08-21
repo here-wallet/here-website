@@ -1,0 +1,434 @@
+@import "common/base"
+@import "header/index"
+@import "footer/index"
+@import "modal/index"
+
+@keyframes flying-box
+  0%
+    transform: translateY(-1.5%)
+  50%
+    transform: translateY(1.5%)
+  100%
+    transform: translateY(-1.5%)
+
+@keyframes light-glow
+  0%
+    opacity: 1
+  50%
+    opacity: 0.75
+  100%
+    opacity: 1
+
+.page
+  margin-bottom: 330px
+  z-index: 1000
+  &-background
+    z-index: -100
+    top: 75%
+    border-radius: 0 0 32px 32px
+    position: absolute
+    height: calc( 41% )
+    // background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%)
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(15%,rgba(255,255,255,1)))
+    // background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 15%)
+    // background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 15%)
+    // background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 15%)
+    // background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 15%)
+  &-background-fake
+    z-index: 99
+    top: 60%
+    border-radius: 0 0 32px 32px
+    position: absolute
+    height: calc( 41% )
+
+.rectangles-group
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%, 0)
+  z-index: -100
+  opacity: 0.1
+
+.page-container
+  max-width: 1136px
+  margin: 0 auto
+
+.mint-interlude
+  margin-top: 80px
+  margin-bottom: 180px
+
+.mint-line
+  background-color: #FDBF1C
+  border: 8px solid #F3E6E9
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  position: absolute
+  width: 107vw
+  left: -52%
+  transform: rotate(-1.93deg) translateX(45%)
+
+.mint-title
+  color: #2C3034
+  padding-top: 25px
+  text-shadow: 0px 0px 16px rgba(253, 161, 93, 0.10)
+  font-size: 72px
+  font-style: normal
+  font-weight: 900
+  line-height: 50px
+  letter-spacing: 1.44px
+  text-transform: uppercase
+  margin-bottom: 0
+
+.mint-text
+  font-size: 18px
+  font-style: normal
+  font-weight: 600
+  line-height: normal
+  opacity: 0.7
+  max-width: 468px
+  text-align: center
+
+.mint-status
+  padding-top: 200px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  gap: 24px
+  &-item
+    display: flex
+    position: relative
+    padding: 24px 0
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 16px
+    border-radius: 16px
+    border: 3px solid #0E0E0E
+    flex: 1 1 auto
+    background: #F3E6E9
+    box-shadow: 9.019607543945312px 9.019607543945312px 0px 0px #0E0E0E
+    .item-title
+      margin: 0
+      font-size: 18px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+      color: #6B6661
+    .item-value
+      color: #2C3034
+      text-align: center
+      font-size: 56px
+      font-style: normal
+      font-weight: 900
+      line-height: 100%
+    .item-value.green
+      color: #087164
+    &::before
+      content: ""
+      width: 2px
+      height: 100px
+      position: absolute
+      top: -100px
+      left: 30px
+      background: #F3E6E9
+      z-index: -1
+    &::after
+      content: ""
+      width: 2px
+      height: 100px
+      position: absolute
+      top: -100px
+      right: 30px
+      background: #F3E6E9
+      z-index: -1
+
+.mint-status-item.prizes
+  max-width: 309px
+
+.mint-status-item.time
+  max-width: 454px
+
+.mint-buttons
+  padding-top: 64px
+  display: flex
+  flex-direction: row
+  gap: 20px
+  justify-content: center
+  position: relative
+
+.mint-button-connect
+  cursor: pointer
+  border-radius: 16px
+  border: 1px solid #2C3034
+  background: #FDBF1E
+  box-shadow: 4px 4px 0px 0px #F3E6E9
+  font-size: 16px
+  font-style: normal
+  font-family: Inter
+  font-weight: 600
+  line-height: normal
+  padding: 13px 49px
+
+.mint-button-more
+  font-family: Inter
+  cursor: pointer
+  border-radius: 16px
+  border: 1px solid #F3EBEA
+  font-size: 16px
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+  padding: 13px 37px
+  color: #F3EBEA
+  background: transparent
+
+.mint-connect
+  padding-top: 100px
+  &-items
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.connect-link
+  margin-top: 140px
+  cursor: pointer
+  display: flex
+  height: 44px
+  max-width: 230px
+  padding: 16px 32px
+  justify-content: center
+  align-items: center
+  gap: 12px
+  border-radius: 60px
+  border: 1px solid #F3E6E9
+  background: #25282B
+  &:hover
+    .link-text
+      transform: translate(0, -55px)
+    .link-hover-text
+      transform: translate(0, -55px)
+  &-text
+    font-family: CabinetGrotesk
+    color: #FFF
+    text-align: center
+    font-size: 24px
+    font-style: normal
+    font-weight: 400
+    line-height: 125.5%
+    overflow: hidden
+    position: relative
+    height: 76px
+    .link-text
+      padding: 0
+      line-height: normal
+      transition: all 0.2s linear
+    .link-hover-text
+      transition: all 0.2s linear
+      padding: 0
+      line-height: normal
+  img
+    width: 48px
+    height: 48px
+
+.connect-item
+  position: relative
+  height: 324px
+  width: 339px
+  display: flex
+  justify-content: center
+
+.flying-box
+  position: absolute
+  z-index: -1
+  animation: flying-box 4s linear infinite
+.flying-box-back
+  position: absolute
+  animation: flying-box 4s linear infinite
+  z-index: -20
+
+.mint-nft-background
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 120%
+  height: 100%
+  opacity: 0
+  transition: opacity 0.4s linear
+  z-index: -100
+  img
+    width: 100%
+
+.mint-nft
+  padding-top: 100px
+  margin-bottom: 140px
+  position: relative
+  h1
+    color: #FFF
+    text-align: center
+    font-feature-settings: 'liga' off
+    font-size: 56px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    letter-spacing: 1.12px
+
+.nft-items
+  padding-top: 140px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.nft-item
+  position: relative
+
+.nft-open-case
+  height: 260px
+  width: 230px
+  position: relative
+  .nft-item-light
+    position: absolute
+    top: 0
+    left: 17px
+    animation: light-glow 5s linear infinite
+    z-index: 1
+  .nft-item-case
+    position: absolute
+    top: 117px
+    z-index: 0
+    left: 0
+
+.nft-small-images
+  position: absolute
+  z-index: 100
+  width: 100%
+  height: 100%
+  .container
+    position: relative
+    img
+      position: absolute
+    .usdt-1
+      top: 25px
+      right: 55px
+      animation: flying-box 2s linear infinite
+    .usdt-2
+      top: 65px
+      left: 60px
+      animation: flying-box 1s ease-out infinite
+    .usdt-3
+      top: 115px
+      right: 60px
+      animation: flying-box 3s ease-in infinite
+    .nft-1
+      top: -40px
+      left: 45px
+      animation: flying-box 1.5s linear infinite
+    .nft-2
+      top: -10px
+      right: 45px
+      animation: flying-box 3.2s ease-in infinite
+    .nft-3
+      top: 40px
+      left: 55px
+      animation: flying-box 2.2s ease-out infinite
+    .nft-4
+      top: 90px
+      right: 35px
+      animation: flying-box 3s ease-in infinite
+    .nft-5
+      top: 130px
+      left: 55px
+      animation: flying-box 1.9s ease-out infinite
+    .score-1
+      top: 20px
+      left: 45px
+      animation: flying-box 3.5s ease-in infinite
+    .score-2
+      top: 65px
+      right: 45px
+      animation: flying-box 1.7s linear infinite
+    .score-3
+      top: 115px
+      left: 50px
+      animation: flying-box 3s ease-in infinite
+    .mutation
+      top: 35px
+      left: 55px
+      animation: flying-box 4s linear infinite
+
+.nft-item-text
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding-top: 30px
+  .title
+    margin: 0
+    color: #FFF
+    text-align: center
+    font-size: 28px
+    font-style: normal
+    font-weight: 900
+    line-height: 49.29px
+    letter-spacing: 0.28px
+  .subtitle
+    margin: 10px 0 0 0
+    color: #FFF
+    text-align: center
+    font-size: 14px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    letter-spacing: 0.14px
+
+.mint-timeline
+  padding-top: 40px
+  h1
+    color: #2C3034
+    text-align: center
+    font-size: 56px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    letter-spacing: 1.12px
+  .timeline-items
+    padding-top: 40px
+    display: flex
+    justify-content: space-between
+    gap: 16px
+.timeline-item
+  width: 258.5px
+  opacity: .2
+  flex: 1 1 auto
+  border-radius: 40px
+  border: 1px solid #C7BAB8
+  display: flex
+  padding: 24px
+  flex-direction: column
+  flex-shrink: 0
+  &-image
+    padding-bottom: 24px
+  &-dates
+    padding-bottom: 12px
+    color: #6B6661
+    font-size: 18px
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+  &-title
+    font-family: Inter
+    font-size: 26px
+    font-style: normal
+    font-weight: 700
+    line-height: 150%
+  &-text
+    padding-top: 4px
+    font-size: 20px
+    font-weight: 400
+    line-height: 150%
+  &.active
+    opacity: 1
+    width: 435px
+    background-color: #EBDEDC
+    border-color: #2C3034
