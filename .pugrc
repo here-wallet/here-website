@@ -387,6 +387,15 @@
     },
     "blogs": [
       {
+        "title": "HERE at Gitcoin ⚡️",
+        "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png",
+        "tag": "near",
+        "text": "On August 15, a new round on Gitcoin launched. Users can support projects that will change the industry in the near future. HERE is one of them.",
+        "timeToRead": "2 min",
+        "date": "05.08.2023",
+        "href": "gitcoin"
+      },
+      {
         "title": "HERE NFT Mutations",
         "cover": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Uv3nGXLdCx6F25EF57GSEQ.jpeg",
         "tag": "near",
@@ -394,15 +403,6 @@
         "timeToRead": "5 min",
         "date": "01.08.2023",
         "href": "here-nft-mutations-4d9259b146a5"
-      },
-      {
-        "title": "10000 NFTS Giveaway 🍾",
-        "cover": "https://cdn-images-1.medium.com/max/2106/0*z7-23Ce5GFbn9QFR",
-        "tag": "near",
-        "text": "After adding web wallet account exports, we launched a small giveaway",
-        "timeToRead": "2 min",
-        "date": "25.07.2023",
-        "href": "10000-nfts-giveaway-7e1d8c53eb6d"
       },
       {
         "title": "Binance connect. Security. 🔒",

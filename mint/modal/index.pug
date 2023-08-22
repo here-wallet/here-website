@@ -13,9 +13,14 @@
               img(src="../assets/mint/modal-warning.svg")
               p Airdrop 0.01 NEAR to pay for gas
           .modal-qr
-            img(src="../assets/mint/modal-qr.svg")
-            a(href="https://download.herewallet.app/site").link Show QR with download link
+            .modal-qr-wrap
         .modal-footer
-          img(src="../assets/mint/modal-near.svg").
-          img(src="../assets/mint/appstore.svg")
+          img.img-near(src="../assets/mint/modal-near.svg")
+
+          .wrap(style="display: flex; gap: 8px; margin-bottom: 32px")
+            a(href="https://download.herewallet.app?ios")
+              img(src="../assets/mint/appstore.svg")
+            a(href="https://download.herewallet.app?android")
+              img(src="../assets/mint/googleplay.svg")
+
           img(src="../assets/mint/modal-rock.svg")
