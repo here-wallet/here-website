@@ -64,20 +64,29 @@
   width: 800px
   padding: 56px 56px 0 56px
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
-  @media (max-width: 560px)
+  @media (max-width: 877px)
     width: 100%
-    p
-      margin: 0 0 32px 0
-      font-weight: 600
-      font-size: 18px
-      line-height: 25px
-      text-align: center
-      color: #6B6661
+    // p
+    //   margin: 0 0 32px 0
+    //   font-weight: 600
+    //   font-size: 18px
+    //   line-height: 25px
+    //   text-align: center
+    //   color: #6B6661
+    // .airdrop
+    //   p
+    //     color: #087164
+    //     line-height: 0
+    //     margin: 15px 0
+    //     font-size: 14px
+    //     word-break: break-all
 
 .stack
   display: flex
   flex-direction: row
   justify-content: space-between
+  @media (max-width: 877px)
+    flex-wrap: wrap
   .title
     font-size: 32px
     font-style: normal
@@ -95,13 +104,16 @@
     border: 1px solid #087164
     color: #087164
     p
-      line-height: 0
+      line-height: normal
+      margin: 8px 0
     img
       padding-left: 12px
 .modal-qr
   display: flex
   flex-direction: column
   align-items: center
+  @media (max-width: 877px)
+    padding-top: 20px
   img
     position: relative
     top: 2px
@@ -120,6 +132,11 @@
   display: flex
   justify-content: space-between
   align-items: flex-end
+  @media (max-width: 877px)
+    flex-wrap: wrap
+  .hands
+    @media (max-width: 877px)
+      display: none
 
 .modal-qr-wrap
   border-radius: 16px
