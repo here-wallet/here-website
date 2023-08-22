@@ -62,7 +62,7 @@ updateScroll();
 const modal = document.querySelector(".modal-wrap");
 const here = new HereWallet();
 
-setInterval(() => {
+const updateTimer = () => {
   const deadline = new Date("Aug, 25, 2023");
   const diff = Math.round((deadline - Date.now()) / 1000);
   const dd = Math.floor(diff / (3600 * 24));
@@ -80,7 +80,10 @@ setInterval(() => {
     (mm < 10 ? "0" + mm : mm) +
     ":" +
     (ss < 10 ? "0" + ss : ss);
-}, 1000);
+};
+
+updateTimer();
+setInterval(updateTimer, 1000);
 
 const connectButton = document.querySelector(".connect-button");
 const signIn = async () => {
