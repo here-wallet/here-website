@@ -1,0 +1,123 @@
+
+@keyframes anvil
+  0%
+    transform: scale(1) translateY(-50%) translateX(-50%)
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0)
+    opacity: 0
+
+  1%
+    transform: scale(0.96) translateY(-60%) translateX(-50%)
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0)
+    opacity: 0
+
+  100%
+    transform: scale(1) translateY(-50%) translateX(-50%)
+    box-shadow: 0 0 500px rgba(241, 241, 241, 0)
+    opacity: 1
+
+@keyframes show
+  0%
+    background: rgba(0, 0, 0, 0)
+
+  100%
+    background: rgba(0, 0, 0, 0.6)
+
+.modal-wrap
+  animation: show 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
+  display: none
+  align-items: center
+  justify-content: center
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 30005
+  padding: 16px
+  &.open
+    display: flex
+
+.modal-close
+  position: absolute
+  background-color: #EBDEDC
+  border-radius: 50%
+  top: -20px
+  right: -20px
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+  cursor: pointer
+  transition: 0.2s opacity
+  &:hover
+    opacity: 0.5
+
+.modal-body
+  top: 50%
+  left: 50%
+  position: relative
+  background: #F3EBEA
+  border-radius: 16px
+  width: 800px
+  padding: 56px 56px 0 56px
+  animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
+  @media (max-width: 560px)
+    width: 100%
+    p
+      margin: 0 0 32px 0
+      font-weight: 600
+      font-size: 18px
+      line-height: 25px
+      text-align: center
+      color: #6B6661
+
+.stack
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  .title
+    font-size: 32px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+
+.modal-text
+  max-width: 343px
+  .airdrop
+    margin-top: 40px
+    display: flex
+    flex-direction: row
+    gap: 8px
+    border-radius: 12px
+    border: 1px solid #087164
+    color: #087164
+    p
+      line-height: 0
+    img
+      padding-left: 12px
+.modal-qr
+  display: flex
+  flex-direction: column
+  align-items: center
+  img
+    position: relative
+    top: 2px
+  .link
+    padding-top: 14px
+    color: #2C3034
+    text-align: center
+    font-family: Inter
+    font-size: 14px
+    font-style: normal
+    font-weight: 600
+    line-height: 16px
+
+.modal-footer
+  padding-top: 29px
+  display: flex
+  justify-content: space-between
+  .img-near
+    position: relative
+    bottom: -4px

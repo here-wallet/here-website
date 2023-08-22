@@ -1,0 +1,170 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title HERE Wallet - secure, fun and powerful client for crypto exchanges
+        meta(name="description", content="Self-custodial mobile wallet on top of centralized exchanges. You can connect Binance account to make quick transfers, use any dApps and stake onchain. Support NEAR Protocol.")
+        
+        meta(name="og:title", content="HERE Wallet")
+        meta(name="og:description", content="Self-custodial wallet on top of centralized exchanges. You can connect Binance account to make quick transfers, use any dApps and stake onchain.")
+        meta(name="og:url", content="https://herewallet.app")
+        meta(name="og:image", content="https://storage.herewallet.app/download.jpg")
+
+        meta(name="twitter:card", content="summary_large_image")
+        meta(name="twitter:image", content="https://storage.herewallet.app/download.jpg")
+        meta(name="telegram_channel", content="herewallet")
+
+        link(rel='shortcut icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico' type='image/x-icon')
+        link(rel='apple-touch-icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+        link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+        link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+        link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+
+        // Google tag (gtag.js)
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J76SQ67RJB');
+
+        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(href="./index.sass", rel="stylesheet")
+    body
+      include /header/index.pug
+      +header("/mint")
+
+      .rectangles-group
+        img(src="../assets/mint/background.png")
+      .page 
+        section.mint-interlude
+          .mint-line
+            h1.mint-title
+              | Free mint here
+            p.mint-text
+              | Free mint will be available at Aug, 25. 00:00 PST. Connect HERE Wallet to get a notification.
+          .mint-status
+            .mint-status-item.prizes
+              p.item-title Available in prizes
+              h3.item-value.green $1,000
+            .mint-status-item.time
+              p.item-title Time to mint
+              h3.item-value 00:02:02:01
+            .mint-status-item
+              p.item-title Total minted
+              h3.item-value 0
+          .mint-buttons
+            button.mint-button-connect Connect wallet
+            button.mint-button-more Learn more
+          .mint-connect
+            .mint-connect-items
+              .connect-item
+                img(src="../assets/mint/flying-box.png").flying-box
+                img(src="../assets/mint/case-bg.svg").flying-box-back
+                a.connect-link
+                  img(src="../assets/mint/link-arrow.svg")
+                  .connect-link-text
+                    p.link-text Connect to mint
+                    p.link-hover-text Connect to mint
+              .connect-item
+                img(src="../assets/mint/flying-box.png").flying-box
+                img(src="../assets/mint/case-bg.svg").flying-box-back
+                a.connect-link
+                  img(src="../assets/mint/link-arrow.svg")
+                  .connect-link-text
+                    p.link-text Connect to mint
+                    p.link-hover-text Connect to mint
+              .connect-item
+                img(src="../assets/mint/flying-box.png").flying-box
+                img(src="../assets/mint/case-bg.svg").flying-box-back
+                a.connect-link
+                  img(src="../assets/mint/link-arrow.svg")
+                  .connect-link-text
+                    p.link-text Connect to mint
+                    p.link-hover-text Connect to mint
+                    
+        
+        section.mint-nft
+          .mint-nft-background.mint-nft-background-dots
+            img(src="../assets/mint/background_dots.svg")
+          .mint-nft-background.mint-nft-background-texture
+            img(src="../assets/mint/background_texture.svg")
+          h1 Burn your NFT and find inside:
+          .nft-items
+            .nft-item
+              .nft-small-images
+                .container
+                  img(src="../assets/mint/nft-usdt.svg").usdt-1
+                  img(src="../assets/mint/nft-usdt.svg").usdt-2
+                  img(src="../assets/mint/nft-usdt.svg").usdt-3
+              .nft-open-case
+                img(src="../assets/mint/nft-light.svg").nft-item-light
+                img(src="../assets/mint/nft-case.svg").nft-item-case
+              .nft-item-text
+                p.title 500 USDT
+                p.subtitle (1000 chests)
+            .nft-item
+              .nft-small-images
+                .container
+                  img(src="../assets/mint/nft-1.svg").nft-1
+                  img(src="../assets/mint/nft-2.svg").nft-2
+                  img(src="../assets/mint/nft-3.svg").nft-3
+                  img(src="../assets/mint/nft-4.svg").nft-4
+                  img(src="../assets/mint/nft-5.svg").nft-5
+              .nft-open-case
+                img(src="../assets/mint/nft-light.svg").nft-item-light
+                img(src="../assets/mint/nft-case.svg").nft-item-case
+              .nft-item-text
+                p.title 5 HERE NFT
+                p.subtitle (Floor $50, 5 chests)
+            .nft-item
+              .nft-small-images
+                .container
+                  img(src="../assets/mint/150-1.svg").score-1
+                  img(src="../assets/mint/150-2.svg").score-2
+                  img(src="../assets/mint/150-3.svg").score-3
+              .nft-open-case
+                img(src="../assets/mint/nft-light.svg").nft-item-light
+                img(src="../assets/mint/nft-case.svg").nft-item-case
+              .nft-item-text
+                p.title +150 SCORE
+                p.subtitle (2000 chests)
+            .nft-item
+              .nft-small-images
+                  .container
+                    img(src="../assets/mint/mutation.svg").mutation
+              .nft-open-case
+                img(src="../assets/mint/nft-light.svg").nft-item-light
+                img(src="../assets/mint/nft-case.svg").nft-item-case
+              .nft-item-text
+                p.title 1 Mutation
+                p.subtitle (Price: 99$, 1 chest)
+        
+        .page-background
+        section.mint-timeline
+          h1 Timeline
+          .timeline-items
+            .timeline-item.active
+              .timeline-item-image
+                img(src="../assets/mint/timeline-qr.svg")
+              .timeline-item-dates Aug, 21 - Aug, 24
+              .timeline-item-title Collecting applications
+              .timeline-item-text Scan QR to set reminder
+            .timeline-item
+              .timeline-item-image
+                img(src="../assets/mint/timeline-chest.svg")
+              .timeline-item-dates Aug, 24 - Aug, 25
+              .timeline-item-title Hurry up and get  NFT chests
+            .timeline-item
+              .timeline-item-image
+                img(src="../assets/mint/timeline-app.svg")
+              .timeline-item-dates Aug, 26 - Aug, 30
+              .timeline-item-title Burn claimed NFT in HERE Wallet
+            
+
+      include modal/index.pug
+      include footer/index.pug
+      script(type="module", src="./index.js")
