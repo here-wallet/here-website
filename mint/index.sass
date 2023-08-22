@@ -20,6 +20,7 @@
     opacity: 1
 
 .page
+  overflow-x: hidden
   margin-bottom: 300px
   z-index: 1000
   @media (max-width: 700px)
@@ -72,7 +73,7 @@
   left: -52%
   transform: rotate(-1.93deg) translateX(45%)
   @media (max-width: 700px)
-    width: 102vw
+    width: 103vw
 
 .mint-title
   color: #2C3034
@@ -85,21 +86,19 @@
   letter-spacing: 1.44px
   text-transform: uppercase
   margin-bottom: 0
-  strong
-    text-shadow: 0px 0px 16px rgba(253, 161, 93, 0.10)
+  em
     color: #FD84E3
     font-feature-settings: 'liga' off
-    font-size: 72px
+    font-size: 56px
     font-style: normal
     font-weight: 900
-    line-height: 86px
-    letter-spacing: 1.44px
-    text-transform: uppercase
+    line-height: normal
+    letter-spacing: 1.12px
     @media (max-width: 700px)
       font-size: 40px
   @media (max-width: 700px)
     font-size: 40px
-    padding-top: 15px
+    padding: 15px 30px 0 30px
 
 .mint-text
   font-size: 18px
@@ -112,7 +111,6 @@
   @media (max-width: 700px)
     font-size: 14px
     padding: 0 35px
-    margin-top: 0
 
 .mint-status.mobile
   display: none
@@ -139,9 +137,9 @@
       content: ""
       display: block
       width: 2px
-      height: 400px
+      height: 450px
       position: absolute
-      top: -400px
+      top: -450px
       left: 30px
       background: #F3E6E9
       z-index: -1
@@ -149,9 +147,9 @@
       content: ""
       display: block
       width: 2px
-      height: 400px
+      height: 450px
       position: absolute
-      top: -400px
+      top: -450px
       right: 30px
       background: #F3E6E9
       z-index: -1
