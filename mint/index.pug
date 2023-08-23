@@ -46,18 +46,17 @@ html(lang="en")
               | Free mint here
             p.mint-text
               | Free mint will be available at Aug, 25. 00:00 PST. Connect HERE Wallet to get a notification.
-          .mint-status
-            .mint-status-item.prizes
-              p.item-title Available in prizes
-              h3.item-value.green $1,000
+          .mint-status.mobile
+            .prizes-and-total
+              .mint-status-item.prizes
+                p.item-title Available in prizes
+                h3.item-value.green $1,000
+              .mint-status-item.total
+                p.item-title Total minted
+                h3.item-value 0
             .mint-status-item.time
               p.item-title Time to mint
-              h3.item-value#time-to-mint 00:02:02:01
-            .mint-status-item
-              p.item-title Total minted
-              h3.item-value 0
-          .mint-buttons
-            button.mint-button-connect Connect wallet
+              h3.item-value#time-to-mint
             a.mint-button-more(href="/blog") Learn more
           .mint-connect
             .mint-connect-items
@@ -86,7 +85,6 @@ html(lang="en")
                     p.link-text Connect to mint
                     p.link-hover-text Connect to mint
                     
-        
         section.mint-nft
           .mint-nft-background.mint-nft-background-dots
             img(src="../assets/mint/background_dots.svg")
