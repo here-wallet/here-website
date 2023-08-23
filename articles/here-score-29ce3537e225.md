@@ -33,10 +33,11 @@ Score is a rating of activity in the app. It is attached to an account and canno
 ## How to earn a score?
 
 1. Open [app](https://download.herewallet.app/): **+5** (one per day)
-2. Make swap: **+20** (one per day)
-3. Start stake: **+100**
-4. Invite friend with balance: **+150**
+2. Make swap for $10+: **+25** (one per day)
+3. Start stake 1+ NEAR: **+100**
+4. Invite friend with balance $1+: **+150**
 5. Join #into channel at [discord](https://discord.gg/AfB5cvtFXH) and make into: **+50**
+6. Buy HERE Early NFT:  **+100** for each NFT
 
 More usecases soon
 

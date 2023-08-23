@@ -229,9 +229,14 @@
   font-weight: 600
   line-height: normal
   padding: 13px 49px
+  transition: 0.2s transform, 0.2s box-shadow
+  &:active
+    transform: translate(4px, 4px)
+    box-shadow: 0 0 #f3e6e9
 
 .mint-button-more
   font-family: Inter
+  text-decoration: none
   cursor: pointer
   border-radius: 16px
   border: 1px solid #F3EBEA
@@ -345,6 +350,7 @@
 
 .nft-items
   padding-top: 140px
+  padding-bottom: 200px
   display: flex
   flex-direction: row
   justify-content: space-between
