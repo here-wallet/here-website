@@ -13,20 +13,20 @@ A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the dr
 
 ## ⚡️ What you can find inside the NFT:
 
-1. **1000 USDT** divided among 500 boxes, ranging from 0.5 to 10 USDT.
+1. **1000 USDT** divided among 500 boxes, ranging from 1 to 10 USDT.
 2. **5 HERE NFTs** (floor 30 NEAR) - unlocking many features in your wallet, providing +1% APY on liquid staking, and accelerating your SCORE accumulation.
 3. **+150 SCORE** in 2000 boxes. A high SCORE grants access to new features, enables earning cashback for swaps and gas refunds. Additionally, the top 10 users with the highest SCORE growth receive USDT weekly (read more about SCORE).
-4. **1 Mutation Potion.** A total of 99 mutation potions are issued, which can transform your HERE NFT. Mutation floor - 99 NEAR!
+4. **1 Mutation Potion.** A total of 99 mutation potions are issued, which can transform your HERE NFT. Mutation floor is **99 NEAR**!
 
-In total, there are over 2500 prizes, so your chances of winning are quite high. You can mint a total of 3 NFTs for free.
+In total, there are over 2500 starboxes with prizes, so your chances of winning are quite high. You can mint a total of 3 NFTs for free.
 
 ## 🎉 Who can mint the NFTs?
 
-**1️⃣ First.** you can mint 3 NFTs on one device. One NFT is available to everyone by default, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
+**1️⃣ 1st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
 
-**2️⃣ Second.** to mint the second NFT, you need a score > 100. You can easily accumulate it by making a few swaps or inviting a friend.
+**2️⃣ 2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
 
-**3️⃣ Third.** instructions will be available during the drop.
+**3️⃣ 3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
 
 ## ☑️ Which wallet is suitable?
 
@@ -44,6 +44,6 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 2. **Free Mint:** Available from August 25th to 26th for 30 hours. Start  [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
-If you have any questions, feel free to reach out on Discord.
+If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
 
 Website for free mint: https://starbox.herewallet.app/
