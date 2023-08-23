@@ -20,17 +20,17 @@
     opacity: 1
 
 .page
-  overflow-x: hidden
-  margin-bottom: 330px
+  margin-bottom: 300px
   z-index: 1000
   @media (max-width: 700px)
     margin-bottom: 0
+    overflow-x: hidden
   &-background
     z-index: -100
     top: 75%
     border-radius: 0 0 32px 32px
     position: absolute
-    height: calc( 41% )
+    height: calc( 36% )
     @media (max-width: 700px)
       height: 22%
       top: 78%
@@ -59,7 +59,7 @@
 .mint-interlude
   margin-top: 80px
   margin-bottom: 180px
-  overflow-y: hidden
+  // overflow-y: hidden
 
 .mint-line
   background-color: #FDBF1C
@@ -73,7 +73,7 @@
   left: -52%
   transform: rotate(-1.93deg) translateX(45%)
   @media (max-width: 700px)
-    width: 102vw
+    width: 103vw
 
 .mint-title
   color: #2C3034
@@ -86,8 +86,19 @@
   letter-spacing: 1.44px
   text-transform: uppercase
   margin-bottom: 0
+  em
+    color: #FD84E3
+    font-feature-settings: 'liga' off
+    font-size: 72px
+    font-style: normal
+    font-weight: 900
+    line-height: 50px
+    letter-spacing: 1.12px
+    @media (max-width: 700px)
+      font-size: 40px
   @media (max-width: 700px)
     font-size: 40px
+    padding: 15px 30px 0 30px
 
 .mint-text
   font-size: 18px
@@ -126,9 +137,9 @@
       content: ""
       display: block
       width: 2px
-      height: 400px
+      height: 450px
       position: absolute
-      top: -400px
+      top: -450px
       left: 30px
       background: #F3E6E9
       z-index: -1
@@ -136,13 +147,12 @@
       content: ""
       display: block
       width: 2px
-      height: 400px
+      height: 450px
       position: absolute
-      top: -400px
+      top: -450px
       right: 30px
       background: #F3E6E9
       z-index: -1
-
 .mint-status
   padding-top: 200px
   display: flex
@@ -229,14 +239,10 @@
   font-weight: 600
   line-height: normal
   padding: 13px 49px
-  transition: 0.2s transform, 0.2s box-shadow
-  &:active
-    transform: translate(4px, 4px)
-    box-shadow: 0 0 #f3e6e9
 
 .mint-button-more
   font-family: Inter
-  text-decoration: none
+  text-align: center
   cursor: pointer
   border-radius: 16px
   border: 1px solid #F3EBEA
@@ -252,6 +258,7 @@
 
 .mint-connect
   padding-top: 100px
+  padding-bottom: 50px
   @media (max-width: 700px)
     padding: 50px 0
   &-items
@@ -335,9 +342,17 @@
     display: none !important
 
 .mint-nft
-  padding-top: 100px
+  padding-top: 40px
   margin-bottom: 140px
   position: relative
+  strong
+    color: #FD84E3
+    font-feature-settings: 'liga' off
+    font-size: 56px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    letter-spacing: 1.12px
   h1
     color: #FFF
     text-align: center
@@ -350,7 +365,6 @@
 
 .nft-items
   padding-top: 140px
-  padding-bottom: 200px
   display: flex
   flex-direction: row
   justify-content: space-between

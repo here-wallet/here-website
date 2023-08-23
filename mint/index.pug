@@ -43,21 +43,28 @@ html(lang="en")
         section.mint-interlude
           .mint-line
             h1.mint-title
-              | Free mint here
+              | <em>STarbox</em> FREE MINT 
             p.mint-text
-              | Free mint will be available at Aug, 25. 00:00 PST. Connect HERE Wallet to get a notification.
+              | Pick up your starbox NFT, 3500 of them holds the prizes. Mint is free via HERE Wallet
+          .mint-status
+            .mint-status-item.prizes
+              p.item-title Total available
+              h3.item-value.green 10 000
+            .mint-status-item.time
+              p.item-title Time to mint
+              h3.item-value#time-to-mint
+            a.mint-button-more(href="/blog") Learn more
           .mint-status.mobile
             .prizes-and-total
               .mint-status-item.prizes
-                p.item-title Available in prizes
-                h3.item-value.green $1,000
+                p.item-title Total available
+                h3.item-value.green 10 000
               .mint-status-item.total
                 p.item-title Total minted
                 h3.item-value 0
             .mint-status-item.time
               p.item-title Time to mint
-              h3.item-value#time-to-mint
-            a.mint-button-more(href="/blog") Learn more
+              h3.item-value#time-to-mint 00:02:02:01
           .mint-connect
             .mint-connect-items
               .connect-item
@@ -90,7 +97,7 @@ html(lang="en")
             img(src="../assets/mint/background_dots.svg")
           .mint-nft-background.mint-nft-background-texture
             img(src="../assets/mint/background_texture.svg")
-          h1 Burn your NFT and find inside:
+          h1 Find inside #[strong STARBOX] NFT:
           .nft-items
             .nft-item
               .nft-small-images
@@ -102,8 +109,8 @@ html(lang="en")
                 img(src="../assets/mint/nft-light.svg").nft-item-light
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
-                p.title 500 USDT
-                p.subtitle (1000 chests)
+                p.title 1000 USDT
+                p.subtitle (0.5 - 100 USDT, inside 1000 NFTs)
             .nft-item
               .nft-small-images
                 .container
@@ -117,7 +124,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title 5 HERE NFT
-                p.subtitle (Floor $50, 5 chests)
+                p.subtitle (floor: 30 NEAR, inside 5 NFTs)
             .nft-item
               .nft-small-images
                 .container
@@ -129,7 +136,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title +150 SCORE
-                p.subtitle (2000 chests)
+                p.subtitle (inside 2000 NFTs)
             .nft-item
               .nft-small-images
                   .container
@@ -139,7 +146,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title 1 Mutation
-                p.subtitle (Price: 99$, 1 chest)
+                p.subtitle (Price: 99 NEAR, inside 1 NFT)
         
         .page-background
         section.mint-timeline
@@ -149,18 +156,18 @@ html(lang="en")
               .timeline-item-image
                 img(src="../assets/mint/timeline-qr.svg")
               .timeline-item-dates Aug, 21 - Aug, 24
-              .timeline-item-title Collecting applications
+              .timeline-item-title Waiting list
               .timeline-item-text Scan QR to set reminder
             .timeline-item
               .timeline-item-image
                 img(src="../assets/mint/timeline-chest.svg")
               .timeline-item-dates Aug, 24 - Aug, 25
-              .timeline-item-title Hurry up and get  NFT chests
+              .timeline-item-title Mint STARBOX NFT
             .timeline-item
               .timeline-item-image
                 img(src="../assets/mint/timeline-app.svg")
               .timeline-item-dates Aug, 26 - Aug, 30
-              .timeline-item-title Burn claimed NFT in HERE Wallet
+              .timeline-item-title Burn minted NFT and get prize
             
 
       include modal/index.pug

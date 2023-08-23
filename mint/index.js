@@ -40,8 +40,8 @@ const animateNftBackground = () => {
         ? 1 - smoothstep(-450, -860, nftY)
         : smoothstep(700, 150, nftY)
       : nftY <= -180
-      ? 1 - smoothstep(-180, -600, nftY)
-      : smoothstep(900, 300, nftY);
+        ? 1 - smoothstep(-180, -600, nftY)
+        : smoothstep(900, 300, nftY);
 
   const color = `rgba(43, 34, 124, ${opacity})`;
   page.style.backgroundColor = color;
@@ -71,15 +71,19 @@ const updateTimer = () => {
   const mm = Math.floor(diff / 60) % 60;
   const ss = diff % 60;
 
-  document.getElementById("time-to-mint").style.width = "350px";
-  document.getElementById("time-to-mint").innerHTML =
-    dd +
-    "d " +
-    hh +
-    ":" +
-    (mm < 10 ? "0" + mm : mm) +
-    ":" +
-    (ss < 10 ? "0" + ss : ss);
+  const timersToMint = document.querySelectorAll('#time-to-mint')
+  timersToMint.forEach(elementNode => {
+    elementNode.style.width = "350px";
+    elementNode.innerHTML =
+      dd +
+      "d " +
+      hh +
+      ":" +
+      (mm < 10 ? "0" + mm : mm) +
+      ":" +
+      (ss < 10 ? "0" + ss : ss);
+  })
+
 };
 
 updateTimer();
