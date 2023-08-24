@@ -171,6 +171,10 @@ export const toggleModalSuccess = async () => {
   isRequested = false;
 };
 
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) toggleModalSuccess();
+});
+
 closeModal.addEventListener("click", toggleModalSuccess);
 connectLinks.forEach((element) => {
   element.addEventListener("click", toggleModalSuccess);
