@@ -1,13 +1,16 @@
 -----
 title: Starbox NFT. Freemint.
-cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*WCWScQFag8--YCe5JoR4Zw.png
+cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg
 tag: nft
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
 timeToRead: 2 min
 date: 20.08.2023
 -----
 
-In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
+In celebration of the largest conference in Asia, **NEAR APAC**, we have prepared a collection of 10,000 Starboxes.
+
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg)
 
 A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the drop ends, you can open the box (burn the NFT) and discover a hidden gift inside, ranging from $0 to $150. If you don't manage to open it within the specified time, the NFT will remain as a memory and become part of the HERE collection.
 
@@ -40,8 +43,8 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 
 ## ⏱️ When?
 
-1. **Waiting List:** Available from August 22nd to 25th.
-2. **Free Mint:** Available from August 25th to 26th for 30 hours. Start  [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
+1. **Waiting List:** Available from August 22nd to 26th.
+2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
 If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
