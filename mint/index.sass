@@ -21,55 +21,42 @@
     opacity: 1
 
 .page
-  width: 100vw
   z-index: 1000
   @media (max-width: 700px)
     margin-bottom: 0
     overflow-x: hidden
-  &-background-fake
-    z-index: 99
-    top: 60%
-    border-radius: 0 0 32px 32px
-    position: absolute
-    height: calc( 41% )
-
-.rectangles-group
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  width: 100vw
-  height: 160vh
-  background: url(../assets/mint/background.png)
-  background-size: cover
-  background-position: center center
-  z-index: -100
-  opacity: 0.1
-  @media (max-width: 700px)
-    display: none
 
 .page-container
   max-width: 1136px
   margin: 0 auto
 
+.mint-interlude-wrap
+  background: #333
+  background-image: linear-gradient(rgba(255, 255, 255, .1) 2, transparent 2), linear-gradient(90deg, rgba(255, 255, 255, .1) 2, transparent 2)
+  background-size: 112px 112px
+
 .mint-interlude
-  margin-top: 80px
-  margin-bottom: 180px
-  // overflow-y: hidden
+  margin: auto
+  padding-top: 150px
 
 .mint-line
   background-color: #FDBF1C
-  border: 8px solid #F3E6E9
+  border-top: 8px solid #F3E6E9
+  border-bottom: 8px solid #F3E6E9
+  border-left: 8px solid #FDBF1C
+  border-right: 8px solid #FDBF1C
   display: flex
   align-items: center
   flex-direction: column
   justify-content: center
   position: absolute
-  width: 107vw
-  left: -52%
-  transform: rotate(-1.93deg) translateX(45%)
+  width: 100%
+  left: -50%
+  top: 130px
+  transform: rotate(-1.93deg) translateX(calc(50% - 16px))
+  z-index: 100
   @media (max-width: 700px)
-    width: 103vw
+    width: 103%
 
 .mint-title
   color: #2C3034
@@ -85,16 +72,19 @@
   em
     color: #FD84E3
     font-feature-settings: 'liga' off
-    font-size: 72px
     font-style: normal
     font-weight: 900
-    line-height: 50px
     letter-spacing: 1.12px
-    @media (max-width: 700px)
-      font-size: 40px
+  @media (max-width: 1000px)
+    font-size: 50px 
   @media (max-width: 700px)
     font-size: 40px
+    line-height: 40px
     padding: 15px 30px 0 30px
+  @media (max-width: 500px)
+    font-size: 32px
+    line-height: 24px
+    padding: 22px 30px 0 30px
 
 .mint-text
   font-size: 18px
@@ -138,7 +128,6 @@
       top: -450px
       left: 30px
       background: #F3E6E9
-      z-index: -1
     &::after
       content: ""
       display: block
@@ -148,7 +137,6 @@
       top: -450px
       right: 30px
       background: #F3E6E9
-      z-index: -1
 .mint-status
   padding-top: 200px
   display: flex
@@ -158,6 +146,7 @@
   @media (max-width: 700px)
     flex-direction: column
     display: none
+  
   &-item
     display: flex
     position: relative
@@ -170,7 +159,8 @@
     border: 3px solid #0E0E0E
     flex: 1 1 auto
     background: #F3E6E9
-    box-shadow: 9.019607543945312px 9.019607543945312px 0px 0px #0E0E0E
+    box-shadow: 9px 9px 0px 0px #0E0E0E
+
     .item-title
       margin: 0
       font-size: 18px
@@ -178,6 +168,7 @@
       font-weight: 600
       line-height: normal
       color: #6B6661
+
     .item-value
       color: #2C3034
       text-align: center
@@ -185,8 +176,12 @@
       font-style: normal
       font-weight: 900
       line-height: 100%
+      @media (max-width: 1000px)
+        font-size: 40px
+
     .item-value.green
       color: #087164
+    
     &::before
       content: ""
       width: 2px
@@ -195,7 +190,7 @@
       top: -100px
       left: 30px
       background: #F3E6E9
-      z-index: -1
+
     &::after
       content: ""
       width: 2px
@@ -204,13 +199,15 @@
       top: -100px
       right: 30px
       background: #F3E6E9
-      z-index: -1
 
 .mint-status-item.prizes
   max-width: 309px
 
 .mint-status-item.time
   max-width: 454px
+  @media (max-width: 1000px)
+    max-width: 254px
+
 
 .mint-buttons
   padding-top: 64px
@@ -219,6 +216,7 @@
   gap: 20px
   justify-content: center
   position: relative
+  z-index: 100
   @media (max-width: 700px)
     flex-direction: column
     padding-top: 200px
@@ -229,6 +227,7 @@
   border: 1px solid #2C3034
   background: #FDBF1E
   box-shadow: 4px 4px 0px 0px #F3E6E9
+  color: #000
   font-size: 16px
   font-style: normal
   font-family: Inter
@@ -261,7 +260,7 @@
   &-items
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
     @media (max-width: 700px)
       flex-direction: column
@@ -280,6 +279,7 @@
   border-radius: 60px
   border: 1px solid #F3E6E9
   background: #25282B
+  z-index: 10
   &:hover
     .link-text
       transform: translate(0, -55px)
@@ -318,12 +318,10 @@
 
 .flying-box
   position: absolute
-  z-index: -1
   animation: flying-box 4s linear infinite
 .flying-box-back
   position: absolute
   animation: flying-box 4s linear infinite
-  z-index: -20
 
 .mint-nft-background
   display: none
@@ -349,7 +347,7 @@
 
 .mint-nft
   padding-top: 40px
-  padding-bottom: 250px
+  padding-bottom: 150px
   position: relative
   strong
     color: #FD84E3
@@ -368,13 +366,16 @@
     font-weight: 900
     line-height: normal
     letter-spacing: 1.12px
+    padding: 0 24px
 
 .nft-items
   padding-top: 140px
   display: flex
   flex-direction: row
-  justify-content: space-between
+  justify-content: center
   flex-wrap: wrap
+  gap: 48px
+
   @media (max-width: 700px)
     flex-direction: column
     padding-top: 70px
@@ -397,6 +398,7 @@
   width: 264px
   height: 130px
   margin-bottom: 100px
+  z-index: 10
 
   &-title
     color: rgba(243, 235, 234, 0.70)

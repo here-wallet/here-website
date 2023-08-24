@@ -72,16 +72,14 @@ const startTimer = async () => {
 
   const updateTimer = () => {
     const diff = Math.round((deadline - Date.now()) / 1000);
-    const dd = Math.floor(diff / (3600 * 24));
-
-    const hh = Math.floor(diff / 3600) % 24;
+    const hh = Math.floor(diff / 3600);
     const mm = Math.floor(diff / 60) % 60;
     const ss = diff % 60;
 
     timerMintEls.forEach((elementNode) => {
       elementNode.style.width = "350px";
       elementNode.innerHTML =
-        dd + "d " + (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
+        (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
     });
 
     requiredTimesEls.forEach((el) => {
@@ -108,7 +106,7 @@ const signIn = async () => {
   connectButton.innerHTML = id.length < 30 ? id : id.slice(0, 6) + ".." + id.slice(-6);
   connectButton.style.display = "flex";
 
-  const res = await fetch("https://dev.herewallet.app/api/v1/user/starbox", { headers: { account_id: id } });
+  const res = await fetch("https://dev.herewallet.app/api/v1/user/starbox?account_id=" + id);
   const data = await res.json();
 
   totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
@@ -158,9 +156,10 @@ export const toggleModalSuccess = async () => {
       onRequested: (id) => {
         isRequested = false;
         modal.style.display = "flex";
-        document.querySelector(".modal-mobile-button-connect").href = "https://my.herewallet.app/request/" + id;
+        document.querySelector(".modal-mobile-button-connect").href = "herewallet://request/" + id;
       },
     });
+
     modal.style.display = "none";
     return;
   }
@@ -182,6 +181,7 @@ connectLinks.forEach((element) => {
 
 const backgroundConnect = async () => {
   try {
+    bgConnectQR.innerHTML = "";
     bgConnectQR.style.width = "140px";
     bgConnectQR.style.height = "140px";
     await register({

@@ -38,90 +38,92 @@ html(lang="en")
       include ./header/index.pug
       +header("/mint")
 
-      .rectangles-group
       .page 
-        section.mint-interlude
+
+        .mint-interlude-wrap
           .mint-line
             h1.mint-title
-              | <em>STarbox</em> FREE MINT 
+              | <em>STARBOX</em> FREE MINT 
             p.mint-text
               | Pick up your starbox NFT, 3500 of them holds the prizes. Mint is free via HERE Wallet
-          .mint-status
-            .mint-status-item.prizes
-              p.item-title Total available
-              h3.item-value.green 10 000
-            .mint-status-item.time
-              p.item-title Time to mint
-              h3.item-value.time-to-mint 0d 00:00:00
-            .mint-status-item
-              p.item-title Total minted
-              h3.item-value.total-minted 0
-          .mint-buttons
-            button.mint-button-connect Connect wallet
-            a.mint-button-more(href="https://www.herewallet.app/blog/freemint") Learn more
-          .mint-status.mobile
-            .prizes-and-total
+
+          section.mint-interlude
+            .mint-status
               .mint-status-item.prizes
                 p.item-title Total available
                 h3.item-value.green 10 000
-              .mint-status-item.total
+              .mint-status-item.time
+                p.item-title Time to mint
+                h3.item-value.time-to-mint 0d 00:00:00
+              .mint-status-item
                 p.item-title Total minted
                 h3.item-value.total-minted 0
-            .mint-status-item.time
-              p.item-title Time to mint
-              h3.item-value.time-to-mint 00:02:02:01
+            .mint-buttons
+              button.mint-button-connect Connect wallet
+              a.mint-button-more(href="https://www.herewallet.app/blog/freemint") Learn more
+            .mint-status.mobile
+              .prizes-and-total
+                .mint-status-item.prizes
+                  p.item-title Total available
+                  h3.item-value.green 10 000
+                .mint-status-item.total
+                  p.item-title Total minted
+                  h3.item-value.total-minted 0
+              .mint-status-item.time
+                p.item-title Time to mint
+                h3.item-value.time-to-mint 
 
-          .mint-connect
-            .mint-connect-items
-              .connect-item
-                img(src="../assets/mint/flying-box.png").flying-box
-                img(src="../assets/mint/case-bg.svg").flying-box-back
-                a.connect-link
-                  img(src="../assets/mint/link-arrow.svg")
-                  .connect-link-text
-                    p.link-text Connect to mint
-                    p.link-hover-text Connect to mint
-                
-                .mint-required.required-time(style="display: none")
-                  p.mint-required-title Free mint will be available at
-                  p.mint-required-info.required-time-info
-                
-              .connect-item
-                img(src="../assets/mint/flying-box.png").flying-box
-                img(src="../assets/mint/case-bg.svg").flying-box-back
-                a.connect-link
-                  img(src="../assets/mint/link-arrow.svg")
-                  .connect-link-text
-                    p.link-text Connect to mint
-                    p.link-hover-text Connect to mint
-                .mint-required.required-activity(style="display: none")
-                  p.mint-required-title Requirements to claim
-                  p.mint-required-info 200+ score
-                  a.mint-required-link(href="https://www.herewallet.app/blog/here-score-29ce3537e225")
-                    span Read more
-                    img(src="../assets/icons/link-arrow-white.svg")
+            .mint-connect
+              .mint-connect-items
+                .connect-item
+                  img(src="../assets/mint/case-bg.svg").flying-box-back
+                  img(src="../assets/mint/flying-box.png").flying-box
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+                  
+                  .mint-required.required-time(style="display: none")
+                    p.mint-required-title Free mint will be available at
+                    p.mint-required-info.required-time-info
+                  
+                .connect-item
+                  img(src="../assets/mint/case-bg.svg").flying-box-back
+                  img(src="../assets/mint/flying-box.png").flying-box
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+                  .mint-required.required-activity(style="display: none")
+                    p.mint-required-title Requirements to claim
+                    p.mint-required-info 200+ score
+                    a.mint-required-link(href="https://www.herewallet.app/blog/here-score-29ce3537e225")
+                      span Read more
+                      img(src="../assets/icons/link-arrow-white.svg")
 
-                .mint-required.required-time(style="display: none")
-                  p.mint-required-title Free mint will be available at
-                  p.mint-required-info.required-time-info
+                  .mint-required.required-time(style="display: none")
+                    p.mint-required-title Free mint will be available at
+                    p.mint-required-info.required-time-info
 
-              .connect-item
-                img(src="../assets/mint/flying-box.png").flying-box
-                img(src="../assets/mint/case-bg.svg").flying-box-back
-                a.connect-link
-                  img(src="../assets/mint/link-arrow.svg")
-                  .connect-link-text
-                    p.link-text Connect to mint
-                    p.link-hover-text Connect to mint
-                .mint-required.required-activity(style="display: none")
-                  p.mint-required-title Requirements to claim
-                  p.mint-required-info Binance connect
-                  a.mint-required-link(href="https://www.herewallet.app/blog/binance%20connect")
-                    span Read more
-                    img(src="../assets/icons/link-arrow-white.svg")
-                .mint-required.required-time(style="display: none")
-                  p.mint-required-title Free mint will be available at
-                  p.mint-required-info.required-time-info
+                .connect-item
+                  img(src="../assets/mint/case-bg.svg").flying-box-back
+                  img(src="../assets/mint/flying-box.png").flying-box
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+                  .mint-required.required-activity(style="display: none")
+                    p.mint-required-title Requirements to claim
+                    p.mint-required-info Binance connect
+                    a.mint-required-link(href="https://www.herewallet.app/blog/binance%20connect")
+                      span Read more
+                      img(src="../assets/icons/link-arrow-white.svg")
+                  .mint-required.required-time(style="display: none")
+                    p.mint-required-title Free mint will be available at
+                    p.mint-required-info.required-time-info
 
 
         section.mint-nft
