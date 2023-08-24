@@ -1,13 +1,16 @@
 -----
 title: Starbox NFT. Freemint.
-cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*WCWScQFag8--YCe5JoR4Zw.png
+cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg
 tag: nft
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
 timeToRead: 2 min
 date: 20.08.2023
 -----
 
-In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
+In celebration of the largest conference in Asia, **NEAR APAC**, we have prepared a collection of 10,000 Starboxes.
+
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg)
 
 A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the drop ends, you can open the box (burn the NFT) and discover a hidden gift inside, ranging from $0 to $150. If you don't manage to open it within the specified time, the NFT will remain as a memory and become part of the HERE collection.
 
