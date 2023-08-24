@@ -16,18 +16,22 @@ A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the dr
 
 ## ⚡️ What you can find inside the NFT:
 
-1. **1000 USDT** divided among 500 boxes, ranging from 1 to 10 USDT.
-2. **5 HERE NFTs** (floor 30 NEAR) - unlocking many features in your wallet, providing +1% APY on liquid staking, and accelerating your SCORE accumulation.
-3. **+150 SCORE** in 2000 boxes. A high SCORE grants access to new features, enables earning cashback for swaps and gas refunds. Additionally, the top 10 users with the highest SCORE growth receive USDT weekly (read more about SCORE).
+1. **1000 USDT** divided among 500 boxes, ranging from 1 to 100 USDT.
+    - 1x $100
+    - 5x $10
+    - 20x $5
+    - 250x $1
+2. **10 HERE NFTs** (floor 30 NEAR) - unlocking many features in your wallet, providing +1% APY on liquid staking, and accelerating your SCORE accumulation.
+3. **+150 SCORE** in 5000 boxes. A high SCORE grants access to new features, enables earning cashback for swaps and gas refunds. Additionally, the top 10 users with the highest SCORE growth receive USDT weekly ([read more](https://www.herewallet.app/blog/here-score-29ce3537e225) about SCORE).
 4. **1 Mutation Potion.** A total of 99 mutation potions are issued, which can transform your HERE NFT. Mutation floor is **99 NEAR**!
 
-In total, there are over 2500 starboxes with prizes, so your chances of winning are quite high. You can mint a total of 3 NFTs for free.
+In total, there are over 5500 starboxes with prizes, so your chances of winning are high. You can mint a total of 3 NFTs for free.
 
 ## 🎉 Who can mint the NFTs?
 
-**11st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
+**1st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
 
-**2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
+**2d NFT.** Everyone who has 150+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
 
 **3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
 
