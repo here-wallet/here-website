@@ -20,6 +20,14 @@
   100%
     opacity: 1
 
+.here-toast
+  background: #fdbf1c !important
+  box-shadow: none !important
+  color: #2C3034 !important
+  border-radius: 16px !important
+  font-family: Inter !important
+  border: 1px solid #2C3034 !important
+
 .page
   z-index: 1000
   @media (max-width: 700px)
@@ -55,8 +63,6 @@
   top: 130px
   transform: rotate(-1.93deg) translateX(calc(50% - 16px))
   z-index: 100
-  @media (max-width: 700px)
-    width: 103%
 
 .mint-title
   color: #2C3034
@@ -85,7 +91,9 @@
     font-size: 32px
     line-height: 24px
     padding: 22px 30px 0 30px
-
+  @media (max-width: 400px)
+    font-size: 24px
+  
 .mint-text
   font-size: 18px
   font-style: normal
@@ -113,12 +121,15 @@
   .total
     max-width: 50%
   .mint-status-item
+    z-index: 10    
     &::before
       display: none
     &::after
       display: none
   .time
     max-width: 100%
+    z-index: 1
+
     &::before
       content: ""
       display: block
@@ -128,6 +139,7 @@
       top: -450px
       left: 30px
       background: #F3E6E9
+      z-index: 1
     &::after
       content: ""
       display: block
@@ -137,6 +149,7 @@
       top: -450px
       right: 30px
       background: #F3E6E9
+      z-index: 1
 .mint-status
   padding-top: 200px
   display: flex
@@ -150,7 +163,7 @@
   &-item
     display: flex
     position: relative
-    padding: 24px 0
+    padding: 24px 12px
     flex-direction: column
     justify-content: center
     align-items: center
@@ -168,6 +181,7 @@
       font-weight: 600
       line-height: normal
       color: #6B6661
+      text-align: center
 
     .item-value
       color: #2C3034
@@ -176,9 +190,12 @@
       font-style: normal
       font-weight: 900
       line-height: 100%
+      text-align: center
       @media (max-width: 1000px)
         font-size: 40px
-
+      @media (max-width: 500px)
+        font-size: 30px
+      
     .item-value.green
       color: #087164
     
@@ -234,6 +251,8 @@
   font-weight: 600
   line-height: normal
   padding: 13px 49px
+  text-align: center
+  justify-content: center
   .connected
     display: none
   
@@ -320,7 +339,13 @@
   display: flex
   justify-content: center
   align-items: center
+  @media (max-width: 480px)
+    width: 280px
+    img
+      width: 280px
+      object-fit: contain
 
+    
 .flying-box
   position: absolute
   animation: flying-box 4s linear infinite
@@ -349,8 +374,7 @@
   background: url(../assets/mint/background_texture.svg)
 
 .mint-nft
-  padding-top: 40px
-  padding-bottom: 150px
+  margin-bottom: 180px
   position: relative
   strong
     color: #FD84E3

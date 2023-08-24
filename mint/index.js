@@ -1,6 +1,9 @@
 import { HereWallet } from "@here-wallet/core";
 import { QRCodeStrategy } from "@here-wallet/core/build/qrcode-strategy";
 import { base_encode } from "near-api-js/lib/utils/serialize";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+
 import { HeaderComponent } from "../landing/scripts/HeaderComponent";
 
 const headerInstance = new HeaderComponent();
@@ -121,24 +124,36 @@ const signIn = async () => {
 };
 
 const register = async (options) => {
-  let nonceArray = new Uint8Array(32);
-  const nonce = [...crypto.getRandomValues(nonceArray)];
-  const result = await here.signMessage({ nonce, message: "starbox", receiver: "HERE Wallet", ...options });
-  const auth = JSON.stringify({
-    account_id: result.accountId,
-    signature: base_encode(Buffer.from(result.signature)),
-    public_key: result.publicKey.toString(),
-    nonce,
-  });
+  try {
+    let nonceArray = new Uint8Array(32);
+    const nonce = [...crypto.getRandomValues(nonceArray)];
+    const result = await here.signMessage({
+      nonce,
+      message: "starbox",
+      receiver: "HERE Wallet",
+      ...options,
+    });
 
-  const response = await fetch("https://dev.herewallet.app/api/v1/user/alarm_starbox", {
-    method: "POST",
-    body: auth,
-  });
+    const auth = JSON.stringify({
+      account_id: result.accountId,
+      signature: base_encode(Buffer.from(result.signature)),
+      public_key: result.publicKey.toString(),
+      nonce,
+    });
 
-  await response.json();
-  localStorage.setItem("account", auth);
-  await signIn();
+    const response = await fetch("https://dev.herewallet.app/api/v1/user/alarm_starbox", {
+      method: "POST",
+      body: auth,
+    });
+
+    await response.json();
+    localStorage.setItem("account", auth);
+    await signIn();
+
+    Toastify({ text: "Authorization success!", position: "left", className: "here-toast" }).showToast();
+  } catch {
+    Toastify({ text: "Authorization failed", position: "left", className: "here-toast" }).showToast();
+  }
 };
 
 let isRequested = false;
@@ -189,12 +204,10 @@ const backgroundConnect = async () => {
     bgConnectQR.innerHTML = "";
     bgConnectQR.style.width = "140px";
     bgConnectQR.style.height = "140px";
-    await register({
-      strategy: new QRCodeStrategy({ element: bgConnectQR, size: 140 }),
-      onFailed: () => backgroundConnect(),
-      onSuccess: () => backgroundConnect(),
-    });
-  } catch {
+    await register({ strategy: new QRCodeStrategy({ element: bgConnectQR, size: 140 }) });
+    backgroundConnect();
+  } catch (e) {
+    console.log(e);
     backgroundConnect();
   }
 };
