@@ -37,13 +37,15 @@
 .rectangles-group
   position: absolute
   top: 0
-  left: 50%
-  transform: translate(-50%, 0)
+  left: 0
+  right: 0
+  width: 100vw
+  height: 160vh
+  background: url(../assets/mint/background.png)
+  background-size: cover
+  background-position: center center
   z-index: -100
   opacity: 0.1
-  img
-    width: 100vw
-
   @media (max-width: 700px)
     display: none
 
@@ -332,11 +334,18 @@
   height: 100%
   opacity: 0
   transition: opacity 0.4s linear
+  background-size: cover
+  background-position: center center
   z-index: -100
-  img
-    width: 100%
+
   @media (max-width: 700px)
     display: none !important
+
+.mint-nft-background.mint-nft-background-dots
+  background: url(../assets/mint/background_dots.svg)
+
+.mint-nft-background.mint-nft-background-texture
+  background: url(../assets/mint/background_texture.svg)
 
 .mint-nft
   padding-top: 40px
