@@ -25,11 +25,11 @@ In total, there are over 2500 starboxes with prizes, so your chances of winning 
 
 ## 🎉 Who can mint the NFTs?
 
-**1️⃣ 1st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
+**11st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
 
-**2️⃣ 2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
+**2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
 
-**3️⃣ 3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
+**3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
 
 ## ☑️ Which wallet is suitable?
 
