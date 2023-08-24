@@ -1,13 +1,16 @@
 -----
-title: Starbox NFT. Freemint.
-cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*WCWScQFag8--YCe5JoR4Zw.png
-tag: nft
+title: Starbox NFT: Freemint
+cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg
+tag: NFT
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
-timeToRead: 2 min
-date: 20.08.2023
+timeToRead: 3 min
+date: 24.08.2023
 -----
 
-In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
+In celebration of the largest conference in Asia, **NEAR APAC**, we have prepared a collection of 10,000 Starboxes.
+
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg)
 
 A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the drop ends, you can open the box (burn the NFT) and discover a hidden gift inside, ranging from $0 to $150. If you don't manage to open it within the specified time, the NFT will remain as a memory and become part of the HERE collection.
 
@@ -22,11 +25,11 @@ In total, there are over 2500 starboxes with prizes, so your chances of winning 
 
 ## 🎉 Who can mint the NFTs?
 
-**1️⃣ 1st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
+**11st NFT.** Everyone with a unique device, just connect your HERE Wallet and mint in time. We recommend setting an alarm and reminder for the start of the drop.
 
-**2️⃣ 2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
+**2d NFT.** Everyone who has 100+ Score. You can easily get score by making a few swaps or inviting a friend. [Read more](https://www.herewallet.app/blog/here-score-29ce3537e225). **Check in Open App -> Profile tab -> My Score**
 
-**3️⃣ 3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
+**3d NFT.** Verified Users. To verify your account connect your Binance account. **Open App -> Settings -> Accounts connected -> +Binance**
 
 ## ☑️ Which wallet is suitable?
 
@@ -36,14 +39,14 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 - Numerous bonuses and rewards in USDT for high score and social activities
 - Ability to connect a Binance account and make transactions directly from the exchange balance
 
-👍 You can download it for free on [Google Play](https://play.google.com/store/apps/details?id=com.herewallet&hl=en&gl=US&pli=1) and the [App Store](https://apps.apple.com/us/app/here-wallet-for-near-protocol/id1634994703). Everyone who scans this QR code will receive a 0.01 NEAR airdrop for gas payment to mint NFTs!
+👍 You can download it for free on [Google Play](https://play.google.com/store/apps/details?id=com.herewallet&hl=en&gl=US&pli=1) and the [App Store](https://apps.apple.com/us/app/here-wallet-for-near-protocol/id1634994703). There is no need to deposit, once you create an account you will receive an 0.01 NEAR **airdrop** to pay for gas.
 
 ## ⏱️ When?
 
-1. **Waiting List:** Available from August 22nd to 25th.
-2. **Free Mint:** Available from August 25th to 26th for 30 hours. Start  [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
+1. **Waiting List:** Available from August 22nd to 26th.
+2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
 If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
 
-Website for free mint: https://starbox.herewallet.app/
+Website for free mint: [https://starbox.herewallet.app/](https://starbox.herewallet.app/)
