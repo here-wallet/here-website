@@ -34,7 +34,7 @@ html(lang="en")
         link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
         link(href="./index.sass", rel="stylesheet")
     body
-      include /header/index.pug
+      include ./header/index.pug
       +header("/mint")
 
       .rectangles-group
@@ -52,13 +52,13 @@ html(lang="en")
               h3.item-value.green 10 000
             .mint-status-item.time
               p.item-title Time to mint
-              h3.item-value#time-to-mint 00:02:02:01
+              h3.item-value.time-to-mint 0d 00:00:00
             .mint-status-item
               p.item-title Total minted
-              h3.item-value 0
+              h3.item-value.total-minted 0
           .mint-buttons
             button.mint-button-connect Connect wallet
-            a.mint-button-more(href="/blog") Learn more
+            a.mint-button-more(href="https://www.herewallet.app/blog/freemint") Learn more
           .mint-status.mobile
             .prizes-and-total
               .mint-status-item.prizes
@@ -66,10 +66,11 @@ html(lang="en")
                 h3.item-value.green 10 000
               .mint-status-item.total
                 p.item-title Total minted
-                h3.item-value 0
+                h3.item-value.total-minted 0
             .mint-status-item.time
               p.item-title Time to mint
-              h3.item-value#time-to-mint 00:02:02:01
+              h3.item-value.time-to-mint 00:02:02:01
+
           .mint-connect
             .mint-connect-items
               .connect-item
@@ -80,6 +81,11 @@ html(lang="en")
                   .connect-link-text
                     p.link-text Connect to mint
                     p.link-hover-text Connect to mint
+                
+                .mint-required.required-time(style="display: none")
+                  p.mint-required-title Free mint will be available at
+                  p.mint-required-info.required-time-info
+                
               .connect-item
                 img(src="../assets/mint/flying-box.png").flying-box
                 img(src="../assets/mint/case-bg.svg").flying-box-back
@@ -88,6 +94,17 @@ html(lang="en")
                   .connect-link-text
                     p.link-text Connect to mint
                     p.link-hover-text Connect to mint
+                .mint-required.required-activity(style="display: none")
+                  p.mint-required-title Requirements to claim
+                  p.mint-required-info 200+ score
+                  a.mint-required-link(href="https://www.herewallet.app/blog/here-score-29ce3537e225")
+                    span Read more
+                    img(src="../assets/icons/link-arrow-white.svg")
+
+                .mint-required.required-time(style="display: none")
+                  p.mint-required-title Free mint will be available at
+                  p.mint-required-info.required-time-info
+
               .connect-item
                 img(src="../assets/mint/flying-box.png").flying-box
                 img(src="../assets/mint/case-bg.svg").flying-box-back
@@ -96,8 +113,17 @@ html(lang="en")
                   .connect-link-text
                     p.link-text Connect to mint
                     p.link-hover-text Connect to mint
-                    
-        
+                .mint-required.required-activity(style="display: none")
+                  p.mint-required-title Requirements to claim
+                  p.mint-required-info Binance connect
+                  a.mint-required-link(href="https://www.herewallet.app/blog/binance%20connect")
+                    span Read more
+                    img(src="../assets/icons/link-arrow-white.svg")
+                .mint-required.required-time(style="display: none")
+                  p.mint-required-title Free mint will be available at
+                  p.mint-required-info.required-time-info
+
+
         section.mint-nft
           .mint-nft-background.mint-nft-background-dots
             img(src="../assets/mint/background_dots.svg")
@@ -116,7 +142,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title 1000 USDT
-                p.subtitle (0.5 - 100 USDT, inside 1000 NFTs)
+                p.subtitle (0.5 - 100 USDT, inside 1000 USDT)
             .nft-item
               .nft-small-images
                 .container
@@ -130,7 +156,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title 5 HERE NFT
-                p.subtitle (floor: 30 NEAR, inside 5 NFTs)
+                p.subtitle (floor: ~30 NEAR, inside 5 NFTs)
             .nft-item
               .nft-small-images
                 .container
@@ -142,7 +168,7 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title +150 SCORE
-                p.subtitle (inside 2000 NFTs)
+                p.subtitle (inside 2000 SCORE)
             .nft-item
               .nft-small-images
                   .container
@@ -152,29 +178,31 @@ html(lang="en")
                 img(src="../assets/mint/nft-case.svg").nft-item-case
               .nft-item-text
                 p.title 1 Mutation
-                p.subtitle (Price: 99 NEAR, inside 1 NFT)
+                p.subtitle (Price: 99 NEAR, inside 1 Mutation)
         
-        .page-background
-        section.mint-timeline
-          h1 Timeline
-          .timeline-items
-            .timeline-item.active
-              .timeline-item-image
-                img(src="../assets/mint/timeline-qr.svg")
-              .timeline-item-dates Aug, 21 - Aug, 24
-              .timeline-item-title Waiting list
-              .timeline-item-text Scan QR to set reminder
-            .timeline-item
-              .timeline-item-image
-                img(src="../assets/mint/timeline-chest.svg")
-              .timeline-item-dates Aug, 24 - Aug, 25
-              .timeline-item-title Mint STARBOX NFT
-            .timeline-item
-              .timeline-item-image
-                img(src="../assets/mint/timeline-app.svg")
-              .timeline-item-dates Aug, 26 - Aug, 30
-              .timeline-item-title Burn minted NFT and get prize
-            
+        div(style="background: #fff")
+          section.mint-timeline
+            h1 Timeline
+            .timeline-items
+              .timeline-item.active
+                .timeline-item-image.background-connect-qrcode
+                .timeline-item-dates Aug, 21 - Aug, 24
+                .timeline-item-title Waiting list
+                .timeline-item-text Scan QR to set reminder
+              .timeline-item
+                .timeline-item-image
+                  img(src="../assets/mint/timeline-chest.svg")
+                .timeline-item-dates Aug, 25 - Aug, 26
+                .timeline-item-title Mint STARBOX NFT
+              .timeline-item
+                .timeline-item-image
+                  img(src="../assets/mint/timeline-app.svg")
+                .timeline-item-dates Aug, 27 - Aug, 30
+                .timeline-item-title 
+                  | Burn minted NFT
+                  br
+                  | and get prize
+              
 
       include modal/index.pug
       include footer/index.pug

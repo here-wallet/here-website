@@ -1,17 +1,17 @@
 
 @keyframes anvil
   0%
-    transform: scale(1) translateY(-50%) translateX(-50%)
+    transform: scale(1)
     box-shadow: 0 0 0 rgba(241, 241, 241, 0)
     opacity: 0
 
   1%
-    transform: scale(0.96) translateY(-60%) translateX(-50%)
+    transform: scale(0.96)
     box-shadow: 0 0 0 rgba(241, 241, 241, 0)
     opacity: 0
 
   100%
-    transform: scale(1) translateY(-50%) translateX(-50%)
+    transform: scale(1)
     box-shadow: 0 0 500px rgba(241, 241, 241, 0)
     opacity: 1
 
@@ -36,6 +36,9 @@
   padding: 16px
   &.open
     display: flex
+  @media (max-width: 877px)
+    padding: 0
+    align-items: flex-end
 
 .modal-close
   position: absolute
@@ -53,11 +56,10 @@
   transition: 0.2s opacity
   &:hover
     opacity: 0.5
+  @media (max-width: 877px)
+    display: none
 
 .modal-body
-  top: 50%
-  left: 50%
-  position: relative
   box-sizing: border-box
   background: #F3EBEA
   border-radius: 16px
@@ -65,6 +67,8 @@
   padding: 56px 56px 0 56px
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
   @media (max-width: 877px)
+    border-radius: 16px 16px 0 0
+    padding: 24px
     width: 100%
     // p
     //   margin: 0 0 32px 0
@@ -93,9 +97,34 @@
     font-weight: 900
     line-height: normal
 
+.modal-mobile-button-connect
+    display: none
+    align-items: center
+    justify-content: center
+    height: 56px
+    flex: 1
+    text-decoration: none
+    border-radius: 12px
+    margin-top: 16px
+    background: var(--black-primary, #2C3034)
+
+    color: var(--white, #FFF)
+    text-align: center
+    font-feature-settings: 'calt' off, 'liga' off
+    font-family: Inter
+    font-size: 16px
+    font-style: normal
+    font-weight: 600
+    line-height: 20px
+    @media (max-width: 877px)
+      display: flex
+
 .modal-text
   max-width: 343px
+  @media (max-width: 877px)
+    max-width: 100%
   .airdrop
+    box-sizing: border-box
     margin-top: 40px
     display: flex
     flex-direction: row
@@ -103,6 +132,8 @@
     border-radius: 12px
     border: 1px solid #087164
     color: #087164
+    @media (max-width: 877px)
+      margin-top: 24px
     p
       line-height: normal
       margin: 8px 0
@@ -114,6 +145,8 @@
   align-items: center
   @media (max-width: 877px)
     padding-top: 20px
+    display: none
+
   img
     position: relative
     top: 2px
@@ -134,6 +167,9 @@
   align-items: flex-end
   @media (max-width: 877px)
     flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
   .hands
     @media (max-width: 877px)
       display: none

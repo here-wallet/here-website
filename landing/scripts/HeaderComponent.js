@@ -3,7 +3,6 @@ import { WaitlistProviderUserName } from "./WaitlistProviderUserName";
 import { QRCode, lightQR } from "@here-wallet/core/build/qrcode-strategy";
 
 export class HeaderComponent {
-  provider = new WaitlistProviderUserName(".form-block");
   header = document.querySelector(".header");
   floatQr = document.querySelector(".float-qr");
   topButton = document.querySelector(".scroll-up");
@@ -11,13 +10,20 @@ export class HeaderComponent {
   isOpen = false;
 
   constructor() {
+    if (document.querySelector(".form-block")) {
+      this.provider = new WaitlistProviderUserName(".form-block");
+      this.provider.onSubmit = () => {
+        successModal.open();
+      };
+    }
+
     this.headerBody = this.header.querySelector(".header-body");
     this.btn = this.header.querySelector(".header-action");
     this.btn.addEventListener("click", () => this.toggleModal());
 
     this.header.classList.toggle("active", window.scrollY > 40);
-    this.floatQr.classList.toggle("active", window.scrollY > 600);
-    this.topButton.classList.toggle("active", window.scrollY > 600);
+    this.floatQr?.classList.toggle("active", window.scrollY > 600);
+    this.topButton?.classList.toggle("active", window.scrollY > 600);
 
     // WTF? Links not working native on mobile???
     [...this.headerBody.querySelectorAll("a")].forEach((el) =>
@@ -30,24 +36,20 @@ export class HeaderComponent {
       })
     );
 
-    this.topButton.addEventListener("click", () => {
+    this.topButton?.addEventListener("click", () => {
       document.body.scrollIntoView({ behavior: "smooth" });
     });
 
     const value = "https://download.herewallet.app";
     const qr = new QRCode({ ...lightQR, size: 80, value });
-    this.floatQr.querySelector(".qrcode").appendChild(qr.canvas);
+    this.floatQr?.querySelector(".qrcode").appendChild(qr.canvas);
 
     window.addEventListener("scroll", () => {
       const threshold = window.innerWidth <= 620 ? 40 : 80;
       this.header.classList.toggle("active", window.scrollY > threshold);
-      this.floatQr.classList.toggle("active", window.scrollY > 600);
-      this.topButton.classList.toggle("active", window.scrollY > 600);
+      this.floatQr?.classList.toggle("active", window.scrollY > 600);
+      this.topButton?.classList.toggle("active", window.scrollY > 600);
     });
-
-    this.provider.onSubmit = () => {
-      successModal.open();
-    };
   }
 
   toggleModal = () => {

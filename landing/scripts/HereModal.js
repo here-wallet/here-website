@@ -1,6 +1,8 @@
 export class HereModal {
   constructor(id) {
     this.el = document.getElementById(id);
+    if (!this.el) return;
+
     window.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && this.isOpen) this.close();
     });
@@ -15,10 +17,11 @@ export class HereModal {
   }
 
   get isOpen() {
-    return this.el.classList.contains("open");
+    return this.el?.classList.contains("open") ?? false;
   }
 
   close() {
+    if (!this.el) return;
     this.el.classList.remove("open");
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
@@ -28,6 +31,7 @@ export class HereModal {
   }
 
   open() {
+    if (!this.el) return;
     this.el.classList.add("open");
     this.el.querySelector("input")?.focus();
     document.body.style.overflow = "hidden";

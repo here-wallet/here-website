@@ -5,12 +5,14 @@ mixin header(active, useWhite)
         img.header-logo(src='/assets/logo.svg' alt='logo')
       
       .header-links
-        a.header-link Rewards
-        a.header-link Timeline
+        a.header-link#anchor-rewards Rewards
+        a.header-link#anchor-timeline Timeline
+  
       .header-right
         for item in header.downloads
-          .header-connect.connect-button
-            a Connect wallet
+          a.header-download(href=item.link) !{item.text}
+        .header-connect.connect-button
+          a Connect wallet
 
       button.header-action
 
@@ -28,24 +30,12 @@ mixin header(active, useWhite)
         a(href=common.partnershipLink).header-link !{common.partnership}
         
       .header-form
-        .form-block
-          p.header-form-title
-            | Binance waiting list
-            span .
-          input.here-input-nick(placeholder="Near username")
-          .error-valid.error-valid_mobi
-          button.here-button Submit
-        .header-form-hr or
         a.here-button.pink.light.appstore(href=common.appStore)
           | Download on App Store
         a.here-button.sunyellow.light.appandroid(href=common.appAndroid)
           | !{common.appAndroidTitle}
         for item in header.downloads
           a.header-download.apprandom(href=item.link) !{item.text}
-
-.float-qr
-  .qrcode
-  p !{floatqr.qrcodeLocale}
 
 .scroll-up
   img(src="/assets/icons/arrow.up.svg")
