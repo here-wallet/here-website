@@ -1,5 +1,5 @@
 -----
-title: HERE at Gitcoin ⚡️
+title: HERE at Gitcoin
 cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png
 tag: near
 text: On August 15, a new round on Gitcoin launched. Users can support projects that will change the industry in the near future. HERE is one of them.

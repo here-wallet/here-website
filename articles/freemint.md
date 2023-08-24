@@ -1,5 +1,5 @@
 -----
-title: Starbox NFT. Freemint.
+title: Starbox NFT: Freemint
 cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg
 tag: NFT
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.

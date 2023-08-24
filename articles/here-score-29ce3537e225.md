@@ -1,5 +1,5 @@
 -----
-title: "HERE: Score"
+title: HERE: Score
 cover: https://cdn-images-1.medium.com/max/5760/1*RParAv_olD7IPUSHqRgTbQ.png
 tag: wallet
 text: In this article, we’ll explain in detail what SCORE is, how to get it, and why you need it
