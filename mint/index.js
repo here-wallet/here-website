@@ -27,6 +27,7 @@ const modalQR = document.querySelector(".modal-qr-wrap");
 const closeModal = document.querySelector(".modal-close");
 const connectLinks = document.querySelectorAll(".connect-link, .mint-button-connect, .connect-button");
 const connectButton = document.querySelector(".connect-button");
+const mintConnectButton = document.querySelector(".mint-button-connect");
 
 const timerMintEls = document.querySelectorAll(".time-to-mint");
 const requiredTimesEls = document.querySelectorAll(".required-time-info");
@@ -105,6 +106,8 @@ const signIn = async () => {
   connectLinks.forEach((el) => (el.style.display = "none"));
   connectButton.innerHTML = id.length < 30 ? id : id.slice(0, 6) + ".." + id.slice(-6);
   connectButton.style.display = "flex";
+  mintConnectButton.innerHTML = id.length < 30 ? id : id.slice(0, 10) + ".." + id.slice(-10);
+  mintConnectButton.classList.add("connected");
 
   const res = await fetch("https://dev.herewallet.app/api/v1/user/starbox?account_id=" + id);
   const data = await res.json();
@@ -166,6 +169,8 @@ export const toggleModalSuccess = async () => {
 
   localStorage.removeItem("account");
   connectButton.innerHTML = "Connect wallet";
+  mintConnectButton.innerHTML = "Connect wallet";
+  mintConnectButton.classList.remove("connected");
   modal.style.display = "none";
   isRequested = false;
 };
