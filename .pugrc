@@ -387,16 +387,16 @@
     },
     "blogs": [
       {
-        "title": "Starbox NFT. Freemint.",
-        "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*WCWScQFag8--YCe5JoR4Zw.png",
-        "tag": "nft",
+        "title": "Starbox NFT: Freemint",
+        "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg",
+        "tag": "NFT",
         "text": "In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.",
-        "timeToRead": "2 min",
-        "date": "20.08.2023",
+        "timeToRead": "3 min",
+        "date": "24.08.2023",
         "href": "freemint"
       },
       {
-        "title": "HERE at Gitcoin ⚡️",
+        "title": "HERE at Gitcoin",
         "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png",
         "tag": "near",
         "text": "On August 15, a new round on Gitcoin launched. Users can support projects that will change the industry in the near future. HERE is one of them.",
@@ -414,7 +414,16 @@
         "href": "here-nft-mutations-4d9259b146a5"
       },
       {
-        "title": "Binance connect. Security. 🔒",
+        "title": "Binance connect",
+        "cover": "https://storage.herewallet.app/media/binance_connect_baner.png",
+        "tag": "Binance",
+        "text": "In the HERE update 1.3.0 you can connect Binance to your non-custodial wallet. In this article, we’ll explain in detail what it is, and how dose Binance connect works.",
+        "timeToRead": "3 min",
+        "date": "24.07.2023",
+        "href": "binance connect"
+      },
+      {
+        "title": "Binance connect: security",
         "cover": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9ZHsW37urweu-Y-2A8iyDg.jpeg",
         "tag": "binance",
         "text": "To prevent loss or freezing funds we take a lot of security measures. In this article, will discuss the main of them.",
