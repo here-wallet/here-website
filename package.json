@@ -1,4 +1,5 @@
 {
+  "browserslist": "> 0.5%, last 3 versions, not dead, Safari > 10",
   "watch": {
     "articles": "blog/_article.pug"
   },
