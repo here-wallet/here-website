@@ -1,6 +1,6 @@
 -----
 title: Binance connect
-cover: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Xv8xkRbj-Cx9Dy52Xtl79w.jpeg
+cover: https://storage.herewallet.app/media/binance_connect_baner.png
 tag: Binance
 text: In the HERE update 1.3.0 you can connect Binance to your non-custodial wallet. In this article, we’ll explain in detail what it is, and how dose Binance connect works.
 timeToRead: 3 min
