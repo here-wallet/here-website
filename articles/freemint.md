@@ -1,10 +1,10 @@
 -----
 title: Starbox NFT. Freemint.
 cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg
-tag: nft
+tag: NFT
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
-timeToRead: 2 min
-date: 20.08.2023
+timeToRead: 3 min
+date: 24.08.2023
 -----
 
 In celebration of the largest conference in Asia, **NEAR APAC**, we have prepared a collection of 10,000 Starboxes.
@@ -39,7 +39,7 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 - Numerous bonuses and rewards in USDT for high score and social activities
 - Ability to connect a Binance account and make transactions directly from the exchange balance
 
-👍 You can download it for free on [Google Play](https://play.google.com/store/apps/details?id=com.herewallet&hl=en&gl=US&pli=1) and the [App Store](https://apps.apple.com/us/app/here-wallet-for-near-protocol/id1634994703). Everyone who scans this QR code will receive a 0.01 NEAR airdrop for gas payment to mint NFTs!
+👍 You can download it for free on [Google Play](https://play.google.com/store/apps/details?id=com.herewallet&hl=en&gl=US&pli=1) and the [App Store](https://apps.apple.com/us/app/here-wallet-for-near-protocol/id1634994703). There is no need to deposit, once you create an account you will receive an 0.01 NEAR **airdrop** to pay for gas.
 
 ## ⏱️ When?
 
@@ -49,4 +49,4 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 
 If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
 
-Website for free mint: https://starbox.herewallet.app/
+Website for free mint: [https://starbox.herewallet.app/](https://starbox.herewallet.app/)
