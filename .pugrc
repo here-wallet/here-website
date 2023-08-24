@@ -387,6 +387,15 @@
     },
     "blogs": [
       {
+        "title": "Starbox NFT. Freemint.",
+        "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*WCWScQFag8--YCe5JoR4Zw.png",
+        "tag": "nft",
+        "text": "In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.",
+        "timeToRead": "2 min",
+        "date": "20.08.2023",
+        "href": "freemint"
+      },
+      {
         "title": "HERE at Gitcoin ⚡️",
         "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png",
         "tag": "near",

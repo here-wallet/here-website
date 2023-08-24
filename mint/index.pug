@@ -52,7 +52,12 @@ html(lang="en")
               h3.item-value.green 10 000
             .mint-status-item.time
               p.item-title Time to mint
-              h3.item-value#time-to-mint
+              h3.item-value#time-to-mint 00:02:02:01
+            .mint-status-item
+              p.item-title Total minted
+              h3.item-value 0
+          .mint-buttons
+            button.mint-button-connect Connect wallet
             a.mint-button-more(href="/blog") Learn more
           .mint-status.mobile
             .prizes-and-total
@@ -92,6 +97,7 @@ html(lang="en")
                     p.link-text Connect to mint
                     p.link-hover-text Connect to mint
                     
+        
         section.mint-nft
           .mint-nft-background.mint-nft-background-dots
             img(src="../assets/mint/background_dots.svg")
