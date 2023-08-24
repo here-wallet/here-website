@@ -43,8 +43,8 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 
 ## ⏱️ When?
 
-1. **Waiting List:** Available from August 22nd to 25th.
-2. **Free Mint:** Available from August 25th to 26th for 30 hours. Start  [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
+1. **Waiting List:** Available from August 22nd to 26th.
+2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
 If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
