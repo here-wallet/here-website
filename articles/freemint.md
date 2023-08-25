@@ -51,6 +51,6 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
-If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
+If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS) or [Telegram](https://t.me/herewalletchat).
 
 Website for free mint: [https://starbox.herewallet.app/](https://starbox.herewallet.app/)
