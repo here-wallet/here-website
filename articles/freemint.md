@@ -17,10 +17,10 @@ A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the dr
 ## ⚡️ What you can find inside the NFT:
 
 1. **1000 USDT** divided among 500 boxes, ranging from 1 to 100 USDT.
-    - 1x $100
-    - 5x $10
-    - 20x $5
-    - 250x $1
+    - 2x $100
+    - 10x $10
+    - 40x $5
+    - 500x $1
 2. **10 HERE NFTs** (floor 30 NEAR) - unlocking many features in your wallet, providing +1% APY on liquid staking, and accelerating your SCORE accumulation.
 3. **+150 SCORE** in 5000 boxes. A high SCORE grants access to new features, enables earning cashback for swaps and gas refunds. Additionally, the top 10 users with the highest SCORE growth receive USDT weekly ([read more](https://www.herewallet.app/blog/here-score-29ce3537e225) about SCORE).
 4. **1 Mutation Potion.** A total of 99 mutation potions are issued, which can transform your HERE NFT. Mutation floor is **99 NEAR**!
