@@ -16,7 +16,7 @@ A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the dr
 
 ## ⚡️ What you can find inside the NFT:
 
-1. **1000 USDT** divided among 500 boxes, ranging from 1 to 100 USDT.
+1. **1000 USDT** divided among 552 boxes, ranging from 1 to 100 USDT.
     - 2x $100
     - 10x $10
     - 40x $5
