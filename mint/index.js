@@ -1,4 +1,4 @@
-import { HereWallet } from "@here-wallet/core";
+import { HereWallet, WidgetStrategy, WindowStrategy } from "@here-wallet/core";
 import { QRCodeStrategy } from "@here-wallet/core/build/qrcode-strategy";
 import { base_encode } from "near-api-js/lib/utils/serialize";
 import Toastify from "toastify-js";
@@ -13,6 +13,9 @@ const bgConnectQR = document.querySelector(".background-connect-qrcode");
 const nftSection = document.querySelector(".mint-nft");
 const nftBackgroundTexture = nftSection.querySelector(".mint-nft-background-dots");
 const nftBackgroundDots = nftSection.querySelector(".mint-nft-background-texture");
+
+const claimButtons = document.querySelectorAll(".claim-link");
+const connectItems = document.querySelectorAll(".connect-item");
 
 const anchorRewards = document.getElementById("anchor-rewards");
 const anchorTimeline = document.getElementById("anchor-timeline");
@@ -69,11 +72,15 @@ const animateNftBackground = () => {
 document.addEventListener("scroll", animateNftBackground, { passive: true });
 animateNftBackground();
 
-const startTimer = async () => {
-  const res = await fetch("https://dev.herewallet.app/api/v1/user/starbox");
-  const data = await res.json();
-  const deadline = Date.now() + data.start_mint_in * 1000;
+const startTimer = async (start_mint_in) => {
+  if (start_mint_in <= 0) {
+    return timerMintEls.forEach((elementNode) => {
+      elementNode.style.color = "#087164";
+      elementNode.innerHTML = "Mint started!";
+    });
+  }
 
+  const deadline = new Date(Date.now() + start_mint_in * 1000);
   const updateTimer = () => {
     const diff = Math.round((deadline - Date.now()) / 1000);
     const hh = Math.floor(diff / 3600);
@@ -82,6 +89,7 @@ const startTimer = async () => {
 
     timerMintEls.forEach((elementNode) => {
       elementNode.style.width = "350px";
+      elementNode.style.color = "#2C3034";
       elementNode.innerHTML =
         (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
     });
@@ -103,7 +111,12 @@ const startTimer = async () => {
 
 const signIn = async () => {
   const auth = JSON.parse(localStorage.getItem("account"));
-  if (!auth) return;
+  if (!auth) {
+    const res = await fetch("https://api.herewallet.app/api/v1/user/starbox");
+    const data = await res.json();
+    startTimer(data.start_mint_in);
+    return;
+  }
 
   const id = auth.account_id;
   connectLinks.forEach((el) => (el.style.display = "none"));
@@ -112,7 +125,7 @@ const signIn = async () => {
   mintConnectButton.innerHTML = id.length < 30 ? id : id.slice(0, 10) + ".." + id.slice(-10);
   mintConnectButton.classList.add("connected");
 
-  const res = await fetch("https://dev.herewallet.app/api/v1/user/starbox?account_id=" + id);
+  const res = await fetch("https://api.herewallet.app/api/v1/user/starbox?account_id=" + id);
   const data = await res.json();
 
   totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
@@ -121,6 +134,42 @@ const signIn = async () => {
   requireTimeEls[0].style.display = data.start_mint_in > 0 ? "flex" : "none";
   requireTimeEls[1].style.display = data.nft2 === 1 && data.start_mint_in > 0 ? "flex" : "none";
   requireTimeEls[2].style.display = data.nft3 === 1 && data.start_mint_in > 0 ? "flex" : "none";
+  claimButtons[0].style.display = data.nft1 === 1 && data.start_mint_in === 0 ? "flex" : "none";
+  claimButtons[1].style.display = data.nft2 === 1 && data.start_mint_in === 0 ? "flex" : "none";
+  claimButtons[2].style.display = data.nft3 === 1 && data.start_mint_in === 0 ? "flex" : "none";
+  connectItems[0].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
+  connectItems[1].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
+  connectItems[2].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
+  startTimer(data.start_mint_in);
+};
+
+const mint = async (id) => {
+  const response = await fetch("https://api.herewallet.app/api/v1/user/mint_starbox?number=" + id, {
+    body: localStorage.getItem("account"),
+    method: "POST",
+  });
+
+  if (!response.ok) {
+    const { detail } = await response.json();
+    Toastify({ text: detail, position: "center", duration: 40000, className: "here-toast" }).showToast();
+    return;
+  }
+
+  const { token_id, proof } = await response.json();
+  await here.signAndSendTransaction({
+    receiverId: "dev-1690852513075-81413941575509",
+    actions: [
+      {
+        type: "FunctionCall",
+        params: {
+          args: { token_id, proof },
+          deposit: "6140000000000000000000",
+          gas: "242794783120800",
+          methodName: "nft_mint",
+        },
+      },
+    ],
+  });
 };
 
 const register = async (options) => {
@@ -141,7 +190,7 @@ const register = async (options) => {
       nonce,
     });
 
-    const response = await fetch("https://dev.herewallet.app/api/v1/user/alarm_starbox", {
+    const response = await fetch("https://api.herewallet.app/api/v1/user/alarm_starbox", {
       method: "POST",
       body: auth,
     });
@@ -150,9 +199,9 @@ const register = async (options) => {
     localStorage.setItem("account", auth);
     await signIn();
 
-    Toastify({ text: "Authorization success!", position: "left", className: "here-toast" }).showToast();
+    Toastify({ text: "Authorization success!", position: "center", className: "here-toast" }).showToast();
   } catch {
-    Toastify({ text: "Authorization failed", position: "left", className: "here-toast" }).showToast();
+    Toastify({ text: "Authorization failed", position: "center", className: "here-toast" }).showToast();
   }
 };
 
@@ -161,6 +210,7 @@ export const toggleModalSuccess = async () => {
   if (isRequested) return;
   isRequested = true;
 
+  modalQR.style.display = "flex";
   if (modal.style.display === "flex") {
     modal.style.display = "none";
     modalQR.innerHTML = "";
@@ -174,7 +224,10 @@ export const toggleModalSuccess = async () => {
       onRequested: (id) => {
         isRequested = false;
         modal.style.display = "flex";
-        document.querySelector(".modal-mobile-button-connect").href = "herewallet://request/" + id;
+        document.querySelector(".modal-mobile-button-connect").href = "https://my.herewallet.app/request/" + id;
+      },
+      onSuccess: () => {
+        modalQR.style.display = "none";
       },
     });
 
@@ -187,6 +240,7 @@ export const toggleModalSuccess = async () => {
   mintConnectButton.innerHTML = "Connect wallet";
   mintConnectButton.classList.remove("connected");
   modal.style.display = "none";
+  modalQR.style.display = "flex";
   isRequested = false;
 };
 
@@ -197,6 +251,10 @@ modal.addEventListener("click", (e) => {
 closeModal.addEventListener("click", toggleModalSuccess);
 connectLinks.forEach((element) => {
   element.addEventListener("click", toggleModalSuccess);
+});
+
+claimButtons.forEach((element, i) => {
+  element.addEventListener("click", () => mint(i + 1));
 });
 
 const backgroundConnect = async () => {
@@ -213,5 +271,4 @@ const backgroundConnect = async () => {
 };
 
 signIn();
-startTimer();
 backgroundConnect();
