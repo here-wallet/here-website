@@ -12,15 +12,15 @@ In celebration of the largest conference in Asia, **NEAR APAC**, we have prepare
 
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg)
 
-A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the drop ends, you can open the box (burn the NFT) and discover a hidden gift inside, ranging from $0 to $150. If you don't manage to open it within the specified time, the NFT will remain as a memory and become part of the HERE collection.
+A Starbox is an NFT on the NEAR Protocol network, but with a twist. After the drop ends, you can open the box (burn the NFT) and discover a hidden gift inside, ranging from $1 to $150. If you don't manage to open it within the specified time, the NFT will remain as a memory and become part of the HERE collection.
 
 ## ⚡️ What you can find inside the NFT:
 
-1. **1000 USDT** divided among 500 boxes, ranging from 1 to 100 USDT.
-    - 1x $100
-    - 5x $10
-    - 20x $5
-    - 250x $1
+1. **1000 USDT** divided among 552 boxes, ranging from 1 to 100 USDT.
+    - 2x $100
+    - 10x $10
+    - 40x $5
+    - 500x $1
 2. **10 HERE NFTs** (floor 30 NEAR) - unlocking many features in your wallet, providing +1% APY on liquid staking, and accelerating your SCORE accumulation.
 3. **+150 SCORE** in 5000 boxes. A high SCORE grants access to new features, enables earning cashback for swaps and gas refunds. Additionally, the top 10 users with the highest SCORE growth receive USDT weekly ([read more](https://www.herewallet.app/blog/here-score-29ce3537e225) about SCORE).
 4. **1 Mutation Potion.** A total of 99 mutation potions are issued, which can transform your HERE NFT. Mutation floor is **99 NEAR**!
@@ -48,9 +48,9 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 ## ⏱️ When?
 
 1. **Waiting List:** Available from August 22nd to 26th.
-2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calrndar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
+2. **Free Mint:** Available from August 26th to 26th for 30 hours. **Start at 8am UTC** [Add to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGQzZnVvNzVzYmRhM2xsanB2bjlkc2JvMmMgcGV0ckBoZXJld2FsbGV0LmFwcA&tmsrc=petr%40herewallet.app)
 3. **Burn NFT for Prizes:** Possible from August 26th to 30th.
 
-If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS).
+If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS) or [Telegram](https://t.me/herewalletchat).
 
 Website for free mint: [https://starbox.herewallet.app/](https://starbox.herewallet.app/)
