@@ -119,6 +119,8 @@ const signIn = async () => {
     requireTimeEls.forEach((el) => (el.style.display = "none"));
     claimButtons.forEach((el) => (el.style.display = "none"));
     connectItems.forEach((el) => el.classList.remove("can-claim", "claimed"));
+    totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
+    totalAvailableEls.forEach((el) => (el.textContent = 10000 - data.total_minted));
     startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
     return;
   }
