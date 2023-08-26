@@ -22,14 +22,6 @@ const connectItems = document.querySelectorAll(".connect-item");
 const anchorRewards = document.getElementById("anchor-rewards");
 const anchorTimeline = document.getElementById("anchor-timeline");
 
-anchorRewards.addEventListener("click", () => {
-  document.querySelector(".mint-nft").scrollIntoView({ behavior: "smooth" });
-});
-
-anchorTimeline.addEventListener("click", () => {
-  document.querySelector(".mint-timeline").scrollIntoView({ behavior: "smooth" });
-});
-
 const modal = document.querySelector(".modal-wrap");
 const modalQR = document.querySelector(".modal-qr-wrap");
 const closeModal = document.querySelector(".modal-close");
@@ -72,83 +64,84 @@ const animateNftBackground = () => {
   page.style.backgroundColor = color;
 };
 
-document.addEventListener("scroll", animateNftBackground, { passive: true });
-animateNftBackground();
-
-const formatTime = (deadline) => {
-  const diff = Math.round((deadline - Date.now()) / 1000);
+const formatTime = (diff) => {
   const hh = Math.floor(diff / 3600);
   const mm = Math.floor(diff / 60) % 60;
   const ss = diff % 60;
   return (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
 };
 
-const startTimer = async (start_mint_in, start_burn_in, deadline_in) => {
-  const startMint = new Date(Date.now() + start_mint_in * 1000);
-  const startBurn = new Date(Date.now() + start_burn_in * 1000);
-  const deadline = new Date(Date.now() + deadline_in * 1000);
+let starboxData;
+const fetchStarboxData = async () => {
+  try {
+    const auth = JSON.parse(localStorage.getItem("account"));
+    if (!auth?.account_id) throw Error();
+    const res = await fetch(`${endpoint}/user/starbox?account_id=${id}`);
+    const data = await res.json();
+    starboxData = data;
+  } catch {
+    const res = await fetch(`${endpoint}/user/starbox`);
+    const data = await res.json();
+    starboxData = data;
+  }
 
-  const updateTimer = () => {
+  if (starboxData.nft1 === 0) starboxData.nft1 = 1;
+  starboxData.time = Date.now();
+  renderPage();
+};
+
+const timeDiff = (secs, past) => {
+  const deadline = new Date(past + secs * 1000);
+  return Math.round((deadline - Date.now()) / 1000);
+};
+
+const renderPage = () => {
+  const data = starboxData;
+
+  if (data) {
+    totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
+    totalAvailableEls.forEach((el) => (el.textContent = 10000 - data.total_minted));
+    data.start_mint_in = timeDiff(data.start_mint_in, data.time);
+    data.start_burn_in = timeDiff(data.start_burn_in, data.time);
+    data.finish_burn_in = timeDiff(data.finish_burn_in, data.time);
+    data.time = Date.now();
+  }
+
+  const tickTimers = () => {
+    if (!data) return;
+    const startMint = new Date(Date.now() + data.start_mint_in * 1000);
+    const startBurn = new Date(Date.now() + data.start_burn_in * 1000);
+    const deadline = new Date(Date.now() + data.finish_burn_in * 1000);
     timerMintEls.forEach((elementNode) => {
       elementNode.style.width = "350px";
       elementNode.style.color = "#2C3034";
       elementNode.innerHTML =
         Date.now() > deadline
           ? "Game over"
-          : formatTime(Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint);
+          : formatTime(
+              Date.now() > +startBurn
+                ? data.finish_burn_in
+                : Date.now() > +startMint
+                ? data.start_burn_in
+                : data.start_mint_in
+            );
 
       elementNode.previousElementSibling.innerHTML =
         Date.now() > +startBurn ? "Time to end burn" : Date.now() > +startMint ? "Time to burn" : "Time to mint";
     });
-
-    requiredTimesEls.forEach((el) => {
-      el.innerHTML = formatTime(Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint);
-    });
   };
 
-  setInterval(updateTimer, 1000);
-  updateTimer();
-};
-
-const signIn = async () => {
-  const auth = JSON.parse(localStorage.getItem("account"));
-  if (!auth) {
-    const res = await fetch(`${endpoint}/user/starbox`);
-    const data = await res.json();
-    connectLinks.forEach((el) => (el.style.display = "flex"));
-    requireActivityEls.forEach((el) => (el.style.display = "none"));
-    requireTimeEls.forEach((el) => (el.style.display = "none"));
-    claimButtons.forEach((el) => (el.style.display = "none"));
-    connectItems.forEach((el) => el.classList.remove("can-claim", "claimed"));
-    totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
-    totalAvailableEls.forEach((el) => (el.textContent = 10000 - data.total_minted));
-    startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
-    return;
-  }
-
-  const id = auth.account_id;
-  connectLinks.forEach((el) => (el.style.display = "none"));
-  connectButton.innerHTML = id.length < 30 ? id : id.slice(0, 6) + ".." + id.slice(-6);
-  connectButton.style.display = "flex";
-  mintConnectButton.innerHTML = id.length < 30 ? id : id.slice(0, 10) + ".." + id.slice(-10);
-  mintConnectButton.classList.add("connected");
-
-  const res = await fetch(`${endpoint}/user/starbox?account_id=${id}`);
-  const data = await res.json();
-
-  if (data.nft1 === 0) data.nft1 = 1;
-  totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
-  totalAvailableEls.forEach((el) => (el.textContent = 10000 - data.total_minted));
-
-  const requireBurn = (i, nft) => {
+  const renderBox = (i, nft) => {
     requireTimeEls[i].style.display = "none";
     requireActivityEls[i].style.display = "none";
     claimButtons[i].style.display = "none";
     connectItems[i].classList.remove("can-claim", "claimed");
     connectItems[i].style.opacity = 1;
 
-    // Условия не выполнены, но этап минта еще не закончился.
+    if (data == null || !localStorage.getItem("account")) return;
+
     if (data.start_burn_in > 0 && data[nft] === 0) {
+      // Условия не выполнены, но этап минта еще не закончился.
       requireActivityEls[i].style.display = "flex";
       return;
     }
@@ -157,6 +150,7 @@ const signIn = async () => {
     if (data.start_mint_in > 0 && data[nft] === 1) {
       requireTimeEls[i].style.display = "flex";
       requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Mint will be available at`;
+      requireTimeEls[i].querySelector(".mint-required-info").innerHTML = formatTime(data.start_mint_in);
       return;
     }
 
@@ -168,10 +162,11 @@ const signIn = async () => {
     }
 
     // Прошел минт, но этап распаковки не начался
-    if (data.start_burn_in > 0 && data[nft] === 2) {
+    if (data.start_burn_in > 0 && data[nft] > 1) {
       requireTimeEls[i].style.display = "flex";
       connectItems[i].classList.add("claimed");
       requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn will be available at`;
+      requireTimeEls[i].querySelector(".mint-required-info").innerHTML = formatTime(data.start_burn_in);
       return;
     }
 
@@ -180,6 +175,7 @@ const signIn = async () => {
       requireTimeEls[i].style.display = "flex";
       connectItems[i].classList.add("claimed");
       requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn it before the deadline`;
+      requireTimeEls[i].querySelector(".mint-required-info").innerHTML = formatTime(data.finish_burn_in);
       return;
     }
 
@@ -187,10 +183,22 @@ const signIn = async () => {
     connectItems[i].style.opacity = 0.5;
   };
 
-  requireBurn(0, "nft1");
-  requireBurn(1, "nft2");
-  requireBurn(2, "nft3");
-  startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
+  renderBox(0, "nft1");
+  renderBox(1, "nft2");
+  renderBox(2, "nft3");
+  tickTimers();
+};
+
+const signIn = () => {
+  const auth = JSON.parse(localStorage.getItem("account"));
+  if (!auth) return;
+
+  const id = auth.account_id;
+  connectLinks.forEach((el) => (el.style.display = "none"));
+  connectButton.innerHTML = id.length < 30 ? id : id.slice(0, 6) + ".." + id.slice(-6);
+  connectButton.style.display = "flex";
+  mintConnectButton.innerHTML = id.length < 30 ? id : id.slice(0, 10) + ".." + id.slice(-10);
+  mintConnectButton.classList.add("connected");
 };
 
 const mint = async (id) => {
@@ -221,8 +229,7 @@ const mint = async (id) => {
     ],
   });
 
-  await signIn();
-  setTimeout(() => signIn(), 3000);
+  await fetchStarboxData();
 };
 
 const register = async (options) => {
@@ -250,7 +257,8 @@ const register = async (options) => {
 
     await response.json();
     localStorage.setItem("account", auth);
-    await signIn();
+    fetchStarboxData();
+    signIn();
 
     Toastify({ text: "Authorization success!", position: "center", className: "here-toast" }).showToast();
   } catch {
@@ -274,13 +282,12 @@ export const toggleModalSuccess = async () => {
   if (!localStorage.getItem("account")) {
     await register({
       strategy: new QRCodeStrategy({ element: modalQR, size: 200 }),
+      onSuccess: () => (modalQR.style.display = "none"),
       onRequested: (id) => {
-        isRequested = false;
+        const btn = document.querySelector(".modal-mobile-button-connect");
+        btn.href = "https://my.herewallet.app/request/" + id;
         modal.style.display = "flex";
-        document.querySelector(".modal-mobile-button-connect").href = "https://my.herewallet.app/request/" + id;
-      },
-      onSuccess: () => {
-        modalQR.style.display = "none";
+        isRequested = false;
       },
     });
 
@@ -292,24 +299,12 @@ export const toggleModalSuccess = async () => {
   connectButton.innerHTML = "Connect wallet";
   mintConnectButton.innerHTML = "Connect wallet";
   mintConnectButton.classList.remove("connected");
+  connectLinks.forEach((el) => (el.style.display = "flex"));
   modal.style.display = "none";
   modalQR.style.display = "flex";
   isRequested = false;
-  await signIn();
+  renderPage();
 };
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) toggleModalSuccess();
-});
-
-closeModal.addEventListener("click", toggleModalSuccess);
-connectLinks.forEach((element) => {
-  element.addEventListener("click", toggleModalSuccess);
-});
-
-claimButtons.forEach((element, i) => {
-  element.addEventListener("click", () => mint(i + 1));
-});
 
 const backgroundConnect = async () => {
   try {
@@ -324,5 +319,26 @@ const backgroundConnect = async () => {
   }
 };
 
+anchorRewards.addEventListener("click", () => {
+  document.querySelector(".mint-nft").scrollIntoView({ behavior: "smooth" });
+});
+
+anchorTimeline.addEventListener("click", () => {
+  document.querySelector(".mint-timeline").scrollIntoView({ behavior: "smooth" });
+});
+
+closeModal.addEventListener("click", toggleModalSuccess);
+modal.addEventListener("click", (e) => e.target === modal && toggleModalSuccess());
+connectLinks.forEach((element) => element.addEventListener("click", toggleModalSuccess));
+claimButtons.forEach((element, i) => element.addEventListener("click", () => mint(i + 1)));
+
+document.addEventListener("scroll", animateNftBackground, { passive: true });
+animateNftBackground();
+
 signIn();
 backgroundConnect();
+fetchStarboxData();
+renderPage();
+
+setInterval(fetchStarboxData, 10000);
+setInterval(renderPage, 1000);
