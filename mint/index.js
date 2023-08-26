@@ -221,7 +221,7 @@ const mint = async (id) => {
         type: "FunctionCall",
         params: {
           args: { token_id, proof },
-          gas: String(50 * Math.pow(10, 12)),
+          gas: String(70 * Math.pow(10, 12)),
           methodName: "nft_mint",
           deposit: "1",
         },
