@@ -270,6 +270,7 @@ export const toggleModalSuccess = async () => {
   modal.style.display = "none";
   modalQR.style.display = "flex";
   isRequested = false;
+  await signIn();
 };
 
 modal.addEventListener("click", (e) => {
