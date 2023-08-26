@@ -207,11 +207,13 @@ const mint = async (id) => {
   isClaiming = true;
 
   try {
-    Toastify({
+    const toast = Toastify({
       text: "Claiming, please wait...",
+      duration: 1000000000,
       position: "center",
       className: "here-toast",
-    }).showToast();
+    });
+    toast.showToast();
 
     const response = await fetch(`${endpoint}/user/mint_starbox?number=${id}`, {
       body: localStorage.getItem("account"),
@@ -221,10 +223,13 @@ const mint = async (id) => {
     if (!response.ok) {
       const { detail } = await response.json();
       Toastify({ text: detail, position: "center", className: "here-toast" }).showToast();
+      isClaiming = false;
       return;
     }
 
     const { token_id, proof } = await response.json();
+    toast.hideToast();
+
     await here.signAndSendTransaction({
       receiverId: "starbox.herewallet.near",
       actions: [
