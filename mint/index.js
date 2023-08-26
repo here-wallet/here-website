@@ -221,9 +221,10 @@ const mint = async (id) => {
     });
 
     if (!response.ok) {
+      toast.hideToast();
+      isClaiming = false;
       const { detail } = await response.json();
       Toastify({ text: detail, position: "center", className: "here-toast" }).showToast();
-      isClaiming = false;
       return;
     }
 
