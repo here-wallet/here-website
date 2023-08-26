@@ -76,7 +76,7 @@ const fetchStarboxData = async () => {
   try {
     const auth = JSON.parse(localStorage.getItem("account"));
     if (!auth?.account_id) throw Error();
-    const res = await fetch(`${endpoint}/user/starbox?account_id=${id}`);
+    const res = await fetch(`${endpoint}/user/starbox?account_id=${auth?.account_id}`);
     const data = await res.json();
     starboxData = data;
   } catch {
@@ -255,7 +255,7 @@ const register = async (options) => {
       body: auth,
     });
 
-    await response.json();
+    if (!response.ok) throw Error();
     localStorage.setItem("account", auth);
     fetchStarboxData();
     signIn();
