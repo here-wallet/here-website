@@ -201,8 +201,18 @@ const signIn = () => {
   mintConnectButton.classList.add("connected");
 };
 
+let isClaiming = false;
 const mint = async (id) => {
+  if (isClaiming) return;
+  isClaiming = true;
+
   try {
+    Toastify({
+      text: "Claiming, please wait...",
+      position: "center",
+      className: "here-toast",
+    }).showToast();
+
     const response = await fetch(`${endpoint}/user/mint_starbox?number=${id}`, {
       body: localStorage.getItem("account"),
       method: "POST",
@@ -237,6 +247,8 @@ const mint = async (id) => {
       position: "center",
       className: "here-toast",
     }).showToast();
+  } finally {
+    isClaiming = false;
   }
 };
 
