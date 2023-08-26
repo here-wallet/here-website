@@ -202,34 +202,42 @@ const signIn = () => {
 };
 
 const mint = async (id) => {
-  const response = await fetch(`${endpoint}/user/mint_starbox?number=${id}`, {
-    body: localStorage.getItem("account"),
-    method: "POST",
-  });
+  try {
+    const response = await fetch(`${endpoint}/user/mint_starbox?number=${id}`, {
+      body: localStorage.getItem("account"),
+      method: "POST",
+    });
 
-  if (!response.ok) {
-    const { detail } = await response.json();
-    Toastify({ text: detail, position: "center", className: "here-toast" }).showToast();
-    return;
-  }
+    if (!response.ok) {
+      const { detail } = await response.json();
+      Toastify({ text: detail, position: "center", className: "here-toast" }).showToast();
+      return;
+    }
 
-  const { token_id, proof } = await response.json();
-  await here.signAndSendTransaction({
-    receiverId: "starbox.herewallet.near",
-    actions: [
-      {
-        type: "FunctionCall",
-        params: {
-          args: { token_id, proof },
-          gas: String(70 * Math.pow(10, 12)),
-          methodName: "nft_mint",
-          deposit: "1",
+    const { token_id, proof } = await response.json();
+    await here.signAndSendTransaction({
+      receiverId: "starbox.herewallet.near",
+      actions: [
+        {
+          type: "FunctionCall",
+          params: {
+            args: { token_id, proof },
+            gas: String(70 * Math.pow(10, 12)),
+            methodName: "nft_mint",
+            deposit: "1",
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
 
-  await fetchStarboxData();
+    await fetchStarboxData();
+  } catch {
+    Toastify({
+      text: "High load, please try again later",
+      position: "center",
+      className: "here-toast",
+    }).showToast();
+  }
 };
 
 const register = async (options) => {
