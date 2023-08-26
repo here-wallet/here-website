@@ -75,36 +75,33 @@ const animateNftBackground = () => {
 document.addEventListener("scroll", animateNftBackground, { passive: true });
 animateNftBackground();
 
-const startTimer = async (start_mint_in) => {
-  if (start_mint_in <= 0) {
-    return timerMintEls.forEach((elementNode) => {
-      elementNode.style.color = "#087164";
-      elementNode.innerHTML = "Mint started!";
-    });
-  }
+const formatTime = (deadline) => {
+  const diff = Math.round((deadline - Date.now()) / 1000);
+  const hh = Math.floor(diff / 3600);
+  const mm = Math.floor(diff / 60) % 60;
+  const ss = diff % 60;
+  return (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
+};
 
-  const deadline = new Date(Date.now() + start_mint_in * 1000);
+const startTimer = async (start_mint_in, start_burn_in, deadline_in) => {
+  const startMint = new Date(Date.now() + start_mint_in * 1000);
+  const startBurn = new Date(Date.now() + start_burn_in * 1000);
+  const deadline = new Date(Date.now() + deadline_in * 1000);
+
   const updateTimer = () => {
-    const diff = Math.round((deadline - Date.now()) / 1000);
-    const hh = Math.floor(diff / 3600);
-    const mm = Math.floor(diff / 60) % 60;
-    const ss = diff % 60;
-
     timerMintEls.forEach((elementNode) => {
       elementNode.style.width = "350px";
       elementNode.style.color = "#2C3034";
-      elementNode.innerHTML =
-        (hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss < 10 ? "0" + ss : ss);
+      elementNode.innerHTML = formatTime(
+        Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint
+      );
+
+      elementNode.previousElementSibling.innerHTML =
+        Date.now() > +startBurn ? "Time to end burn" : Date.now() > +startMint ? "Time to burn" : "Time to mint";
     });
 
     requiredTimesEls.forEach((el) => {
-      el.innerHTML = new Date(deadline).toLocaleString("en-US", {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-      });
+      el.innerHTML = formatTime(Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint);
     });
   };
 
@@ -117,7 +114,12 @@ const signIn = async () => {
   if (!auth) {
     const res = await fetch(`${endpoint}/user/starbox`);
     const data = await res.json();
-    startTimer(data.start_mint_in);
+    connectLinks.forEach((el) => (el.style.display = "flex"));
+    requireActivityEls.forEach((el) => (el.style.display = "none"));
+    requireTimeEls.forEach((el) => (el.style.display = "none"));
+    claimButtons.forEach((el) => (el.style.display = "none"));
+    connectItems.forEach((el) => el.classList.remove("can-claim", "claimed"));
+    startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
     return;
   }
 
@@ -150,23 +152,20 @@ const signIn = async () => {
   connectItems[2].classList.toggle("claimed", data.nft1 === 2);
 
   const requireBurn = (node, nft) => {
-    const date = new Date(Date.now() + data.start_burn_in * 1000).toLocaleString("en-US", {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    });
+    node.style.display = data[nft] === 2 && (data.start_burn_in > 0 || data.finish_burn_in > 0) ? "flex" : "none";
+    if (data.start_burn_in > 0) {
+      node.querySelector(".mint-required-title").innerHTML = `Minted. Wait to unpack after`;
+    }
 
-    node.style.display = data[nft] === 2 && data.start_burn_in > 0 ? "flex" : "none";
-    node.querySelector(".mint-required-title").innerHTML = `Minted. Open app to unpack`;
-    node.querySelector(".mint-required-info").innerHTML = date;
+    if (data.finish_burn_in > 0) {
+      node.querySelector(".mint-required-title").innerHTML = `Burn before the deadline`;
+    }
   };
 
   requireBurn(requireTimeEls[0], "nft1");
   requireBurn(requireTimeEls[1], "nft2");
   requireBurn(requireTimeEls[2], "nft3");
-  startTimer(data.start_mint_in);
+  startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
 };
 
 const mint = async (id) => {
@@ -196,6 +195,9 @@ const mint = async (id) => {
       },
     ],
   });
+
+  await signIn();
+  setTimeout(() => signIn(), 3000);
 };
 
 const register = async (options) => {
