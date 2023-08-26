@@ -92,9 +92,10 @@ const startTimer = async (start_mint_in, start_burn_in, deadline_in) => {
     timerMintEls.forEach((elementNode) => {
       elementNode.style.width = "350px";
       elementNode.style.color = "#2C3034";
-      elementNode.innerHTML = formatTime(
-        Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint
-      );
+      elementNode.innerHTML =
+        Date.now() > deadline
+          ? "Game over"
+          : formatTime(Date.now() > +startBurn ? deadline : Date.now() > +startMint ? startBurn : startMint);
 
       elementNode.previousElementSibling.innerHTML =
         Date.now() > +startBurn ? "Time to end burn" : Date.now() > +startMint ? "Time to burn" : "Time to mint";
@@ -135,38 +136,60 @@ const signIn = async () => {
   const res = await fetch(`${endpoint}/user/starbox?account_id=${id}`);
   const data = await res.json();
 
+  if (data.nft1 === 0) data.nft1 = 1;
   totalMintedEls.forEach((el) => (el.textContent = data.total_minted));
   totalAvailableEls.forEach((el) => (el.textContent = 10000 - data.total_minted));
 
-  requireActivityEls[0].style.display = data.nft2 === 0 ? "flex" : "none";
-  requireActivityEls[1].style.display = data.nft3 === 0 ? "flex" : "none";
-  requireTimeEls[0].style.display = data.start_mint_in > 0 ? "flex" : "none";
-  requireTimeEls[1].style.display = data.nft2 === 1 && data.start_mint_in > 0 ? "flex" : "none";
-  requireTimeEls[2].style.display = data.nft3 === 1 && data.start_mint_in > 0 ? "flex" : "none";
-  claimButtons[0].style.display = data.nft1 === 1 && data.start_mint_in === 0 ? "flex" : "none";
-  claimButtons[1].style.display = data.nft2 === 1 && data.start_mint_in === 0 ? "flex" : "none";
-  claimButtons[2].style.display = data.nft3 === 1 && data.start_mint_in === 0 ? "flex" : "none";
-  connectItems[0].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
-  connectItems[1].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
-  connectItems[2].classList.toggle("can-claim", data.nft1 === 1 && data.start_mint_in === 0);
-  connectItems[0].classList.toggle("claimed", data.nft1 === 2);
-  connectItems[1].classList.toggle("claimed", data.nft1 === 2);
-  connectItems[2].classList.toggle("claimed", data.nft1 === 2);
+  const requireBurn = (i, nft) => {
+    requireTimeEls[i].style.display = "none";
+    requireActivityEls[i].style.display = "none";
+    claimButtons[i].style.display = "none";
+    connectItems[i].classList.remove("can-claim", "claimed");
+    connectItems[i].style.opacity = 1;
 
-  const requireBurn = (node, nft) => {
-    node.style.display = data[nft] === 2 && (data.start_burn_in > 0 || data.finish_burn_in > 0) ? "flex" : "none";
-    if (data.start_burn_in > 0) {
-      node.querySelector(".mint-required-title").innerHTML = `Minted. Wait to unpack after`;
+    // Условия не выполнены, но этап минта еще не закончился.
+    if (data.start_burn_in > 0 && data[nft] === 0) {
+      requireActivityEls[i].style.display = "flex";
+      return;
     }
 
-    if (data.finish_burn_in > 0) {
-      node.querySelector(".mint-required-title").innerHTML = `Burn before the deadline`;
+    // Условия выполнены, но этап минта еще не начался
+    if (data.start_mint_in > 0 && data[nft] === 1) {
+      requireTimeEls[i].style.display = "flex";
+      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Mint will be available at`;
+      return;
     }
+
+    // Условия выполнены и начался этап минта, даем возможность сделать минт
+    if (data.start_burn_in > 0 && data[nft] === 1) {
+      claimButtons[i].style.display = "flex";
+      connectItems[i].classList.add("can-claim");
+      return;
+    }
+
+    // Прошел минт, но этап распаковки не начался
+    if (data.start_burn_in > 0 && data[nft] === 2) {
+      requireTimeEls[i].style.display = "flex";
+      connectItems[i].classList.add("claimed");
+      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn will be available at`;
+      return;
+    }
+
+    // Прошел минт ии начался этап распаковки
+    if (data.finish_burn_in > 0 && data[nft] > 1) {
+      requireTimeEls[i].style.display = "flex";
+      connectItems[i].classList.add("claimed");
+      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn it before the deadline`;
+      return;
+    }
+
+    // Просроченный бокс, ничего нельзя сделать
+    connectItems[i].style.opacity = 0.5;
   };
 
-  requireBurn(requireTimeEls[0], "nft1");
-  requireBurn(requireTimeEls[1], "nft2");
-  requireBurn(requireTimeEls[2], "nft3");
+  requireBurn(0, "nft1");
+  requireBurn(1, "nft2");
+  requireBurn(2, "nft3");
   startTimer(data.start_mint_in, data.start_burn_in, data.finish_burn_in);
 };
 
