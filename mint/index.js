@@ -336,7 +336,6 @@ document.addEventListener("scroll", animateNftBackground, { passive: true });
 animateNftBackground();
 
 signIn();
-backgroundConnect();
 fetchStarboxData();
 renderPage();
 
