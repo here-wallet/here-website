@@ -396,6 +396,14 @@
         "href": "freemint"
       },
       {
+        "title": "NEAR Election",
+        "cover": "https://pages.near.org/wp-content/uploads/2023/07/ndc-elections-social.png",
+        "tag": "NEAR",
+        "text": "NDC has been working on letting everyone in the NEAR network have a say in how things work. Their mission? Make everything clear, let everyone decide together, and bring a fresh way of doing things.",
+        "date": "20.08.2023",
+        "href": "ndc-vode"
+      },
+      {
         "title": "HERE at Gitcoin",
         "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png",
         "tag": "near",

@@ -50,10 +50,18 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@here-wallet/core@^1.4.0", "@here-wallet/core@^1.5.0":
+"@here-wallet/core@^1.4.0":
   version "1.5.0"
   resolved "https://registry.npmjs.org/@here-wallet/core/-/core-1.5.0.tgz"
   integrity sha512-6BJFPebtRxqgIRCcBoEcX93PF+Xkg59xhRTIEtaYJEXY7SkdCgIsTBcBixGWdquL6MVwpuM/wDq3xPZBs9mMzA==
+  dependencies:
+    sha1 "^1.1.1"
+    uuid4 "2.0.3"
+
+"@here-wallet/core@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@here-wallet/core/-/core-1.5.1.tgz#618db9de547bfaed5229100002357663fcee5d77"
+  integrity sha512-gCzB27k0QfviyJQUhxqX3kAH3g3mRHb6B5RJdUhX9tTsLlPW6AMV/PJiYBudPCt0EeyeyU4i8kEh223ACHXOjw==
   dependencies:
     sha1 "^1.1.1"
     uuid4 "2.0.3"
