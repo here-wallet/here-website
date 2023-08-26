@@ -339,5 +339,5 @@ signIn();
 fetchStarboxData();
 renderPage();
 
-setInterval(fetchStarboxData, 10000);
+// setInterval(fetchStarboxData, 10000);
 setInterval(renderPage, 1000);
