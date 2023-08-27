@@ -281,7 +281,7 @@ const renderUnpack = (id) => {
     return;
   }
 
-  if (prize.prize_nft) {
+  if (prize.prize_nft && prize.prize_nft != "0") {
     prizeEl.innerHTML = `<img src="${prize.prize_nft}" width=84 height=84 class="here-nft" />`;
     return;
   }
