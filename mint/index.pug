@@ -23,6 +23,10 @@ html(lang="en")
         link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
         link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nerko+One&display=swap" rel="stylesheet")
+
         // Google tag (gtag.js)
         script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
 
@@ -80,36 +84,62 @@ html(lang="en")
 
             .mint-connect
               .mint-connect-items
-                .connect-item
-                  img(src="../assets/mint/case.png", width=337, height=422).flying-box
-                  a.connect-link
-                    img(src="../assets/mint/link-arrow.svg")
-                    .connect-link-text
-                      p.link-text Connect to mint
-                      p.link-hover-text Connect to mint
-                  .mint-required.required-activity(style="display: none")
+                .connect-item.close
+                  img(src="../assets/mint/case.png", width=337, height=422).nft-close-case
+                  .nft-open-case(style="display: none")
+                    img(src="../assets/mint/nft-light.png", width=195, height=236).nft-item-light
+                    img(src="../assets/mint/nft-case.png", width=230, height=193).nft-item-case
+
+                  a.unpack-link(style="display: none")
+                    img(src="../assets/mint/claim.svg")
+                    .unpack-link-text
+                      p.link-text Unpack
+                      p.link-hover-text Unpack
                   a.claim-link(style="display: none")
                     img(src="../assets/mint/claim.svg")
                     .claim-link-text
                       p.link-text Claim
                       p.link-hover-text Claim
-            
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+
+                  .mint-required.required-activity(style="display: none")
+         
                   .mint-required.required-time(style="display: none")
                     p.mint-required-title Free mint will be available at
                     p.mint-required-info.required-time-info
                   
-                .connect-item
-                  img(src="../assets/mint/case.png", width=337, height=422).flying-box
-                  a.connect-link
-                    img(src="../assets/mint/link-arrow.svg")
-                    .connect-link-text
-                      p.link-text Connect to mint
-                      p.link-hover-text Connect to mint
+                .connect-item.open.claimed(style="display: none")
+                  .nft-open-case
+                    img(src="../assets/mint/nft-light.png", width=195, height=236).nft-item-light
+                    img(src="../assets/mint/nft-case.png", width=230, height=193).nft-item-case
+                  .nft-prize
+
+                .connect-item.close
+                  img(src="../assets/mint/case.png", width=337, height=422).nft-close-case
+                  .nft-open-case(style="display: none")
+                    img(src="../assets/mint/nft-light.png", width=195, height=236).nft-item-light
+                    img(src="../assets/mint/nft-case.png", width=230, height=193).nft-item-case
+
+                  a.unpack-link(style="display: none")
+                    img(src="../assets/mint/claim.svg")
+                    .unpack-link-text
+                      p.link-text Unpack
+                      p.link-hover-text Unpack
                   a.claim-link(style="display: none")
                     img(src="../assets/mint/claim.svg")
                     .claim-link-text
                       p.link-text Claim
                       p.link-hover-text Claim
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+
                   .mint-required.required-activity(style="display: none")
                     p.mint-required-title Requirements to claim
                     p.mint-required-info 150+ score
@@ -120,19 +150,30 @@ html(lang="en")
                   .mint-required.required-time(style="display: none")
                     p.mint-required-title Free mint will be available at
                     p.mint-required-info.required-time-info
-
-                .connect-item
-                  img(src="../assets/mint/case.png", width=337, height=422).flying-box
-                  a.connect-link
-                    img(src="../assets/mint/link-arrow.svg")
-                    .connect-link-text
-                      p.link-text Connect to mint
-                      p.link-hover-text Connect to mint
+                .connect-item.open.claimed(style="display: none")
+                  .nft-open-case
+                    img(src="../assets/mint/nft-light.png", width=195, height=236).nft-item-light
+                    img(src="../assets/mint/nft-case.png", width=230, height=193).nft-item-case
+                  .nft-prize
+                  
+                .connect-item.close
+                  img(src="../assets/mint/case.png", width=337, height=422).nft-close-case
+                  a.unpack-link(style="display: none")
+                    img(src="../assets/mint/claim.svg")
+                    .unpack-link-text
+                      p.link-text Unpack
+                      p.link-hover-text Unpack
                   a.claim-link(style="display: none")
                     img(src="../assets/mint/claim.svg")
                     .claim-link-text
                       p.link-text Claim
                       p.link-hover-text Claim
+                  a.connect-link
+                    img(src="../assets/mint/link-arrow.svg")
+                    .connect-link-text
+                      p.link-text Connect to mint
+                      p.link-hover-text Connect to mint
+
                   .mint-required.required-activity(style="display: none")
                     p.mint-required-title Requirements to claim
                     p.mint-required-info Binance connect
@@ -142,7 +183,11 @@ html(lang="en")
                   .mint-required.required-time(style="display: none")
                     p.mint-required-title Free mint will be available at
                     p.mint-required-info.required-time-info
-
+                .connect-item.open.claimed(style="display: none")
+                  .nft-open-case
+                    img(src="../assets/mint/nft-light.png", width=195, height=236).nft-item-light
+                    img(src="../assets/mint/nft-case.png", width=230, height=193).nft-item-case
+                  .nft-prize
 
         section.mint-nft
           .mint-nft-background.mint-nft-background-dots
@@ -207,12 +252,12 @@ html(lang="en")
                 .timeline-item-dates Aug, 25 - Aug, 26
                 .timeline-item-title Waiting list
                 .timeline-item-text Scan QR to set reminder
-              .timeline-item.active
+              .timeline-item
                 .timeline-item-image
                   img(src="../assets/mint/timeline-chest.png", width=140, height=140)
                 .timeline-item-dates Aug, 26 - Aug, 27
                 .timeline-item-title Mint STARBOX NFT
-              .timeline-item
+              .timeline-item.active
                 .timeline-item-image
                   img(src="../assets/mint/timeline-app.png", width=140, height=140)
                 .timeline-item-dates Aug, 27 - Aug, 30

@@ -17,7 +17,9 @@ const nftBackgroundTexture = nftSection.querySelector(".mint-nft-background-dots
 const nftBackgroundDots = nftSection.querySelector(".mint-nft-background-texture");
 
 const claimButtons = document.querySelectorAll(".claim-link");
-const connectItems = document.querySelectorAll(".connect-item");
+const unpackButtons = document.querySelectorAll(".unpack-link");
+const connectItems = document.querySelectorAll(".connect-item.close");
+const unpackItems = document.querySelectorAll(".connect-item.open");
 
 const anchorRewards = document.getElementById("anchor-rewards");
 const anchorTimeline = document.getElementById("anchor-timeline");
@@ -25,12 +27,11 @@ const anchorTimeline = document.getElementById("anchor-timeline");
 const modal = document.querySelector(".modal-wrap");
 const modalQR = document.querySelector(".modal-qr-wrap");
 const closeModal = document.querySelector(".modal-close");
-const connectLinks = document.querySelectorAll(".connect-link, .mint-button-connect, .connect-button");
 const connectButton = document.querySelector(".connect-button");
 const mintConnectButton = document.querySelector(".mint-button-connect");
+const connectLinks = document.querySelectorAll(".connect-link, .mint-button-connect, .connect-button");
 
 const timerMintEls = document.querySelectorAll(".time-to-mint");
-const requiredTimesEls = document.querySelectorAll(".required-time-info");
 const totalMintedEls = document.querySelectorAll(".total-minted");
 const totalAvailableEls = document.querySelectorAll(".total-available");
 
@@ -87,7 +88,11 @@ const fetchStarboxData = async () => {
 
   if (starboxData.nft1 === 0) starboxData.nft1 = 1;
   starboxData.time = Date.now();
+
   renderPage();
+  renderUnpack(0);
+  renderUnpack(1);
+  renderUnpack(2);
 };
 
 const timeDiff = (secs, past) => {
@@ -127,7 +132,7 @@ const renderPage = () => {
             );
 
       elementNode.previousElementSibling.innerHTML =
-        Date.now() > +startBurn ? "Time to end burn" : Date.now() > +startMint ? "Time to burn" : "Time to mint";
+        Date.now() > +startBurn ? "Time to end unpack" : Date.now() > +startMint ? "Time to unpack" : "Time to mint";
     });
   };
 
@@ -135,6 +140,7 @@ const renderPage = () => {
     requireTimeEls[i].style.display = "none";
     requireActivityEls[i].style.display = "none";
     claimButtons[i].style.display = "none";
+    unpackButtons[i].style.display = "none";
     connectItems[i].classList.remove("can-claim", "claimed");
     connectItems[i].style.opacity = 1;
 
@@ -155,7 +161,7 @@ const renderPage = () => {
     }
 
     // Условия выполнены и начался этап минта, даем возможность сделать минт
-    if (data.start_burn_in > 0 && data[nft] === 1) {
+    if (data.start_burn_in > 0 && data[nft] === 1 && data.total_minted < 10000) {
       claimButtons[i].style.display = "flex";
       connectItems[i].classList.add("can-claim");
       return;
@@ -165,17 +171,15 @@ const renderPage = () => {
     if (data.start_burn_in > 0 && data[nft] > 1) {
       requireTimeEls[i].style.display = "flex";
       connectItems[i].classList.add("claimed");
-      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn will be available at`;
+      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Unpack will be available at`;
       requireTimeEls[i].querySelector(".mint-required-info").innerHTML = formatTime(data.start_burn_in);
       return;
     }
 
     // Прошел минт ии начался этап распаковки
     if (data.finish_burn_in > 0 && data[nft] > 1) {
-      requireTimeEls[i].style.display = "flex";
       connectItems[i].classList.add("claimed");
-      requireTimeEls[i].querySelector(".mint-required-title").innerHTML = `Burn it before the deadline`;
-      requireTimeEls[i].querySelector(".mint-required-info").innerHTML = formatTime(data.finish_burn_in);
+      unpackButtons[i].style.display = "flex";
       return;
     }
 
@@ -201,18 +205,103 @@ const signIn = () => {
   mintConnectButton.classList.add("connected");
 };
 
+let isUnpacking = false;
+const unpack = async (id) => {
+  if (isUnpacking) return;
+  isUnpacking = true;
+  const toast = Toastify({
+    text: "Unpaking, please wait...",
+    duration: 1000000000,
+    position: "center",
+    className: "here-toast",
+  });
+
+  try {
+    toast.showToast();
+    const tokenId = starboxData.tokens[id];
+
+    if (starboxData.nft_images[id].includes("/SB")) {
+      await here.signAndSendTransaction({
+        receiverId: "starbox.herewallet.near",
+        actions: [
+          {
+            type: "FunctionCall",
+            params: {
+              methodName: "unpack",
+              gas: String(50 * Math.pow(10, 12)),
+              args: { token_id: String(tokenId) },
+              deposit: "1",
+            },
+          },
+        ],
+      });
+    }
+
+    const res = await fetch(`${endpoint}/user/starbox/unpack_web`, {
+      body: JSON.stringify({ ...JSON.parse(localStorage.getItem("account")), token_id: tokenId }),
+      method: "POST",
+    });
+
+    if (!res.ok) {
+      const { detail } = await response.json();
+      toast.hideToast();
+      Toastify({ text: detail, position: "center", className: "here-toast" }).showToast();
+      isUnpacking = false;
+      return;
+    }
+
+    const prize = await res.json();
+    toast.hideToast();
+    isUnpacking = false;
+    starboxData.prizes[id] = prize;
+    renderUnpack(id);
+  } catch (e) {
+    console.log(e);
+    isUnpacking = false;
+    toast.hideToast();
+  }
+};
+
+const renderUnpack = (id) => {
+  const prize = starboxData.prizes?.[id];
+  if (prize == null) return;
+
+  const prizeEl = unpackItems[id].querySelector(".nft-prize");
+  connectItems[id].style.display = "none";
+  unpackItems[id].style.display = "flex";
+  if (prize.prize_score) {
+    prizeEl.innerHTML = `<p class="score-prize">+${prize.prize_score}<br/><span>SCORE</span>`;
+    return;
+  }
+
+  if (prize.prize_usdt) {
+    prizeEl.innerHTML = `<p class="title">${
+      prize.prize_usdt
+    }</p><img src="${require("../assets/mint/nft-usdt.png")}" width=84 height=84 class="usdt-1" />`;
+    return;
+  }
+
+  if (prize.prize_nft) {
+    prizeEl.innerHTML = `<img src="${prize.prize_nft}" width=84 height=84 class="here-nft" />`;
+    return;
+  }
+
+  prizeEl.innerHTML = `<p class="title">Empty</p>`;
+};
+
 let isClaiming = false;
 const mint = async (id) => {
   if (isClaiming) return;
   isClaiming = true;
 
+  const toast = Toastify({
+    text: "Claiming, please wait...",
+    duration: 1000000000,
+    position: "center",
+    className: "here-toast",
+  });
+
   try {
-    const toast = Toastify({
-      text: "Claiming, please wait...",
-      duration: 1000000000,
-      position: "center",
-      className: "here-toast",
-    });
     toast.showToast();
 
     const response = await fetch(`${endpoint}/user/mint_starbox?number=${id}`, {
@@ -246,6 +335,7 @@ const mint = async (id) => {
       ],
     });
 
+    isClaiming = false;
     await fetchStarboxData();
   } catch {
     Toastify({
@@ -253,8 +343,8 @@ const mint = async (id) => {
       position: "center",
       className: "here-toast",
     }).showToast();
-  } finally {
     isClaiming = false;
+    toast.hideToast();
   }
 };
 
@@ -326,6 +416,9 @@ export const toggleModalSuccess = async () => {
   mintConnectButton.innerHTML = "Connect wallet";
   mintConnectButton.classList.remove("connected");
   connectLinks.forEach((el) => (el.style.display = "flex"));
+  unpackItems.forEach((el) => (el.style.display = "none"));
+  connectItems.forEach((el) => (el.style.display = "flex"));
+
   modal.style.display = "none";
   modalQR.style.display = "flex";
   isRequested = false;
@@ -357,6 +450,7 @@ closeModal.addEventListener("click", toggleModalSuccess);
 modal.addEventListener("click", (e) => e.target === modal && toggleModalSuccess());
 connectLinks.forEach((element) => element.addEventListener("click", toggleModalSuccess));
 claimButtons.forEach((element, i) => element.addEventListener("click", () => mint(i + 1)));
+unpackButtons.forEach((element, i) => element.addEventListener("click", () => unpack(i)));
 
 document.addEventListener("scroll", animateNftBackground, { passive: true });
 animateNftBackground();

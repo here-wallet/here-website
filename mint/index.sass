@@ -12,6 +12,14 @@
   100%
     transform: translateY(-1.5%)
 
+@keyframes flying-box-rotate
+  0%
+    transform: translateY(-1.5%) rotate(-5deg)
+  50%
+    transform: translateY(1.5%) rotate(-5deg)
+  100%
+    transform: translateY(-1.5%) rotate(-5deg)
+
 @keyframes light-glow
   0%
     opacity: 1
@@ -312,7 +320,7 @@
       flex-direction: column
       align-items: center
 
-.connect-link, .claim-link
+.connect-link, .claim-link, .unpack-link
   margin-bottom: 80px
   cursor: pointer
   display: flex
@@ -366,6 +374,14 @@
   display: flex
   justify-content: center
   align-items: center
+
+  .nft-open-case
+    transform: scale(1.4)
+    margin-bottom: 100px
+    position: absolute
+    @media (max-width: 700px)
+      transform: scale(1.1)
+
   &.can-claim, &.claimed
     img
       opacity: 1
@@ -382,15 +398,60 @@
 
   @media (max-width: 480px)
     width: 280px
-    > img
+    .nft-close-case
       width: 280px
       object-fit: contain
 
     
-.flying-box
+.nft-close-case
   position: absolute
   animation: flying-box 4s linear infinite
   opacity: 0.4
+
+.nft-prize
+  display: flex
+  align-items: center
+  z-index: 10
+  gap: 12px
+  margin-bottom: 150px
+  animation: flying-box-rotate 5s ease-out infinite
+  @media (max-width: 700px)
+    *
+      transform: scale(0.8)
+
+  .score-prize
+    font-family: Nerko One
+    font-size: 100px
+    line-height: 50px
+    color: #FD84E3
+    text-shadow: 4px 4px 0 #2C3034
+    -webkit-text-stroke: 2px #2C3034
+    text-align: center
+
+    & span
+      font-size: 60px
+      -webkit-text-stroke: 1px #2C3034
+      margin-left: 12px
+
+  .here-nft
+    width: 160px
+    height: 160px
+    border-radius: 16px
+    border: 2px solid #2C3034
+    box-shadow: 4px 4px 0 #2C3034
+    object-fit: cover
+
+  .title
+    margin: 0
+    color: #FFF
+    text-align: center
+    font-size: 80px
+    font-style: normal
+    font-weight: 900
+    line-height: 49.29px
+    letter-spacing: 0.28px  
+    text-shadow: 4px 4px 0 #2C3034
+    -webkit-text-stroke: 2px #2C3034
 
 .mint-nft-background
   display: none
