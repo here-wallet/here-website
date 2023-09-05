@@ -33,8 +33,6 @@ Since you can now store assets in a non-custodial wallet and use decentralized a
 Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
-> [**AwesomeNEAR**](https://awesomenear.com/here-wallet)
 > [**Telegram**](https://t.me/herewallet)
 > [**Telegram chat**](https://t.me/herewalletchat)
 > [**Medium**](https://medium.com/@nearhere)
-> [**Website**](https://herewallet.app/)

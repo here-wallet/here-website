@@ -36,8 +36,6 @@ This is only part of the security measures we take, but the most important thing
 Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
-> [**AwesomeNEAR**](https://awesomenear.com/here-wallet)
 > [**Telegram**](https://t.me/herewallet)
 > [**Telegram chat**](https://t.me/herewalletchat)
 > [**Medium**](https://medium.com/@nearhere)
-> [**Website**](https://herewallet.app/)

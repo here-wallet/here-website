@@ -56,3 +56,9 @@ date: 20.08.2023
 - Elected members will have a big online meeting to kick things off!
 
 [Read more](https://pages.near.org/blog/ndc-v1-governance-elections-faq/)
+
+> [**Discord**](https://discord.gg/AfB5cvtFXH)
+> [**Twitter**](https://twitter.com/here_wallet)
+> [**Telegram**](https://t.me/herewallet)
+> [**Telegram chat**](https://t.me/herewalletchat)
+> [**Medium**](https://medium.com/@nearhere)
