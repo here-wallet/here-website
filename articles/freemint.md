@@ -54,3 +54,10 @@ You need to mint NFTs on the NEAR Protocol, and for that, you need a special wal
 If you have any questions, feel free to reach out on [Discord](https://discord.gg/mxyguuvS) or [Telegram](https://t.me/herewalletchat).
 
 Website for free mint: [https://starbox.herewallet.app/](https://starbox.herewallet.app/)
+
+
+> [**Discord**](https://discord.gg/AfB5cvtFXH)
+> [**Twitter**](https://twitter.com/here_wallet)
+> [**Telegram**](https://t.me/herewallet)
+> [**Telegram chat**](https://t.me/herewalletchat)
+> [**Medium**](https://medium.com/@nearhere)

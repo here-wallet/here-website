@@ -32,7 +32,7 @@ Track your score and your position in the ranking in the “Profile -> Global ra
 
 
 Prizes — 100 USDT weekly:
-=========================
+--------------------
 
 🥇1st place — $25  
 🥈2d place — $20  
@@ -47,7 +47,6 @@ Exciting weekly sprints with valuable gifts from us and our partners await us ah
 Join us to start earning and explore the Near Protocol together with [HERE](https://download.herewallet.app/telegram)! 🚀💰
 
 
-Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
 > [**Telegram**](https://t.me/herewallet)

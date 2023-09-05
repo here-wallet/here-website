@@ -17,11 +17,8 @@ NEAR-SNAP, the application under development, aims to harness the innovative Sna
 Further details about the development progress and the official launch date of NEAR-SNAP will be shared in the coming weeks.
 
 Join our community:
-Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
-> [**AwesomeNEAR**](https://awesomenear.com/here-wallet)
 > [**Telegram**](https://t.me/herewallet)
 > [**Telegram chat**](https://t.me/herewalletchat)
 > [**Medium**](https://medium.com/@nearhere)
-> [**Website**](https://herewallet.app/)
