@@ -2,7 +2,7 @@
 title: Weekly score awards
 cover: https://miro.medium.com/v2/resize:fill:88:88/1*88BViXP3LNYjQNAtO12QVA.png
 tag: score
-text:We are excited to introduce our new activity for HERE Wallet users! Every week, you can earn score for specific actions, and the leaders in weekly leaderboard will get rewards in USDT
+text: We are excited to introduce our new activity for HERE Wallet users! Every week, you can earn score for specific actions, and the leaders in weekly leaderboard will get rewards in USDT
 timeToRead: 2 min
 date: 05.09.2023
 -----
