@@ -327,7 +327,7 @@
     cursor: pointer
     position: fixed
     bottom: -200px
-    right: 20px
+    right: 32px
     width: 48px
     height: 48px
     background: #F3EBEA
@@ -343,7 +343,10 @@
     transition: 0.2s transform, 0.2s bottom
 
     &.active
-        bottom: 20px
+        bottom: 100px
+        @media (max-width: 620px)
+            bottom: 20px
+            right: 100px
 
     &:hover
         transform: translateY(-4px)
