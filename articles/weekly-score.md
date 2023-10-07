@@ -16,7 +16,7 @@ We are excited to introduce our new activity for HERE Wallet users! Every week, 
 
 Now there are 6 ways to get score:
 
-1.  Invite friends: +150 score 🚀
+1.  Invite friends: +50-200 score 🚀
 2.  Just open the app: +5 score (once a day) 🫢
 3.  Swap for an equivalent of $10: +25 score (once a day) 💰
 4.  Add friends and give likes: +1 score for each friend’s like 👍
