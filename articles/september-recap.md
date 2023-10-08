@@ -36,7 +36,7 @@ We're excited to announce our partnership with Orderly Network. As part of this 
 
 
 
-## 4. Aurora is Beta
+## 4. Aurora available in Beta
 
 We have some big news on the horizon! HERE wallet will soon be adding the Aurora network. This week, we'll be granting beta test access to users with high scores, and holders of HERE early user NFTs can start testing already. This partnership opens up exciting new possibilities for us.
 
@@ -51,12 +51,8 @@ We're delighted to announce that we've integrated Near Social into our wallet. N
 ![](https://cdn-images-1.medium.com/max/1600/0*gVn08EHd_HipXgdS)
 
 
-## 6. Transitioned our Backend to the new Python Version
 
-We've migrated our backend to the latest version of Python, ensuring a more robust and efficient infrastructure for our platform.
-
-
-## 7. Rewritten swaps on Android in Kotlin
+## 7.Ref swaps moved on low-level computations 
 
 For our Android users, we've rewritten our swap functionality in Kotlin, a native language for Android applications. This enhancement will significantly improve the speed at which you can find swap routes.
 
