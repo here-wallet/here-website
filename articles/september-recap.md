@@ -52,7 +52,7 @@ We're delighted to announce that we've integrated Near Social into our wallet. N
 
 
 
-## 7.Ref swaps moved on low-level computations 
+## 6.Ref swaps moved on low-level computations 
 
 For our Android users, we've rewritten our swap functionality in Kotlin, a native language for Android applications. This enhancement will significantly improve the speed at which you can find swap routes.
 
