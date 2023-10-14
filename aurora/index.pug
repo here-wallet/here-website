@@ -1,0 +1,92 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Aurora is HERE now
+		meta(name="description", content="Get score for using each of AURORA apps below")
+		link(href="style.sass", rel="stylesheet")
+		link(href="http://herewallet.app/binance-waitlist", rel="canonical")
+		meta(property="og:url", content="http://herewallet.app/binance-waitlist")
+		meta(property="og:title", content="Aurora is HERE now")
+		meta(property="og:description", content="Get score for using each of AURORA apps below")
+		meta(name="format-detection", content="telephone=no")
+		link(href="https://fonts.googleapis.com", rel="preconnect")
+		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+		link(rel='shortcut icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico' type='image/x-icon')
+		
+		link(rel='apple-touch-icon' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-icon' sizes='76x76' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-icon' sizes='152x152' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		link(rel='apple-touch-startup-image' href='https://static.tildacdn.com/tild6365-3063-4930-b165-613062656662/favicon_4.ico')
+		
+		// Google tag (gtag.js)
+		script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-J76SQ67RJB')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-J76SQ67RJB');
+	body
+		.header
+			a(href="https://medium.com/@nearhere/here-binance-connect-and-earn-4-aab88341fe1e",target="_blank").logo
+				img(src="images/logo-aurora.svg", alt="Aurora is HERE now")
+			a(href="#faq").menu__faq FAQ
+			div.btn-connect-wallet Connect wallet
+
+		.header-welcome
+			.welcome__first
+				img(src="images/aurora-lite-logo.png", alt="Aurora is HERE now").welcome__logo
+				span AURORA
+			.welcome__second IS HERE NOW
+			.welcome__third Get score for using each of AURORA apps below
+			.welcome__prev Top 50 users with highest weekly score growth get 1-25 USDT! Starts every Monday.
+			a(href="#").welcome__prev_a Learn what score is ->
+		
+		.cart-section
+			.cart-rainbow.cart-item
+				.cart-title Rainbow bridge
+				.cart-description Transfer tokens between Ethereum, NEAR & Aurora!
+				.cart-transaction
+					p First transaction:
+					button + 50
+			.cart-aurigami.cart-item
+				.cart-title Aurigami
+				.cart-description Aurora's native money market
+				.cart-transaction
+					p First transaction:
+					button + 50
+			.cart-trisolaris.cart-item
+				.cart-title Trisolaris
+				.cart-description Trisolaris is the first AMM exchange on Aurora
+				.cart-transaction
+					p First transaction:
+					button + 50
+			.cart-finance.cart-item
+				.cart-title Bounce Finance
+				.cart-description Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.cart-transaction
+					p First transaction:
+					button + 50
+
+		.connect-wallet
+			.connect-wallet__title Connect wallet <span>to start</span>
+			.connect-wallet__qr
+		
+		.section-faq#faq
+			.section-faq__title In case you <span>missed anything.</span>
+			.section-faq__item
+				.section-faq__ask What is score?
+				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+			.section-faq__item
+				.section-faq__ask What is the biggest prize?
+				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+			.section-faq__item
+				.section-faq__ask When I get score?
+				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+			.section-faq__item
+				.section-faq__ask How to get more score?
+				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+		script(type="module", src="index.js")
