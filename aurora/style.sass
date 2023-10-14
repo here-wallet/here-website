@@ -1,0 +1,496 @@
+@import "../landing/common/base.sass"
+@font-face
+	font-family: 'CabinetGrotesk-Variable'
+	src: url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.woff') format('woff'), url('assets/cabinet-grotesk/fonts/CabinetGrotesk-Variable.ttf') format('truetype')
+	font-weight: 100 900
+	font-display: block
+	font-style: normal
+
+*,
+*:before,
+*:after
+	padding: 0
+	margin: 0
+	border: 0
+	vertical-align: baseline
+	box-sizing: border-box
+:focus,
+:active
+	outline: none
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, img
+	display: block
+
+input,
+button,
+textarea
+	font-family: inherit
+	background-color: transparent
+input::-ms-clear
+	display: none
+button
+	display: inline-block
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+a
+	text-decoration: none
+	&:visited
+		text-decoration: none
+	&:hover
+		text-decoration: none
+
+ul
+	li
+		list-style-type: none
+
+img
+	vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: 'CabinetGrotesk-Variable', Arial, sans-serif
+	font-style: inherit
+	font-weight: 400
+h1
+	font-size: 64px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 52px
+h2
+	font-size: 62px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 48px
+h3
+	font-size: 40px
+	font-weight: 900
+	@media (max-width: 760px)
+		font-size: 32px
+h4
+	font-size: 28px
+	font-weight: 900
+p
+	line-height: 1.35
+
+html, body
+	height: 100%
+	width: 100%
+	line-height: 1
+	font-weight: 300
+	font-size: 16px
+	-ms-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	font-family: 'Inter',Arial,sans-serif
+	color: #2c3034
+	background-color: #081515
+body
+	background-image: url(./images/fon.jpg)
+	background-position: 50% 0
+	background-repeat: no-repeat
+	@media (max-width: 1140px)
+		background-size: 100% auto
+	@media (max-width: 750px)
+		background-size: auto
+
+.header
+	display: flex
+	align-items: center
+	width: 1136px
+	max-width: 100%
+	margin: 0 auto 88px auto
+	padding: 8px 0 0 0
+	@media (max-width: 1140px)
+		padding: 8px 24px 0 24px
+	@media (max-width: 750px)
+		padding: 16px 16px 0 16px
+	.logo
+		display: block
+		flex-shrink: 0
+		width: 96px
+		img
+			width: 100%
+	.menu__faq
+		display: block
+		margin: 0 0 0 92px
+		font-size: 1em
+		font-weight: 600
+		line-height: 1.25
+		color: #fff
+		&:hover
+			opacity: .8
+		@media (max-width: 750px)
+			display: none
+	.btn-connect-wallet
+		margin: 0 0 0 auto
+		padding: 12px 16px
+		background-color: #fff
+		border-radius: 24px
+		font-size: 1em
+		font-weight: 600
+		line-height: 1.25
+		color: #2C3034
+		cursor: pointer
+		&:hover
+			color: #5d666f
+		@media (max-width: 300px)
+			padding: 8px 12px
+
+.header-welcome
+	width: 1136px
+	max-width: 100%
+	margin: 0 auto
+	text-align: center
+	@media (max-width: 1140px)
+		padding: 0 24px
+	.welcome__first
+		display: flex
+		justify-content: center
+		align-items: center
+		.welcome__logo
+			width: 72px
+			height: 72px
+			margin: 0 12px 0 0
+			@media (max-width: 750px)
+				width: 40px
+				height: 40px
+		span
+			font-feature-settings: 'liga' off
+			text-shadow: 0px 0px 8.943737983703613px rgba(253, 161, 93, 0.10)
+			font-family: 'CabinetGrotesk-Variable'
+			font-size: 80px
+			font-weight: 900
+			line-height: 1.05
+			letter-spacing: 0.8px
+			text-transform: uppercase
+			background: linear-gradient(90deg, #FBFC6B 18.73%, #C1F366 48.17%, #89E86F 79.52%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@media (max-width: 750px)
+				font-size: 44px
+				line-height: 48px
+				letter-spacing: 0.44px
+			@media (max-width: 300px)
+				font-size: 32px
+				line-height: 36px
+	.welcome__second
+		margin: 0 0 12px 0
+		text-align: center
+		font-feature-settings: 'liga' off
+		font-family: 'CabinetGrotesk-Variable'
+		font-size: 80px
+		font-weight: 900
+		line-height: 1.05
+		letter-spacing: 0.8px
+		text-transform: uppercase
+		background: linear-gradient(180deg, #F3EBEA 55.15%, rgba(243, 235, 234, 0.60) 89.29%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 750px)
+			font-size: 44px
+			line-height: 48px
+			letter-spacing: 0.44px
+		@media (max-width: 300px)
+			font-size: 32px
+			line-height: 36px
+	.welcome__third
+		margin: 0 0 40px 0
+		color: rgba(243, 235, 234, 0.8)
+		text-align: center
+		font-family: 'Inter',Arial,sans-serif
+		font-size: 20px
+		font-style: normal
+		font-weight: 500
+		line-height: 1.2
+		letter-spacing: 0.2px
+		@media (max-width: 750px)
+			width: 240px
+			margin: 0 auto 32px auto
+			font-size: 18px
+			line-height: 24px
+	.welcome__prev
+		max-width: 440px
+		margin: 0 auto
+		color: rgba(255, 255, 255, 0.8)
+		text-align: center
+		font-family: 'Inter',Arial,sans-serif
+		font-size: 20px
+		font-weight: 500
+		line-height: 1.35
+		@media (max-width: 750px)
+			width: 272px
+			margin: 0 auto
+			font-size: 18px
+			line-height: 24px
+		@media (max-width: 300px)
+			width: 100%
+	.welcome__prev_a
+		display: block
+		margin: 0 0 80px 0
+		color: #fff
+		font-family: 'Inter',Arial,sans-serif
+		font-size: 20px
+		font-style: normal
+		font-weight: 700
+		line-height: 135%
+		@media (max-width: 750px)
+			margin: 0 0 64px 0
+			font-size: 18px
+			line-height: 24px
+	
+.cart-section
+	display: flex
+	flex-wrap: wrap
+	gap: 16px
+	width: 1138px
+	max-width: 100%
+	margin: 0 auto 140px auto
+	@media (max-width: 1140px)
+		padding: 0 24px
+	@media (max-width: 750px)
+		margin: 0 auto 80px auto
+		padding: 0 16px
+	.cart-item
+		display: flex
+		flex-direction: column
+		position: relative
+		width: 561px
+		height: 242px
+		padding: 32px 16px 24px 16px
+		border-radius: 8px
+		border: 1px solid rgba(255, 255, 255, .1)
+		background: linear-gradient(125deg, #1A3137 0%, rgba(26, 49, 55, 0.40) 100%)
+		overflow: hidden
+		cursor: pointer
+		transition: transform .2s
+		&:hover
+			transform: scale(1.02)
+		@media (max-width: 1140px)
+			width: calc( 50% - 8px )
+			height: auto
+			min-height: 242px
+		@media (max-width: 750px)
+			width: 100%
+		.cart-title
+			margin: 0 0 8px 0
+			color: #fff
+			font-family: 'Inter',Arial,sans-serif
+			font-size: 1.375em
+			font-style: normal
+			font-weight: 700
+			line-height: 1
+		.cart-description
+			position: relative
+			z-index: 2
+			max-width: 410px
+			margin: 0 0 24px 0
+			color: rgba(255, 255, 255, 0.8)
+			font-family: 'Inter',Arial,sans-serif
+			font-size: 1em
+			font-weight: 500
+			line-height: 1.375
+			@media (max-width: 1140px)
+				padding: 0 100px 0 0
+			@media (max-width: 750px)
+				padding: 0 24px 0 0
+		.cart-transaction
+			position: relative
+			z-index: 2
+			margin: auto 0 0 0
+			p
+				margin: 0 0 8px 0
+				color: rgba(255, 255, 255, .8)
+				font-family: 'Inter',Arial,sans-serif
+				font-size: 0.875em
+				font-weight: 500
+				line-height: 1.25
+			button
+				display: inline-block
+				padding: 4px 8px 4px 30px
+				border-radius: 8px
+				border: 1px solid #2C3034
+				background-color: #fdbf1e
+				box-shadow: 2px 2px 0px 0px #FDBF1E
+				background-image: url(./images/icon-union.svg)
+				background-repeat: no-repeat
+				background-position: 4px 50%
+	
+	.cart-item:before
+		content: ""
+		display: block
+		position: absolute
+		right: 12px
+		top: 12px
+		width: 24px
+		height: 24px
+		background-image: url(./images/icon-pin.svg)
+		background-repeat: no-repeat
+		background-size: 24px auto
+		opacity: .8
+	.cart-item:after
+		content: ""
+		display: block
+		width: 180px
+		height: 180px
+		position: absolute
+		right: 0px
+		bottom: -38px
+		z-index: 1
+		background-repeat: no-repeat
+		background-size: 100% auto
+		@media (max-width: 750px)
+			width: 140px
+			height: 140px
+		@media (max-width: 750px)
+			bottom: -28px
+	.cart-rainbow:after
+		background-image: url(./images/cart-1.svg)
+
+	.cart-aurigami:after
+		background-image: url(./images/cart-2.svg)
+	.cart-trisolaris:after
+		background-image: url(./images/cart-3.svg)
+	.cart-finance:after
+		background-image: url(./images/cart-4.svg)
+
+.connect-wallet
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 1137px
+	max-width: 100%
+	margin: 0 auto 140px auto
+	@media (max-width: 1140px)
+		width: 100%
+		padding: 0 24px
+	@media (max-width: 750px)
+		margin: 0 auto 80px auto
+		flex-direction: column
+	.connect-wallet__title
+		flex-shrink: 0
+		width: calc( 100% - 320px )
+		font-family: 'CabinetGrotesk-Variable'
+		font-size: 80px
+		font-weight: 900
+		line-height: 1.05
+		letter-spacing: 0.8px
+		text-transform: uppercase
+		background: linear-gradient(180deg, #F3EBEA 55.15%, rgba(243, 235, 234, 0.60) 89.29%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 1000px)
+			width: calc( 100% - 280px )
+			font-size: 52px
+		@media (max-width: 750px)
+			width: 100%
+			margin: 0 0 40px 0
+			text-align: center
+			font-size: 32px
+			line-height: 40px
+			letter-spacing: 0.32px
+		span
+			display: block
+	.connect-wallet__qr
+		width: 320px
+		height: 320px
+		flex-shrink: 0
+		background-image: url(./images/aurora-qr.svg)
+		background-repeat: no-repeat
+		background-size: 100% auto
+		@media (max-width: 1140px)
+			width: 240px
+			height: 240px
+		@media (max-width: 750px)
+			width: 320px
+			height: 320px
+		@media (max-width: 750px)
+			width: 260px
+			height: 260px
+
+.section-faq
+	width: 1137px
+	max-width: 100%
+	margin: 0 auto
+	padding: 0 0 118px 0
+	@media (max-width: 1140px)
+		padding: 0 24px 118px 24px
+	@media (max-width: 1000px)
+		padding: 0 24px 78px 24px
+	.section-faq__title
+		margin: 0 0 40px 0
+		text-align: center
+		font-feature-settings: 'liga' off
+		font-family: 'CabinetGrotesk-Variable'
+		font-size: 56px
+		font-weight: 900
+		line-height: 1.20
+		letter-spacing: 0.56px
+		text-transform: uppercase
+		background: linear-gradient(180deg, #F3EBEA 55.15%, rgba(243, 235, 234, 0.60) 89.29%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 750px)
+			font-size: 32px
+			line-height: 40px
+			letter-spacing: 0.32px
+		span
+			display: block
+	.section-faq__item
+		position: relative
+		margin: 0 0 12px 0
+		border-radius: 16px
+		border: 1px solid rgba(255,255,255,0.1)
+		background: linear-gradient(175deg, #1A3137 0%, rgba(26, 49, 55, 0.40) 100%)
+		cursor: pointer
+		transition: height .2s,opacity .2s
+		overflow: hidden
+		&:hover
+			opacity: 0.8
+			transition: opacity .2s
+		.section-faq__ask
+			display: flex
+			justify-content: space-between
+			padding: 32px 56px 32px 24px
+			color: #fff
+			font-family: Manrope
+			font-size: 20px
+			font-style: normal
+			font-weight: 600
+			line-height: normal
+			@media (max-width: 1000px)
+				padding: 32px 24px
+			@media (max-width: 300px)
+				padding: 16px 16px 16px 16px
+				font-size: 16px
+			&::after
+				content: ""
+				display: block
+				width: 24px
+				height: 24px
+				background-image: url(./images/icon-arrow-down.svg)
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: 100% auto
+				transition: transform .35s
+		&.open .section-faq__ask::after
+			transform: rotate(-180deg)
+		.section-faq__answer
+			display: none
+			padding: 0 56px 32px 24px
+			color: #fff
+			font-weight: 500
+			line-height: 22px
+			@media (max-width: 1000px)
+				padding: 0 24px 24px 24px
+			@media (max-width: 300px)
+				padding: 0 16px 16px 16px

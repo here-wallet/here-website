@@ -387,6 +387,15 @@
     },
     "blogs": [
       {
+        "title": "Weekly score awards",
+        "cover": "https://miro.medium.com/v2/resize:fill:88:88/1*88BViXP3LNYjQNAtO12QVA.png",
+        "tag": "score",
+        "text": "We are excited to introduce our new activity for HERE Wallet users! Every week, you can earn score for specific actions, and the leaders in weekly leaderboard will get rewards in USDT",
+        "timeToRead": "2 min",
+        "date": "05.09.2023",
+        "href": "weekly-score"
+      },
+      {
         "title": "Starbox NFT: Freemint",
         "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg",
         "tag": "NFT",
