@@ -93,7 +93,10 @@ const fetchUser = async () => {
 
   const auth = JSON.parse(localStorage.getItem("account"));
   const account = await here.account(auth.account_id);
-  connectBtn.innerHTML = account.accountId.slice(0, 8) + ".." + account.accountId.slice(-8);
+  connectBtn.innerHTML =
+    account.accountId.length > 16
+      ? account.accountId.slice(0, 8) + ".." + account.accountId.slice(-8)
+      : account.accountId;
 
   const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
 
