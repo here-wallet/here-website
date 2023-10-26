@@ -387,6 +387,15 @@
     },
     "blogs": [
       {
+        "title": "September recap",
+        "cover": "https://cdn-images-1.medium.com/max/1600/0*0uA5qKRB8IVCWRyy",
+        "tag": "recap",
+        "text": "We've gathered the most exciting updates from the month of September to give you a sneak peek into what our team has been working on and what we've accomplished.",
+        "timeToRead": "4 min",
+        "date": "01.10.2023",
+        "href": "september-recap"
+      },
+      {
         "title": "Weekly score awards",
         "cover": "https://miro.medium.com/v2/resize:fill:88:88/1*88BViXP3LNYjQNAtO12QVA.png",
         "tag": "score",

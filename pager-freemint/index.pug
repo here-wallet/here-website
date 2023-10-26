@@ -4,13 +4,13 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		title Aurora is HERE now
-		meta(name="description", content="Get score for using each of AURORA apps below")
+		title Pager Freemint
+		meta(name="description", content="Send money to friends via phone number and get rewards")
 		link(href="style.sass", rel="stylesheet")
-		link(href="http://herewallet.app/binance-waitlist", rel="canonical")
-		meta(property="og:url", content="http://herewallet.app/binance-waitlist")
+		link(href="http://herewallet.app/pager-freemint", rel="canonical")
+		meta(property="og:url", content="http://herewallet.app/pager-freemint")
 		meta(property="og:title", content="Pager Freemint")
-		meta(property="og:description", content="Get score for using each of AURORA apps below")
+		meta(property="og:description", content="Send money to friends via phone number and get rewards")
 		meta(name="format-detection", content="telephone=no")
 		link(href="https://fonts.googleapis.com", rel="preconnect")
 		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
@@ -29,20 +29,29 @@ html(lang="en")
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'G-J76SQ67RJB');
+
 	body
-		.header
-			a(href="https://medium.com/@nearhere/here-binance-connect-and-earn-4-aab88341fe1e",target="_blank").logo
+		.header(style="padding-top:32px")
+			a(href="https://herewallet.app").logo
 				img(src="images/logo-here.svg", alt="Aurora is HERE now")
 			div.btn-connect-wallet Connect wallet
+
+		.support-buttons
+			a(href="https://discord.gg/8Q3gw3gsD2")
+				img(src="../assets/Socials/Discord.svg")
+			a(href="https://t.me/herewalletchat")
+				img(src="../assets/Socials/Telegram.svg")
+
 		.screen-title
 			.screen-title__left
 				h1.title-h1 Pager Freemint
-				.title-prev October, 17-31
+				.title-prev Deadline: 5 November
 			.screen-title__right
 				img.screen-title__img(src='./images/pager-comics.png' alt='Pager Freemint')
+
 		.screen-stock
 			.screen-stock__wrapper
-				.screen-stock_title 9999 pagers in stock
+				.screen-stock_title 10000 pagers in stock
 				.stock-p Mint basic pager and upgrade it to receive better rewards
 				.screen-stock__slider
 					.screen-stock__slider-item
@@ -98,19 +107,17 @@ html(lang="en")
 								img.slider-item_img.slider-item_img_desktop(src='./images/pagers-stock-3.png' alt='Basic')
 								img.slider-item_img.slider-item_img_mobile(src='./images/mint-3.jpg' alt='Basic')
 					
-					
 					.slider-item__pagination
 						.slider-pagination__item.slider-pagination__prev
 						.slider-pagination__item.slider-pagination__next
 
-		.screen-your
+		.screen-your.user
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR
-					span (0.1-0.2 USDT)
+					span (0.1-1 USDT)
 				.screen-your__right
-					img.screen-your__img.screen-your__img_opacity(src='./images/mint-1.jpg' alt='Basic')
-					p Сomplete the mission to mint
+					img.screen-your__img(src='./images/mint-1.jpg' alt='Basic')
 				.screen-your__prev Mission:
 					span Link phone number to mint
 				ul.screen-your__ul
@@ -122,51 +129,55 @@ html(lang="en")
 				.screen-your__send
 					button.screen-your__btn Mint PAGER
 					p You haven’t claimed the pager yet. You can do it now!
-		
+					span.screen-your__error
+
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR
-					span (0.1-0.2 USDT)
+					span (0.1-1 USDT)
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-1.jpg' alt='Basic')
 				.screen-your__prev Upgrade to Pager Pro:
-					span Invite 3 people with phone number transfer
+					span Invite friend with phone number transfer
 				ul.screen-your__ul
 					li
 						span Tips: 
 					li 1. Click “Pay&Transfer”
 					li 2. Click “Use Phone number”
-					li 3. Send money to a friend. Make sure they don’t have HERE account
+					li 3. Send money to a friend which haven't gotten the transfer by number yet
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Pro
 					button.screen-your__btn_transp Sell
-						span Available on Oct, 20
-		.screen-your.user
+						span Available on Nov, 1
+					span.screen-your__error
+
+		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR PRO
-					span (3-5 USDT)
+					span (1-5 USDT)
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-2.jpg' alt='PageR PRO')
 				.screen-your__prev Upgrade to Pager Ultra:
-					span Invite 2 people with phone number transfer
+					span Invite 5 people with phone number transfer
 				ul.screen-your__ul
 					li
 						span Tips: 
 					li 1. Click “Pay&Transfer”
 					li 2. Click “Use Phone number”
-					li 3. Send money to a friend. Make sure they don’t have HERE account
+					li 3. Send money to a friend which haven't gotten the transfer by number yet
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Ultra
 					button.screen-your__btn_transp Sell
-						span Available on Oct, 20
+						span Available on Nov, 1
+					span.screen-your__error
 		
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR ULTRA
-					span (5-9 USDT)
+					span (5-15 USDT)
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-3.jpg' alt='PageR ULTRA')
 				.screen-your__prev Maximum level reached!
@@ -178,6 +189,7 @@ html(lang="en")
 
 				.screen-your__send
 					button.screen-your__btn_transp Sell
+						span Available on Nov, 1
 		
 		.screen-howitwork
 			h2.title-black How it works
