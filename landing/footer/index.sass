@@ -1,23 +1,32 @@
 .footer
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
     padding: 112px 0 82px
-
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 1120px
+        max-width: calc( 100% - 48px )
+        margin: 0 auto 40px auto
+        padding: 0 24px
+        @media (max-width: 1000px)
+            flex-direction: column
+            gap: 24px
 
     &-logo
-        width: 320px
-        height: 73px
+        height: 64px
+        @media (max-width: 400px)
+            height: 40px
 
+    &-socials
+        display: flex
+        gap: 16px
 
     &-mail
         font-weight: 500
         font-size: 16px
-        line-height: 22px
-        text-align: center
+        line-height: 20px
+        text-align: right
         color: #F3EBEA
-        margin-top: 50px
         margin-bottom: 0
         text-decoration: none
 
@@ -25,17 +34,50 @@
     &-terms
         font-weight: 500
         font-size: 16px
-        line-height: 22px
+        line-height: 20px
         text-align: center
-        color: #FD84E3
+        color: #F3EBEA
         text-decoration: none
 
-
-    &-socials
+    &__down
         display: flex
-        gap: 16px
-        margin: 26px 0 42px
-
+        align-items: center
+        justify-content: space-between
+        width: 1120px
+        max-width: calc( 100% - 48px )
+        margin: 0 auto
+        padding: 0 24px
+        gap: 5vw
+        @media (max-width: 1000px)
+            flex-direction: column
+            gap: 24px
+    &-link
+        font-size: 16px
+        font-weight: 500
+        line-height: 1.25
+        color: #F3EBEA
+        text-decoration: none
+    &-download
+        display: inline-block
+        padding: 0 0 0 32px
+        font-size: 16px
+        font-weight: 500
+        line-height: 1.25
+        color: #F3EBEA
+        text-decoration: none
+        background-image: url(../assets/icons/android-logo.svg)
+        background-position: 0 50%
+        background-repeat: no-repeat
+        background-size: 24px auto
+    &__menu
+        display: flex
+        justify-content: space-between
+        flex-grow: 1
+        @media (max-width: 1000px)
+            gap: 24px
+        @media (max-width: 400px)
+            flex-direction: column
+            text-align: center
     & a
         transition: 0.2s opacity
         &:hover

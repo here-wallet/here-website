@@ -262,7 +262,6 @@ body
 		flex-direction: column
 		position: relative
 		width: 561px
-		height: 242px
 		padding: 32px 16px 24px 16px
 		border-radius: 8px
 		border: 1px solid rgba(255, 255, 255, .1)
@@ -337,11 +336,11 @@ body
 	.cart-item:after
 		content: ""
 		display: block
-		width: 180px
-		height: 180px
+		width: 144px
+		height: 144px
 		position: absolute
 		right: 0px
-		bottom: -38px
+		bottom: -30px
 		z-index: 1
 		background-repeat: no-repeat
 		background-size: 100% auto
@@ -349,16 +348,20 @@ body
 			width: 140px
 			height: 140px
 		@media (max-width: 750px)
-			bottom: -28px
+			bottom: -38px
 	.cart-rainbow:after
 		background-image: url(./images/cart-1.svg)
 
-	.cart-aurigami:after
+	.cart-aurora:after
 		background-image: url(./images/cart-2.svg)
 	.cart-trisolaris:after
 		background-image: url(./images/cart-3.svg)
 	.cart-finance:after
 		background-image: url(./images/pipeflare.png)
+	.cart-2048:after
+		background-image: url(./images/cart-3.svg)
+	.cart-meson:after
+		background-image: url(./images/meson.svg)
 
 .connect-wallet
 	display: flex
