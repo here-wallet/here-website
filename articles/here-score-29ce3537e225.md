@@ -30,16 +30,27 @@ Score is a rating of activity in the app. It is attached to an account and canno
 
 ![](https://cdn-images-1.medium.com/max/5760/1*RParAv_olD7IPUSHqRgTbQ.png)
 
-## How to earn a score?
+## What is Weekly Score and how to earn USDT every week?
 
-1. Open [app](https://download.herewallet.app/): **+5** (one per day)
-2. Make swap for $10+: **+25** (one per day)
-3. Start stake 1+ NEAR: **+100**
-4. Invite friend with balance $1+: **+150**
-5. Join #into channel at [discord](https://discord.gg/AfB5cvtFXH) and make into: **+50**
-6. Buy HERE Early NFT:  **+100** for each NFT
+Weekly Score is a unique feature in the HERE wallet where users earn points for using the wallet. To receive USDT at the end of the week, you need to rank among the top users eligible for rewards
 
-More usecases soon
+## How to earn score?
+
+To earn score points, you need to complete missions. You can view missions at Profile -> All Missions. You can track your position at Profile -> Global Ranking.
+
+![](https://cdn-images-1.medium.com/max/880/1*plk-cQor0cf0tvy_56MGcQ.png)
+
+The wallet offers diverse missions suitable for both regular holders and advanced DeFi users. Some missions are passive and are completed simply by using the HERE wallet, such as Staking, Daily Open, and Swap. This not only makes using the NEAR Protocol convenient but also profitable.
+
+## When does a new week start?
+
+Each new week starts on Monday at 9:00 AM UTC.
+
+## How to claim USDT?
+
+At the end of each weekly score event, if you are among the top users, you will see a banner in the wallet. Click the Claim button, and USDT will be automatically deposited into your address.
+
+![](https://cdn-images-1.medium.com/max/800/1*Xch3pYRUfczhYS-oRATMfQ.jpeg)
 
 
 Join our community:
