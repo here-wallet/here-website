@@ -1,12 +1,10 @@
 ---
-
-title: Starbox NFT: Freemint
+title: "Starbox NFT: Freemint"
 cover: https://storage.herewallet.app/media/freemint.png
 tag: NFT
 text: In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.
 timeToRead: 3 min
 date: 24.08.2023
-
 ---
 
 In celebration of the largest conference in Asia, **NEAR APAC**, we have prepared a collection of 10,000 Starboxes.
