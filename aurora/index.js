@@ -24,7 +24,7 @@ const renderMission = (item) => {
 const fetchUser = async () => {
   connectBtn.innerHTML = "Connect wallet";
 
-  let url = `https://dev.herewallet.app/partners/aurora/missions`;
+  let url = `https://api.herewallet.app/partners/aurora/missions`;
   try {
     const auth = JSON.parse(localStorage.getItem("account"));
     const account = await here.account(auth.account_id);
@@ -33,7 +33,7 @@ const fetchUser = async () => {
         ? account.accountId.slice(0, 8) + ".." + account.accountId.slice(-8)
         : account.accountId;
 
-    url = `https://dev.herewallet.app/partners/aurora/missions?account_id=${auth.account_id}`;
+    url = `https://api.herewallet.app/partners/aurora/missions?account_id=${auth.account_id}`;
   } catch {}
 
   const res = await fetch(url, { headers: { "Content-Type": "application/json" }, method: "GET" });
