@@ -19,7 +19,7 @@ const renderMission = (item) => {
       <button>+${item.score}</button>
     </div>
     <img class="logo" src="${item.image_url}" />
-  </a>`;
+  ${isDisabled ? "</div>" : "</a>"}`;
 };
 
 const fetchUser = async () => {
