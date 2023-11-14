@@ -177,6 +177,10 @@ body
 				font-size: 32px
 				line-height: 36px
 	.welcome__second
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: 16px
 		margin: 0 0 12px 0
 		text-align: center
 		font-feature-settings: 'liga' off
@@ -191,12 +195,18 @@ body
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
 		@media (max-width: 750px)
+			gap: 8px
 			font-size: 44px
 			line-height: 48px
 			letter-spacing: 0.44px
 		@media (max-width: 300px)
 			font-size: 32px
 			line-height: 36px
+		img
+			width: 82px
+			@media (max-width: 750px)
+				width: 52px
+
 	.welcome__third
 		margin: 0 0 40px 0
 		color: rgba(243, 235, 234, 0.8)

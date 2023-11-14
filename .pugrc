@@ -400,7 +400,7 @@
         "cover": "https://cdn-images-1.medium.com/max/1600/0*0uA5qKRB8IVCWRyy",
         "tag": "recap",
         "text": "We've gathered the most exciting updates from the month of September to give you a sneak peek into what our team has been working on and what we've accomplished.",
-        "timeToRead": "4 min",
+        "timeToRead": "5 min",
         "date": "01.10.2023",
         "href": "september-recap"
       },
@@ -415,7 +415,7 @@
       },
       {
         "title": "Starbox NFT: Freemint",
-        "cover": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LhMQ63BVAz7x5cwvxooPw.jpeg",
+        "cover": "https://storage.herewallet.app/media/freemint.png",
         "tag": "NFT",
         "text": "In celebration of the largest conference in Asia, NEAR APAC, we have prepared a collection of 10,000 Starboxes.",
         "timeToRead": "3 min",
@@ -489,7 +489,7 @@
         "cover": "https://cdn-images-1.medium.com/max/5760/1*RParAv_olD7IPUSHqRgTbQ.png",
         "tag": "wallet",
         "text": "In this article, we’ll explain in detail what SCORE is, how to get it, and why you need it",
-        "timeToRead": "3 min",
+        "timeToRead": "5 min",
         "date": "03.06.2023",
         "href": "here-score-29ce3537e225"
       },
