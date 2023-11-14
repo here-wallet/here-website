@@ -17,7 +17,7 @@ Score is a rating of activity in the app. It is attached to an account and canno
 
 1. **Private features**. New features are unlocked in the app after reaching the score threshold. You can earn USDT and get gifts for the found bugs.
 
-2. **+APY**. The more score, the more profit you get from staking. Up to 10.2% per annum!
+2. **+APY**. The more score, the more profit you get from staking. Up to 8.8% per annum!
 
 3. **Cashback**. Users with score higher than 2500 can do gas free transactions between friends, get cashback for swaps, and purchase of some NFTs.
 
