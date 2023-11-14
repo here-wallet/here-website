@@ -9,8 +9,9 @@ const connectBtn = document.querySelector(".btn-connect-wallet");
 const renderMission = (item) => {
   const isDisabled = item.status === 0 ? "disabled" : "";
   const isSuccess = item.status === 2 ? "success" : "";
+  const href = isDisabled ? "<div " : `<a href="${item.link}"`;
 
-  return `<a  href="${item.link}" class="cart-rainbow cart-item ${isDisabled} ${isSuccess}">
+  return `${href} class="cart-rainbow cart-item ${isDisabled} ${isSuccess}">
     <div class="cart-title">${item.title}</div>
     <div class="cart-description">${item.description.replaceAll("\n", "<br />")}</div>
     <div class="cart-transaction">
