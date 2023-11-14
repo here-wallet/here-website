@@ -35,11 +35,8 @@ button
 		padding: 0
 		border: 0
 a
-	text-decoration: none
-	&:visited
-		text-decoration: none
-	&:hover
-		text-decoration: none
+	color: inherit
+	font-weight: bold
 
 ul
 	li
@@ -244,7 +241,7 @@ body
 			margin: 0 0 64px 0
 			font-size: 18px
 			line-height: 24px
-	
+
 .cart-section
 	display: flex
 	flex-wrap: wrap
@@ -312,7 +309,7 @@ body
 				line-height: 1.25
 			button
 				display: inline-block
-				padding: 4px 8px 4px 30px
+				padding: 4px 8px 4px 28px
 				border-radius: 8px
 				border: 1px solid #2C3034
 				background-color: #fdbf1e
@@ -320,7 +317,11 @@ body
 				background-image: url(./images/icon-union.svg)
 				background-repeat: no-repeat
 				background-position: 4px 50%
-	
+				background-size: 18px
+
+	.cart-item.disabled
+		opacity: 0.5
+
 	.cart-item:before
 		content: ""
 		display: block
@@ -333,14 +334,15 @@ body
 		background-repeat: no-repeat
 		background-size: 24px auto
 		opacity: .8
-	.cart-item:after
-		content: ""
+
+	.cart-item .logo
 		display: block
 		width: 144px
 		height: 144px
 		position: absolute
+		object-fit: contain
 		right: 0px
-		bottom: -30px
+		bottom: -24px
 		z-index: 1
 		background-repeat: no-repeat
 		background-size: 100% auto
@@ -348,20 +350,7 @@ body
 			width: 140px
 			height: 140px
 		@media (max-width: 750px)
-			bottom: -38px
-	.cart-rainbow:after
-		background-image: url(./images/cart-1.svg)
-
-	.cart-aurora:after
-		background-image: url(./images/cart-2.svg)
-	.cart-trisolaris:after
-		background-image: url(./images/cart-3.svg)
-	.cart-finance:after
-		background-image: url(./images/pipeflare.png)
-	.cart-2048:after
-		background-image: url(./images/cart-3.svg)
-	.cart-meson:after
-		background-image: url(./images/meson.svg)
+			bottom: -24px
 
 .connect-wallet
 	display: flex

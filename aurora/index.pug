@@ -30,8 +30,8 @@ html(lang="en")
 			gtag('js', new Date());
 			gtag('config', 'G-J76SQ67RJB');
 	body
-		.header
-			a(href="https://medium.com/@nearhere/here-binance-connect-and-earn-4-aab88341fe1e",target="_blank").logo
+		.header(style="padding-top: 32px")
+			a(href="https://www.herewallet.app",target="_blank").logo
 				img(src="images/logo-aurora.svg", alt="Aurora is HERE now")
 			a(href="#faq").menu__faq FAQ
 			div.btn-connect-wallet Connect wallet
@@ -83,22 +83,49 @@ html(lang="en")
 					p First transaction:
 					button + 50
 
-		.connect-wallet
-			.connect-wallet__title scan from <span>HERE wallet</span> to claim score
-			.connect-wallet__qr
-		
 		.section-faq#faq
 			.section-faq__title In case you <span>missed anything.</span>
 			.section-faq__item
+				.section-faq__ask What is Aurora?
+				.section-faq__answer Aurora is an Ethereum-compatible platform built on the Near Protocol that solves the speed and scalability problems of Ethereum.
+			
+			.section-faq__item
+				.section-faq__ask How to add the Aurora network to the HERE wallet
+				.section-faq__answer Open “Settings” -> “Chains connected” -> Tap on “Aurora” -> 
+					br 
+					| Create a new account or import an existing account using a seed phrase or private key.
+			
+			.section-faq__item
+				.section-faq__ask Which token to use for Aurora network fees
+				.section-faq__answer The base token for paying fees on the Aurora network is ETH (within the Aurora network). 
+					br 
+					| Although fees are paid in ETH, they typically range from $0.02 to $0.05.
+			
+			.section-faq__item
+				.section-faq__ask How to top up ETH on the Aurora network for fee payments
+				.section-faq__answer 
+					| 1) Exchange NEAR (or any other token) for ETH within HERE wallet.
+					br
+					| 2) Connect to the 
+					a(href="https://rainbowbridge.app/transfer") Rainbow Bridge
+					|  on the Aurora and Near networks.
+					br
+					| 3) Initiate an ETH transfer to the Aurora network.
+
+			.section-faq__item
 				.section-faq__ask What is score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__answer The Score is a unique system where users earn points for completing various tasks within the HERE wallet, and at the end of the week, users receive USDT. 
+					a(href="https://www.herewallet.app/blog/here-score-29ce3537e225") Read full information here
+
 			.section-faq__item
-				.section-faq__ask What is the biggest prize?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__ask How to earn Score
+				.section-faq__answer Complete tasks on the website and those available within the HERE wallet, and the points will be credited automatically.
+				
 			.section-faq__item
-				.section-faq__ask When I get score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
-			.section-faq__item
-				.section-faq__ask How to get more score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__ask What should I do if I complete a task but don't receive any points
+				.section-faq__answer You should reach out to our technical support on Telegram at 
+					a(href="https://t.me/heresupport") @heresupport 
+					| or open a ticket in 
+					a(href="https://discord.com/invite/UBSDVmJYTp") our Discord channel
+
 		script(type="module", src="index.js")
