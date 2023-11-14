@@ -3,7 +3,7 @@ title: September recap
 cover: https://cdn-images-1.medium.com/max/1600/0*0uA5qKRB8IVCWRyy
 tag: recap
 text: We've gathered the most exciting updates from the month of September to give you a sneak peek into what our team has been working on and what we've accomplished.
-timeToRead: 4 min
+timeToRead: 5 min
 date: 01.10.2023
 -----
 
