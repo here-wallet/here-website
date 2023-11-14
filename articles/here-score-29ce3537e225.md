@@ -3,7 +3,7 @@ title: "HERE: Score"
 cover: https://cdn-images-1.medium.com/max/5760/1*RParAv_olD7IPUSHqRgTbQ.png
 tag: wallet
 text: In this article, we’ll explain in detail what SCORE is, how to get it, and why you need it
-timeToRead: 3 min
+timeToRead: 5 min
 date: 03.06.2023
 -----
 
@@ -15,11 +15,11 @@ Score is a rating of activity in the app. It is attached to an account and canno
 
 ## What gives a high score?
 
-1. **Private features**. New features are unlocked in the app after reaching the score threshold. You can earn USDT and get gifts for the found bugs
+1. **Private features**. New features are unlocked in the app after reaching the score threshold. You can earn USDT and get gifts for the found bugs.
 
 2. **+APY**. The more score, the more profit you get from staking. Up to 10.2% per annum!
 
-3. **Cashback**. Users with score higher than 2500 can do gas free transactions between friends, get cashback for swaps, and purchase of some NFTs
+3. **Cashback**. Users with score higher than 2500 can do gas free transactions between friends, get cashback for swaps, and purchase of some NFTs.
 
 **Levels:**
 
@@ -48,3 +48,4 @@ Join our community:
 > [**Telegram**](https://t.me/herewallet)
 > [**Telegram chat**](https://t.me/herewalletchat)
 > [**Medium**](https://medium.com/@nearhere)
+> [**Near Social**](https://near.social/mob.near/widget/ProfilePage?accountId=mm.herewallet.near)
