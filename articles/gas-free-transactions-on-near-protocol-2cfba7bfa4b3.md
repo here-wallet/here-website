@@ -32,7 +32,7 @@ In addition, even though HERE RPC pays for gas, it cannot under any circumstance
 
 1. **Simplification of the user experience**: Paying for gas can be complicated for unprepared users, especially if the cost of gas fluctuates. HERE Wallet simplifies this process by automatically paying for the gas on behalf of the user.
 
-1. **Support for economic inclusion: **Some users may experience difficulties in acquiring cryptocurrency due to geographical or economic barriers.
+1. **Support for economic inclusion:** Some users may experience difficulties in acquiring cryptocurrency due to geographical or economic barriers.
 
 **Autor**: [Petr Volnov](https://twitter.com/p_volnov)
 
