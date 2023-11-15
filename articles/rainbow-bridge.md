@@ -1,10 +1,10 @@
 -----
 title: How to transfer tokens from NEAR to Aurora
-cover: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*BM1NH_ZiV3rwPCHwR4EKmQ.png
+cover: https://cdn-images-1.medium.com/max/880/1*Nrvviqo1UwTc4HrEAdlBbw.png
 tag: Tutorial
 text: HERE wallet has added support for the first EMV network - Aurora. In this guide, you will learn how to add the Aurora network and transfer tokens from the NEAR to the Aurora.
 timeToRead: 2 min
-date: 15.11.2023
+date: 16.11.2023
 -----
 
 
@@ -20,7 +20,7 @@ First, you need to add Aurora network to your HERE wallet. You can either import
 
 Token transfers are done through the [Rainbow Bridge](https://rainbowbridge.app/transfer). The Rainbow Bridge is the official bridge for transferring tokens between the Ethereum, NEAR and Aurora blockchains. 
 
-To initiate the transfer, you need to connect your HERE wallet to the [https://rainbowbridge.app/transfer](https://rainbowbridge.app/transfer) website in the NEAR network.
+To make the transfer, you need to connect your HERE wallet to the [https://rainbowbridge.app/transfer](https://rainbowbridge.app/transfer) website in the NEAR network.
 
 ![](https://cdn-images-1.medium.com/max/880/1*y3luADIQbUSGO3CJYigOug.png)
 
