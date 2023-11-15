@@ -36,11 +36,11 @@ Weekly Score is a unique feature in the HERE wallet where users earn points for 
 
 ## How to earn score?
 
-To earn score points, you need to complete missions. You can view missions at Profile -> All Missions. You can track your position at Profile -> Global Ranking.
+To earn score points, you need to complete missions. You can view missions at Profile -> All missions. You can track your position at Profile -> Global ranking.
 
 ![](https://cdn-images-1.medium.com/max/880/1*plk-cQor0cf0tvy_56MGcQ.png)
 
-The wallet offers diverse missions suitable for both regular holders and advanced DeFi users. Some missions are passive and are completed simply by using the HERE wallet, such as Staking, Daily Open, and Swap. This not only makes using the NEAR Protocol convenient but also profitable.
+The wallet offers diverse missions suitable for both regular holders and advanced DeFi users. Some missions are passive and are completed simply by using HERE wallet, such as Staking, Daily Open, and Swap. This not only makes using the NEAR Protocol convenient but also profitable.
 
 ## When does a new week start?
 
