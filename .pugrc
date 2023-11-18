@@ -387,6 +387,15 @@
     },
     "blogs": [
       {
+        "title": "How to transfer tokens from NEAR to Aurora",
+        "cover": "https://cdn-images-1.medium.com/max/880/1*Nrvviqo1UwTc4HrEAdlBbw.png",
+        "tag": "Tutorial",
+        "text": "HERE wallet has added support for the first EMV network - Aurora. In this guide, you will learn how to add the Aurora network and transfer tokens from the NEAR to the Aurora.",
+        "timeToRead": "2 min",
+        "date": "16.11.2023",
+        "href": "rainbow-bridge"
+      },
+      {
         "title": "USDT vs USDTe",
         "cover": "https://cdn-images-1.medium.com/max/1600/0*TyfUNnvRWu8drfaE",
         "tag": "wiki",
@@ -471,7 +480,7 @@
         "cover": "https://cdn-images-1.medium.com/max/5760/1*Tv5Iw-O9Xv6s1egcBja08w.jpeg",
         "tag": "near",
         "text": "Gas fees represent the charge that users must pay for processing their transactions on the blockchain. But what if there was a way to do transactions without paying for gas?",
-        "timeToRead": "5 min",
+        "timeToRead": "4 min",
         "date": "03.07.2023",
         "href": "gas-free-transactions-on-near-protocol-2cfba7bfa4b3"
       },

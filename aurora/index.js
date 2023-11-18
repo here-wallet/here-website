@@ -10,15 +10,16 @@ const renderMission = (item) => {
   const isDisabled = item.status === 0 ? "disabled" : "";
   const isSuccess = item.status === 2 ? "success" : "";
   const href = isDisabled ? "<div " : `<a href="${item.link}"`;
+  const style = item.title === "Aurora.Plus" ? "bottom:-16px;right: -14px;" : "";
 
   return `${href} class="cart-rainbow cart-item ${isDisabled} ${isSuccess}">
     <div class="cart-title">${item.title}</div>
     <div class="cart-description">${item.description.replaceAll("\n", "<br />")}</div>
     <div class="cart-transaction">
       <p>${item.score_description}:</p>
-      <button>+${item.score}</button>
+      ${isSuccess ? `<button class="success">Completed</button>` : `<button>+${item.score}</button>`}
     </div>
-    <img class="logo" src="${item.image_url}" />
+    <img class="logo" style="${style}" src="${item.image_url}" />
   ${isDisabled ? "</div>" : "</a>"}`;
 };
 
