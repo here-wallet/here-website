@@ -15,10 +15,12 @@
         justify-content: space-between
         position: relative
         box-sizing: border-box
-        gap: 38px
+        gap: 40px 62px
+        @media (max-width: 1160px)
+            justify-content: center
+            gap: 40px
         a
             display: inline-block
-            margin: 0 0 30px 0
     &-wrap
         display: flex
         gap: 12px
@@ -46,90 +48,9 @@
         object-position: center
         display: block
     
-    &_1 img
-        width: 185px
-        height: auto
-    &_2 img
-        width: 112px
-        height: auto
-    &_3 img
-        width: 244px
-        height: auto
-    &_4 img
-        width: 148px
-        height: auto
-    &_5 img
-        width: 116px
-        height: auto
-    &_6 img
-        width: 158px
-        height: auto
-    &_7 img
-        width: 145px
-        height: auto
-    &_8 img
-        width: 179px
-        height: auto
-    &_9 img
-        width: 204px
-        height: auto
-    &_10 img
-        width: 208px
-        height: auto
-    &_11 img
-        width: 254px
-        height: auto
-    &_12 img
-        width: 180px
-        height: auto
-    &_13 img
-        width: 125px
-        height: auto
     @media (max-width: 1160px)
         &-group
             padding: 72px 72px 22px 72px
-        &_1 img
-            width: 148px
-        &_2 img
-            width: 90px
-        &_3 img
-            width: 195px
-        &_4 img
-            width: 118px
-        &_5 img
-            width: 93px
-        &_6 img
-            width: 148px
-        &_7 img
-            width: 120px
-            margin-left: 20px
-            margin-right: 20px
-        &_8 img
-            width: 150px
-            margin-left: 20px
-            margin-right: 20px
-        &_9 img
-            width: 163px
-        &_10 img
-            width: 176px
-        &_11 img
-            width: 203px
-        &_12 img
-            width: 144px
-        &_13 img
-            width: 100px
-
-    @media (max-width: 800px)
-        &_7 img
-            margin-left: 0
-            margin-right: 0
-        &_8 img
-            margin-left: 0
-            margin-right: 0
-        &_10 img
-            width: 172px
-        &_11 img
-            width: 200px
 
     @media (max-width: 500px)
         &-group
@@ -139,57 +60,3 @@
                 margin: 0 0 12px 0
                 img
                     width: 100% !important
-            
-        &_1
-            width: calc(25% - 18px)
-        &_2
-            width: calc(25% - 18px)
-        &_3
-            width: calc(25% - 18px)
-        &_4
-            width: calc(25% - 18px)
-        &_5
-            width: calc(25% - 18px)
-        &_6
-            width: calc(25% - 18px)
-        &_7
-            width: calc(25% - 18px)
-        &_8
-            width: calc(25% - 18px)
-        &_9
-            width: calc(25% - 18px)
-        &_10
-            width: calc(25% - 18px)
-        &_11
-            width: calc(25% - 18px)
-        &_12
-            width: calc(25% - 18px)
-        &_13
-            width: calc(25% - 18px)
-    @media (max-width: 400px)
-        &_1
-            width: calc(38% - 18px)
-        &_2
-            width: calc(23% - 18px)
-        &_3
-            width: calc(38% - 18px)
-        &_4
-            width: calc(35% - 18px)
-        &_5
-            width: calc(28% - 18px)
-        &_6
-            width: calc(36% - 18px)
-        &_7
-            width: calc(33% - 24px)
-        &_8
-            width: calc(33% - 18px)
-        &_9
-            width: calc(33% - 18px)
-        &_10
-            width: calc(33% - 18px)
-        &_11
-            width: calc(33% - 18px)
-        &_12
-            width: calc(33% - 18px)
-        &_13
-            width: calc(28% - 18px)

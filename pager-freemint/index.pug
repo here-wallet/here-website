@@ -34,7 +34,19 @@ html(lang="en")
 		.header(style="padding-top:32px")
 			a(href="https://herewallet.app").logo
 				img(src="images/logo-here.svg", alt="Aurora is HERE now")
-			div.btn-connect-wallet Connect wallet
+			.follow-us
+				.follow-us__title Follow us:
+				.follow-us__ul
+					a(href="https://twitter.com/here_wallet", target="_blank").follow-us__li
+						img(src="./images/twit.svg")
+					a(href="https://t.me/herewallet", target="_blank").follow-us__li
+						img(src="./images/teleg.svg")
+					a(href="https://discord.gg/8Q3gw3gsD2", target="_blank").follow-us__li
+						img(src="./images/discord.svg")
+					a(href="https://www.instagram.com/here_wallet/", target="_blank").follow-us__li
+						img(src="./images/insta.svg")
+
+			.btn-connect-wallet Connect wallet
 
 		.support-buttons
 			a(href="https://discord.gg/8Q3gw3gsD2")
@@ -46,6 +58,11 @@ html(lang="en")
 			.screen-title__left
 				h1.title-h1 Pager Freemint
 				.title-prev Deadline: 5 November
+				a(href="https://t.me/herewalletchat", target="_blank").title-link Freemint tutorial
+				.backed-by
+					.backed-by__title Backed by
+					img(src="./images/big-brains.png").backed-by__brain
+					img(src="./images/near-foundation.svg").backed-by__near
 			.screen-title__right
 				img.screen-title__img(src='./images/pager-comics.png' alt='Pager Freemint')
 
@@ -60,40 +77,43 @@ html(lang="en")
 								h3.h3-basic Basic
 								.slider-item__table
 									.slider-item__table-list
-										.slider-item__table-list_left Prize
-										.slider-item__table-list_right 0.1-0.2 USDT
+										.slider-item__table-list_left Current Price
+											.tooltip-container
+												span.tooltip-trigger
+												.tooltip This is a tooltip text
+										.slider-item__table-list_right ≈ 2 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Amount
-										.slider-item__table-list_right 10000
+										.slider-item__table-list_left Min. Price
+										.slider-item__table-list_right 0.2 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Score
-										.slider-item__table-list_right 5/Transfer
+										.slider-item__table-list_left Minted
+										.slider-item__table-list_right 1234/10000
 
 							.slider-item__left
 								h3.h3-pro PRO
 								.slider-item__table
 									.slider-item__table-list
-										.slider-item__table-list_left Prize
-										.slider-item__table-list_right 2-3 USDT
+										.slider-item__table-list_left Current Price
+										.slider-item__table-list_right ≈ 20 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Amount
-										.slider-item__table-list_right 2500
+										.slider-item__table-list_left Min. Price
+										.slider-item__table-list_right 2 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Score
-										.slider-item__table-list_right 15/Transfer
+										.slider-item__table-list_left Minted
+										.slider-item__table-list_right 234/1000
 
 							.slider-item__left
 								h3.h3-ultra ULTRA
 								.slider-item__table
 									.slider-item__table-list
-										.slider-item__table-list_left Prize
-										.slider-item__table-list_right 5-20 USDT
+										.slider-item__table-list_left Current Price
+										.slider-item__table-list_right ≈ 40 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Amount
-										.slider-item__table-list_right 500
+										.slider-item__table-list_left Min. Price
+										.slider-item__table-list_right 2 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Score
-										.slider-item__table-list_right 35/Transfer
+										.slider-item__table-list_left Minted
+										.slider-item__table-list_right 34/250
 						.slider-item__slide-images
 							.slider-item__right.active
 								img.slider-item_img.slider-item_img_desktop(src='./images/pagers-stock-1.png' alt='Basic')
@@ -212,22 +232,22 @@ html(lang="en")
 						img.screen-earnmore_main-img(src='./images/earn-more-1.png' alt='Weekly Score')
 						.screen-earnmore__usdt 40
 							img.screen-earnmore_img-icon(src='./images/earn-more-t.png' alt='40 USDT')
-					h3 Weekly Score
+					h3 Weekly<br /> Score
 					p Every week top 100 users by score grow get 0.5-40 USDT
 				.screen-earnmore__column
 					.screen-earnmore__img
 						img.screen-earnmore_main-img(src='./images/earn-more-2.png' alt='cashback for transfer')
-						.screen-earnmore__usdt 1.5
+						.screen-earnmore__usdt 0.2
 							img.screen-earnmore_img-icon(src='./images/earn-more-t.png' alt='1.5 USDT')
-					h3 cashback for transfer
-					p You receive 1.5 USDT cashback for each transfer by phone number
+					h3 cashback<br /> for transfer
+					p You receive 0.2 USDT cashback for each transfer by phone number
 				.screen-earnmore__column
 					.screen-earnmore__img
 						img.screen-earnmore_main-img(src='./images/earn-more-3.png' alt='Refferal program')
-						.screen-earnmore__usdt 2
+						.screen-earnmore__usdt 1
 							img.screen-earnmore_img-icon(src='./images/earn-more-t.png' alt='2 USDT')
-					h3 Refferal program
-					p You receive 2 USDT for each invited friend who connected binance account
+					h3 Refferal<br /> program
+					p You receive 1 USDT for each invited friend who connected binance account
 		
 		.section-faq#faq
 			.section-faq__title In case you <span>missed anything</span>
