@@ -114,9 +114,9 @@
       ]
     },
     "main": {
-      "title": "Make Binance",
-      "subTitle": "Safe and simple",
-      "textTitle": "Keep money safe and use Binance via HERE app when you really need it",
+      "title": "One wallet",
+      "subTitle": "You only need",
+      "textTitle": "Connect your hardware wallets, centralized exchanges and EVM accounts to use crypto assets in the best way possible",
       "qrcode": "/assets/QR/qr.gold.svg",
       "qrcodeLocale": "Scan to start HERE",
       "poweredbynear": "Powered by NEAR Protocol",
@@ -125,15 +125,15 @@
     "interface": [
       {
         "title": "First screen",
-        "image": "/assets/Screens/interface-1.png"
+        "image": "/assets/Screens/interface-1-2.png"
       },
       {
         "title": "Second screen",
-        "image": "/assets/Screens/interface-2.png"
+        "image": "/assets/Screens/interface-2-2.png"
       },
       {
         "title": "Third screen",
-        "image": "/assets/Screens/interface-3.png"
+        "image": "/assets/Screens/interface-3-2.png"
       }
     ],
     "floatqr": {
@@ -142,54 +142,94 @@
     },
     "features": [
       {
-        "title": "More safety",
+        "title": "Make it easy",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
-          "/assets/sliders/1-1news.png",
-          "/assets/sliders/1-2news.png",
-          "/assets/sliders/1-3news.png"
+          "/assets/sliders/mie-1.png",
+          "/assets/sliders/mie-2.png",
+          "/assets/sliders/mie-3.png"
         ],
         "items": [
-          "Keep seed phrase localy",
-          "Deposit money to Binance only when you need it",
-          "No more blockages or restrictions"
+          "Connect Binance, Hito, Ledger, EVM accounts",
+          "Move money between Ledger, Binance and your wallets in one click",
+          "Make crosschain transfers via your Binance account and save money on bridge fees"
         ]
       },
       {
-        "title": "More profit",
+        "title": "Save money",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
-          "/assets/sliders/2-1.png",
-          "/assets/sliders/2-2.png",
-          "/assets/sliders/2-3.png"
+          "/assets/sliders/sm-1.png",
+          "/assets/sliders/sm-2.png"
         ],
         "items": [
-          "0% staking fees",
-          "Get cashback for swaps via HERE",
-          "Gas-free payments between friends"
+          "Gas-free USDT* transfers",
+          "Free transfers by phone number",
+          "Withdraw stablecoins from Binance without 1$ fees"
         ]
       },
       {
-        "title": "More fancy",
+        "title": "Earn money",
         "moreLink": "https://appstore.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
-          "/assets/sliders/3-1.png",
-          "/assets/sliders/3-2.png",
-          "/assets/sliders/3-3.png"
+          "/assets/sliders/em-1.png",
+          "/assets/sliders/em-2.png",
+          "/assets/sliders/em-3.png"
         ],
         "items": [
-          "Earn social score for payments",
-          "Unlock features for your friends",
-          "Flex your NFTS and portfolio"
+          "Best routes for swaps on centralized and decentralized exchanges",
+          "Liquid staking with 0% instant withdrawal fee",
+          "Weekly giveaway of up to $250 for active app users"
         ]
       }
     ],
+    "oneplaces": {
+      "title": "One place for your crypto",
+      "items": [
+        {
+          "alt": "Logo Hito",
+          "image": "/assets/logos/logo-hito.png"
+        },
+        {
+          "alt": "Logo Ledger",
+          "image": "/assets/logos/logo-ledger.png"
+        },
+        {
+          "alt": "Logo Binance",
+          "image": "/assets/logos/logo-binance.png"
+        },
+        {
+          "alt": "Logo Near",
+          "image": "/assets/logos/logo-near.png"
+        },
+        {
+          "alt": "Logo Aurora",
+          "image": "/assets/logos/logo-aurora.png"
+        },
+        {
+          "alt": "Logo Etherium",
+          "image": "/assets/logos/logo-etherium.png"
+        },
+        {
+          "alt": "Logo Polygon",
+          "image": "/assets/logos/logo-polygon.png"
+        },
+        {
+          "alt": "Logo BNB-Chain",
+          "image": "/assets/logos/logo-bnb-chain.png"
+        },
+        {
+          "alt": "Logo Tron",
+          "image": "/assets/logos/logo-tron.png"
+        }
+      ]
+    },
     "news": {
       "title": "The latest news HERE",
       "items": [

@@ -211,3 +211,22 @@ document.addEventListener("DOMContentLoaded", function () {
   leftSlides[currentSlide].classList.add("active");
   rightSlides[currentSlide].classList.add("active");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tooltipContainer = document.querySelectorAll(".tooltip-container");
+  var tooltipTrigger = document.querySelectorAll(".tooltip-trigger");
+  
+  if (tooltipTrigger) {
+    tooltipTrigger.addEventListener('click', function() {
+      tooltipContainer.classList.toggle("clicked");
+    });
+    tooltipTrigger.addEventListener("mouseover", function() {
+      tooltipContainer.classList.add("mouseover");
+    });
+
+    tooltipTrigger.addEventListener("mouseout", function() {
+      tooltipContainer.classList.remove("mouseover");
+    });
+  }
+
+});
