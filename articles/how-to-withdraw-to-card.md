@@ -1,14 +1,15 @@
 ---
 
 title: How to Withdraw USDT to Your Bank Account?
-cover: ""
+cover: https://cdn-images-1.medium.com/max/2320/1*CeH0hw0NMCdgmYIXlXKgFw.png
 tag: Tutorial
-text: """There are three main ways to withdraw USDT or any cryptocurrency:
+date: 25.11.2023
+text: "There are three main ways to withdraw USDT or any cryptocurrency:
 
 1. Direct withdrawal from an exchange to your card.
 2. Using a peer-to-peer (P2P) service on an exchange.
    timeToRead: 7 min
-   date: 24.11.2023"""
+   date: 24.11.2023"
 
 ---
 

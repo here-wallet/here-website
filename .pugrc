@@ -427,6 +427,14 @@
     },
     "blogs": [
       {
+        "title": "How to Withdraw USDT to Your Bank Account?",
+        "cover": "https://cdn-images-1.medium.com/max/2320/1*CeH0hw0NMCdgmYIXlXKgFw.png",
+        "tag": "Tutorial",
+        "date": "25.11.2023",
+        "text": "There are three main ways to withdraw USDT or any cryptocurrency:\n1. Direct withdrawal from an exchange to your card. 2. Using a peer-to-peer (P2P) service on an exchange. timeToRead: 7 min date: 24.11.2023",
+        "href": "how-to-withdraw-to-card"
+      },
+      {
         "title": "How to transfer tokens from NEAR to Aurora",
         "cover": "https://cdn-images-1.medium.com/max/880/1*Nrvviqo1UwTc4HrEAdlBbw.png",
         "tag": "Tutorial",
