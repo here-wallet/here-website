@@ -11,32 +11,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
 
-    - name: Install dependencies
-      run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
-    - name: Build articles
-      run: node blog-builder.js
+      - name: Build articles
+        run: node blog-builder.js
 
-    - name: Build
-      run: yarn build
+      - name: Build
+        run: yarn build
 
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
+      - name: Clean cache
+        run: rm -rf .parcel-cache
+
+      - name: Build Pager
+        run: yarn build:pager
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: SCP files
-      run: |
-        scp -o StrictHostKeyChecking=no -r ./howto/* fedor@web.herewallet.app:/var/www/here/www/howto
-        scp -o StrictHostKeyChecking=no -r ./privacypolicy/* fedor@web.herewallet.app:/var/www/here/www/privacypolicy
-        scp -o StrictHostKeyChecking=no -r ./nft/* fedor@web.herewallet.app:/var/www/here/www/nft
-        scp -o StrictHostKeyChecking=no -r ./dist/* fedor@web.herewallet.app:/var/www/here/www
-        scp -o StrictHostKeyChecking=no -r ./dist/landing/* fedor@web.herewallet.app:/var/www/here/www
+      - name: SCP files
+        run: |
+          scp -o StrictHostKeyChecking=no -r ./dist-pager/* fedor@web.herewallet.app:/var/www/here/pager
+          scp -o StrictHostKeyChecking=no -r ./howto/* fedor@web.herewallet.app:/var/www/here/www/howto
+          scp -o StrictHostKeyChecking=no -r ./privacypolicy/* fedor@web.herewallet.app:/var/www/here/www/privacypolicy
+          scp -o StrictHostKeyChecking=no -r ./nft/* fedor@web.herewallet.app:/var/www/here/www/nft
+          scp -o StrictHostKeyChecking=no -r ./dist/* fedor@web.herewallet.app:/var/www/here/www
+          scp -o StrictHostKeyChecking=no -r ./dist/landing/* fedor@web.herewallet.app:/var/www/here/www

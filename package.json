@@ -5,6 +5,7 @@
   },
   "scripts": {
     "articles": "node blog-builder.js",
+    "build:pager": "parcel build ./pager/index.pug --dist-dir dist-pager",
     "build": "parcel build ./blog/*.html ./stream/index.pug ./binance-waitlist/index.pug ./aurora/index.pug ./pager/index.pug ./pager-freemint/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug ./mint/index.pug",
     "parcel:watch": "parcel ./blog/*.html ./stream/index.pug ./binance-waitlist/index.pug ./aurora/index.pug ./pager/index.pug ./pager-freemint/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug ./mint/index.pug",
     "start": "concurrently --kill-others \"yarn parcel:watch\" \"npm-watch\""
