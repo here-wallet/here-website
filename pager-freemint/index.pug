@@ -57,7 +57,7 @@ html(lang="en")
 		.screen-title
 			.screen-title__left
 				h1.title-h1 Pager Freemint
-				.title-prev Deadline: 5 November
+				.title-prev Deadline: 31 November
 				a(href="https://t.me/herewalletchat", target="_blank").title-link Freemint tutorial
 				.backed-by
 					.backed-by__title Backed by
@@ -69,51 +69,57 @@ html(lang="en")
 		.screen-stock
 			.screen-stock__wrapper
 				.screen-stock_title 10000 pagers in stock
-				.stock-p Mint basic pager and upgrade it to receive better rewards
+				.stock-p Mint basic pager, upgrade it and burn to receive USDT rewards
 				.screen-stock__slider
 					.screen-stock__slider-item
 						.slider-item__slide-tables
-							.slider-item__left.active
+							.slider-item__left.active#item-basic
 								h3.h3-basic Basic
 								.slider-item__table
 									.slider-item__table-list
 										.slider-item__table-list_left Current Price
-											.tooltip-container
-												span.tooltip-trigger
-												.tooltip This is a tooltip text
-										.slider-item__table-list_right ≈ 2 USDT
+										.tooltip-container
+											span.tooltip-trigger
+											.tooltip The price of NFT can coming down as new NFTs are released
+										.slider-item__table-list_right.price ≈ 2 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Min. Price
-										.slider-item__table-list_right 0.2 USDT
+										.slider-item__table-list_left Weight of points
+										.slider-item__table-list_right 1
 									.slider-item__table-list
 										.slider-item__table-list_left Minted
-										.slider-item__table-list_right 1234/10000
+										.slider-item__table-list_right.count 1234/10000
 
-							.slider-item__left
+							.slider-item__left#item-pro
 								h3.h3-pro PRO
 								.slider-item__table
 									.slider-item__table-list
 										.slider-item__table-list_left Current Price
-										.slider-item__table-list_right ≈ 20 USDT
+										.tooltip-container
+											span.tooltip-trigger
+											.tooltip The price of NFT can coming down as new NFTs are released
+										.slider-item__table-list_right.price ≈ 20 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Min. Price
-										.slider-item__table-list_right 2 USDT
+										.slider-item__table-list_left Weight of points
+										.slider-item__table-list_right 3
 									.slider-item__table-list
-										.slider-item__table-list_left Minted
-										.slider-item__table-list_right 234/1000
+										.slider-item__table-list_left Upgraded
+										.slider-item__table-list_right.count 0
 
-							.slider-item__left
+							.slider-item__left#item-ultra
 								h3.h3-ultra ULTRA
 								.slider-item__table
 									.slider-item__table-list
 										.slider-item__table-list_left Current Price
-										.slider-item__table-list_right ≈ 40 USDT
+										.tooltip-container
+											span.tooltip-trigger
+											.tooltip The price of NFT can coming down as new NFTs are released
+										.slider-item__table-list_right.price ≈ 40 USDT
 									.slider-item__table-list
-										.slider-item__table-list_left Min. Price
-										.slider-item__table-list_right 2 USDT
+										.slider-item__table-list_left Weight of points
+										.slider-item__table-list_right 6
 									.slider-item__table-list
-										.slider-item__table-list_left Minted
-										.slider-item__table-list_right 34/250
+										.slider-item__table-list_left Upgraded
+										.slider-item__table-list_right.count 0
 						.slider-item__slide-images
 							.slider-item__right.active
 								img.slider-item_img.slider-item_img_desktop(src='./images/pagers-stock-1.png' alt='Basic')
@@ -135,81 +141,127 @@ html(lang="en")
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR
-					span (0.1-1 USDT)
+					span.price
+
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-1.jpg' alt='Basic')
+				
 				.screen-your__prev Mission:
-					span Link phone number to mint
+					span Follow HERE on Telegram or Twitter
+
 				ul.screen-your__ul
 					li
 						span Tips: 
-					li Open Settings
-					li Click “Phone number”
-					li Click “Link phone”
+					li 
+						div 1. Connect Telegram or Twitter account
+						div(style="display: flex; gap: 8px; margin: 8px 0 16px;")
+							a(href="").connect-social.twitter.connected Twitter
+							a(href="").connect-social.telegram Telegram
+
+					li 2. Follow @here_wallet
+
 				.screen-your__send
-					button.screen-your__btn Mint PAGER
-					p You haven’t claimed the pager yet. You can do it now!
+					button.screen-your__btn.connect-wallet-from-item Connect wallet
+					p To find out the details, connect your account!
 					span.screen-your__error
 
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR
-					span (0.1-1 USDT)
+					span.price
+
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-1.jpg' alt='Basic')
-				.screen-your__prev Upgrade to Pager Pro:
-					span Invite friend with phone number transfer
+				
+				.screen-your__prev Mission:
+					span Follow HERE on Telegram or Twitter
+
+				ul.screen-your__ul
+					li
+						span Tips: 
+					li 
+						div 1. Connect Telegram or Twitter account
+						div(style="display: flex; gap: 8px; margin: 8px 0 16px;")
+							a(href="").connect-social.twitter Twitter
+							a(href="").connect-social.telegram Telegram
+
+					li 2. Follow @here_wallet
+
+				.screen-your__send
+					button.screen-your__btn Mint PAGER
+					p You haven’t claimed the pager yet. You can do it now!
+					span.screen-your__error
+
+		.screen-your
+			.screen-your__left.user
+				.screen-your__h4 Your
+				.screen-your__h2 PageR
+					span.price
+
+				.screen-your__right
+					img.screen-your__img(src='./images/mint-1.jpg' alt='Basic')
+				.screen-your__prev Mission to upgrade:
+					span Send $3+ by link to your friend
+
 				ul.screen-your__ul
 					li
 						span Tips: 
 					li 1. Click “Pay&Transfer”
 					li 2. Click “Use Phone number”
 					li 3. Send money to a friend which haven't gotten the transfer by number yet
+					li 
+						span 4. Wait while he/she claims it from new device.
+
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Pro
 					button.screen-your__btn_transp Sell
-						span Available on Nov, 1
+						span Available on Dec, 10
 					span.screen-your__error
 
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR PRO
-					span (1-5 USDT)
+					span.price
+
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-2.jpg' alt='PageR PRO')
-				.screen-your__prev Upgrade to Pager Ultra:
-					span Invite 5 people with phone number transfer
+				.screen-your__prev Mission to upgrade:
+					span Send $5+ by phone number
 				ul.screen-your__ul
 					li
 						span Tips: 
 					li 1. Click “Pay&Transfer”
 					li 2. Click “Use Phone number”
 					li 3. Send money to a friend which haven't gotten the transfer by number yet
+					li 
+						span 4. Wait while he/she claims it from new device.
+
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Ultra
 					button.screen-your__btn_transp Sell
-						span Available on Nov, 1
+						span Available on Dec, 10
 					span.screen-your__error
 		
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
 				.screen-your__h2 PageR ULTRA
-					span (5-15 USDT)
+					span.price 
+
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-3.jpg' alt='PageR ULTRA')
 				.screen-your__prev Maximum level reached!
 				ul.screen-your__ul
 					li
 						span What to do next? 
-					li You can earn +50 score for every new user invited via phone number
-					li You can sell this pager for 5-9 USDT on Tradeport
+					li 1. You can earn +50 score for every new user invited via phone number
+					li 2. You can sell this pager for 5-9 USDT on Tradeport
 
 				.screen-your__send
 					button.screen-your__btn_transp Sell
-						span Available on Nov, 1
+						span Available on Dec, 10
 		
 		.screen-howitwork
 			h2.title-black How it works
@@ -263,4 +315,13 @@ html(lang="en")
 			.section-faq__item
 				.section-faq__ask How to get more score?
 				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+		
+		.price-widget 
+			div
+				p Point price: 
+					span.price ___
+			div
+				p Bounty bank: 
+					span $4000
+
 		script(type="module", src="index.js")

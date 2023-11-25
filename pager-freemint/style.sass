@@ -3,10 +3,9 @@
 @font-face
 	font-family: 'ClashDisplay-Variable'
 	src: url('./assets/ClashDisplay/ClashDisplay-Variable.woff2') format('woff2'), url('./assets/ClashDisplay/ClashDisplay-Variable.woff') format('woff'), url('./assets/ClashDisplay/ClashDisplay-Variable.ttf') format('truetype')
-		font-weight: 200 700
-		font-display: swap
-		font-style: normal
-
+	font-weight: 200 700
+	font-display: swap
+	font-style: normal
 
 @font-face
 	font-family: 'ComicSans'
@@ -114,12 +113,12 @@ body
 		transition: 0.2s opacity
 	img:hover
 		opacity: 1
-	
+
 	@media (max-width: 700px)
 		gap: 16px
 		left: 16px
 		bottom: 16px
-		img 
+		img
 			width: 42px
 			height: 42px
 
@@ -373,6 +372,7 @@ body
 			border-radius: 800px
 			opacity: 0.2
 			background: #EDD1AB
+			pointer-events: none
 			filter: blur(100px)
 			@media (max-width: 750px)
 				display: none
@@ -386,11 +386,12 @@ body
 			width: 894px
 			height: 875px
 			background-image: url(./images/bg-pagerinstock-right.png)
+			pointer-events: none
 			background-position: 50% 50%
 			background-size: 894px 875px
 			background-repeat: no-repeat
 			filter: blur(2px)
-		
+
 	&_title
 		margin: 0 0 8px 0
 		color: #EDD1AB
@@ -529,7 +530,6 @@ body
 							left: 50%
 							transform: translateX(-50%)
 							font-size: 32px
-						
 
 				.slider-item__table
 					border-radius: 16px
@@ -540,8 +540,8 @@ body
 						border: 2.248px solid #EDD1AB
 					&-list
 						display: flex
-						justify-content: space-between
 						padding: 16px 20px
+						align-items: center
 						border-bottom: 3px solid #EDD1AB
 						color: rgba(237, 209, 171, 0.80)
 						font-feature-settings: 'liga' off
@@ -555,13 +555,17 @@ body
 							padding: 16px
 							font-size: 16px
 							border-bottom: 2.248px solid #EDD1AB
-							
+
 						&_left
 							position: relative
 							text-shadow: 4px 8px 16px #101010
+
+						&_right
+							margin-left: auto
+
 						&:nth-last-child(1)
 							border-bottom: 0
-							
+
 			.slider-item__right
 				flex-shrink: 1
 				position: absolute
@@ -573,7 +577,7 @@ body
 				opacity: 0
 				&.active
 					opacity: 1
-					
+
 				@media (max-width: 1140px)
 					top: 185px
 					right: 180px
@@ -657,11 +661,9 @@ body
 		background-repeat: no-repeat
 		background-size: 24px auto
 
-
 .tooltip-trigger:hover + .tooltip,
 .tooltip-trigger.clicked + .tooltip
 	display: block
-
 
 .slider-item__slide-tables
 	display: flex
@@ -691,7 +693,7 @@ body
 		top: 200px
 		z-index: 3
 		width: 100%
-		
+
 	.slider-pagination__item
 		width: 48px
 		height: 48px
@@ -875,7 +877,7 @@ body
 		max-width: 500px
 		width: 50%
 		height: 100%
-		
+
 		@media (max-width: 750px)
 			position: relative
 			right: auto
@@ -883,7 +885,7 @@ body
 			transform: unset
 			width: 100%
 			margin: 0 0 24px 0
-		
+
 		p
 			position: absolute
 			top: 50%
@@ -958,7 +960,7 @@ body
 		&:nth-child(2)
 			.slider-item_img
 				transform: scale(1.1)
-			
+
 		p
 			padding: 0 32px
 			color: #0C0B09
@@ -971,7 +973,6 @@ body
 			text-transform: uppercase
 			@media (max-width: 1000px)
 				padding: 0 24px
-
 
 .screen-earnmore
 	margin: 0 0 60px 0
@@ -1050,7 +1051,7 @@ body
 				font-size: 18px
 			@media (max-width: 1000px)
 				font-size: 24px
-			
+
 		&:nth-child(3)
 			&::before
 				content: "Just connect HERE"
@@ -1078,7 +1079,7 @@ body
 					font-size: 12.368px
 					top: 28px
 					left: 9px
-				
+
 	&__img
 		position: relative
 		width: 100%
@@ -1130,7 +1131,6 @@ body
 			@media (max-width: 750px)
 				width: 24px
 
-
 .section-faq
 	width: 1184px
 	max-width: 100%
@@ -1159,7 +1159,7 @@ body
 			font-size: 44px
 			line-height: 1.128
 			letter-spacing: 0.88px
-			
+
 		span
 			display: block
 	.section-faq__item
@@ -1208,3 +1208,76 @@ body
 				padding: 0 40px 24px 40px
 			@media (max-width: 300px)
 				padding: 0 16px 16px 16px
+
+.connect-social
+	display: flex
+	padding: 0 24px
+	justify-content: center
+	align-items: center
+	gap: 8px
+	align-self: stretch
+	border-radius: 24px
+
+	text-align: center
+	font-feature-settings: 'calt' off, 'liga' off
+	font-family: Inter
+	font-size: 16px
+	font-style: normal
+	font-weight: 600
+	line-height: 20px
+
+	color: #F5DBB6
+	background: #0C0B09
+	border: 1px solid #F5DBB6
+	height: 48px
+	opacity: 0.8
+	transition: 0.2s opacity
+	text-shadow: none
+
+	&:hover
+		opacity: 1
+
+	&.connected
+		background: #F5DBB6
+		color: #0C0B09
+		pointer-events: none
+
+	&.connected::after
+		content: ""
+		background-image: url(./images/tick.svg)
+		background-size: 24px 24px
+		background-position: center
+		width: 24px
+		height: 24px
+
+.price-widget
+	position: fixed
+	bottom: 0
+	right: 10%
+	background: #EDD1AB
+	border-radius: 8px 8px 0px 0px
+	align-items: center
+	display: flex
+	z-index: 1000000
+	border: 1px solid #0F0E0C
+
+	div
+		padding: 0px 16px 0px 16px
+		height: 32px
+		align-items: center
+		display: flex
+
+	div:first-child
+		border-right: 2px solid #0F0E0C
+
+	p
+		color: #4A473E
+		font-family: Inter
+		font-size: 16px
+		font-style: normal
+		font-weight: 600
+		line-height: normal
+		letter-spacing: -0.32px
+
+	span
+		color: #0F0E0C
