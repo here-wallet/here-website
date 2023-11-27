@@ -119,6 +119,9 @@ const fetchSupply = async () => {
 
   const totalSupply = await account.viewFunction(CONTRACT, "get_total_supply");
   document.querySelector(".screen-stock_title").innerHTML = 10000 - totalSupply + " pagers in stock";
+
+  const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
+  document.querySelector(".price-widget .bank").textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
 
 setInterval(() => {
@@ -188,6 +191,8 @@ const fetchUser = async () => {
 
   button.disabled = !isEnabled;
   button.addEventListener("click", async () => {
+    if (index === 0) return;
+
     const signature = await getSignatureForClaim(index - 1, auth).catch(() => null);
     if (screens[index] == null) return;
 
@@ -195,7 +200,7 @@ const fetchUser = async () => {
     if (errorText) errorText.innerHTML = signature.error?.detail ?? "";
     if (signature.error?.detail != null) return;
 
-    if (index === 0) {
+    if (index === 1) {
       await claim(signature.success);
       await fetchUser();
       return;

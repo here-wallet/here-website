@@ -155,8 +155,8 @@ html(lang="en")
 					li 
 						div 1. Connect Telegram or Twitter account
 						div(style="display: flex; gap: 8px; margin: 8px 0 16px;")
-							a(href="").connect-social.twitter.connected Twitter
-							a(href="").connect-social.telegram Telegram
+							a(href="" target="_blank" rel="noopener noreferrer").connect-social.twitter.connected Twitter
+							a(href="" target="_blank" rel="noopener noreferrer").connect-social.telegram Telegram
 
 					li 2. Follow @here_wallet
 
@@ -183,8 +183,8 @@ html(lang="en")
 					li 
 						div 1. Connect Telegram or Twitter account
 						div(style="display: flex; gap: 8px; margin: 8px 0 16px;")
-							a(href="").connect-social.twitter Twitter
-							a(href="").connect-social.telegram Telegram
+							a(href="" target="_blank" rel="noopener noreferrer").connect-social.twitter.connected Twitter
+							a(href="" target="_blank" rel="noopener noreferrer").connect-social.telegram Telegram
 
 					li 2. Follow @here_wallet
 
@@ -304,24 +304,34 @@ html(lang="en")
 		.section-faq#faq
 			.section-faq__title In case you <span>missed anything</span>
 			.section-faq__item
-				.section-faq__ask What is score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__ask What is the fee for transferring via phone number?
+				.section-faq__answer The cost for transferring via a phone number is the same as the SMS processing fee. It varies for different countries, and HERE doesn't charge its own fee for this.
 			.section-faq__item
-				.section-faq__ask What is the biggest prize?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__ask What is the fee for transferring via a link?
+				.section-faq__answer The fee for transferring via a link is approximately 0.045 NEAR. Link transfers are facilitated through keypom.xyz.
 			.section-faq__item
-				.section-faq__ask When I get score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
+				.section-faq__ask How is the price of NFTs determined?
+				.section-faq__answer The more users mint  NFT's, the lower its price. Additionally, for different user categories, the sale will occur at different times. This might depend on factors like total score and linking Binance to HERE wallet.
 			.section-faq__item
-				.section-faq__ask How to get more score?
-				.section-faq__answer Decentralized auction protocol that empowers users to create and participate in customizable on-chain auctions across multiple blockchain ecosystems
-		
+				.section-faq__ask How to sell NFTs
+				.section-faq__answer In your wallet's NFT section, a special button will appear. By clicking it, you'll burn the NFT and automatically receive USDT in your account.
+			.section-faq__item
+				.section-faq__ask What to do if the NFT doesn’t update after a successful transfer
+				.section-faq__answer If your transfer isn't credited, contact our technical support on 
+					a(href="https://t.me/heresupport") Telegram 
+					| or submit a ticket in our 
+					a(href="https://discord.gg/vNWr495ZPr") Discord channel
+			.section-faq__item
+				.section-faq__ask How to withdraw USDT to a bank card
+				.section-faq__answer 
+					a(href="https://www.herewallet.app/blog/how-to-withdraw-to-card") Read this article on our blog 
+
 		.price-widget 
 			div
 				p Point price: 
 					span.price ___
 			div
 				p Bounty bank: 
-					span $4000
+					span.bank ______
 
 		script(type="module", src="index.js")
