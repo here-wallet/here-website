@@ -25,7 +25,7 @@ const register = async () => {
     const nonce = [...crypto.getRandomValues(nonceArray)];
     const result = await here.signMessage({
       receiver: "HERE Wallet",
-      message: "starbox",
+      message: "pager",
       nonce,
     });
 
@@ -78,14 +78,14 @@ const claim = async (args) => {
 };
 
 const getClaimStatus = async (id) => {
-  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
   return await res.json();
 };
 
 const getSignatureForClaim = async (level, auth) => {
-  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/claim`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
     body: JSON.stringify({ level, ...auth }),
     method: "POST",
