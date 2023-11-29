@@ -78,7 +78,7 @@ const claim = async (args) => {
 };
 
 const getClaimStatus = async (id) => {
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
   return await res.json();
@@ -154,12 +154,23 @@ const fetchUser = async () => {
 
   const status = await getClaimStatus(auth.account_id);
 
-  const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
-  connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter));
-  connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
+  if (!status.twitter) {
+    const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
+    connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
+  }
+  else {
+    connectTwitter.forEach((e) => e.setAttribute("href", "https://twitter.com/here_wallet"));
+    if (status.twitter === 2) connectTwitter.forEach((e) => e.classList.toggle("connected", true));
+  }
 
-  connectTelegram.forEach((e) => e.classList.toggle("connected", status.telegram));
-  connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawalletbot"));
+  if (!status.telegram) {
+    connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawalletbot"));
+  }
+  else {
+    connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawallet"));
+    if (status.telegram === 2) connectTelegram.forEach((e) => e.classList.toggle("connected", true));
+  }
+
 
   const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
   const pager = nfts[0]?.metadata.extra ?? "";
@@ -185,7 +196,7 @@ const fetchUser = async () => {
   if (button == null) return;
 
   let isEnabled = false;
-  if (index === 1) isEnabled = status.telegram || status.twitter;
+  if (index === 1) isEnabled = status.telegram > 1 || status.twitter > 1;
   if (index === 2) isEnabled = status.linkdrop === 2;
   if (index === 3) isEnabled = status.phone_transfer === 2;
 
