@@ -15,7 +15,7 @@ We've gathered the most exciting updates from the month of September to give you
 
 ## 1. Completed our campaign on Gitcoin
 
-(Gitcoin)[https://www.gitcoin.co/] is the largest web3 platform for donating to startups. Every quarter, they carefully select projects that qualify for their campaign. We're thrilled to share that HERE wallet made it into the top 25 projects in terms of donations, raising an impressive $3,000.
+[Gitcoin](https://www.gitcoin.co/) is the largest web3 platform for donating to startups. Every quarter, they carefully select projects that qualify for their campaign. We're thrilled to share that HERE wallet made it into the top 25 projects in terms of donations, raising an impressive $3,000.
 
 ![](https://cdn-images-1.medium.com/max/1600/0*lqn5n0KvLKJmGG4F)
 
