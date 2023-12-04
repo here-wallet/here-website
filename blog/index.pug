@@ -43,7 +43,6 @@ html(lang="en")
 	body.white
 		include ../landing/header/index.pug
 		+header("/blog")
-		
 		.page-minus
 			.page
 				.page-background
@@ -59,6 +58,11 @@ html(lang="en")
 					.subtitle 
 						p.subtitle__text
 							| Stay updated on our most recent stories and announcements!
+					.subscribe.subscribe-email-form
+						form(method='post').subscribe__form.form-box
+							input(name='Email', placeholder='Email').subscribe__input.email-form-input
+							button(type='Submit').subscribe__submit.email-form-button Submit
+						p.form-error
 					.blog-list
 						for blog in blogs
 							.blog-item

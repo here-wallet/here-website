@@ -129,6 +129,45 @@ section
         height: calc( 100% + 154px )
         left: 0
 
+.subscribe.subscribe-email-form
+    width: 100%
+    padding: 0
+    padding-bottom: 0
+    border-radius: 0
+    border: 0
+    background: unset
+.subscribe
+    display: flex
+    justify-content: center
+    position: relative
+    margin: 40px 0 0 0
+    @media (max-width: 750px)
+        display: none
+    &__form
+        display: flex
+        align-items: center
+        gap: 16px
+        position: relative
+    &__input
+        width: 343px
+        padding: 18px 16px
+        border-radius: 16px
+        border: 1px solid #2C3034
+        background-color: #EBDEDC
+        color: #6B6661
+        font-size: 16px
+        font-weight: 500
+        line-height: 1
+    &__submit
+        width: 200px
+        padding: 18px 16px
+        border-radius: 24px
+        background-color: #2c3034
+        font-size: 16px
+        color: #FFF
+        text-align: center
+        font-feature-settings: 'calt' off, 'liga' off
+        font-weight: 700
 .white
     .header
         &-link
@@ -409,7 +448,6 @@ section
                 bottom: 0
                 left: 50%
                 transform: translate(-50%, 0)
-
 .subscribe-email-form
     display: flex
     width: 100%
