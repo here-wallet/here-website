@@ -1,9 +1,10 @@
+import "toastify-js/src/toastify.css";
+
 import { HereWallet } from "@here-wallet/core";
-import { Near } from "near-api-js";
 import { InMemoryKeyStore } from "near-api-js/lib/key_stores/in_memory_key_store";
 import { base_encode } from "near-api-js/lib/utils/serialize";
 import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
+import { Near } from "near-api-js";
 import uuid4 from "uuid4";
 
 const here = new HereWallet();
@@ -78,7 +79,7 @@ const claim = async (args) => {
 };
 
 const getClaimStatus = async (id) => {
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${"mydev.near"}`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
   return await res.json();
