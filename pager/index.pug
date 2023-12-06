@@ -81,7 +81,7 @@ html(lang="en")
 										.tooltip-container
 											span.tooltip-trigger
 											.tooltip The prize pool is shared by all NFTs. The price of NFT can coming down as new PAGERs are minted. Be the first to sell.
-										.slider-item__table-list_right.price ≈ 2 USDT
+										.slider-item__table-list_right.price ≈ 5 USDT
 									.slider-item__table-list
 										.slider-item__table-list_left Value
 										.slider-item__table-list_right 1 point
@@ -97,7 +97,7 @@ html(lang="en")
 										.tooltip-container
 											span.tooltip-trigger
 											.tooltip The prize pool is shared by all NFTs. The price of NFT can coming down as new PAGERs are minted. Be the first to sell.
-										.slider-item__table-list_right.price ≈ 20 USDT
+										.slider-item__table-list_right.price ≈ 15 USDT
 									.slider-item__table-list
 										.slider-item__table-list_left Value
 										.slider-item__table-list_right 3 points
@@ -113,7 +113,7 @@ html(lang="en")
 										.tooltip-container
 											span.tooltip-trigger
 											.tooltip The prize pool is shared by all NFTs. The price of NFT can coming down as new PAGERs are minted. Be the first to sell.
-										.slider-item__table-list_right.price ≈ 40 USDT
+										.slider-item__table-list_right.price ≈ 30 USDT
 									.slider-item__table-list
 										.slider-item__table-list_left Value
 										.slider-item__table-list_right 6 points
@@ -161,8 +161,7 @@ html(lang="en")
 					li 2. Follow @here_wallet
 
 				.screen-your__send
-					button.screen-your__btn.connect-wallet-from-item Connect wallet
-					p To mint and upgarde PAGER NFT, connect your account!
+					button.screen-your__btn.connect-wallet-from-item(style="width: 100%") Connect wallet
 					span.screen-your__error
 
 		.screen-your
@@ -186,11 +185,15 @@ html(lang="en")
 							a(href="" target="_blank" rel="noopener noreferrer").connect-social.twitter.connected Twitter
 							a(href="" target="_blank" rel="noopener noreferrer").connect-social.telegram Telegram
 
-					li 2. Follow @here_wallet
+					li(style="display: flex; gap: 4px; align-items: center")
+						span 2. Follow @here_wallet 
+						a(target="_blank" rel="noopener noreferrer" style="margin-left: 8px" href="https://twitter.com/here_wallet")
+							img(src="./images/twitter3.svg")
+						a(target="_blank" rel="noopener noreferrer" href="https://t.me/herewalletchat")
+							img(src="./images/telegram3.svg")
 
 				.screen-your__send
-					button.screen-your__btn Mint (free)
-					p You haven’t claimed the PAGER NFT yet. You can do it now!
+					button(disable).screen-your__btn(style="width: 100%; max-width: 100%") Mint
 					span.screen-your__error
 
 		.screen-your

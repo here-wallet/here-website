@@ -69,7 +69,7 @@ html(lang="en")
                                     | Subscribe to get useful tutorials and updates!
                                 form.form-box
                                     input(placeholder="Email" name="Email").email-form-input
-                                    button(type="Submit").email-form-button
+                                    button.email-form-button
                                         | Subscribe
                                 p.form-error
             
@@ -78,9 +78,8 @@ html(lang="en")
                     button.modal-close
                         img(src="/assets/icons/close.svg")
 
-                    img(src="../assets/Graphics/success.png", height="148px")
-                    p 
-                        | We will notify you about our NEWS
+                    img(style="margin: auto" src="../assets/Graphics/success.png", height="148px")
+                    p(style="margin-top: 24px") We will notify you about our NEWS
             include ../landing/footer/index.pug
             script(type="module", src="./index.js")
             script(type="module", src="./scripts/emailForm.js")

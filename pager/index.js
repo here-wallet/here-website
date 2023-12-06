@@ -78,7 +78,7 @@ const claim = async (args) => {
 };
 
 const getClaimStatus = async (id) => {
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${"mydev.near"}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
   return await res.json();
@@ -101,28 +101,73 @@ const fetchSupply = async () => {
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
   const points = issued["0"] + issued["1"] * 2 + issued["2"] * 3;
   const price = +Math.max(Math.min(5, 4000 / points), 0).toFixed(3);
+  const isNotStart = claimStart > Date.now();
 
   document.querySelector(".price-widget .price").textContent = `$${price}`;
 
   document.querySelector("#item-basic .price").textContent = `≈ ${price} USDT`;
-  document.querySelector("#item-basic .count").textContent = `${issued["0"]}/10000`;
+  document.querySelector("#item-basic .count").textContent = `${isNotStart ? 0 : issued["0"]}/10000`;
 
   document.querySelector("#item-pro .price").textContent = `≈ ${+(price * 3).toFixed(3)} USDT`;
-  document.querySelector("#item-pro .count").textContent = issued["1"];
+  document.querySelector("#item-pro .count").textContent = isNotStart ? 0 : issued["1"];
 
   document.querySelector("#item-ultra .price").textContent = `≈ ${+(price * 6).toFixed(3)} USDT`;
-  document.querySelector("#item-ultra .count").textContent = issued["2"];
+  document.querySelector("#item-ultra .count").textContent = isNotStart ? 0 : issued["2"];
 
   const item = document.querySelector(".screen-your.user");
   const priceText = item.querySelector(".price");
   if (priceText) priceText.innerHTML = `(${price * +(item.dataset.weight || 1)} USDT)`;
 
   const totalSupply = await account.viewFunction(CONTRACT, "get_total_supply");
-  document.querySelector(".screen-stock_title").innerHTML = 10000 - totalSupply + " pagers in stock";
+  document.querySelector(".screen-stock_title").innerHTML =
+    (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
   const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
   document.querySelector(".price-widget .bank").textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
+
+function timeToGo(claimStart) {
+  function z(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  var diff = claimStart - Date.now();
+  var sign = diff < 0 ? "-" : "";
+  diff = Math.abs(diff);
+  var hours = (diff / 3.6e6) | 0;
+  var mins = ((diff % 3.6e6) / 6e4) | 0;
+  var secs = Math.round((diff % 6e4) / 1e3);
+  return sign + z(hours) + ":" + z(mins) + ":" + z(secs);
+}
+
+let claimStart = 1701911561263;
+let sellStart = 1701911561263;
+const updateTimer = () => {
+  const screens = document.querySelectorAll(".screen-your");
+  const btn = screens[1].querySelector(".screen-your__btn");
+  if (claimStart > Date.now()) {
+    btn.innerHTML = `${timeToGo(claimStart)} <br/> left until claim`;
+    btn.disabled = true;
+  } else {
+    btn.innerHTML = `Claim`;
+    btn.disabled = false;
+  }
+
+  [...document.querySelectorAll(".screen-your__btn_transp")].forEach((btn) => {
+    if (sellStart > Date.now()) {
+      btn.innerHTML = `${timeToGo(sellStart)} <br/> left until sale`;
+      btn.disabled = true;
+    } else {
+      btn.innerHTML = `Sell`;
+      btn.disabled = false;
+    }
+  });
+};
+
+updateTimer();
+setInterval(() => {
+  updateTimer();
+}, 1000);
 
 setInterval(() => {
   fetchSupply();
@@ -153,6 +198,8 @@ const fetchUser = async () => {
       : account.accountId;
 
   const status = await getClaimStatus(auth.account_id);
+  claimStart = Date.now() + status.claim_in * 1000;
+  sellStart = Date.now() + status.sell_in * 1000;
 
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter));
@@ -185,7 +232,7 @@ const fetchUser = async () => {
   if (button == null) return;
 
   let isEnabled = false;
-  if (index === 1) isEnabled = status.telegram || status.twitter;
+  if (index === 1) isEnabled = (status.telegram === 2 || status.twitter === 2) && claimStart <= Date.now();
   if (index === 2) isEnabled = status.linkdrop === 2;
   if (index === 3) isEnabled = status.phone_transfer === 2;
 

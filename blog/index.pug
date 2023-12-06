@@ -43,6 +43,14 @@ html(lang="en")
 	body.white
 		include ../landing/header/index.pug
 		+header("/blog")
+
+		.modal-wrap
+			.modal-body
+				button.modal-close
+					img(src="/assets/icons/close.svg")
+				img(style="margin: auto;" src="../assets/Graphics/success.png", height="148px")
+				p(style="margin-top: 24px;")  We will notify you about our NEWS
+
 		.page-minus
 			.page
 				.page-background
@@ -58,11 +66,12 @@ html(lang="en")
 					.subtitle 
 						p.subtitle__text
 							| Stay updated on our most recent stories and announcements!
-					.subscribe.subscribe-email-form
-						form(method='post').subscribe__form.form-box
+					.subscribe.subscribe-email-form(style="margin-top: 24px")
+						form.subscribe__form.form-box#email-form
 							input(name='Email', placeholder='Email').subscribe__input.email-form-input
-							button(type='Submit').subscribe__submit.email-form-button Submit
+							button.subscribe__submit.email-form-button Submit
 						p.form-error
+
 					.blog-list
 						for blog in blogs
 							.blog-item

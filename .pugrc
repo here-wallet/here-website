@@ -427,6 +427,15 @@
     },
     "blogs": [
       {
+        "title": "October + November recap",
+        "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*Iyh3aes7eedMTwrdZXW65g.png",
+        "tag": "recap",
+        "text": "Here’s a quick summary of the last two months! Explore the condensed highlights of our journey towards making HERE Wallet the ultimate mobile wallet for web3.",
+        "timeToRead": "5 min",
+        "date": "04.12.2023",
+        "href": "november-recap"
+      },
+      {
         "title": "How to transfer tokens from NEAR to Aurora",
         "cover": "https://cdn-images-1.medium.com/max/880/1*Nrvviqo1UwTc4HrEAdlBbw.png",
         "tag": "Tutorial",
