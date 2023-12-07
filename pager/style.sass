@@ -661,6 +661,9 @@ body
 		background-repeat: no-repeat
 		background-size: 24px auto
 
+	@media (max-width: 420px)
+		left: -106px
+
 .tooltip-trigger:hover + .tooltip,
 .tooltip-trigger.clicked + .tooltip
 	display: block
@@ -1266,11 +1269,20 @@ body
 	z-index: 1000000
 	border: 1px solid #0F0E0C
 
+	@media (max-width: 420px)
+		left: 0
+		right: 0
+
 	div
 		padding: 0px 16px 0px 16px
 		height: 32px
 		align-items: center
+		justify-content: center
+		text-align: center
 		display: flex
+
+		@media (max-width: 420px)
+			padding: 0 8px
 
 	div:first-child
 		border-right: 2px solid #0F0E0C
@@ -1283,6 +1295,7 @@ body
 		font-weight: 600
 		line-height: normal
 		letter-spacing: -0.32px
+		text-align: center
 
 	span
 		color: #0F0E0C

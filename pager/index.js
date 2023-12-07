@@ -180,10 +180,10 @@ const fetchUser = async () => {
 
   const connectTwitter = [...document.querySelectorAll(".connect-social.twitter")];
   const connectTelegram = [...document.querySelectorAll(".connect-social.telegram")];
-  connectTwitter.forEach((e) => e.setAttribute("href", "you-must-connect-wallet://"));
+  connectTwitter.forEach((e) => (e.style.pointerEvents = "none"));
   connectTwitter.forEach((e) => e.classList.remove("connected"));
 
-  connectTelegram.forEach((e) => e.setAttribute("href", "you-must-connect-wallet://"));
+  connectTelegram.forEach((e) => (e.style.pointerEvents = "none"));
   connectTelegram.forEach((e) => e.classList.remove("connected"));
 
   const screens = document.querySelectorAll(".screen-your");
@@ -205,9 +205,11 @@ const fetchUser = async () => {
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter));
   connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
+  connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
 
   connectTelegram.forEach((e) => e.classList.toggle("connected", status.telegram));
   connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawalletbot"));
+  connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
 
   const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
   const pager = nfts[0]?.metadata.extra ?? "";
