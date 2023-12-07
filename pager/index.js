@@ -192,6 +192,8 @@ const fetchUser = async () => {
   screens[0].dataset.weight = "1";
 
   const auth = JSON.parse(localStorage.getItem("account"));
+  if (!auth) return null;
+
   const account = await here.account(auth.account_id);
   connectBtn.innerHTML =
     account.accountId.length > 16
