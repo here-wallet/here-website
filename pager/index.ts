@@ -10,6 +10,7 @@ import uuid4 from "uuid4";
 const here = new HereWallet();
 const CONTRACT = "pager.herewallet.near";
 const near = new Near({
+  headers: {},
   nodeUrl: "https://rpc.mainnet.near.org",
   networkId: "mainnet",
   keyStore: new InMemoryKeyStore(),
@@ -18,7 +19,15 @@ const near = new Near({
 const sessionId = window.localStorage.getItem("session-id") ?? uuid4();
 window.localStorage.setItem("session-id", sessionId);
 
-const connectBtn = document.querySelector(".btn-connect-wallet");
+const userData = {
+  claimStart: 1701911561263,
+  sellStart: 1701911561263,
+  status: null as any,
+  nfts: [] as any[],
+  auth: null as any,
+};
+
+const connectBtn = document.querySelector(".btn-connect-wallet")!;
 
 const register = async () => {
   try {
@@ -86,15 +95,19 @@ const getClaimStatus = async (id) => {
 };
 
 const getSignatureForClaim = async (level, auth) => {
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
-    headers: { "Content-Type": "application/json", "session-id": sessionId },
-    body: JSON.stringify({ level, ...auth }),
-    method: "POST",
-  });
+  try {
+    const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
+      headers: { "Content-Type": "application/json", "session-id": sessionId },
+      body: JSON.stringify({ level, ...auth }),
+      method: "POST",
+    });
 
-  const data = await res.json();
-  if (res.ok) return { success: data };
-  return { error: data };
+    const data = await res.json();
+    if (res.ok) return { success: data };
+    return { error: data };
+  } catch {
+    return { error: { details: "Network error" } };
+  }
 };
 
 const fetchSupply = async () => {
@@ -102,29 +115,29 @@ const fetchSupply = async () => {
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
   const points = issued["0"] + issued["1"] * 2 + issued["2"] * 3;
   const price = +Math.max(Math.min(5, 4000 / points), 0).toFixed(3);
-  const isNotStart = claimStart > Date.now();
+  const isNotStart = userData.claimStart > Date.now();
 
-  document.querySelector(".price-widget .price").textContent = `$${price}`;
+  document.querySelector(".price-widget .price")!.textContent = `$${price}`;
 
-  document.querySelector("#item-basic .price").textContent = `≈ ${price} USDT`;
-  document.querySelector("#item-basic .count").textContent = `${isNotStart ? 0 : issued["0"]}/10000`;
+  document.querySelector("#item-basic .price")!.textContent = `≈ ${price} USDT`;
+  document.querySelector("#item-basic .count")!.textContent = `${isNotStart ? 0 : issued["0"]}/10000`;
 
-  document.querySelector("#item-pro .price").textContent = `≈ ${+(price * 3).toFixed(3)} USDT`;
-  document.querySelector("#item-pro .count").textContent = isNotStart ? 0 : issued["1"];
+  document.querySelector("#item-pro .price")!.textContent = `≈ ${+(price * 3).toFixed(3)} USDT`;
+  document.querySelector("#item-pro .count")!.textContent = isNotStart ? 0 : issued["1"];
 
-  document.querySelector("#item-ultra .price").textContent = `≈ ${+(price * 6).toFixed(3)} USDT`;
-  document.querySelector("#item-ultra .count").textContent = isNotStart ? 0 : issued["2"];
+  document.querySelector("#item-ultra .price")!.textContent = `≈ ${+(price * 6).toFixed(3)} USDT`;
+  document.querySelector("#item-ultra .count")!.textContent = isNotStart ? 0 : issued["2"];
 
-  const item = document.querySelector(".screen-your.user");
-  const priceText = item.querySelector(".price");
+  const item = document.querySelector(".screen-your.user") as HTMLElement;
+  const priceText = item.querySelector(".price")!;
   if (priceText) priceText.innerHTML = `(${price * +(item.dataset.weight || 1)} USDT)`;
 
   const totalSupply = await account.viewFunction(CONTRACT, "get_total_supply");
-  document.querySelector(".screen-stock_title").innerHTML =
+  document.querySelector(".screen-stock_title")!.innerHTML =
     (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
   const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
-  document.querySelector(".price-widget .bank").textContent = `$${+(balance / 1000000).toFixed(2)}`;
+  document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
 
 function timeToGo(claimStart) {
@@ -141,22 +154,21 @@ function timeToGo(claimStart) {
   return sign + z(hours) + ":" + z(mins) + ":" + z(secs);
 }
 
-let claimStart = 1701911561263;
-let sellStart = 1701911561263;
 const updateTimer = () => {
   const screens = document.querySelectorAll(".screen-your");
-  const btn = screens[1].querySelector(".screen-your__btn");
-  if (claimStart > Date.now()) {
-    btn.innerHTML = `${timeToGo(claimStart)} <br/> left until claim`;
+  const btn = screens[1].querySelector(".screen-your__btn") as HTMLButtonElement;
+  if (userData.claimStart > Date.now()) {
+    btn.innerHTML = `${timeToGo(userData.claimStart)} <br/> left until claim`;
     btn.disabled = true;
   } else {
     btn.innerHTML = `Claim`;
-    btn.disabled = false;
+    renderLogic();
   }
 
   [...document.querySelectorAll(".screen-your__btn_transp")].forEach((btn) => {
-    if (sellStart > Date.now()) {
-      btn.innerHTML = `${timeToGo(sellStart)} <br/> left until sale`;
+    if (!(btn instanceof HTMLButtonElement)) return;
+    if (userData.sellStart > Date.now()) {
+      btn.innerHTML = `${timeToGo(userData.sellStart)} <br/> left until sale`;
       btn.disabled = true;
     } else {
       btn.innerHTML = `Sell`;
@@ -165,34 +177,17 @@ const updateTimer = () => {
   });
 };
 
-updateTimer();
-setInterval(() => {
-  updateTimer();
-}, 1000);
-
-setInterval(() => {
-  fetchSupply();
-}, 3000);
-
 const fetchUser = async () => {
   connectBtn.innerHTML = "Connect wallet";
   fetchSupply();
 
-  const connectTwitter = [...document.querySelectorAll(".connect-social.twitter")];
-  const connectTelegram = [...document.querySelectorAll(".connect-social.telegram")];
-  connectTwitter.forEach((e) => (e.style.pointerEvents = "none"));
-  connectTwitter.forEach((e) => e.classList.remove("connected"));
-
-  connectTelegram.forEach((e) => (e.style.pointerEvents = "none"));
-  connectTelegram.forEach((e) => e.classList.remove("connected"));
-
-  const screens = document.querySelectorAll(".screen-your");
-  [...screens].forEach((el) => el.classList.remove("user"));
-  screens[0].classList.add("user");
-  screens[0].dataset.weight = "1";
-
-  const auth = JSON.parse(localStorage.getItem("account"));
-  if (!auth) return null;
+  const auth = JSON.parse(localStorage.getItem("account")!);
+  if (!auth) {
+    userData.nfts = [];
+    userData.status = null;
+    renderLogic();
+    return null;
+  }
 
   const account = await here.account(auth.account_id);
   connectBtn.innerHTML =
@@ -201,8 +196,32 @@ const fetchUser = async () => {
       : account.accountId;
 
   const status = await getClaimStatus(auth.account_id);
-  claimStart = Date.now() + status.claim_in * 1000;
-  sellStart = Date.now() + status.sell_in * 1000;
+  const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
+
+  userData.nfts = nfts;
+  userData.status = status;
+  userData.claimStart = Date.now() + status.claim_in * 1000;
+  userData.sellStart = Date.now() + status.sell_in * 1000;
+  userData.auth = auth;
+  renderLogic();
+};
+
+const renderLogic = () => {
+  const connectTwitter = [...document.querySelectorAll(".connect-social.twitter")] as HTMLElement[];
+  const connectTelegram = [...document.querySelectorAll(".connect-social.telegram")] as HTMLElement[];
+  connectTwitter.forEach((e) => (e.style.pointerEvents = "none"));
+  connectTwitter.forEach((e) => e.classList.remove("connected"));
+
+  connectTelegram.forEach((e) => (e.style.pointerEvents = "none"));
+  connectTelegram.forEach((e) => e.classList.remove("connected"));
+
+  const screens = [...document.querySelectorAll(".screen-your")] as HTMLElement[];
+  screens.forEach((el) => el.classList.remove("user"));
+  screens[0].classList.add("user");
+  screens[0].dataset.weight = "1";
+
+  if (userData.status == null) return;
+  const { status, auth } = userData;
 
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter));
@@ -213,8 +232,7 @@ const fetchUser = async () => {
   connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawalletbot"));
   connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
 
-  const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
-  const pager = nfts[0]?.metadata.extra ?? "";
+  const pager = userData.nfts[0]?.metadata.extra ?? "";
 
   let index = 1;
   if (pager.startsWith("BASIC")) index = 2;
@@ -226,26 +244,26 @@ const fetchUser = async () => {
   if (pager.startsWith("ULTRA")) weight = 6;
   if (pager === "PRO7" || pager === "ULTRA13") weight += 1;
 
-  [...screens].forEach((el) => el.classList.remove("user"));
+  screens.forEach((el) => el.classList.remove("user"));
   screens[index].classList.add("user");
-  screens[index].dataset.weight = weight;
+  screens[index].dataset.weight = weight.toString();
 
-  const image = screens[index].querySelector(".screen-your__img");
-  if (index > 1 && image) image.src = nfts[0]?.metadata.media;
+  const image = screens[index].querySelector(".screen-your__img") as HTMLImageElement;
+  if (index > 1 && image) image.src = userData.nfts[0]?.metadata.media;
 
-  const button = screens[index].querySelector(".screen-your__send button");
+  const button = screens[index].querySelector(".screen-your__send button") as HTMLButtonElement;
   if (button == null) return;
 
   let isEnabled = false;
-  if (index === 1) isEnabled = (status.telegram === 2 || status.twitter === 2) && claimStart <= Date.now();
+  if (index === 1) isEnabled = (status.telegram === 2 || status.twitter === 2) && userData.claimStart <= Date.now();
   if (index === 2) isEnabled = status.linkdrop === 2;
   if (index === 3) isEnabled = status.phone_transfer === 2;
 
   button.disabled = !isEnabled;
-  button.addEventListener("click", async () => {
+  button.onclick = async () => {
     if (index === 0) return;
 
-    const signature = await getSignatureForClaim(index - 1, auth).catch(() => null);
+    const signature = await getSignatureForClaim(index - 1, auth);
     if (screens[index] == null) return;
 
     const errorText = screens[index].querySelector(".screen-your__error");
@@ -258,12 +276,22 @@ const fetchUser = async () => {
       return;
     }
 
-    await upgrade({ token_id: nfts[0].token_id, ...signature.success });
+    await upgrade({ token_id: userData.nfts[0].token_id, ...signature.success });
     await fetchUser();
-  });
+  };
 };
 
+renderLogic();
 fetchUser();
+
+updateTimer();
+setInterval(() => {
+  updateTimer();
+}, 1000);
+
+setInterval(() => {
+  fetchSupply();
+}, 3000);
 
 connectBtn.addEventListener("click", async () => {
   if (localStorage.getItem("account")) return;
@@ -277,13 +305,14 @@ document.querySelector(".connect-wallet-from-item")?.addEventListener("click", (
 const asks = Array.from(document.querySelectorAll(".section-faq__item"));
 asks.forEach((el) => {
   el.addEventListener("click", () => {
-    const header = el.querySelector(".section-faq__ask");
-    const body = el.querySelector(".section-faq__answer");
+    if (!(el instanceof HTMLElement)) return;
+    const header = el.querySelector(".section-faq__ask") as HTMLElement;
+    const body = el.querySelector(".section-faq__answer") as HTMLElement;
     const headerBox = header.getBoundingClientRect();
 
     asks.forEach((ask) => {
-      if (ask == el) return;
-      const header = ask.querySelector(".section-faq__ask");
+      if (ask == el || !(ask instanceof HTMLElement)) return;
+      const header = ask.querySelector(".section-faq__ask") as HTMLElement;
       const box = header.getBoundingClientRect();
       ask.classList.remove("open");
       ask.style.height = box.height + "px";
@@ -301,11 +330,11 @@ asks.forEach((el) => {
 
 // Слайдер номер 1
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".screen-stock__slider");
-  const leftSlides = slider.querySelectorAll(".slider-item__left");
-  const rightSlides = slider.querySelectorAll(".slider-item__right");
-  const prevButton = slider.querySelector(".slider-pagination__prev");
-  const nextButton = slider.querySelector(".slider-pagination__next");
+  const slider = document.querySelector(".screen-stock__slider") as HTMLElement;
+  const leftSlides = [...slider.querySelectorAll(".slider-item__left")] as HTMLElement[];
+  const rightSlides = [...slider.querySelectorAll(".slider-item__right")] as HTMLElement[];
+  const prevButton = slider.querySelector(".slider-pagination__prev") as HTMLElement;
+  const nextButton = slider.querySelector(".slider-pagination__next") as HTMLElement;
 
   let currentSlide = 0;
 
@@ -341,18 +370,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var tooltipContainer = document.querySelectorAll(".tooltip-container");
-  var tooltipTrigger = document.querySelectorAll(".tooltip-trigger");
-  [...tooltipTrigger].forEach((item) => {
+  var tooltipTrigger = [...document.querySelectorAll(".tooltip-trigger")] as HTMLElement[];
+  tooltipTrigger.forEach((item) => {
     item.addEventListener("click", function () {
-      tooltipContainer.classList.toggle("clicked");
+      item.parentElement?.classList.toggle("clicked");
     });
     item.addEventListener("mouseover", function () {
-      tooltipContainer.classList.add("mouseover");
+      item.parentElement?.classList.add("mouseover");
     });
 
     item.addEventListener("mouseout", function () {
-      tooltipContainer.classList.remove("mouseover");
+      item.parentElement?.classList.remove("mouseover");
     });
   });
 });
