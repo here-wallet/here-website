@@ -2,7 +2,7 @@ import "toastify-js/src/toastify.css";
 
 import { HereWallet } from "@here-wallet/core";
 import { InMemoryKeyStore } from "near-api-js/lib/key_stores/in_memory_key_store";
-import { base_encode } from "near-api-js/lib/utils/serialize";
+import { base_encode } from "near-api-js/lib/utils/serialize"; // @ts-ignore
 import Toastify from "toastify-js";
 import { Near } from "near-api-js";
 import uuid4 from "uuid4";
@@ -32,7 +32,7 @@ const connectBtn = document.querySelector(".btn-connect-wallet")!;
 const register = async () => {
   try {
     let nonceArray = new Uint8Array(32);
-    const nonce = [...crypto.getRandomValues(nonceArray)];
+    const nonce = Array.from(crypto.getRandomValues(nonceArray));
     const result = await here.signMessage({
       receiver: "HERE Wallet",
       message: "pager",
@@ -53,7 +53,7 @@ const register = async () => {
   }
 };
 
-const upgrade = async (args) => {
+const upgrade = async (args: any) => {
   await here.signAndSendTransaction({
     receiverId: CONTRACT,
     actions: [
@@ -70,7 +70,7 @@ const upgrade = async (args) => {
   });
 };
 
-const claim = async (args) => {
+const claim = async (args: any) => {
   await here.signAndSendTransaction({
     receiverId: CONTRACT,
     actions: [
@@ -87,14 +87,14 @@ const claim = async (args) => {
   });
 };
 
-const getClaimStatus = async (id) => {
+const getClaimStatus = async (id: string) => {
   const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
   return await res.json();
 };
 
-const getSignatureForClaim = async (level, auth) => {
+const getSignatureForClaim = async (level: number, auth: any) => {
   try {
     const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
       headers: { "Content-Type": "application/json", "session-id": sessionId },
@@ -140,8 +140,8 @@ const fetchSupply = async () => {
   document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
 
-function timeToGo(claimStart) {
-  function z(n) {
+function timeToGo(claimStart: number) {
+  function z(n: number) {
     return (n < 10 ? "0" : "") + n;
   }
 
@@ -165,7 +165,7 @@ const updateTimer = () => {
     renderLogic();
   }
 
-  [...document.querySelectorAll(".screen-your__btn_transp")].forEach((btn) => {
+  Array.from(document.querySelectorAll(".screen-your__btn_transp")).forEach((btn) => {
     if (!(btn instanceof HTMLButtonElement)) return;
     if (userData.sellStart > Date.now()) {
       btn.innerHTML = `${timeToGo(userData.sellStart)} <br/> left until sale`;
@@ -207,15 +207,15 @@ const fetchUser = async () => {
 };
 
 const renderLogic = () => {
-  const connectTwitter = [...document.querySelectorAll(".connect-social.twitter")] as HTMLElement[];
-  const connectTelegram = [...document.querySelectorAll(".connect-social.telegram")] as HTMLElement[];
+  const connectTwitter = Array.from(document.querySelectorAll(".connect-social.twitter")) as HTMLElement[];
+  const connectTelegram = Array.from(document.querySelectorAll(".connect-social.telegram")) as HTMLElement[];
   connectTwitter.forEach((e) => (e.style.pointerEvents = "none"));
   connectTwitter.forEach((e) => e.classList.remove("connected"));
 
   connectTelegram.forEach((e) => (e.style.pointerEvents = "none"));
   connectTelegram.forEach((e) => e.classList.remove("connected"));
 
-  const screens = [...document.querySelectorAll(".screen-your")] as HTMLElement[];
+  const screens = Array.from(document.querySelectorAll(".screen-your")) as HTMLElement[];
   screens.forEach((el) => el.classList.remove("user"));
   screens[0].classList.add("user");
   screens[0].dataset.weight = "1";
@@ -229,7 +229,7 @@ const renderLogic = () => {
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
 
   connectTelegram.forEach((e) => e.classList.toggle("connected", status.telegram));
-  connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/hereawalletbot"));
+  connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewalletbot"));
   connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
 
   const pager = userData.nfts[0]?.metadata.extra ?? "";
@@ -331,14 +331,14 @@ asks.forEach((el) => {
 // Слайдер номер 1
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".screen-stock__slider") as HTMLElement;
-  const leftSlides = [...slider.querySelectorAll(".slider-item__left")] as HTMLElement[];
-  const rightSlides = [...slider.querySelectorAll(".slider-item__right")] as HTMLElement[];
+  const leftSlides = Array.from(slider.querySelectorAll(".slider-item__left")) as HTMLElement[];
+  const rightSlides = Array.from(slider.querySelectorAll(".slider-item__right")) as HTMLElement[];
   const prevButton = slider.querySelector(".slider-pagination__prev") as HTMLElement;
   const nextButton = slider.querySelector(".slider-pagination__next") as HTMLElement;
 
   let currentSlide = 0;
 
-  function goToSlide(index) {
+  function goToSlide(index: number) {
     leftSlides[currentSlide].classList.remove("active");
     rightSlides[currentSlide].classList.remove("active");
 
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var tooltipTrigger = [...document.querySelectorAll(".tooltip-trigger")] as HTMLElement[];
+  var tooltipTrigger = Array.from(document.querySelectorAll(".tooltip-trigger")) as HTMLElement[];
   tooltipTrigger.forEach((item) => {
     item.addEventListener("click", function () {
       item.parentElement?.classList.toggle("clicked");
