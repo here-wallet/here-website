@@ -26,7 +26,7 @@ To make the transfer, you need to connect your HERE wallet to the [https://rainb
 
 Then, you also need to connect your HERE wallet in the Aurora network.
 
-![](https://cdn-images-1.medium.com/max/880/1*y3luADIQbUSGO3CJYigOug.png)
+![](https://cdn-images-1.medium.com/max/880/1*oOpA6uZ6dgDeq8q5j2TF_Q.png)
 
 The next step is to start the transfer, selecting the desired token and the amount you want to transfer.
 
