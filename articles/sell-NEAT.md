@@ -17,8 +17,6 @@ We suggest entering the amount of NEAT manually because after clicking 'select m
 After successfully wrapping, go to your HERE wallet, and you'll see wNEAT in your balance. To swap, click 'swap' and choose wNEAT – near (we recommend pairing it with NEAR or USDCe for better liquidity).
 Congratulations on your profit!
 
-![](]blob:https://medium.com/996e0b2d-02ca-47a9-b6a9-46eda0bbe887)
-
 Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
