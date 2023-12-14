@@ -8,7 +8,7 @@ date: 14.12.2023
 -----
 
 
-The first step is to go to the website: https://near.org/inscribe.near/widget/NEAT?tab=wrap and connect your [HERE wallet](https://download.herewallet.app/site). Here, you can wrap NEAT into wNEAT to sell them.
+The first step is to go to the [website](https://near.org/inscribe.near/widget/NEAT?tab=wrap) and connect your [HERE wallet](https://download.herewallet.app/site). Here, you can wrap NEAT into wNEAT to sell them.
 
 ![](https://cdn-images-1.medium.com/max/880/1*n2EBrPiA0rUkZep3du3NaQ.png)
 
