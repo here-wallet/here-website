@@ -1,0 +1,120 @@
+.secure-near
+    display: flex
+    flex-wrap: wrap
+    gap: 16px
+    width: 100%
+    margin: 0 auto 140px auto
+    @media (max-width: 1000px)
+        margin: 0 auto 74px auto
+    &__item
+        display: flex
+        flex-direction: column
+        position: relative
+        width: calc( 50% - 8px )
+        padding: 0 0 48px 0
+        border-radius: 32px
+        background-color: #EBDEDC
+        @media (max-width: 750px)
+            width: 100%
+        img
+            display: block
+            width: 100%
+            margin: 0
+            @media (max-width: 720px)
+                width: calc( 100% - 32px )
+                margin: 0 auto
+        &-independently
+            img
+                @media (max-width: 720px)
+                    width: 300px
+                    margin: 32px auto 40px auto
+                @media (max-width: 400px)
+                    width: calc( 100% - 32px )
+    &__keys
+        display: flex
+        gap: 12px
+        padding: 81px 48px 0 48px
+        @media (max-width: 800px)
+            padding: 32px 16px 0 16px
+        &_1
+            margin: 0 0 16px 0
+            @media (max-width: 400px)
+                margin: 0 0 24px 0
+        &_2
+            margin: 0 0 77px 0
+            padding: 0 0 0 64px
+            @media (max-width: 1060px)
+                margin: 0 0 81px 0
+            @media (max-width: 400px)
+                margin: 0 0 40px 0
+                padding: 0 16px
+        &-item
+            padding: 24px 32px
+            color: #2C3034
+            font-feature-settings: 'liga' off
+            font-size: 32px
+            font-weight: 900
+            border-radius: 48px
+            border: 1px solid #2C3034
+            background-color: #D9CDCB
+            @media (max-width: 1060px)
+                font-size: 24px
+                padding: 16px 24px
+            @media (max-width: 400px)
+                width: calc( 50% - 6px )
+                padding: 16px
+                font-size: 18px
+                text-align: center
+
+.item-content
+    position: absolute
+    left: 0
+    right: 0
+    width: 100%
+    h3
+        margin: 0 0 12px 0
+        padding: 0 36px 0 48px
+        color: #2C3034
+        font-feature-settings: 'liga' off
+        font-size: 40px
+        font-weight: 900
+        @media (max-width: 800px)
+            font-size: 32px
+            padding: 0 32px
+    p
+        margin: 0
+        padding: 0 48px
+        color: #2C3034
+        font-family: Inter
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.4
+        @media (max-width: 800px)
+            padding: 0 32px
+            font-size: 18px
+    &__hardware
+        bottom: 60px
+        @media (max-width: 800px)
+            bottom: 40px
+    &__independently
+        bottom: 88px
+        @media (max-width: 1060px)
+            bottom: 60px
+        @media (max-width: 800px)
+            bottom: 40px
+    &__safety
+        bottom: 60px
+        @media (max-width: 800px)
+            bottom: 40px
+    &__keys
+        bottom: 92px
+        @media (max-width: 1060px)
+            bottom: 82px
+        @media (max-width: 800px)
+            bottom: 54px
+    @media (max-width: 720px)
+        position: relative
+        bottom: auto
+        left: auto
+        right: auto
+        top: auto

@@ -1,0 +1,260 @@
+.page-minus
+    position: relative
+    z-index: 10001
+    margin: -180px auto 0
+    @media (max-width: 900px)
+        margin: -132px auto 0
+    @media (max-width: 620px)
+        margin: -96px auto 0
+.features
+    margin: 0 auto 0
+    padding: 104px 64px 0 64px
+    overflow: hidden
+    @media (max-width: 768px)
+        padding: 48px 20px
+
+.feature
+    display: flex
+    align-items: center
+    width: 100%
+    margin: 0 0 164px 0
+    gap: 16px
+    @media (max-width: 1160px)
+        margin: 0 0 80px 0
+    @media (max-width: 620px)
+        margin: 0 0 64px 0
+    
+    &:nth-child(1)
+        flex-wrap: wrap
+        margin: 0 0 112px 0
+        @media (max-width: 620px)
+            margin: 0 0 32px 0
+    &:nth-child(2)
+        .dot
+            display: none
+
+    @media (max-width: 620px)
+        flex-direction: column-reverse
+        gap: 40px
+    .feature-picture-phone
+        width: 100%
+        img
+            width: 100%
+
+        .no-slider
+            z-index: 2
+
+    &:nth-child(even)
+        flex-direction: row-reverse
+        @media (max-width: 620px)
+            flex-direction: column-reverse
+
+    &:nth-child(odd)
+        & .feature-content
+            padding: 0 0 0 48px
+            @media (max-width: 620px)
+                padding: 0
+
+    & h2
+        margin-bottom: 24px
+
+    &-picture-phone
+        width: 100%
+        z-index: 100
+
+    &-content
+        width: calc( 50% - 56px )
+        @media (max-width: 620px)
+            width: 100%
+
+    &-content h2
+        font-weight: 900
+        font-size: 54px
+        line-height: 69px
+        letter-spacing: 0.02em
+        color: #2c3034
+        @media (max-width: 768px)
+            font-weight: 900
+            font-size: 32px
+            line-height: 40px
+
+    &-content a
+        font-style: normal
+        font-weight: 700
+        font-size: 20px
+        line-height: 27px
+        color: #2c3034
+        width: fit-content
+        padding: 4px 24px 4px 12px
+        margin: -4px -12px
+        transition: 0.2s background
+        border-radius: 8px
+
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        margin-top: 36px
+
+        &:hover
+            background: #EBDEDC
+            img
+                transform: translateX(6px)
+
+        @media (max-width: 768px)
+            font-size: 16px
+            line-height: 22px
+
+    &-content a img
+        transition: 0.2s transform
+        margin-left: 16px
+
+    &-content ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        gap: 8px
+
+    &-content li
+        font-weight: 600
+        font-size: 20px
+        line-height: 140%
+        color: #2c3034
+        align-items: flex-start
+        display: flex
+
+        @media (max-width: 768px)
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            color: #2C3034
+
+    &-content li.active::before
+        background: #fd84e3
+    &-content li::before
+        content: ""
+        display: block
+        flex-shrink: 0
+        float: left
+        width: 12px
+        height: 12px
+        margin-right: 8px
+        margin-top: 8px
+        background-color: #EAD3E5
+
+.slider
+    display: flex
+    position: relative
+    z-index: 2
+    width: calc( 50% - 8px )
+    align-items: center
+    justify-content: center
+    user-select: none
+    background-image: url(../assets/Screens/features-bg.svg)
+    background-size: 100% auto
+    background-position: 50%
+    @media (max-width: 620px)
+        width: 100%
+
+.slides
+    display: flex
+    position: relative
+    z-index: 3
+    width: 100%
+    overflow: hidden
+
+    img
+        width: 100%
+        opacity: 0
+        transform: translateX(-100%)
+        transition: opacity .8s ease-in, transform .8s cubic-bezier(.4, 1, .55, 1.05)
+        &.active
+            opacity: 1
+            transform: translateX(0%)
+
+.pagination
+    position: absolute
+    z-index: 3
+    bottom: 36px
+    left: 50%
+    transform: translate(-50%, 0)
+    text-align: center
+    & span
+        display: inline-block
+        width: 8px
+        height: 8px
+        margin: 0 4px
+        border: none
+        background-color: #D9CDCB
+        cursor: pointer
+        &.active
+            background-color: #FD84E3
+
+.banner-get-gas
+    box-sizing: border-box
+    position: relative
+    width: 1135px
+    margin: 40px auto 0 auto
+    padding: 32px 44px
+    background: linear-gradient(92deg, #FDBF1C 0%, #FDA31C 100%)
+    border-radius: 16px
+    @media (max-width: 1160px)
+        width: 100%
+    @media (max-width: 620px)
+        order: -1
+        height: auto
+        margin: 0 auto
+        padding: 18px 26px
+    &:after
+        content: ""
+        display: block
+        position: absolute
+        right: 0
+        top: 0
+        width: 1135px
+        height: 270px
+        background-image: url(../assets/Graphics/hand-in-yellow.png)
+        background-size: auto 100%
+        background-repeat: no-repeat
+        background-position: 100% 0
+        @media (max-width: 1160px)
+            width: 100%
+            height: 220px
+        @media (max-width: 1000px)
+            background-image: url(../assets/Graphics/hand-in-yellow-mobi.svg)
+            background-position: 100% calc(50% + 2px)
+        @media (max-width: 720px)
+            height: 200px
+            background-position: 100% calc(50% - 4px)
+    h3
+        max-width: 450px
+        margin: 0 0 24px 0
+        color: #2C3034
+        font-feature-settings: 'liga' off
+        font-size: 32px
+        font-weight: 900
+        line-height: 1.25
+        @media (max-width: 620px)
+            width: 170px
+            margin: 0 0 18px 0
+            font-size: 21px
+    &__download
+        display: inline-block
+        position: relative
+        z-index: 2
+        padding: 10px 24px
+        border-radius: 16px
+        background-color: #2C3034
+        color: #F3EBEA
+        text-align: center
+        font-feature-settings: 'calt' off, 'liga' off
+        font-family: Inter
+        font-size: 16px
+        font-weight: 600
+        line-height: 1.25
+        text-decoration: none
+        cursor: pointer
+        &:hover
+            background-color: #35393b

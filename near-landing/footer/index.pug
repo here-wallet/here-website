@@ -1,0 +1,23 @@
+footer.footer
+    .footer__header
+        img.footer-logo(src='/assets/logo.svg')
+        .footer-socials
+            for item in common.socials 
+                a(href=item.link)
+                    img(src=item.icon)
+        a.footer-mail(href=common.mailto) 
+            | #{common.supportEmail}
+    .footer__down
+        .footer__menu
+            for item, index in header.links
+                if index !== 0
+                    if active === item.link
+                        if useWhite
+                            a.footer-link.active-white(href=item.link) !{item.text}
+                        else
+                            a.footer-link.active(href=item.link) !{item.text}
+                    else
+                    a.footer-link(href=item.link) !{item.text}
+        a.footer-download(href="https://storage.herewallet.app/app.apk",target="_blank") Download apk
+        a.footer-terms(href=common.termsLink)
+            | #{common.termsLocale}

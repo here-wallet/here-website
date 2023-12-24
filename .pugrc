@@ -72,6 +72,35 @@
         }
       ]
     },
+    "reviews": {
+      "title": "50 000 + users love us",
+      "review": [
+        {
+          "name": "Shaane",
+          "avatar": "/assets/reviews/no-photo.svg",
+          "text": "It's a good project. I really appreciate it, I will support you till the end, hope project will go to the moon in the future and believe it. Glad to be participant of this",
+          "date": "November 22, 2023",
+          "socIcon": "/assets/reviews/twitter.png",
+          "socLink": ""
+        },
+        {
+          "name": "Junior Figueiredo",
+          "avatar": "/assets/reviews/no-photo.svg",
+          "text": "Excellent news, I really like Aurora and Near and now together with Here Wallet it's even better. 🚀🚀",
+          "date": "November 21, 2023",
+          "socIcon": "/assets/reviews/twitter.png",
+          "socLink": "@JuniorFigueiredo"
+        },
+        {
+          "name": "Shaane",
+          "avatar": "/assets/reviews/no-photo.svg",
+          "text": "@here wallet never ceases to amaze me. Just look at this growth - it's a significant step towards even greater heights. I believe they have a bright future ahead.",
+          "date": "November 3, 2023",
+          "socIcon": "/assets/reviews/twitter.png",
+          "socLink": "@JuniorFigueiredo"
+        }
+      ]
+    },
     "mint-header": {
       "waitlistLocale": "Android waiting list",
       "socials": [
@@ -122,6 +151,11 @@
       "poweredbynear": "Powered by NEAR Protocol",
       "scrolldown": "Scroll down to learn more"
     },
+    "nearmain": {
+      "title": "Near Wallet",
+      "subTitle": "is HERE",
+      "textTitle": "Mobile secure wallet for NEAR Protocol. Explore DeFi, NFTs, stake NEAR and earn score - web3 is HERE."
+    },
     "interface": [
       {
         "title": "First screen",
@@ -134,6 +168,20 @@
       {
         "title": "Third screen",
         "image": "/assets/Screens/interface-3-2.png"
+      }
+    ],
+    "interfacenear": [
+      {
+        "title": "First screen",
+        "image": "/assets/Screens/interface-1-near.png"
+      },
+      {
+        "title": "Second screen",
+        "image": "/assets/Screens/interface-2-near.png"
+      },
+      {
+        "title": "Third screen",
+        "image": "/assets/Screens/interface-3-near.png"
       }
     ],
     "floatqr": {
@@ -186,6 +234,56 @@
           "Best routes for swaps on centralized and decentralized exchanges",
           "Liquid staking with 0% instant withdrawal fee",
           "Weekly giveaway of up to $250 for active app users"
+        ]
+      }
+    ],
+    "featuresnear": [
+      {
+        "title": "Swap tokens",
+        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLocale": "Try it out",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": [
+          "/assets/near-sliders/1-1.png",
+          "/assets/near-sliders/1-2.png",
+          "/assets/near-sliders/1-3.png"
+        ],
+        "items": [
+          "Get the best rate at Orderly DEX or Ref Finance",
+          "Gas-free swaps starting at $100",
+          "Whitelist of verified tokens"
+        ]
+      },
+      {
+        "title": "Stake NEAR",
+        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLocale": "Try it out",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": [
+          "/assets/near-sliders/2-1.png",
+          "/assets/near-sliders/2-2.png",
+          "/assets/near-sliders/2-3.png"
+        ],
+        "items": [
+          "Instant withdrawal from staking with 0% fee",
+          "Up to 9% APY for NEAR tokens",
+          "+1 APY for HERE Early user NFT owners"
+        ]
+      },
+      {
+        "title": "Explore NFTs",
+        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLocale": "Try it out",
+        "backPicture": "/assets/Screens/features-bg.svg",
+        "frontPicture": [
+          "/assets/near-sliders/3-1.png",
+          "/assets/near-sliders/3-2.png",
+          "/assets/near-sliders/3-3.png"
+        ],
+        "items": [
+          "Review and share the NFT",
+          "Add friends and set an NFT avatar",
+          "Unlock extra features for holding NFTs from special collections"
         ]
       }
     ],
@@ -426,6 +524,24 @@
       ]
     },
     "blogs": [
+      {
+        "title": "HOW TO SELL NEAT",
+        "cover": "https://cdn-images-1.medium.com/max/880/1*Wbo0AHBiIbvJ3Fi7bTgdQw.png",
+        "tag": "Tutorial",
+        "text": "HERE wallet now supports NEAT exchange swaps. Read about it in the blog.",
+        "timeToRead": "1 min",
+        "date": "14.12.2023",
+        "href": "sell-NEAT"
+      },
+      {
+        "title": "PAGER FREEMINT",
+        "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*6OxBdaHw69fgNQ0xReKqtw.png",
+        "tag": "tutorial",
+        "text": "HERE team and NEAR Protocol have prepared a collection of 10 000 PAGER NFTs for the launch of the revolutionary USDT transfer method. Now you can send your tokens via link and phone number even if the recipient doesn’t have a wallet 🔥",
+        "timeToRead": "5 min",
+        "date": "11.12.2023",
+        "href": "pager"
+      },
       {
         "title": "October + November recap",
         "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*Iyh3aes7eedMTwrdZXW65g.png",
