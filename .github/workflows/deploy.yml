@@ -34,6 +34,12 @@ jobs:
       - name: Build Pager
         run: yarn build:pager
 
+      - name: Clean cache
+        run: rm -rf .parcel-cache
+
+      - name: Build Near Landing
+        run: yarn build:near
+
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.7.0
         with:
@@ -41,6 +47,7 @@ jobs:
 
       - name: SCP files
         run: |
+          scp -o StrictHostKeyChecking=no -r ./dist-near/* fedor@web.herewallet.app:/var/www/here/near
           scp -o StrictHostKeyChecking=no -r ./dist-pager/* fedor@web.herewallet.app:/var/www/here/pager
           scp -o StrictHostKeyChecking=no -r ./howto/* fedor@web.herewallet.app:/var/www/here/www/howto
           scp -o StrictHostKeyChecking=no -r ./privacypolicy/* fedor@web.herewallet.app:/var/www/here/www/privacypolicy
