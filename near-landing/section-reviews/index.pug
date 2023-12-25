@@ -1,0 +1,14 @@
+section.reviews
+    h2 !{reviews.title}
+    .reviews-wrapper
+        for item in reviews.review
+            .review
+                .review-header
+                    img(src=item.avatar).review-header__avatar
+                    .review-header__name
+                        h3= item.name
+                        h5= item.socLink
+                    img(src=item.socIcon).soc-icon
+                .review-content
+                    p= item.text
+                .review-date= item.date

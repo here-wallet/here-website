@@ -1,0 +1,23 @@
+section.download
+    h2
+        | Download NOW
+        span.dot .
+    
+    .download-banner
+        .download-banner-text
+            p !{download.text}
+            
+            .download-banner-links
+                a.here-button.here-button-orange(href=download.ios)
+                    img(src='/assets/Socials/apple.svg')
+                    | App Store
+
+                a.here-button.pink(href="https://play.google.com/store/apps/details?id=com.herewallet&hl=en&gl=US")
+                    img(src='/assets/Socials/google-play.svg')
+                    | Google play
+            
+        img(src=download.picture)
+        .download-banner-qr
+            .qr-second
+            img(src='/assets/icons/arrow.up.black.svg')
+            p= download.scanLocale

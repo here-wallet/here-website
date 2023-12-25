@@ -1,0 +1,38 @@
+section.secure
+    h2
+        | #{security.title}
+    
+    .secure-near
+        .secure-near__item
+            .secure-near__keys.secure-near__keys_1
+                .secure-near__keys-item Your
+                .secure-near__keys-item Keys
+            .secure-near__keys.secure-near__keys_2
+                .secure-near__keys-item Your
+                .secure-near__keys-item Crypto
+            .item-content.item-content__keys
+                h3 Non-custodial
+                p Seed phrase stored locally on your device. The app is protected by Face ID and PIN
+        .secure-near__item.secure-near__item-hardware
+            picture
+                source(srcset='/assets/near-secure/lock.svg', media='(max-width: 720px)')
+                img(src='/assets/near-secure/lock-full.svg', alt='Hardware wallets support')
+            .item-content.item-content__hardware
+                h3 Hardware wallets support
+                p Connect HITO or Ledger and get ultimate security 
+
+        .secure-near__item.secure-near__item-independently
+            picture
+                source(srcset='/assets/near-secure/osec-word-logo.svg', media='(max-width: 720px)')
+                img(src='/assets/near-secure/ottersec-full.svg', alt='Independently audited')
+            .item-content.item-content__independently
+                h3 Independently audited
+                p By OtterSec
+
+        .secure-near__item.secure-near__item-safety
+            picture
+                source(srcset='/assets/near-secure/safety.svg', media='(max-width: 720px)')
+                img(src='/assets/near-secure/safety-full.svg', alt='Safety Alerts')
+            .item-content.item-content__safety
+                h3 Safety Alerts
+                p The app checks your actions for safety and warns you of potential risks

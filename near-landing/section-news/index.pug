@@ -1,0 +1,18 @@
+section.news
+  h2
+    | !{news.title}
+    span.dot .
+  .news-list
+    for item in news.items
+        .news-item
+            img(src=item.image)
+            .news-item-content
+                h3= item.header
+                p
+                  each line in item.text.split('\n') 
+                    | #{line}
+                    br
+
+                a(href=item.url)
+                    | Read more
+                    img(src='/assets/icons/link-arrow-white.svg')

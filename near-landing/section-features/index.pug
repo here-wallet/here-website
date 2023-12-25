@@ -1,0 +1,32 @@
+section.features
+    - let firstFeature = true
+    for feature in featuresnear
+        .feature
+            if Array.isArray(feature.frontPicture)
+                div.slider
+                    div.slides.feature-picture-phone
+                        for pic in feature.frontPicture
+                            img(src=pic)
+                    div.pagination
+            else
+                img.no-slider.feature-picture-phone(src=feature.frontPicture)
+                
+            .feature-content
+                h2
+                    | #{feature.title}
+                    span.dot .
+
+                ul.feature-pagination
+                    for item in feature.items
+                        li !{item}
+            
+                a(href=feature.moreLink)
+                    | #{feature.moreLocale} 
+                    img(src='/assets/icons/link-arrow.svg')
+
+            if firstFeature
+                .banner-get-gas
+                    h3 Get 10 GAS-FREE transaction and a FREE Nickname!
+                    for item in header.downloads
+                        a.banner-get-gas__download(href=item.link) !{item.text}
+                - firstFeature = false

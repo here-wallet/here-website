@@ -1,0 +1,35 @@
+main.main
+  .main-center
+    .main-header
+      .main-header__left
+        img(src='/assets/logo-ottersec.svg')
+      .main-header__center
+        h1 !{nearmain.title}
+        h3 !{nearmain.subTitle}
+        p !{nearmain.textTitle}
+        
+        .main-header-waitlist.waitlist-button
+          a !{waiting.titleMobile}
+      .main-header__right
+        .main-header__appclip
+          p !{main.qrcodeLocale}
+          span.qrcode-main
+          
+      
+      
+
+main.main-mobile
+  h1 !{nearmain.title}
+  .main-mobile-near
+    img(src='/assets/Socials/near-small.light.svg')
+    p= main.poweredbynear
+
+  a.here-button.pink.light(href=common.appStore)
+    | Download HERE
+  
+  img(src="/assets/icons/arrow.down.white.svg", alt="arrow")
+
+.interface
+  for item in interfacenear
+    .interface-item
+      img(src=item.image)

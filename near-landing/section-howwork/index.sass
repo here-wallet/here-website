@@ -1,0 +1,243 @@
+.how-work
+	padding-top: 0
+	@media (max-width: 1000px)
+		padding: 0 16px
+	h2
+		margin-bottom: 12px
+	p
+		font-weight: 500
+		font-size: 20px
+		text-align: center
+		max-width: 640px
+		margin: 0 auto
+		margin-bottom: 70px
+		color: #2C3034
+	&__cover
+		display: flex
+		position: relative
+		width: 100%
+	&__mobile-img
+		display: none
+		img
+			width: 100%
+			border-radius: 16px
+		@media (max-width: 750px)
+			display: block
+			width: 100%
+		&.enlarged
+			width: calc(100% - 32px)
+			position: fixed
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 9999
+			overflow: auto
+			img
+				width: 686px
+				height: 384px
+
+		// @media (max-width: 750px)
+		// 	background-color: #F3EBEA
+		// 	&::after
+		// 		content: ""
+		// 		display: block
+		// 		position: absolute
+		// 		right: 5px
+		// 		top: 8px
+		// 		width: 24px
+		// 		height: 24px
+		// 		background-image: url(../assets/icons/hover-show.svg)
+		// 		background-size: auto 24px
+		// 		background-position: 50%
+		// 		background-repeat: no-repeat
+	&__left
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		flex-grow: 1
+		padding: 0 40px 0 0
+		@media (max-width: 1180px)
+			padding: 0 22px 0 0
+		@media (max-width: 750px)
+			display: none
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.how-work__arrow
+			@media (max-width: 1000px)
+				width: 65px
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__yellow-block
+		width: 272px
+		padding: 28px 0
+		font-size: 16px
+		font-weight: 600
+		line-height: 22px
+		text-align: center
+		font-feature-settings: 'liga' off, 'calt' off
+		color: #2C3034
+		background: #F0B90B
+		border: 1px solid #2C3034
+		border-radius: 16px
+		@media (max-width: 1000px)
+			width: 115px
+			padding: 12px 0
+	&__pink-block
+		display: flex
+		align-items: start
+		justify-content: center
+		position: relative
+		width: 272px
+		padding: 28px 0
+		font-size: 16px
+		font-weight: 600
+		line-height: 22px
+		text-align: center
+		font-feature-settings: 'liga' off, 'calt' off
+		color: #2C3034
+		background: #FD84E3
+		border: 1px solid #2C3034
+		border-radius: 32px
+		@media (max-width: 1000px)
+			width: 115px
+			padding: 12px 0
+		&::before
+			content: ""
+			display: inline-block
+			padding-right: 10px
+			width: 24px
+			height: 24px
+			background-image: url(../assets/icons/start-staking.svg)
+			background-size: auto 24px
+			background-position: 50%
+			background-repeat: no-repeat
+			@media (max-width: 1000px)
+				display: none
+	&__binance
+		width: 212px
+		height: 43px
+		background-position: 0 50%
+		background-repeat: no-repeat
+		background-size: 212px auto
+		img
+			width: 100%
+		@media (max-width: 1180px)
+			width: 156px
+			height: 32px
+	&__logo
+		width: 205px
+		img
+			width: 100%
+		@media (max-width: 1180px)
+			width: 125px
+	&__arrow
+		position: relative
+		width: 145px
+		height: 22px
+		background-image: url(../assets/icons/arrow-long-right.svg)
+		background-position: 100% 50%
+		@media (max-width: 1180px)
+			width: 95px
+		span
+			position: absolute
+			top: -80px
+			width: 100%
+			font-weight: 700
+			font-size: 18px
+			line-height: 25px
+			text-align: center
+			color: #2C3034
+			line-height: 22px
+			@media (max-width: 1180px)
+				font-size: 14px
+				line-height: 19px
+
+	&__arrow_big
+		position: relative
+		width: 199px
+		height: 22px
+		background-image: url(../assets/icons/arrow-long-right-big.svg)
+		background-repeat: no-repeat
+		background-position: 100% 50%
+		@media (max-width: 1180px)
+			width: 140px
+	&__arrow-top
+		color: #2C3034
+		position: absolute
+		top: -40px
+		width: 100%
+		font-size: 18px
+		font-weight: 700
+		text-align: center
+		@media (max-width: 1180px)
+			font-size: 14px
+			line-height: 19px
+	&__arrow-bottom
+		position: absolute
+		top: 40px
+		width: 100%
+		font-family: CabinetGrotesk, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+		font-weight: 800
+		font-size: 32px
+		line-height: 40px
+		text-align: center
+		font-feature-settings: 'liga' off
+		@media (max-width: 1180px)
+			font-size: 20px
+			line-height: 25px
+	&__arrow-bottom_red
+		font-weight: 800
+		color: #D63E3E
+	&__arrow-bottom_green
+		font-weight: 800
+		color: #087164
+	&__right
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		width: 206px
+		@media (max-width: 1000px)
+			gap: 12px
+		@media (max-width: 750px)
+			display: none
+
+	.logo-wallet
+		display: block
+		position: relative
+		width: 58px
+		height: 58px
+		background-position: 50%
+		background-repeat: no-repeat
+		background-size: 58px auto
+		@media (max-width: 1000px)
+			width: 48px
+			height: 48px
+			background-size: 48px auto
+		&__1
+			background-image: url(../assets/Graphics/logo/logo-1.png)
+		&__2
+			background-image: url(../assets/Graphics/logo/logo-2.png)
+		&__3
+			background-image: url(../assets/Graphics/logo/logo-3.png)
+		&__4
+			background-image: url(../assets/Graphics/logo/logo-4.png)
+		&__5
+			background-image: url(../assets/Graphics/logo/logo-5.png)
+		&__6
+			background-image: url(../assets/Graphics/logo/logo-6.png)
+		&__7
+			background-image: url(../assets/Graphics/logo/logo-7.png)
+		&__8
+			background-image: url(../assets/Graphics/logo/logo-8.png)
+		&__9
+			background-image: url(../assets/Graphics/logo/logo-9.png)
+		&__10
+			background-image: url(../assets/Graphics/logo/logo-10.png)
+		&__11
+			background-image: url(../assets/Graphics/logo/logo-11.png)
+		&__12
+			background-image: url(../assets/Graphics/logo/logo-more.svg)

@@ -1,0 +1,110 @@
+.news
+    margin: 0
+    max-width: 100%
+    background-image: url("/assets/Graphics/pattern.svg")
+    background-size: cover
+    padding: 164px 156px 0
+    @media (max-width: 1160px)
+        padding: 80px 20px 0px
+
+    &-list
+        display: flex
+        gap: 24px
+        align-items: center
+        justify-content: center
+        @media (max-width: 620px)
+            flex-direction: column
+
+    &-item
+        display: block
+        width: 362px
+        height: 420px
+        background: #2C3034
+        border-radius: 16px
+        transition: 0.2s transform
+        cursor: pointer
+
+        display: flex
+        flex-direction: column
+
+        @media (max-width: 620px)
+            width: 100%
+
+        &:hover
+            transform: scale(1.02)
+            a
+                background: rgba(255, 255, 255, 0.1)
+            a img
+                transform: translateX(4px)
+
+    &-item:last-child
+        @media (max-width: 1160px)
+            display: none
+
+    &-item h3
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 25px
+        color: #F3EBEA
+        margin: 0
+
+    &-item p
+        display: -webkit-box
+        -webkit-line-clamp: 5
+        -webkit-box-orient: vertical
+        text-overflow: ellipsis
+        white-space: break-spaces
+        width: 100%
+        overflow: hidden
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        color: #F3EBEA
+        margin-top: 12px
+
+    &-item-content
+        padding: 16px
+        padding-bottom: 20px
+        display: flex
+        flex-direction: column
+        flex: 1
+        p
+            font-weight: 400 !important
+
+    &-item>img
+        width: 100%
+        max-width: 362px
+        object-fit: cover
+        border-top-left-radius: 16px
+        border-top-right-radius: 16px
+        height: 191px
+
+    &-item a
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+        color: #FFFFFF
+        width: fit-content
+
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        margin-top: auto
+
+        border-radius: 12px
+        transition: 0.2s background
+        padding: 4px 18px 4px 10px
+        margin-left: -8px
+
+        &:hover
+            background: rgba(255, 255, 255, 0.1)
+            img
+                transform: translateX(4px)
+
+    &-item a img
+        transition: 0.2s transform
+        margin-left: 8px
