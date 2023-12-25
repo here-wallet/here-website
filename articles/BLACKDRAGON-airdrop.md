@@ -1,6 +1,6 @@
 -----
 title: BLACKDRAGON TOKENS AIRDROP
-cover: blob:https://medium.com/9df4077c-942b-4a37-9416-83071a0e531e
+cover: https://miro.medium.com/v2/resize:fit:786/format:webp/1*1xDazVMI2K6wTAqiBCNuNQ.jpeg
 tag: NFT
 text: HERE wallet now supports NEAT exchange swaps. Read about it in the blog.
 timeToRead: 1 min
