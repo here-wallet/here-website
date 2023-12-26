@@ -180,7 +180,7 @@ const updateTimer = () => {
   Array.from(document.querySelectorAll(".screen-your__btn_transp")).forEach((btn) => {
     if (!(btn instanceof HTMLButtonElement)) return;
     if (userData.sellStart > Date.now()) {
-      btn.innerHTML = `${timeToGo(userData.sellStart)} <br/> left until sale`;
+      btn.innerHTML = `Burn  will be available<br/>${timeToGo(userData.sellStart)}`;
       btn.disabled = true;
     } else {
       btn.innerHTML = `Sell`;
