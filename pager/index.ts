@@ -1,6 +1,7 @@
 import "toastify-js/src/toastify.css";
 
 import { HereWallet } from "@here-wallet/core";
+import { parseNearAmount } from "near-api-js/lib/utils/format";
 import { InMemoryKeyStore } from "near-api-js/lib/key_stores/in_memory_key_store";
 import { base_encode } from "near-api-js/lib/utils/serialize"; // @ts-ignore
 import Toastify from "toastify-js";
@@ -82,7 +83,7 @@ const claim = async (args: any) => {
         params: {
           methodName: "nft_mint",
           gas: 100 * Math.pow(10, 12),
-          deposit: "1",
+          deposit: parseNearAmount("0.05")!,
           args: args,
         },
       },
@@ -134,10 +135,10 @@ const fetchSupply = async () => {
   document.querySelector("#item-basic .price")!.textContent = `≈ ${price} USDT`;
   document.querySelector("#item-basic .count")!.textContent = `${isNotStart ? 0 : issued["0"]}/10000`;
 
-  document.querySelector("#item-pro .price")!.textContent = `≈ ${+(price * 3).toFixed(3)} USDT`;
+  document.querySelector("#item-pro .price")!.textContent = `≈ ${+(price * 5).toFixed(3)} USDT`;
   document.querySelector("#item-pro .count")!.textContent = isNotStart ? 0 : issued["1"];
 
-  document.querySelector("#item-ultra .price")!.textContent = `≈ ${+(price * 6).toFixed(3)} USDT`;
+  document.querySelector("#item-ultra .price")!.textContent = `≈ ${+(price * 10).toFixed(3)} USDT`;
   document.querySelector("#item-ultra .count")!.textContent = isNotStart ? 0 : issued["2"];
 
   const item = document.querySelector(".screen-your.user") as HTMLElement;
