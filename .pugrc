@@ -7,7 +7,7 @@
       "mailto": "mailto:support@herewallet.app",
       "termsLocale": "Privacy policy and Terms of Service",
       "termsLink": "/privacypolicy",
-      "appStore": "https://appstore.herewallet.app/site",
+      "download": "https://download.herewallet.app/site",
       "appAndroidTitle": "Download on Google Play",
       "appAndroid": "https://play.google.com/store/apps/details?id=com.herewallet",
       "socials": [
@@ -152,9 +152,9 @@
       "scrolldown": "Scroll down to learn more"
     },
     "nearmain": {
-      "title": "Near Wallet",
+      "title": "NEAR Wallet",
       "subTitle": "is HERE",
-      "textTitle": "Mobile secure wallet for NEAR Protocol. Explore DeFi, NFTs, stake NEAR and earn score - web3 is HERE."
+      "textTitle": "Self-custodial wallet for NEAR Protocol. Build in DEX aggregator, NFTs, non-blocking staking and weekly airdrop"
     },
     "interface": [
       {
@@ -191,7 +191,7 @@
     "features": [
       {
         "title": "Make it easy",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -207,7 +207,7 @@
       },
       {
         "title": "Save money",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -222,7 +222,7 @@
       },
       {
         "title": "Earn money",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -240,7 +240,7 @@
     "featuresnear": [
       {
         "title": "Swap tokens",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -256,7 +256,7 @@
       },
       {
         "title": "Stake NEAR",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -272,7 +272,7 @@
       },
       {
         "title": "Explore NFTs",
-        "moreLink": "https://appstore.herewallet.app/site",
+        "moreLink": "https://download.herewallet.app/site",
         "moreLocale": "Try it out",
         "backPicture": "/assets/Screens/features-bg.svg",
         "frontPicture": [
@@ -439,7 +439,7 @@
       "text": "<span>Download HERE</span> and<br/>explore web3 safely and comfortably",
       "qrcode": "/assets/QR/qr.black.svg",
       "picture": "/assets/Screens/screens.png",
-      "iosLink": "https://appstore.herewallet.app/site",
+      "iosLink": "https://download.herewallet.app/site",
       "scanLocale": "Scan to start HERE"
     },
     "waiting": {
