@@ -369,7 +369,12 @@ section
         font-style: normal
         font-weight: 900
         line-height: normal
-
+    &-title
+        &_mini
+            @media (max-width: 750px)
+                font-size: 40px !important
+            @media (max-width: 340px)
+                font-size: 32px !important
     &-header
         .time-to-read
             font-family: Inter
