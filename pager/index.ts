@@ -94,7 +94,7 @@ let isOverhighed = false;
 const getClaimStatus = async (id: string) => {
   if (isOverhighed) throw Error();
 
-  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
 
