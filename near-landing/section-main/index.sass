@@ -69,7 +69,7 @@ body
 
 		@media (max-width: 768px)
 			max-width: 615px
-			margin-top: 112px
+			margin-top: 24px
 
 	&-header
 		display: flex
@@ -139,24 +139,26 @@ body
 					font-size: 14px
 		&-waitlist
 			display: none
-			padding: 13px 40px
-			font-weight: 700
-			font-size: 16px
-			line-height: 22px
-			text-align: center
-			font-feature-settings: 'liga' off, 'calt' off
-			color: #2C3034
-			background: #FD84E3
-			border: 1px solid #2C3034
-			box-shadow: 4px 4px 0px #fff
-			border-radius: 16px
-			cursor: pointer
 
 			@media (max-width: 900px)
 				display: inline-block
-			@media (max-width: 620px)
-				padding: 13px 20px
-
+			a
+				display: block
+				font-weight: 700
+				font-size: 16px
+				line-height: 22px
+				text-align: center
+				font-feature-settings: 'liga' off, 'calt' off
+				background: #FD84E3
+				border: 1px solid #2C3034
+				box-shadow: 4px 4px 0px #fff
+				border-radius: 16px
+				cursor: pointer
+				padding: 13px 40px
+				text-decoration: none
+				color: #2C3034
+				@media (max-width: 620px)
+					padding: 13px 20px
 		&__right
 			@media (max-width: 900px)
 				display: none
