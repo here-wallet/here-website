@@ -27,6 +27,9 @@ const userData = {
   auth: null as any,
 };
 
+const chooseMission3 = document.querySelector(".change-mission-variant") as HTMLDivElement;
+const getMission3Variant = () => localStorage.getItem("mission3Variant") || "1";
+
 const connectBtn = document.querySelector(".btn-connect-wallet")!;
 
 const register = async () => {
@@ -87,10 +90,19 @@ const claim = async (args: any) => {
   });
 };
 
+let isOverhighed = false;
 const getClaimStatus = async (id: string) => {
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  if (isOverhighed) throw Error();
+
+  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
+
+  if (res.status === 429) {
+    isOverhighed = true;
+    throw Error();
+  }
+
   return await res.json();
 };
 
@@ -248,6 +260,9 @@ const renderLogic = () => {
   screens[index].classList.add("user");
   screens[index].dataset.weight = weight.toString();
 
+  const weeklyScoreAmount = document.querySelector(".weekly-score-amount");
+  if (weeklyScoreAmount) weeklyScoreAmount.textContent = ` ${status.weekly_score}/500`;
+
   const image = screens[index].querySelector(".screen-your__img") as HTMLImageElement;
   if (index > 1 && image) image.src = userData.nfts[0]?.metadata.media;
 
@@ -257,7 +272,10 @@ const renderLogic = () => {
   let isEnabled = false;
   if (index === 1) isEnabled = (status.telegram === 2 || status.twitter === 2) && userData.claimStart <= Date.now();
   if (index === 2) isEnabled = status.linkdrop === 2;
-  if (index === 3) isEnabled = status.phone_transfer === 2;
+  if (index === 3) {
+    if (getMission3Variant() === "1") isEnabled = status.phone_transfer === 2;
+    if (getMission3Variant() === "2") isEnabled = status.weekly_score >= 500;
+  }
 
   button.disabled = !isEnabled;
   button.onclick = async () => {
@@ -292,6 +310,32 @@ setInterval(() => {
 setInterval(() => {
   fetchSupply();
 }, 3000);
+
+setInterval(() => {
+  fetchUser();
+}, 30000);
+
+const chanageMissionVariant = () => {
+  if (getMission3Variant() === "1") {
+    chooseMission3.querySelector("p")!.textContent = "I can’t use phone number transfer";
+    (document.querySelector(".mission3-variant1") as HTMLDivElement).style.display = "";
+    (document.querySelector(".mission3-variant2") as HTMLDivElement).style.display = "none";
+  }
+
+  if (getMission3Variant() === "2") {
+    chooseMission3.querySelector("p")!.textContent = "I want use phone number transfer";
+    (document.querySelector(".mission3-variant1") as HTMLDivElement).style.display = "none";
+    (document.querySelector(".mission3-variant2") as HTMLDivElement).style.display = "";
+  }
+
+  renderLogic();
+};
+
+chanageMissionVariant();
+chooseMission3?.addEventListener("click", () => {
+  localStorage.setItem("mission3Variant", getMission3Variant() === "1" ? "2" : "1");
+  chanageMissionVariant();
+});
 
 connectBtn.addEventListener("click", async () => {
   if (localStorage.getItem("account")) return;

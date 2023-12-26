@@ -51,7 +51,7 @@ html(lang="en")
 		.screen-title
 			.screen-title__left
 				h1.title-h1 Pager Freemint
-				.title-prev Buyback: Dec, 10
+				.title-prev Buyback: Dec, 30
 				a(href="https://herewallet.medium.com/pager-freemint-92ad3a2c7e3c", target="_blank").title-link Freemint tutorial
 				.backed-by
 					.backed-by__title Backed by
@@ -218,7 +218,7 @@ html(lang="en")
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Pro
 					button.screen-your__btn_transp Sell
-						span Buyback on Dec, 10
+						span Buyback on Dec, 30
 					span.screen-your__error
 
 		.screen-your
@@ -229,23 +229,42 @@ html(lang="en")
 
 				.screen-your__right
 					img.screen-your__img(src='./images/mint-2.jpg' alt='PageR PRO')
-				.screen-your__prev Mission to upgrade:
-					span Send $5+ by phone number
-				ul.screen-your__ul
-					li
-						span Tips: 
-					li 1. Click "Pay&Transfer"
-					li 2. Click "Use Phone number"
-					li 3. Send money to a friend which haven't gotten the transfer by number yet
-					li 
-						span 4. Wait while he/she claims it from new device.
+
+				.mission3-variant1
+					.screen-your__prev Mission to upgrade:
+						span Send $5+ by phone number
+					ul.screen-your__ul
+						li
+							span Tips: 
+						li 1. Click "Pay&Transfer"
+						li 2. Click "Use Phone number"
+						li 3. Send money to a friend which haven't gotten the transfer by number yet
+						li 
+							span 4. Wait while he/she claims it from new device.
+
+				.mission3-variant2(style="display: none")
+					.screen-your__prev Mission to upgrade:
+						span Earn 500+ weekly score.
+					
+					ul.screen-your__ul
+						li
+							span Tips: 
+						li 1. Go to profile
+						li 2. Click "Missions"
+						li 3. Complete any mission to get 500+ score. Now:
+							span.weekly-score-amount
+
 
 				.screen-your__send
 					button.screen-your__btn Upgrade to PAGER Ultra
 					button.screen-your__btn_transp Sell
-						span Buyback on Dec, 10
+						span Buyback on Dec, 30
 					span.screen-your__error
-		
+
+				.change-mission-variant
+					p I can’t use phone number transfer
+					img(src="./images/cursor-right.svg")
+			
 		.screen-your
 			.screen-your__left
 				.screen-your__h4 Your
@@ -263,7 +282,7 @@ html(lang="en")
 
 				.screen-your__send
 					button.screen-your__btn_transp Sell
-						span Buyback on Dec, 10
+						span Buyback on Dec, 30
 		
 		.screen-howitwork
 			h2.title-black How it works

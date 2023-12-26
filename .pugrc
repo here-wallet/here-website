@@ -525,6 +525,15 @@
     },
     "blogs": [
       {
+        "title": "BLACKDRAGON TOKENS AIRDROP",
+        "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*1xDazVMI2K6wTAqiBCNuNQ.jpeg",
+        "tag": "NFT",
+        "text": "HERE wallet now supports NEAT exchange swaps. Read about it in the blog.",
+        "timeToRead": "1 min",
+        "date": "25.12.2023",
+        "href": "BLACKDRAGON-airdrop"
+      },
+      {
         "title": "HOW TO SELL NEAT",
         "cover": "https://cdn-images-1.medium.com/max/880/1*Wbo0AHBiIbvJ3Fi7bTgdQw.png",
         "tag": "Tutorial",
