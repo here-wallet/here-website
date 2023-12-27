@@ -38,3 +38,10 @@ However, HERE wallet warns users when sending USDC.e to non-branded addresses, u
 ### Coclusion
 
 In conclusion, both USDC and USDC.e are stablecoins pegged to the US dollar, but they have different origins within the NEAR Protocol network. USDC.e is a wrapped token transferred from the Ethereum blockchain through the Rainbow Bridge. In contrast, USDC is a native token officially issued within the Near network. Users can conveniently convert them using HERE wallet, ensuring security and preventing errors when sending to exchanges. It is important to be aware of the security of the Rainbow Bridge and prefer exchanging USDC.e for USDC to minimize risks.
+
+Join our community:
+> [**Discord**](https://discord.gg/AfB5cvtFXH)
+> [**Twitter**](https://twitter.com/here_wallet)
+> [**Telegram**](https://t.me/herewallet)
+> [**Telegram chat**](https://t.me/herewalletchat)
+> [**Medium**](https://medium.com/@nearhere)
