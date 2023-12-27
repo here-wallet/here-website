@@ -31,7 +31,7 @@ The safety of USDC.e depends on the security of the Rainbow Bridge. This bridge 
 
 ### What happens if you send USDC.e to the exchange
 
-The main centralized exchanges mostly support USDC. Therefore, avoid sending USDC.e directly to exchanges (such as Binance) to avoid losing money. In case USDC.e is mistakenly sent to an exchange, you should immediately contact exchange support. However, the refund transaction may incur significant fees, sometimes up to $500.
+The main centralized exchanges [mostly support USDC](https://www.binance.com/en/support/announcement/binance-completes-integration-of-usd-coin-usdc-on-near-protocol-network-opens-deposits-and-withdrawals-1ade588ceb9845b78ec785f123b986fd). Therefore, avoid sending USDC.e directly to exchanges (such as Binance) to avoid losing money. In case USDC.e is mistakenly sent to an exchange, you should immediately contact exchange support. However, the refund transaction may incur significant fees, sometimes up to $500.
 
 However, HERE wallet warns users when sending USDC.e to non-branded addresses, usually belonging to exchanges.
 
