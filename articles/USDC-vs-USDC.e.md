@@ -3,6 +3,7 @@ title: "Difference Between USDC and USDC.e: A Comprehensive Guide"
 cover: https://miro.medium.com/v2/resize:fit:786/format:webp/1*ZHsFLM6TVuDHGWclY2fdgA.jpeg
 tag: USDC, USDCe, Stablecoins, Cryptocurrency
 text: This article will help you understand the differences between USDC and USDC.e. After this article, you will understand the differences and functionality of these two stablecoins.
+date: 24.12.2023
 -----
 
 ### $USDC v. $USDC.e
