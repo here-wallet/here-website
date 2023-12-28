@@ -126,8 +126,8 @@ const getSignatureForClaim = async (level: number, auth: any) => {
 const fetchSupply = async () => {
   const account = await near.account("azbang.near");
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
-  const points = issued["0"] + issued["1"] * 2 + issued["2"] * 3;
-  const price = +Math.max(Math.min(1, 4000 / points), 0).toFixed(3);
+  const points = issued["0"] + issued["1"] * 4 + issued["2"] * 5;
+  const price = +Math.max(Math.min(2, 4000 / points), 0).toFixed(3);
   const isNotStart = userData.claimStart > Date.now();
 
   document.querySelector(".price-widget .price")!.textContent = `$${price}`;
