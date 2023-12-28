@@ -4,12 +4,12 @@ cover: https://miro.medium.com/v2/resize:fit:720/format:webp/1*6OxBdaHw69fgNQ0xR
 tag: tutorial
 text: HERE team and NEAR Protocol have prepared a collection of 10 000 PAGER NFTs for the launch of the revolutionary USDT transfer method. Now you can send your tokens via link and phone number even if the recipient doesn’t have a wallet 🔥
 timeToRead: 5 min
-date: 11.12.2023
+date: 29.12.2023
 -----
 
 HERE team and NEAR Protocol have prepared a collection of 10 000 PAGER NFTs for the launch of the revolutionary USDT transfer method. Now you can send your tokens via link and phone number even if the recipient doesn’t have a wallet 🔥
 
-Take part in the campaign here:
+Take part in the campaign [here](https://pager.herewallet.app/)
 
 ## PAGER
 
@@ -25,16 +25,8 @@ The price of a point is determined by the total number of upgraded NFTs released
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*AvpNb3xeBrnl_XD2LNdDyA.png)
 
-*Example:*
-Bank: $4,000
+## Mint 
 
-NFTs issued: 1000
-
-Then the price of NFT Pro (3 points) = 4000 ⁄ 1000✖3=12$.
-
-So the earlier you sell the higher the price will be.
-
-## Mint (free)
 Connect HERE wallet (the main mobile wallet for NEAR Protocol, it is available on [Google Play and App Store](https://download.herewallet.app/pager))
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*ekj5WMjdvjDKJKe1uL6mfg.jpeg)
@@ -48,7 +40,7 @@ Then refresh the page and mint the pager. We also cover gas-price! Just create a
 
 To do this, you need to send a friend $3 worth of cryptocurrency via a link. Click on *Pay & Transfer* -> *Drop token with a link* and send the link to your friend. Then, your friend needs to claim the tokens through the link. Then refresh the page and mint the pager.
 
-A friend should not stigmatize the links of other participants and they should participate from a unique device.
+The main condition: the transfer must be made to a recipient who has not yet received tokens via the link.
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*D_lKC3cyUiSeagYo5sY5tg.jpeg)
 
@@ -62,7 +54,11 @@ Click *Pay & Transfer* -> *Use phone number* -> enter the phone number and confi
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*YH3ikxuK4upFpFjIaRuvBA.jpeg)
 
-The key condition is that the transfer should be either to a new user without a wallet or to a HERE wallet user who hasn’t linked their phone number.
+The key condition is that the transfer should be either to a new user without a wallet or to a HERE wallet user who hasn’t linked his phone number.
+
+If number transfers are not available in your country, you can improve your pager if you have >500 SCORE points
+
+![](https://cdn-images-1.medium.com/max/720/1*yeW9fBg7PGoS2ihY4t7kmw.jpeg)
 
 Congratulations, you’ve obtained the pager at the maximum level!
 
@@ -70,11 +66,7 @@ Congratulations, you’ve obtained the pager at the maximum level!
 
 - For now, we’ve limited sending to only USDT, but all tokens will be available later.
 - During the campaign, the minimum send amount is set at 5 USDT to prevent drop hunters as much as possible
-- SMS transfers are not available in all countries due to regional regulation. If sms is not available in your country, you can alternatively connect a [Binance](https://www.herewallet.app/blog/binance%20connect) account with a balance over $100.
-(To replace the mission, send */pager_for_binance* in [Telegram Bot](https://t.me/herewalletbot))
-
-### Cashbacks and commission
-Every transfer to a phone number not linked to HERE wallet incurs a fee equivalent to the cost of an SMS in your region, ranging from $0.01 to $0.75 (depending on the region). However, you’ll receive cashback equal to or more than the fee you paid. To claim the cashback, you’ll need to wait for a specific period. Users connected to [Binance](https://www.herewallet.app/blog/binance%20connect) will have a shorter waiting time.
+- SMS transfers are not available in all countries due to regional regulation. If sms is not available in your country, you can upgrage a pager using your score points.
 
 ### Cancel Transaction
 
@@ -94,9 +86,8 @@ It is worth noting that phone numbers are not disclosed to outside users. The sm
 
 When the NFT sale date arrives, you need to open the NFT pager in HERE wallet, and there will be a *Sell* button available.
 
-Keep an eye on Twitter, there will be **3 early sales** for 50 PAGERs at a higher price.
+Keep an eye on Twitter, there will be 3 early waves of sales at a higher price.
 
-The early sale will be available to users with 500+ [score](https://www.herewallet.app/blog/here-score-29ce3537e225) or those who have connected a [Binance](https://www.herewallet.app/blog/binance%20connect) account with a $100+ balance.
 
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
