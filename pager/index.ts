@@ -240,7 +240,7 @@ const renderLogic = () => {
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
   if (status.twitter === 1) {
-      connectTwitter.forEach((e) => e.textContent = "Twitter linked (click to follow us)");
+      connectTwitter.forEach((e) => e.textContent = "Twitter linked (click to follow)");
       connectTwitter.forEach((e) => e.setAttribute("href", "https://twitter.com/here_wallet"));
   }
   else {
@@ -252,7 +252,7 @@ const renderLogic = () => {
   connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewalletbot"));
   connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
   if (status.telegram === 1) {
-    connectTelegram.forEach((e) => e.textContent = "Telegram linked (click to follow us)");
+    connectTelegram.forEach((e) => e.textContent = "Telegram linked (click to follow)");
     connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewallet"));
 }
 
