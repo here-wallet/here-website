@@ -233,17 +233,28 @@ const renderLogic = () => {
   screens[0].classList.add("user");
   screens[0].dataset.weight = "1";
 
+
   if (userData.status == null) return;
   const { status, auth } = userData;
 
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
-  connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter));
-  connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
+  if (status.twitter === 1) {
+      connectTwitter.forEach((e) => e.textContent = "Twitter linked (click to follow us)");
+      connectTwitter.forEach((e) => e.setAttribute("href", "https://twitter.com/here_wallet"));
+  }
+  else {
+    connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter === 2));
+    connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
+  }
 
-  connectTelegram.forEach((e) => e.classList.toggle("connected", status.telegram));
+  connectTelegram.forEach((e) => e.classList.toggle("connected", status.telegram == 2));
   connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewalletbot"));
   connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
+  if (status.telegram === 1) {
+    connectTelegram.forEach((e) => e.textContent = "Telegram linked (click to follow us)");
+    connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewallet"));
+}
 
   const pager = userData.nfts[0]?.metadata.extra ?? "";
 
@@ -253,9 +264,8 @@ const renderLogic = () => {
   if (pager.startsWith("ULTRA")) index = 4;
 
   let weight = 1;
-  if (pager.startsWith("PRO")) weight = 3;
-  if (pager.startsWith("ULTRA")) weight = 6;
-  if (pager === "PRO7" || pager === "ULTRA13") weight += 1;
+  if (pager.startsWith("PRO")) weight = 5;
+  if (pager.startsWith("ULTRA")) weight = 10;
 
   screens.forEach((el) => el.classList.remove("user"));
   screens[index].classList.add("user");
