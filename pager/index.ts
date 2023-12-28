@@ -124,7 +124,7 @@ const getSignatureForClaim = async (level: number, auth: any) => {
 };
 
 const fetchSupply = async () => {
-  const account = await near.account("azbang.near");
+  const account = await near.account("bob.near");
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
   const points = issued["0"] + issued["1"] * 4 + issued["2"] * 5;
   const price = +Math.max(Math.min(2, 4000 / points), 0).toFixed(3);
