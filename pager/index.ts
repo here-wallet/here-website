@@ -126,8 +126,8 @@ const getSignatureForClaim = async (level: number, auth: any) => {
 const fetchSupply = async () => {
   const account = await near.account("azbang.near");
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
-  const points = issued["0"] + issued["1"] * 2 + issued["2"] * 3;
-  const price = +Math.max(Math.min(1, 4000 / points), 0).toFixed(3);
+  const points = issued["0"] + issued["1"] * 5 + issued["2"] * 10;
+  const price = +Math.max(Math.min(2, 4000 / points), 0).toFixed(3);
   const isNotStart = userData.claimStart > Date.now();
 
   document.querySelector(".price-widget .price")!.textContent = `$${price}`;
@@ -254,7 +254,7 @@ const renderLogic = () => {
   if (status.telegram === 1) {
     connectTelegram.forEach((e) => e.textContent = "Telegram linked (click to follow us)");
     connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewallet"));
-}
+  }
 
   const pager = userData.nfts[0]?.metadata.extra ?? "";
 
