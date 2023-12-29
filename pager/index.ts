@@ -149,8 +149,8 @@ const fetchSupply = async () => {
   document.querySelector(".screen-stock_title")!.innerHTML =
     (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
-  const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
-  document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
+  // const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
+  // document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
 
 function timeToGo(claimStart: number) {
