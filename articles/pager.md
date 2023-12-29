@@ -91,7 +91,7 @@ When the NFT sale date arrives, you need to open the NFT pager in HERE wallet, a
 
 Unlike other NFT collections, PAGER has a buyback budget. This is money from the HERE Wallet team that is allocated for community support. The entire budget will be spent on buyback, but the price of one NFT depends on the total number of mined NFTs at the time of sale.
 
-Starting price is $2, $10, $20. It may decrease as new NFTs are mined and increase after December 30-31 on unburned NFTs - there will be few PAGERs left and further bonuses for PAGER NFT owners ahead.
+Starting price is $2, $10, $20. It may decrease as new NFTs are mined and increase after January 1 on unburned NFTs - there will be few PAGERs left and further bonuses for PAGER NFT owners ahead.
 
 Keep an eye on Twitter, there will be 3 early waves of sales. In that case, you may have time to sell the NFT before a few NFTs are mined and the price will be higher.
 
