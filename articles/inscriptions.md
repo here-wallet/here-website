@@ -2,7 +2,7 @@
 title: "INSCRIPTION MINT on NEAR Protocol"
 cover: https://miro.medium.com/v2/resize:fit:640/format:webp/1*pGQkshrwDMzMjpKBwPnEVA.png
 tag: Tutorial
-text: Inscriptions on NEAR are reaching a new level and therefore the HERE wallet team has developed a special site where you can enter the desired amount of tokens, see the approximate amount of gas spent and much more
+text: Inscriptions on NEAR are reaching a new level and therefore the HERE wallet team has developed a special site where you can enter the desired amount of tokens, see the approximate amount of gas spent and much more.
 timeToRead: 3 min
 date: 29.12.2023
 -----
