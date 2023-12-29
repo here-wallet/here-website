@@ -33,10 +33,10 @@ Connect HERE wallet (the main mobile wallet for NEAR Protocol, it is available o
 
 **Mint a BASIC PAGER**
 
-You need to authorize and follow us on [Twitter](https://twitter.com/here_wallet) or authorize through the [Telegram bot](https://t.me/herewalletbot).
-Then refresh the page and mint the pager. We also cover gas-price! Just create account.
+You just need to authorize and follow us on [Twitter](https://twitter.com/here_wallet) or authorize through the [Telegram bot](https://t.me/herewalletbot).
+Then refresh the page and mint the pager. There may be 0.03-0.05 NEAR frozen on storage, depending on the gas price at the time of mint.
 
-**Upgrade the pager to PRO level**
+**Upgrade the pager to PRO level (Free)**
 
 To do this, you need to send a friend $3 worth of cryptocurrency via a link. Click on *Pay & Transfer* -> *Drop token with a link* and send the link to your friend. Then, your friend needs to claim the tokens through the link. Then refresh the page and mint the pager.
 
@@ -67,6 +67,7 @@ Congratulations, you’ve obtained the pager at the maximum level!
 - For now, we’ve limited sending to only USDT, but all tokens will be available later.
 - During the campaign, the minimum send amount is set at 5 USDT to prevent drop hunters as much as possible
 - SMS transfers are not available in all countries due to regional regulation. If sms is not available in your country, you can upgrage a pager using your score points.
+- If the SMS is not received, contact support, it happens because of blocking on the side of regional SMS provides.
 
 ### Cancel Transaction
 
@@ -86,7 +87,13 @@ It is worth noting that phone numbers are not disclosed to outside users. The sm
 
 When the NFT sale date arrives, you need to open the NFT pager in HERE wallet, and there will be a *Sell* button available.
 
-Keep an eye on Twitter, there will be 3 early waves of sales at a higher price.
+### PAGER price
+
+Unlike other NFT collections, PAGER has a buyback budget. This is money from the HERE Wallet team that is allocated for community support. The entire budget will be spent on buyback, but the price of one NFT depends on the total number of mined NFTs at the time of sale.
+
+Starting price is $2, $10, $20. It may decrease as new NFTs are mined and increase after December 30-31 on unburned NFTs - there will be few PAGERs left and further bonuses for PAGER NFT owners ahead.
+
+Keep an eye on Twitter, there will be 3 early waves of sales. In that case, you may have time to sell the NFT before a few NFTs are mined and the price will be higher.
 
 
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
