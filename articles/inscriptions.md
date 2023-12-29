@@ -18,8 +18,8 @@ The HERE wallet team has developed a special [site](https://my.herewallet.app/in
 
 Brief instructions
 1) Download [HERE wallet](https://download.herewallet.app/mediumru) and create or import an account.
-2) Go to the [site](https://my.herewallet.app/) and connect using HERE wallet.
-3) Go to the [site](https://my.herewallet.app/inscription) and enter the desired number of tokens and click Start mint.
+2) Go to the [site]([https://my.herewallet.app/](https://my.herewallet.app/inscription)) and connect using HERE wallet.
+3) Enter the desired number of tokens and click Start mint.
 
 The received tokens can be tracked directly in HERE wallet (HERE is the only wallet so far where NRC-20 tokens can be easily tracked).
 
@@ -27,7 +27,8 @@ The received tokens can be tracked directly in HERE wallet (HERE is the only wal
 
 ## Important
 
-Always do your reserch before every such mint and keep in mind that the cost of gas can go up!
+- Do not close the mint window until it is finished.
+- Always do your reserch before every such mint and keep in mind that the cost of gas can go up!
 
 Join our community:
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
