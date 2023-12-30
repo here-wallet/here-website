@@ -21,8 +21,8 @@ const sessionId = window.localStorage.getItem("session-id") ?? uuid4();
 window.localStorage.setItem("session-id", sessionId);
 
 const userData = {
-  claimStart: 1703876400000,
-  sellStart: 1703962800000,
+  claimStart: 1703962800000,
+  sellStart: 1704132000000,
   status: null as any,
   nfts: [] as any[],
   auth: null as any,
