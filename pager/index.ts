@@ -213,8 +213,8 @@ const fetchUser = async () => {
 
   userData.nfts = nfts;
   userData.status = status;
-  userData.claimStart = Date.now() + status.claim_in * 1000 + 1000 * 3600 * 10;
-  userData.sellStart = Date.now() + status.sell_in * 1000 + 1000 * 3600 * 10;
+  userData.claimStart = status.claim_in * 1000;
+  userData.sellStart = status.sell_in * 1000;
   userData.auth = auth;
   renderLogic();
 };
