@@ -213,8 +213,8 @@ const fetchUser = async () => {
 
   userData.nfts = nfts;
   userData.status = status;
-  userData.claimStart = Date.now() + status.claim_in * 1000;
-  userData.sellStart = Date.now() + status.sell_in * 1000;
+  userData.claimStart = Date.now() + status.claim_in * 1000 + 1000 * 3600 * 10;
+  userData.sellStart = Date.now() + status.sell_in * 1000 + 1000 * 3600 * 10;
   userData.auth = auth;
   renderLogic();
 };
@@ -233,17 +233,15 @@ const renderLogic = () => {
   screens[0].classList.add("user");
   screens[0].dataset.weight = "1";
 
-
   if (userData.status == null) return;
   const { status, auth } = userData;
 
   const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
   if (status.twitter === 1) {
-      connectTwitter.forEach((e) => e.textContent = "Twitter linked (click to follow us)");
-      connectTwitter.forEach((e) => e.setAttribute("href", "https://twitter.com/here_wallet"));
-  }
-  else {
+    connectTwitter.forEach((e) => (e.textContent = "Twitter linked (click to follow us)"));
+    connectTwitter.forEach((e) => e.setAttribute("href", "https://twitter.com/here_wallet"));
+  } else {
     connectTwitter.forEach((e) => e.classList.toggle("connected", status.twitter === 2));
     connectTwitter.forEach((e) => e.setAttribute("href", twitterLink));
   }
@@ -252,7 +250,7 @@ const renderLogic = () => {
   connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewalletbot"));
   connectTelegram.forEach((e) => (e.style.pointerEvents = ""));
   if (status.telegram === 1) {
-    connectTelegram.forEach((e) => e.textContent = "Telegram linked (click to follow us)");
+    connectTelegram.forEach((e) => (e.textContent = "Telegram linked (click to follow us)"));
     connectTelegram.forEach((e) => e.setAttribute("href", "https://t.me/herewallet"));
   }
 
