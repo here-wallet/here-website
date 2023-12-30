@@ -1,6 +1,6 @@
 import "toastify-js/src/toastify.css";
 
-import { HereWallet } from "@here-wallet/core";
+import { HereCall, HereWallet } from "@here-wallet/core";
 import { parseNearAmount } from "near-api-js/lib/utils/format";
 import { InMemoryKeyStore } from "near-api-js/lib/key_stores/in_memory_key_store";
 import { base_encode } from "near-api-js/lib/utils/serialize"; // @ts-ignore
@@ -23,9 +23,11 @@ window.localStorage.setItem("session-id", sessionId);
 const userData = {
   claimStart: 0,
   sellStart: 0,
+  presaleCount: 0,
   status: null as any,
   nfts: [] as any[],
   auth: null as any,
+  burned: false,
 };
 
 const chooseMission3 = document.querySelector(".change-mission-variant") as HTMLDivElement;
@@ -98,7 +100,36 @@ const sell = async (token_id: string, auth: any) => {
     method: "POST",
   }).then((t) => t.json());
 
-  await here.signAndSendTransaction({
+  const account = await here.account(auth.account_id);
+
+  const isRegister = await account
+    .viewFunction("usdt.tether-token.near", "storage_balance_of", { account_id: account.accountId })
+    .catch(() => null);
+
+  console.log({ isRegister });
+
+  const transactions: HereCall[] = [];
+  if (!isRegister) {
+    transactions.push({
+      receiverId: "usdt.tether-token.near",
+      actions: [
+        {
+          type: "FunctionCall",
+          params: {
+            gas: 30 * Math.pow(10, 12),
+            methodName: "storage_deposit",
+            deposit: "12500000000000000000000",
+            args: {
+              account_id: account.accountId,
+              registration_only: true,
+            },
+          },
+        },
+      ],
+    });
+  }
+
+  transactions.push({
     receiverId: CONTRACT,
     actions: [
       {
@@ -112,6 +143,8 @@ const sell = async (token_id: string, auth: any) => {
       },
     ],
   });
+
+  await here.signAndSendTransactions({ transactions });
 };
 
 let isOverhighed = false;
@@ -149,8 +182,9 @@ const getSignatureForClaim = async (level: number, auth: any) => {
 const fetchSupply = async () => {
   const account = await near.account("azbang.near");
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
-  const points = issued["0"] + issued["1"] * 5 + issued["2"] * 10;
-  const price = +Math.max(Math.min(2, 4000 / points), 0).toFixed(3);
+  const points = issued["0"] + issued["1"] * 4 + issued["2"] * 5;
+
+  const price = +Math.max(Math.min(1, 4000 / points), 0).toFixed(3);
   const isNotStart = userData.claimStart > Date.now();
 
   document.querySelector(".price-widget .price")!.textContent = `$${price}`;
@@ -172,8 +206,8 @@ const fetchSupply = async () => {
   document.querySelector(".screen-stock_title")!.innerHTML =
     (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
-  // const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
-  // document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
+  const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
+  document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
 };
 
 function timeToGo(claimStart: number) {
@@ -204,11 +238,14 @@ const updateTimer = () => {
   Array.from(document.querySelectorAll(".screen-your__btn_transp")).forEach((btn) => {
     if (!(btn instanceof HTMLButtonElement)) return;
     if (userData.sellStart > Date.now()) {
-      btn.innerHTML = `Burn  will be available<br/>${timeToGo(userData.sellStart)}`;
+      btn.innerHTML = `Burn will be available<br/>${timeToGo(userData.sellStart)}`;
       btn.disabled = true;
     } else {
-      btn.innerHTML = `Sell`;
-      btn.disabled = false;
+      btn.innerHTML = `<span style="font-size: 18px; margin: 0">Sell</span>${
+        userData.presaleCount < 200 ? `Presale rest: ${userData.presaleCount}` : ""
+      }`;
+
+      btn.disabled = userData.presaleCount <= 0;
     }
   });
 };
@@ -235,10 +272,16 @@ const fetchUser = async () => {
   const nfts = await account
     .viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId })
     .catch(() => []);
-  console.log(nfts);
 
+  const nonce = await account.viewFunction(CONTRACT, "get_nonce", { account_id: account.accountId });
+  const presaleCount = await account.viewFunction(CONTRACT, "get_available_for_sale", {
+    account_id: account.accountId,
+  });
+
+  userData.burned = nonce >= 3;
   userData.nfts = nfts;
   userData.status = status;
+  userData.presaleCount = presaleCount;
   userData.claimStart = status.claim_in * 1000;
   userData.sellStart = status.sell_in * 1000;
   userData.auth = auth;
@@ -256,6 +299,13 @@ const renderLogic = () => {
 
   const screens = Array.from(document.querySelectorAll(".screen-your")) as HTMLElement[];
   screens.forEach((el) => el.classList.remove("user"));
+
+  if (userData.burned) {
+    const screen = document.querySelector(".congrats-screen") as HTMLDivElement;
+    screen.classList.add("user");
+    return;
+  }
+
   screens[0].classList.add("user");
   screens[0].dataset.weight = "1";
 
