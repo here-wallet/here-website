@@ -13,16 +13,16 @@ const CONTRACT = "pager.herewallet.near";
 const near = new Near({
   headers: {},
   nodeUrl: "https://rpc.mainnet.near.org",
-  networkId: "mainnet",
   keyStore: new InMemoryKeyStore(),
+  networkId: "mainnet",
 });
 
 const sessionId = window.localStorage.getItem("session-id") ?? uuid4();
 window.localStorage.setItem("session-id", sessionId);
 
 const userData = {
-  claimStart: 1703962800000,
-  sellStart: 1704132000000,
+  claimStart: 0,
+  sellStart: 0,
   status: null as any,
   nfts: [] as any[],
   auth: null as any,
@@ -91,11 +91,34 @@ const claim = async (args: any) => {
   });
 };
 
+const sell = async (token_id: string, auth: any) => {
+  const { signature } = await fetch("https://dev.herewallet.app/api/v1/user/pager/sell", {
+    headers: { "Content-Type": "application/json", "session-id": sessionId },
+    body: JSON.stringify({ ...auth, token_id }),
+    method: "POST",
+  }).then((t) => t.json());
+
+  await here.signAndSendTransaction({
+    receiverId: CONTRACT,
+    actions: [
+      {
+        type: "FunctionCall",
+        params: {
+          deposit: "1",
+          methodName: "sell",
+          gas: 100 * Math.pow(10, 12),
+          args: { token_id: token_id, signature },
+        },
+      },
+    ],
+  });
+};
+
 let isOverhighed = false;
 const getClaimStatus = async (id: string) => {
   if (isOverhighed) throw Error();
 
-  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
 
@@ -109,7 +132,7 @@ const getClaimStatus = async (id: string) => {
 
 const getSignatureForClaim = async (level: number, auth: any) => {
   try {
-    const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
+    const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/claim`, {
       headers: { "Content-Type": "application/json", "session-id": sessionId },
       body: JSON.stringify({ level, ...auth }),
       method: "POST",
@@ -209,7 +232,10 @@ const fetchUser = async () => {
       : account.accountId;
 
   const status = await getClaimStatus(auth.account_id);
-  const nfts = await account.viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId });
+  const nfts = await account
+    .viewFunction(CONTRACT, "nft_tokens_for_owner", { account_id: account.accountId })
+    .catch(() => []);
+  console.log(nfts);
 
   userData.nfts = nfts;
   userData.status = status;
@@ -236,7 +262,7 @@ const renderLogic = () => {
   if (userData.status == null) return;
   const { status, auth } = userData;
 
-  const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
+  const twitterLink = `https://dev.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
   if (status.twitter === 1) {
     connectTwitter.forEach((e) => (e.textContent = "Twitter linked (click to follow us)"));
@@ -275,7 +301,10 @@ const renderLogic = () => {
   const image = screens[index].querySelector(".screen-your__img") as HTMLImageElement;
   if (index > 1 && image) image.src = userData.nfts[0]?.metadata.media;
 
-  const button = screens[index].querySelector(".screen-your__send button") as HTMLButtonElement;
+  const [button, sellButton] = Array.from(
+    screens[index].querySelectorAll(".screen-your__send button")
+  ) as HTMLButtonElement[];
+
   if (button == null) return;
 
   let isEnabled = false;
@@ -304,6 +333,13 @@ const renderLogic = () => {
     }
 
     await upgrade({ token_id: userData.nfts[0].token_id, ...signature.success });
+    await fetchUser();
+  };
+
+  if (!sellButton) return;
+  sellButton.onclick = async () => {
+    if (index === 0) return;
+    await sell(userData.nfts[0].token_id, auth);
     await fetchUser();
   };
 };

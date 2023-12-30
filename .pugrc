@@ -525,6 +525,24 @@
     },
     "blogs": [
       {
+        "title": "INSCRIPTION MINT on NEAR Protocol",
+        "cover": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*pGQkshrwDMzMjpKBwPnEVA.png",
+        "tag": "Tutorial",
+        "text": "Inscriptions on NEAR are reaching a new level and therefore the HERE wallet team has developed a special site where you can enter the desired amount of tokens, see the approximate amount of gas spent and much more.",
+        "timeToRead": "3 min",
+        "date": "29.12.2023",
+        "href": "inscriptions"
+      },
+      {
+        "title": "PAGER FREEMINT",
+        "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*6OxBdaHw69fgNQ0xReKqtw.png",
+        "tag": "tutorial",
+        "text": "HERE team and NEAR Protocol have prepared a collection of 10 000 PAGER NFTs for the launch of the revolutionary USDT transfer method. Now you can send your tokens via link and phone number even if the recipient doesn’t have a wallet 🔥",
+        "timeToRead": "5 min",
+        "date": "29.12.2023",
+        "href": "pager"
+      },
+      {
         "title": "Difference Between USDC and USDC.e: A Comprehensive Guide",
         "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*ZHsFLM6TVuDHGWclY2fdgA.jpeg",
         "tag": "wiki",
@@ -550,15 +568,6 @@
         "timeToRead": "1 min",
         "date": "14.12.2023",
         "href": "sell-NEAT"
-      },
-      {
-        "title": "PAGER FREEMINT",
-        "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*6OxBdaHw69fgNQ0xReKqtw.png",
-        "tag": "tutorial",
-        "text": "HERE team and NEAR Protocol have prepared a collection of 10 000 PAGER NFTs for the launch of the revolutionary USDT transfer method. Now you can send your tokens via link and phone number even if the recipient doesn’t have a wallet 🔥",
-        "timeToRead": "5 min",
-        "date": "11.12.2023",
-        "href": "pager"
       },
       {
         "title": "October + November recap",
@@ -595,15 +604,6 @@
         "timeToRead": "5 min",
         "date": "01.10.2023",
         "href": "september-recap"
-      },
-      {
-        "title": "Weekly score awards",
-        "cover": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*76B2eij22HFELHaLdN-0ow.jpeg",
-        "tag": "score",
-        "text": "We are excited to introduce our new activity for HERE Wallet users! Every week, you can earn score for specific actions, and the leaders in weekly leaderboard will get rewards in USDT",
-        "timeToRead": "2 min",
-        "date": "05.09.2023",
-        "href": "weekly-score"
       },
       {
         "title": "Starbox NFT: Freemint",
