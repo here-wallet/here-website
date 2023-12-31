@@ -94,7 +94,7 @@ const claim = async (args: any) => {
 };
 
 const sell = async (token_id: string, auth: any) => {
-  const { signature } = await fetch("https://dev.herewallet.app/api/v1/user/pager/sell", {
+  const { signature } = await fetch("https://api.herewallet.app/api/v1/user/pager/sell", {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
     body: JSON.stringify({ ...auth, token_id }),
     method: "POST",
@@ -151,7 +151,7 @@ let isOverhighed = false;
 const getClaimStatus = async (id: string) => {
   if (isOverhighed) throw Error();
 
-  const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
+  const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/status?account_id=${id}`, {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
   });
 
@@ -165,7 +165,7 @@ const getClaimStatus = async (id: string) => {
 
 const getSignatureForClaim = async (level: number, auth: any) => {
   try {
-    const res = await fetch(`https://dev.herewallet.app/api/v1/user/pager/claim`, {
+    const res = await fetch(`https://api.herewallet.app/api/v1/user/pager/claim`, {
       headers: { "Content-Type": "application/json", "session-id": sessionId },
       body: JSON.stringify({ level, ...auth }),
       method: "POST",
@@ -312,7 +312,7 @@ const renderLogic = () => {
   if (userData.status == null) return;
   const { status, auth } = userData;
 
-  const twitterLink = `https://dev.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
+  const twitterLink = `https://api.herewallet.app/api/v1/web/auth/twitter?user_id=${auth.account_id}`;
   connectTwitter.forEach((e) => (e.style.pointerEvents = ""));
   if (status.twitter === 1) {
     connectTwitter.forEach((e) => (e.textContent = "Twitter linked (click to follow us)"));
