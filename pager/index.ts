@@ -351,11 +351,8 @@ const renderLogic = () => {
   const image = screens[index].querySelector(".screen-your__img") as HTMLImageElement;
   if (index > 1 && image) image.src = userData.nfts[0]?.metadata.media;
 
-  const [button, sellButton] = Array.from(
-    screens[index].querySelectorAll(".screen-your__send button")
-  ) as HTMLButtonElement[];
-
-  if (button == null) return;
+  const button = screens[index].querySelector(".screen-your__btn");
+  const sellButton = screens[index].querySelector(".screen-your__btn_transp");
 
   let isEnabled = false;
   if (index === 1) isEnabled = (status.telegram === 2 || status.twitter === 2) && userData.claimStart <= Date.now();
@@ -365,33 +362,36 @@ const renderLogic = () => {
     if (getMission3Variant() === "2") isEnabled = status.weekly_score >= 500;
   }
 
-  button.disabled = !isEnabled;
-  button.onclick = async () => {
-    if (index === 0) return;
+  if (button) {
+    button.disabled = !isEnabled;
+    button.onclick = async () => {
+      if (index === 0) return;
 
-    const signature = await getSignatureForClaim(index - 1, auth);
-    if (screens[index] == null) return;
+      const signature = await getSignatureForClaim(index - 1, auth);
+      if (screens[index] == null) return;
 
-    const errorText = screens[index].querySelector(".screen-your__error");
-    if (errorText) errorText.innerHTML = signature.error?.detail ?? "";
-    if (signature.error?.detail != null) return;
+      const errorText = screens[index].querySelector(".screen-your__error");
+      if (errorText) errorText.innerHTML = signature.error?.detail ?? "";
+      if (signature.error?.detail != null) return;
 
-    if (index === 1) {
-      await claim(signature.success);
+      if (index === 1) {
+        await claim(signature.success);
+        await fetchUser();
+        return;
+      }
+
+      await upgrade({ token_id: userData.nfts[0].token_id, ...signature.success });
       await fetchUser();
-      return;
-    }
+    };
+  }
 
-    await upgrade({ token_id: userData.nfts[0].token_id, ...signature.success });
-    await fetchUser();
-  };
-
-  if (!sellButton) return;
-  sellButton.onclick = async () => {
-    if (index === 0) return;
-    await sell(userData.nfts[0].token_id, auth);
-    await fetchUser();
-  };
+  if (sellButton) {
+    sellButton.onclick = async () => {
+      if (index === 0) return;
+      await sell(userData.nfts[0].token_id, auth);
+      await fetchUser();
+    };
+  }
 };
 
 renderLogic();
