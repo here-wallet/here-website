@@ -94,19 +94,26 @@ const claim = async (args: any) => {
 };
 
 const sell = async (token_id: string, auth: any) => {
-  const { signature } = await fetch("https://api.herewallet.app/api/v1/user/pager/sell", {
+  const { signature, detail } = await fetch("https://api.herewallet.app/api/v1/user/pager/sell", {
     headers: { "Content-Type": "application/json", "session-id": sessionId },
     body: JSON.stringify({ ...auth, token_id }),
     method: "POST",
-  }).then((t) => t.json());
+  })
+    .then((t) => t.json())
+    .catch(() => {
+      Toastify({ text: "Something wrong", position: "center", className: "here-toast" }).showToast();
+      throw Error();
+    });
+
+  if (signature == null) {
+    Toastify({ text: detail || "Something wrong", position: "center", className: "here-toast" }).showToast();
+    return;
+  }
 
   const account = await here.account(auth.account_id);
-
   const isRegister = await account
     .viewFunction("usdt.tether-token.near", "storage_balance_of", { account_id: account.accountId })
     .catch(() => null);
-
-  console.log({ isRegister });
 
   const transactions: HereCall[] = [];
   if (!isRegister) {
@@ -362,7 +369,7 @@ const renderLogic = () => {
     if (getMission3Variant() === "2") isEnabled = status.weekly_score >= 500;
   }
 
-  if (button) {
+  if (button instanceof HTMLButtonElement) {
     button.disabled = !isEnabled;
     button.onclick = async () => {
       if (index === 0) return;
@@ -385,7 +392,7 @@ const renderLogic = () => {
     };
   }
 
-  if (sellButton) {
+  if (sellButton instanceof HTMLElement) {
     sellButton.onclick = async () => {
       if (index === 0) return;
       await sell(userData.nfts[0].token_id, auth);
