@@ -189,9 +189,11 @@ const getSignatureForClaim = async (level: number, auth: any) => {
 const fetchSupply = async () => {
   const account = await near.account("azbang.near");
   const issued = await account.viewFunction(CONTRACT, "get_total_issued");
-  const points = issued["0"] + issued["1"] * 4 + issued["2"] * 5;
+  const points = await account.viewFunction(CONTRACT, "total_points");
+  let balance = await account.viewFunction(CONTRACT, "get_bank_balance");
+  balance = +(balance / 1000000).toFixed(2);
 
-  const price = +Math.max(Math.min(2, 4000 / points), 0).toFixed(3);
+  const price = +Math.max(Math.min(2, balance / points), 0).toFixed(3);
   const isNotStart = userData.claimStart > Date.now();
 
   document.querySelector(".price-widget .price")!.textContent = `$${price}`;
@@ -213,8 +215,7 @@ const fetchSupply = async () => {
   document.querySelector(".screen-stock_title")!.innerHTML =
     (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
-  const balance = await account.viewFunction(CONTRACT, "get_bank_balance");
-  document.querySelector(".price-widget .bank")!.textContent = `$${+(balance / 1000000).toFixed(2)}`;
+  document.querySelector(".price-widget .bank")!.textContent = `$${balance}`;
 };
 
 function timeToGo(claimStart: number) {
