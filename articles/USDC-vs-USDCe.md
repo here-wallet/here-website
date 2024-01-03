@@ -21,9 +21,12 @@ As NEAR Protocol evolved, the demand for native steblecoins grew and Circle laun
 
 The easiest way to convert USDC.e to USDC is to use the swap function of the HERE wallet (download it [here](https://download.herewallet.app/blog)). The wallet provides the best exchange rate and does not charge any fees. To make an exchange, follow these instructions:
 
-1. Click "Exchange".
-2. Select USDCe and USDC and enter the amount.
+1. Click "Swap".
+2. Select USDC.e and USDC and enter the amount.
 3. Check the transaction details and confirm the exchange.
+
+![](https://storage.herewallet.app/upload/52051785-f137-4d13-aa27-d1d3b4b79b51.png)
+
 
 ### USDC.e security.
 
