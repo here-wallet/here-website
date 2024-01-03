@@ -1,6 +1,6 @@
 -----
 title: "Difference Between USDC and USDC.e: A Comprehensive Guide"
-cover: https://storage.herewallet.app/upload/2fee93b9-9a12-4431-8143-b5658caeb4f5
+cover: https://storage.herewallet.app/upload/6e9cb6b8-325f-48bd-9769-8dbc2d79472c.jpeg
 tag: wiki
 text: This article will help you understand the differences between USDC and USDC.e. After this article, you will understand the differences and functionality of these two stablecoins.
 timeToRead: 3 min
