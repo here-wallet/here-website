@@ -196,24 +196,24 @@ const fetchSupply = async () => {
   const price = +Math.max(Math.min(2, balance / points), 0).toFixed(3);
   const isNotStart = userData.claimStart > Date.now();
 
-  document.querySelector(".price-widget .price")!.textContent = `$${price}`;
+  // document.querySelector(".price-widget .price")!.textContent = `$${price}`;
 
-  document.querySelector("#item-basic .price")!.textContent = `≈ ${price} USDT`;
-  document.querySelector("#item-basic .count")!.textContent = `${isNotStart ? 0 : issued["0"]}/10000`;
+  document.querySelector("#item-basic .price")!.textContent = "-";
+  document.querySelector("#item-basic .count")!.textContent = "-";
 
-  document.querySelector("#item-pro .price")!.textContent = `≈ ${+(price * 5).toFixed(3)} USDT`;
-  document.querySelector("#item-pro .count")!.textContent = isNotStart ? 0 : issued["1"];
+  document.querySelector("#item-pro .price")!.textContent = "-";
+  document.querySelector("#item-pro .count")!.textContent = "-";
 
-  document.querySelector("#item-ultra .price")!.textContent = `≈ ${+(price * 10).toFixed(3)} USDT`;
-  document.querySelector("#item-ultra .count")!.textContent = isNotStart ? 0 : issued["2"];
+  document.querySelector("#item-ultra .price")!.textContent= "-";
+  document.querySelector("#item-ultra .count")!.textContent= "-";
 
   const item = document.querySelector(".screen-your.user") as HTMLElement;
   const priceText = item.querySelector(".price")!;
   if (priceText) priceText.innerHTML = `(${price * +(item.dataset.weight || 1)} USDT)`;
 
   const totalSupply = await account.viewFunction(CONTRACT, "get_total_supply");
-  document.querySelector(".screen-stock_title")!.innerHTML =
-    (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
+  // document.querySelector(".screen-stock_title")!.innerHTML =
+  //   (isNotStart ? 10000 : 10000 - totalSupply) + " pagers in stock";
 
   document.querySelector(".price-widget .bank")!.textContent = `$${balance}`;
 };
