@@ -371,7 +371,7 @@ const renderLogic = () => {
   }
 
   if (button instanceof HTMLButtonElement) {
-    button.disabled = !isEnabled;
+    button.disabled = true;
     button.onclick = async () => {
       if (index === 0) return;
 
