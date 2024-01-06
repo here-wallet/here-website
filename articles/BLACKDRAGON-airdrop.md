@@ -21,7 +21,7 @@ Access the **HERE wallet** (If not installed, [download](https://download.herewa
 
 Upon receiving NFTs and tokens, you can trade them directly through the HERE wallet. (*HERE imposes no exchange fees and provides the best DEX rates on NEAR*)
 
-![Exchange](https://miro.medium.com/v2/resize:fit:786/format:webp/1*qBRhOupLTJbYob36RhEmnw.png)
+![Exchange](https://storage.herewallet.app/upload/ad4e2f3f-7596-472a-a8b9-d0f3aedeeef4.webp)
 
 It's recommended to trade for NEAR or USDC.e as they offer higher liquidity.
 
