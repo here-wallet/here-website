@@ -1,6 +1,6 @@
 -----
 title: BLACKDRAGON TOKENS AIRDROP
-cover: https://miro.medium.com/v2/resize:fit:786/format:webp/1*1xDazVMI2K6wTAqiBCNuNQ.jpeg
+cover: https://storage.herewallet.app/upload/c649e120-92ee-4fc4-9f00-205b106a7cef.jpeg
 tag: NFT
 text: HERE wallet now supports NEAT exchange swaps. Read about it in the blog.
 timeToRead: 1 min
@@ -13,7 +13,7 @@ If you've previously owned or traded NFTs within the NEAR network, the ShardDog 
 
 Step 1 - To claim NFTs and tokens, visit the [ShardDog website](https://shard.dog/blackdragon), click on *Claim*, input your NEAR address, then select *Claim ShardDog*. The tokens and NFTs will be sent to your address.
 
-![Claim](https://miro.medium.com/v2/resize:fit:786/format:webp/1*VetHi8P6QQHnaDBTyjH8EQ.png)
+![Claim](https://storage.herewallet.app/upload/921c722a-d59e-4e27-8c75-33b3923d8e5b.png)
 
 ## How to View and Exchange Tokens
 
@@ -21,13 +21,13 @@ Access the **HERE wallet** (If not installed, [download](https://download.herewa
 
 Upon receiving NFTs and tokens, you can trade them directly through the HERE wallet. (*HERE imposes no exchange fees and provides the best DEX rates on NEAR*)
 
-![Exchange](https://storage.herewallet.app/upload/ad4e2f3f-7596-472a-a8b9-d0f3aedeeef4.webp)
+![Exchange](https://storage.herewallet.app/upload/6491494b-2243-465e-8251-38dff57a241a.png)
 
 It's recommended to trade for NEAR or USDC.e as they offer higher liquidity.
 
 Track your NFTs here:
 
-![NFT](https://miro.medium.com/v2/resize:fit:786/format:webp/1*TKKfxPDwdnc16w5hsJAhPQ.png).
+![NFT](https://storage.herewallet.app/upload/f877ce26-ac7d-49ca-bad0-5d546fc09124.png).
 
 ## Important Information
 
