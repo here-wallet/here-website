@@ -72,6 +72,7 @@ Users earn points for various activities in the HERE wallet, and at the end of e
 HERE wallet NFT holders receive a multiplier for the points earned:
 
 x1.25 for ordinary NFTs
+
 x1.5 for mutated NFTs
 
 This way active users can earn USDT and our NFT helps to earn more.
