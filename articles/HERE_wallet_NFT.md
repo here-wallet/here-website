@@ -11,9 +11,9 @@ In this article, we'll dive into the HERE wallet NFT collection, covering the nu
 
 The total number of NFTs stands at 2288. However, presently, there are approximately 600 NFTs in the market, accompanied by 99  poisons for their mutation, of which 35 have already found new owners. HERE wallet NFTs can be traded on [Tradeport](https://www.tradeport.xyz/near/collection/nft.herewallet.near?bottomTab=trades), [Paras](https://paras.id/collection/nft.herewallet.near), and [Mintbase](https://www.mintbase.xyz/contract/nft.herewallet.near/nfts/all/0).
 
-### Types of NFTs and their atributes:
+## Types of NFTs and their atributes:
 
-## COMMON (Ordinary) - 2132 NFT's. 
+### COMMON (Ordinary) - 2132 NFT's. 
 
 ![](https://storage.herewallet.app/upload/f704bf24-a60b-4880-9e88-b7de7e677aaa.png)
 
@@ -28,7 +28,7 @@ This is the most common type of NFT with the following attributes:
 
 Additionally, NFTs can undergo mutation using a special potion. All mutated NFTs have and will continue to provide more benefits for holders.
 
-## RARE - 116 NFT's.
+### RARE - 116 NFT's.
 
 ![](https://storage.herewallet.app/upload/407845eb-c004-41c4-bdb5-5d951a1aab38.png)
 
@@ -36,7 +36,7 @@ This type of NFT distinguishes itself by having characters with masks covering t
 
 ![](https://storage.herewallet.app/upload/8849bc4f-a837-4dc8-a3c2-23b438e55ccf.png)
 
-## NFT for beta testers  - 30 NFT's
+### NFT for beta testers  - 30 NFT's
 
 ![](https://storage.herewallet.app/upload/f546c0ce-6399-443d-b7ea-521ce45586fc.png)
 
@@ -45,19 +45,19 @@ These NFTs were granted to beta-testers actively contributing to the project and
 ![](https://storage.herewallet.app/upload/c98c5a1a-6321-45a2-ad80-8414cec41867.png)
 
 
-## LEGENDARY - 3 NFT's
+### LEGENDARY - 3 NFT's
 
 ![](https://storage.herewallet.app/upload/3c7d9c33-1a88-45a0-8897-4c7660880068.png)
 
 The rarest NFTs distributed in special contests.
 
-## ANCIENT - 7 NFT's
+### ANCIENT - 7 NFT's
 
 ![](https://storage.herewallet.app/upload/880d493e-8fd5-4f5a-ab92-be6274d29a4b.png)
 
 NFTs representing the HERE wallet team members.
 
-### Key utilities of the HERE wallet NFT collection:
+## Key utilities of the HERE wallet NFT collection:
 
 **1) Increased annual APY by 1%.**
 
@@ -88,7 +88,7 @@ NFTs and their mutations will play a crucial role in airdrops from HERE wallet a
 
 **6) Partner bonuses**
 
-### Conclusion:
+## Conclusion:
 
 Owning NFTs from Here Wallet not only adds uniqueness but also unlocks numerous privileges and opportunities to engage in the project's life. Stay informed about the latest events and enjoy the world of NFTs and NEAR Protocol with benefits available only to Here Wallet NFT holders. 😊🚀
 
