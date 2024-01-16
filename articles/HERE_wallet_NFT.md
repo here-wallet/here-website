@@ -63,9 +63,11 @@ NFTs representing the HERE wallet team members.
 
 NFT owners receive +1% APY on NEAR liquid staking in the HERE wallet.
 
-**2)[SCORE](https://www.herewallet.app/blog/here-score-29ce3537e225) boost** 
+**2) [SCORE](https://www.herewallet.app/blog/here-score-29ce3537e225) boost** 
 
 Users earn points for various activities in the HERE wallet, and at the end of each week, top users receive USDT for these points.
+
+![](https://storage.herewallet.app/upload/2e98cabb-e9f1-496c-bcec-03287694b4dc.png)
 
 HERE wallet NFT holders receive a multiplier for the points earned:
 
