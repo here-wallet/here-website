@@ -61,7 +61,7 @@ NFTs representing the HERE wallet team members.
 
 **1) Increased annual APY by 1%.**
 
-NFT owners receive +1% APY on NEAR liquid staking in the HERE wallet.
+NFT owners receive +1% APY on NEAR liquid staking in HERE wallet.
 
 **2) [SCORE](https://www.herewallet.app/blog/here-score-29ce3537e225) boost** 
 
