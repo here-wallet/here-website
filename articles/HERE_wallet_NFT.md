@@ -85,6 +85,8 @@ Access to an exclusive private Telegram chat for promptly receiving important in
 
 NFTs and their mutations will play a crucial role in airdrops from HERE wallet and our partners.
 
+*There is no official announcement of the launch of the HERE token and tokenomics at the time of publishing this article*
+
 **4) Merch discounts**
 
 **5) Discord role**
