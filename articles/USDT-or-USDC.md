@@ -4,7 +4,7 @@ cover: https://storage.herewallet.app/upload/99615545-b78c-4735-88ba-eed6a4ac363
 tag: tutorial
 text: In this article we will try to explain in simple words, the difference between USDT and USDC.
 timeToRead: 3 min
-date: 26.12.2023
+date: 23.01.2024
 -----
 
 Since Binance added [support for USDC on the NEAR Protocol](https://www.binance.com/en/support/announcement/binance-completes-integration-of-usd-coin-usdc-on-near-protocol-network-opens-deposits-and-withdrawals-1ade588ceb9845b78ec785f123b986fd), NEAR users have had a question about which stablecoin to store their funds in. In this article, we will try to explain the differences between them.
