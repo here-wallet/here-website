@@ -54,7 +54,7 @@
         },
         {
           "text": "NFT",
-          "link": "/nft"
+          "link": "/blog/HERE_wallet_NFT"
         },
         {
           "text": "Docs",
@@ -124,7 +124,7 @@
         },
         {
           "text": "NFT",
-          "link": "/nft"
+          "link": "/blog/HERE_wallet_NFT"
         },
         {
           "text": "Docs",
@@ -525,6 +525,42 @@
     },
     "blogs": [
       {
+        "title": "How to add NEAR to Metamask",
+        "cover": "https://storage.herewallet.app/upload/4cd3fb96-b355-4dfb-8550-91cffa4e16e0.png",
+        "tag": "Tutorial",
+        "text": "NEAR is now available in Metamask thanks to NEAR SNAP. This article will show you how to add NEAR to Metamask and how to sign transactions. Everyone who creates a named NEAR account in Metamask will be able to get Meta-NEAR NFT.",
+        "timeToRead": "8 min",
+        "date": "26.01.2024",
+        "href": "metamask-near"
+      },
+      {
+        "title": "USDT or USDC:  What to choose",
+        "cover": "https://storage.herewallet.app/upload/99615545-b78c-4735-88ba-eed6a4ac363a.png",
+        "tag": "tutorial",
+        "text": "In this article we will try to explain in simple words, the difference between USDT and USDC.",
+        "timeToRead": "3 min",
+        "date": "23.01.2024",
+        "href": "USDT-or-USDC"
+      },
+      {
+        "title": "HERE wallet NFT collection",
+        "cover": "https://storage.herewallet.app/upload/6e81e631-9fdf-4b0e-9127-ea8a219d6878.png",
+        "tag": "NFT",
+        "text": "In this article, we'll dive into the HERE wallet NFT collection, covering the number of NFTs available, their types, distinguishing features, current privileges, and what the future holds for owners.",
+        "timeToRead": "7 min",
+        "date": "16.01.2024",
+        "href": "HERE_wallet_NFT"
+      },
+      {
+        "title": "December recap",
+        "cover": "https://storage.herewallet.app/upload/a309b580-17ac-4798-8bcc-91ba68c004bc.png",
+        "tag": "recap",
+        "text": "In this article, you’ll learn about exchanges on the Aurora network, new achievements in social media, the full support for Incriptions (NRC-20 tokens), sending USDT via phone number (even if the receiver doesn’t have a wallet), the PAGER FREEMINT campaign, and the transaction volume through HERE wallet for swaps..",
+        "timeToRead": "5 min",
+        "date": "05.01.2024",
+        "href": "december-recap"
+      },
+      {
         "title": "INSCRIPTION MINT on NEAR Protocol",
         "cover": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*pGQkshrwDMzMjpKBwPnEVA.png",
         "tag": "Tutorial",
@@ -544,7 +580,7 @@
       },
       {
         "title": "Difference Between USDC and USDC.e: A Comprehensive Guide",
-        "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*ZHsFLM6TVuDHGWclY2fdgA.jpeg",
+        "cover": "https://storage.herewallet.app/upload/6e9cb6b8-325f-48bd-9769-8dbc2d79472c.jpeg",
         "tag": "wiki",
         "text": "This article will help you understand the differences between USDC and USDC.e. After this article, you will understand the differences and functionality of these two stablecoins.",
         "timeToRead": "3 min",
@@ -553,7 +589,7 @@
       },
       {
         "title": "BLACKDRAGON TOKENS AIRDROP",
-        "cover": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*1xDazVMI2K6wTAqiBCNuNQ.jpeg",
+        "cover": "https://storage.herewallet.app/upload/c649e120-92ee-4fc4-9f00-205b106a7cef.jpeg",
         "tag": "NFT",
         "text": "HERE wallet now supports NEAT exchange swaps. Read about it in the blog.",
         "timeToRead": "1 min",
