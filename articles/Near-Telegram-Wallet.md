@@ -1,19 +1,18 @@
 -----
 title: "NEAR TELEGRAM WALLET: Complete Guide"
-cover: https://storage.herewallet.app/upload/4954f4e5-ffb2-435e-8018-1df254669d87.png
+cover: https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png
 tag: Tutorial
 text: 
 The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.
-timeToRead: 7 min
-date: 31.01.2024
+timeToRead: 3 min
+date: 16.01.2024
 -----
-
 
 It's important to understand that the wallet is self-custodial, meaning only you have access to your funds. This is its key advantage and what sets it apart from competitors.
 
 ## Creating a wallet
 
-![Creating a NEAR Wallet account]()
+![Creating a NEAR Wallet account](https://storage.herewallet.app/upload/2e80bc37-0d0a-4ab5-a111-989537ed27ab.png)
 
 To create a wallet:
 1) Click on "Create new account".
@@ -23,7 +22,7 @@ You can also import an existing account via the "Log in" button.
 
 ## Seed phrase
 
-![Save seed phrase]()
+![Save seed phrase](https://storage.herewallet.app/upload/ce9a8cfc-3f13-43a1-9245-4fc9bcb81b7e.png)
 
 The most crucial step is to save your seed phrase. A seed phrase is a simple set of words that allows you to recover your crypto wallet.
 
@@ -36,7 +35,7 @@ Never lose it, and never show it to anyone (even us). Anyone with access to thes
 
 Before you send tokens, you need to add NEAR to your balance. NEAR is used to cover transaction fees. NEAR Protocol fees are approximately $0.001. Learn how to add funds in this article.
 
-// Video
+![How to send NEAR](https://storage.herewallet.app/upload/1111d727-5584-4c60-b12e-b6fbec8728a8.png)
 
 1) Press the "Transfer" button.
 2) Enter the recipient's address.
