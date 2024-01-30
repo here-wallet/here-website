@@ -11,11 +11,13 @@ date: 16.01.2024
 
 HOT is like a special token for the NEAR ecosystem inside Telegram. Because of meta-transactions, using HOT lets you do real transactions on the blockchain, play games, and pay for transfers. It is the first FT that has the functionality of native L1 blockchain tokens.
 
-In the future, HOT won't just work with NEAR Ecosystem. After something called Chain Abstraction starts in Q2 2024, you'll be able to use $HOT to do transactions on Ethereum and other networks that are like Ethereum.
+In the future, HOT won't just work with NEAR Ecosystem. After something called Chain Abstraction starts in Q2 2024, you'll be able to use HOT to do transactions on Ethereum and other networks that are like Ethereum.
+
+You can learn all the basic functions of the wallet here
 
 ### How to start mining HOT
 
-The mining process starts as soon as you create a wallet and get your first free HOT when you click "Claim" (link to article).
+The mining process starts as soon as you create a wallet and get your first free HOT when you click "Claim".
 
 ![How to start mining HOT](https://storage.herewallet.app/upload/50122551-4cad-419a-a3f2-70aebc5ea5bf.png)
 
@@ -48,10 +50,6 @@ Level 5 - Gold Storage - 24 hours - 10 HOT
 ![How to increase HOT mining speed](https://storage.herewallet.app/upload/c4134a24-b40a-4ef1-b6fc-1c5cb4e49fda.png)
 
 The more HOT you have, the better!  So the most important thing is the speed of mining. There are 3 ways to increase it:
-
-### Fireplace
-
-The Fireplace is responsible for the basic speed of mining HOT, and you can level it up just like Storage using HOT.
 
 ### Fireplace
 
