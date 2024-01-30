@@ -2,8 +2,7 @@
 title: "NEAR TELEGRAM WALLET: Complete Guide"
 cover: https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png
 tag: Tutorial
-text: 
-The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.
+text: The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.
 timeToRead: 3 min
 date: 16.01.2024
 -----
