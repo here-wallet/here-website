@@ -33,17 +33,12 @@ Initially Storage is only enough for 2 hours of mining, but you can pump it up b
 
 There are a total of 6 levels of Storage:
 
-Level 0 -  Wooden Storage - 2 hours - free
-
-Level 1 - Metal Storage - 3 hours - 0.2 HOT
-
-Level 2 - Modular Storage - 4 hours - 0.5 HOT
-
-Level 3 - Liquid Storage - 6 hours - 1 HOT
-
-Level 4 - Titanium Storage - 12 hours - 4 HOT
-
-Level 5 - Gold Storage - 24 hours - 10 HOT
+- Level 0 -  Wooden Storage - 2 hours - free
+- Level 1 - Metal Storage - 3 hours - 0.2 HOT
+- Level 2 - Modular Storage - 4 hours - 0.5 HOT
+- Level 3 - Liquid Storage - 6 hours - 1 HOT
+- Level 4 - Titanium Storage - 12 hours - 4 HOT
+- Level 5 - Gold Storage - 24 hours - 10 HOT
 
 ## Mining Speed
 
@@ -57,17 +52,12 @@ The Fireplace is responsible for the basic speed of mining HOT, and you can leve
 
 There are 5 levels of Fireplace in total
 
-Level 0 -  Wood Firespace - 0.01 HOT/hour - free 
-
-Level 1 -  Stone Firespace - 0.015 HOT/hour - 0.2 HOT
-
-Level 2 -  Gas Firespace - 0.02 HOT/hour - 1 HOT
-
-Level 3 -  Neon Firespace - 0.025 HOT/hour - 2 HOT
-
-Level 4 -  Neon Multi-Firespace - 0.03 HOT/hour - 5 HOT
-
-Level 5 -  Gold Fireplace - 0.05 HOT/hour - 15 HOT
+- Level 0 -  Wood Firespace - 0.01 HOT/hour - free 
+- Level 1 -  Stone Firespace - 0.015 HOT/hour - 0.2 HOT
+- Level 2 -  Gas Firespace - 0.02 HOT/hour - 1 HOT
+- Level 3 -  Neon Firespace - 0.025 HOT/hour - 2 HOT
+- Level 4 -  Neon Multi-Firespace - 0.03 HOT/hour - 5 HOT
+- Level 5 -  Gold Fireplace - 0.05 HOT/hour - 15 HOT
 
 ### Wood
 
@@ -91,9 +81,9 @@ Initially, you have 3 free transactions (we cover the gas for you). However, aft
 
 **1. Top Up NEAR**
 
-Simply add NEAR to your address; find out how to do it here.
+Simply add NEAR to your address.
 
-**2. Pay Fees with HOT**
+**2. Cover gas-fee in HOT**
 
 We caution that you can do this, but it's more cost-effective to use NEAR for covering network fees.
 
