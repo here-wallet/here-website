@@ -9,11 +9,11 @@ date: 16.01.2024
 
 ## HOT
 
-HOT is like a special token for the NEAR ecosystem inside Telegram. Because of meta-transactions, using HOT lets you do real transactions on the blockchain, play games, and pay for transfers. It is the first FT that has the functionality of native L1 blockchain tokens.
+HOT is a central piece for the NEAR ecosystem inside Telegram. Because of meta-transactions, using HOT lets you do real transactions on the blockchain, play games, and pay for transfers. It is the first FT that has the functionality of native L1 blockchain tokens.
 
 In the future, HOT won't just work with NEAR Ecosystem. After something called Chain Abstraction starts in Q2 2024, you'll be able to use HOT to do transactions on Ethereum and other networks that are like Ethereum.
 
-You can learn all the basic functions of the wallet here
+You can learn all the basic functions of the wallet [here](https://www.herewallet.app/blog/Near-Telegram-Wallet)
 
 ### How to start mining HOT
 
