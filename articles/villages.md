@@ -3,7 +3,7 @@ title: "Villages"
 cover: https://storage.herewallet.app/upload/9dc0b5b3-ea33-405b-b1ab-faad4bdf9c0b.png
 tag: tutorial
 text: 1,000,000 people already mine HOT and we are happy to announce that we are opening a new way to mine HOT - community mining in villages!
-timeToRead: 7 min
+timeToRead: 3 min
 date: 10.02.2024
 ---
 
@@ -50,6 +50,8 @@ you can deny the bot any actions related to the chat. The admin who adds the bot
 
 We hope that villages will give more motivation to build community. Soon we will add more multi-player features to the wallet .
 These are HOT giveaways to members, competitions between villages, voting for the treasure trove.
+
+YouTube tutorial: https://youtu.be/xH-zpDQcXU0
 
 > [**Discord**](https://discord.gg/AfB5cvtFXH)
 > [**Twitter**](https://twitter.com/here_wallet)
