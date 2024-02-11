@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const { Remarkable } = require("remarkable");
 const pug = require("pug");
-const parseMD = require('parse-md').default
+const parseMD = require("parse-md").default;
 
-const md = new Remarkable();
+const md = new Remarkable({ html: true });
 const pugConfig = JSON.parse(fs.readFileSync(".pugrc", "utf-8"));
 const mdFilesDir = "./articles";
 
@@ -24,7 +24,7 @@ const generateHtml = async () => {
     if (path.extname(file) === ".md") {
       const mdFilePath = path.join(mdFilesDir, file);
       const mdContent = await fs.promises.readFile(mdFilePath, "utf-8");
-      const { metadata, content } = parseMD(mdContent)
+      const { metadata, content } = parseMD(mdContent);
       const href = path.basename(mdFilePath, path.extname(mdFilePath));
       metadata.href = href;
       const html = md.render(content);
@@ -34,15 +34,15 @@ const generateHtml = async () => {
 };
 
 function formatDateToISO(dateString) {
-  const [day, month, year] = dateString.split('.');
+  const [day, month, year] = dateString.split(".");
   return `${year}-${month}-${day}`;
 }
 
 const formatDate = (dateString) => {
   const formattedDate = formatDateToISO(dateString);
   const date = new Date(formattedDate);
-  return date
-}
+  return date;
+};
 
 const buildBlogPreviews = async () => {
   const pug = JSON.parse(await fs.promises.readFile(".pugrc", "utf-8"));
@@ -52,10 +52,7 @@ const buildBlogPreviews = async () => {
         const mdFilePath = path.join(mdFilesDir, file);
         const mdContent = await fs.promises.readFile(mdFilePath, "utf-8");
         const { metadata } = parseMD(mdContent);
-        metadata.href = `${path.basename(
-          mdFilePath,
-          path.extname(mdFilePath)
-        )}`;
+        metadata.href = `${path.basename(mdFilePath, path.extname(mdFilePath))}`;
         return metadata;
       }
       return null;
@@ -70,8 +67,5 @@ const buildBlogPreviews = async () => {
   await fs.promises.writeFile(".pugrc", JSON.stringify(pug, null, 2));
 };
 
-
 buildBlogPreviews();
 generateHtml();
-
-

@@ -525,6 +525,15 @@
     },
     "blogs": [
       {
+        "title": "Villages",
+        "cover": "https://storage.herewallet.app/upload/9dc0b5b3-ea33-405b-b1ab-faad4bdf9c0b.png",
+        "tag": "tutorial",
+        "text": "1,000,000 people already mine HOT and we are happy to announce that we are opening a new way to mine HOT - community mining in villages!",
+        "timeToRead": "7 min",
+        "date": "10.02.2024",
+        "href": "villages"
+      },
+      {
         "title": "How to add NEAR to Metamask",
         "cover": "https://storage.herewallet.app/upload/4cd3fb96-b355-4dfb-8550-91cffa4e16e0.png",
         "tag": "Tutorial",
@@ -550,6 +559,24 @@
         "timeToRead": "7 min",
         "date": "16.01.2024",
         "href": "HERE_wallet_NFT"
+      },
+      {
+        "title": "NEAR TELEGRAM WALLET: Complete Guide",
+        "cover": "https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png",
+        "tag": "Tutorial",
+        "text": "The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.",
+        "timeToRead": "3 min",
+        "date": "16.01.2024",
+        "href": "Near-Telegram-Wallet"
+      },
+      {
+        "title": "How to mine HOT",
+        "cover": "https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64ed.png",
+        "tag": "Tutorial",
+        "text": "In this article you will learn all about what HOT is, how to mine it, how to increase the mining speed and what missions await you.",
+        "timeToRead": "7 min",
+        "date": "16.01.2024",
+        "href": "how-to-mine-HOT"
       },
       {
         "title": "December recap",
