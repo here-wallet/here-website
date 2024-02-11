@@ -15,18 +15,18 @@ the village gets a 5% HOT bonus to its treasure! This money can be spent on comm
 ## How to join the village
 
 1. To create a village or join one that isn't in the top, just send a chat link to the [bot](https://t.me/herewalletbot)
-   <video autoplay style="max-width: 450px; width: 100%; margin-top: 8px; margin-bottom: 16px" controls src="https://storage.herewallet.app/upload/41e786df-a6d1-4941-89de-8e748fd4c801.mp4">
+   <video autoplay muted style="max-width: 450px; width: 100%; margin-top: 8px; margin-bottom: 16px" controls src="https://storage.herewallet.app/upload/41e786df-a6d1-4941-89de-8e748fd4c801.mp4">
 </video>
 
 3. Join the village from the top
-   <video autoplay style="margin-top: 8px; margin-bottom: 16px; max-width: 450px; width: 100%;" controls src="https://storage.herewallet.app/upload/99f25aed-126b-4f2e-bac1-5bf6b763b180.mp4">
+   <video autoplay muted style="margin-top: 8px; margin-bottom: 16px; max-width: 450px; width: 100%;" controls src="https://storage.herewallet.app/upload/99f25aed-126b-4f2e-bac1-5bf6b763b180.mp4">
 </video>
 
 5. Join the village through the link.
 
 ## How to change the village
 
-<video autoplay style="max-width: 450px; width: 100%;" controls src="https://storage.herewallet.app/upload/27d4134a-dfef-4287-af6b-803a12190fcf.mp4">
+<video autoplay muted style="max-width: 450px; width: 100%;" controls src="https://storage.herewallet.app/upload/27d4134a-dfef-4287-af6b-803a12190fcf.mp4">
 </video>
 
 To change villages simply join a new village.
