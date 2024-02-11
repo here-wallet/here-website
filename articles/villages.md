@@ -49,4 +49,10 @@ you can deny the bot any actions related to the chat. The admin who adds the bot
 ## Future
 
 We hope that villages will give more motivation to build community. Soon we will add more multi-player features to the wallet .
-These are HOT giveaways to members, competitions between villages, voting for the treasure trove
+These are HOT giveaways to members, competitions between villages, voting for the treasure trove.
+
+> [**Discord**](https://discord.gg/AfB5cvtFXH)
+> [**Twitter**](https://twitter.com/here_wallet)
+> [**Telegram**](https://t.me/herewallet)
+> [**Telegram chat**](https://t.me/herewalletchat)
+> [**Medium**](https://medium.com/@nearhere)
