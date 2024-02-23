@@ -1,5 +1,5 @@
 ---
-title: "How to mine HOT"
+title: "How mining works"
 cover: https://storage.herewallet.app/upload/07fa8801-bb5c-4d04-b56f-02de992cbbbc.png
 tag: HOT
 text: In this article we will tell you how HOT mining works, what the blockchain has to do with it, how to view the data in the blockchain, how much commissions are spent, what is the main feature of the wallet.
@@ -7,17 +7,17 @@ timeToRead: 5 min
 date: 23.02.2024
 ---
 
-HOT mining is a fair launch system built on smart contracts. It was made to get as many people as possible immersed in web3.  
-Now we already have 1.7 million registered wallets and with the help of gamification, 
+HOT mining is a fair launch system built on smart contracts. It was made to get as many people as possible immersed in web3.
+  
+HOT already has 1.7 million registered wallets and with the help of gamification, 
 friendly UX, telegram virality and educational content we plan to smoothly integrate crypto into the lives of a huge number of users.
 
 ## HOT is built on blockchain
 
 ![hot blockchain game](https://storage.herewallet.app/upload/9d5cebe2-611b-48c5-add1-c4f2c93d8fc3.png)
 
-HOT is built on the blockchain and every action you take (every Claim, every friend, everything related to villages and so on) 
-is a real transaction on the NEAR Protocol blockchain. NEAR Protocol stands out for its high scalability, 
-low transaction cost and high speed. HOT game has the 1st highest number of interacting unique wallets among all apps on any blockchain 
+HOT is built on the blockchain and every claim, every friend, everything related to villages and so on 
+is a real transaction on the NEAR Protocol blockchain. NEAR Protocol stands out for its high scalability, low transaction cost and high speed. HOT game has the 1st highest number of interacting unique wallets among all apps on any blockchain 
 according to [DappRadar](https://dappradar.com/rankings). At the time of writing, that's about 800k unique wallets per day.
 
 Blockchain helps to build a truly fair and transparent distribution system.
