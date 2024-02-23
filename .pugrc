@@ -525,11 +525,20 @@
     },
     "blogs": [
       {
-        "title": "Villages",
+        "title": "How mining works",
+        "cover": "https://storage.herewallet.app/upload/07fa8801-bb5c-4d04-b56f-02de992cbbbc.png",
+        "tag": "HOT",
+        "text": "In this article we will tell you how HOT mining works, what the blockchain has to do with it, how to view the data in the blockchain, how much commissions are spent, what is the main feature of the wallet.",
+        "timeToRead": "5 min",
+        "date": "23.02.2024",
+        "href": "how-miningg-works"
+      },
+      {
+        "title": "HOT: Mining in villages - Tutorial",
         "cover": "https://storage.herewallet.app/upload/9dc0b5b3-ea33-405b-b1ab-faad4bdf9c0b.png",
         "tag": "tutorial",
         "text": "1,000,000 people already mine HOT and we are happy to announce that we are opening a new way to mine HOT - community mining in villages!",
-        "timeToRead": "7 min",
+        "timeToRead": "3 min",
         "date": "10.02.2024",
         "href": "villages"
       },

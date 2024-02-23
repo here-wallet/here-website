@@ -39,11 +39,17 @@ html(lang="en")
             gtag('js', new Date());
             gtag('config', 'G-J76SQ67RJB');
 
-        link(href="style.sass", rel="stylesheet")
-        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(href="../style.sass", rel="stylesheet")
+        link(href="../../assets/cabinet-grotesk/index.css", rel="stylesheet")
+
+        style.
+            .post h1, h2, h3, h4, h5, h6 {
+                font-family: 'Inter', Arial, sans-serif !important;
+            }
+
 
     body.white
-        include ../landing/header/index.pug
+        include ../../landing/header/index.pug
         +header("/blog", false, metadata.langs)
 
         .page-minus
@@ -76,10 +82,10 @@ html(lang="en")
             .modal-wrap
                 .modal-body
                     button.modal-close
-                        img(src="../assets/icons/close.svg")
+                        img(src="../../assets/icons/close.svg")
 
-                    img(style="margin: auto" src="../assets/Graphics/success.png", height="148px")
+                    img(style="margin: auto" src="../../assets/Graphics/success.png", height="148px")
                     p(style="margin-top: 24px") We will notify you about our NEWS
-            include ../landing/footer/index.pug
-            script(type="module", src="./index.js")
-            script(type="module", src="./scripts/emailForm.js")
+            include ../../landing/footer/index.pug
+            script(type="module", src="../index.js")
+            script(type="module", src="../scripts/emailForm.js")

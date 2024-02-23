@@ -1,4 +1,4 @@
-mixin header(active, useWhite)
+mixin header(active, useWhite, langs)
   header.header
     .header-center
       a(href="/", style="display: flex").link-logo
@@ -14,7 +14,15 @@ mixin header(active, useWhite)
 
           else
             a.header-link(href=item.link) !{item.text}
+
       .header-right
+        if langs
+          for lang in langs
+            if lang.active
+              a.switch-lang.active(href=lang.href) !{lang.lang}
+            else
+              a.switch-lang(href=lang.href) !{lang.lang}
+
         for item in header.downloads
           a.header-download(href=item.link) !{item.text}
 
