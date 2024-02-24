@@ -33,7 +33,7 @@ HOT полностью построен на блокчейне, и каждый
 Вы можете отслеживать все, что связано с HOT. Вы можете легко узнать количество отчеканенных и сожженных HOT через
 [nearblocks](https://nearblocks.io/token/game.hot.tg#holders) или на [аналитической платформе Flipside](https://flipsidecrypto.xyz/MoDeFi/here-wallet-bot-your-passport-to-near-on-telegram-herewalletbot-your-passport-to-near-on-telegram-Nsth1N).
 
-## Комиссии в блоечейне
+## Комиссии в блокчейне
 
 ![near protocol gas](https://storage.herewallet.app/upload/39095015-c3e1-43f5-9502-a4020cb52e9b.png)
 
