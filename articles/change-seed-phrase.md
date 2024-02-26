@@ -7,7 +7,7 @@ timeToRead: 5 min
 date: 23.02.2023
 ---
 
-# Step 1: One Key Only
+## Step 1: One Key Only
 
 ![](https://storage.herewallet.app/upload/7d7e9a5b-5ba7-4ed8-9927-451d6f739b29.png)
 
@@ -15,7 +15,7 @@ To successfully generate a new seed phrase, it's crucial to have only one key on
 1. Open settings -> Key Manager.
 2. Ensure that you have only one key. If not, remove any extras.
 
-# Step 2: Import to Web Version
+## Step 2: Import to Web Version
 
 ![](https://storage.herewallet.app/upload/11de3e77-a07c-4037-8aba-ebf790dfe8f4.PNG)
 
@@ -25,7 +25,7 @@ Now, let's proceed with changing the seed phrase using the web version:
 3. Choose *Passphrase or Private Key*.
 4. Enter your current seed phrase and click *Continue*.
 
-# Step 3: Changing the Seed Phrase
+## Step 3: Changing the Seed Phrase
 
 ![](https://storage.herewallet.app/upload/cc3d61dd-a432-429a-80e7-73aea1790141.PNG)
 
