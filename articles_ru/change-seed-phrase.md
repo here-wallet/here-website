@@ -31,7 +31,7 @@ date: 23.02.2023
 
 ![](https://storage.herewallet.app/upload/cc3d61dd-a432-429a-80e7-73aea1790141.PNG)
 
-Переходим по [ссылке](https://beta.herewallet.app/settings/passphrase?change-seed), которая открывает доступ к смене seed-фразы и 
+Переходим по [ссылке](https://my.herewallet.app/settings/passphrase?change-seed), которая открывает доступ к смене seed-фразы и 
 нажимаем *generate new seed phrase*
 
 Очень важно записать и сохранить новую сид фразу.
