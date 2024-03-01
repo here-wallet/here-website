@@ -1,5 +1,5 @@
 ---
-title: "How to Change Your Seed Phraseу"
+title: "How to Change Your Seed Phrase"
 cover: 
 tag: Tutorial
 text: Hello, dear HERE wallet users! We've noticed that with the influx of new participants, many tend to ignore warnings about changing their seed phrase, leading to issues with wallet functionality. As a temporary measure, we've hidden the seed phrase change feature in the mobile version of HERE wallet. But worry not, we have a solution!
