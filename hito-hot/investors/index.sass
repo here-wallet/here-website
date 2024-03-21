@@ -1,0 +1,135 @@
+.investors__bg
+	background: rgba(255, 255, 255, 0.03)
+.investors
+	padding: 160px var(--padding-wrapper)
+	@media (max-width: 1000px)
+		padding: 80px var(--padding-wrapper)
+	&-list
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		@media (max-width: 1000px)
+			gap: 8px
+		&__item
+			position: relative
+			&_big
+				width: calc( 40% - 16px )
+				@media (max-width: 1000px)
+					width: 100%
+					margin: 0 0 24px 0
+				h2
+					font-size: 24px
+					font-style: normal
+					font-weight: 800
+					line-height: normal
+					text-transform: uppercase
+					background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%)
+					background-clip: text
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					@media (max-width: 1000px)
+						font-size: 18px
+						text-align: center
+					@media (max-width: 720px)
+						font-size: 16px
+				h3
+					color: var(--icon-light-light, #FFF)
+					font-size: 48px
+					font-style: normal
+					font-weight: 700
+					line-height: normal
+					letter-spacing: -0.96px
+					@media (max-width: 1000px)
+						font-size: 40px
+						letter-spacing: -0.8px
+						text-align: center
+					@media (max-width: 720px)
+						font-size: 32px
+						letter-spacing: -0.64px
+			&_big-lite
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				width: calc( 40% - 16px )
+				text-align: center
+				@media (max-width: 1000px)
+					width: 100%
+					margin: 24px 0 0 0
+			&_mid
+				width: calc( 20% - 16px )
+				padding: 32px 24px
+				border-radius: 16px
+				border: 1px solid #414141
+				background: #25282B
+				text-align: center
+				@media (max-width: 1000px)
+					width: calc( 33.3333% - 6px )
+				@media (max-width: 720px)
+					width: calc( 50% - 4px )
+				h4
+					margin: 0 0 4px 0
+					color: var(--icon-light-light, #FFF)
+					font-size: 24px
+					font-style: normal
+					font-weight: 700
+					line-height: normal
+					letter-spacing: -0.48px
+					@media (max-width: 720px)
+						font-size: 20px
+						letter-spacing: -0.4px
+				h5
+					color: rgba(255, 255, 255, 0.50)
+					text-align: center
+					font-size: 18px
+					font-style: normal
+					font-weight: 400
+					line-height: normal
+					letter-spacing: -0.36px
+					@media (max-width: 1000px)
+						font-size: 16px
+						letter-spacing: -0.32px
+					a
+						color: rgba(255, 255, 255, 0.50)
+						&:hover
+							text-decoration: none
+							color: rgba(255, 255, 255, 0.70)
+
+.investors-title
+	margin: 0 0 4px 0
+	color: var(--icon-light-light, #FFF)
+	text-align: center
+	font-size: 24px
+	font-style: normal
+	font-weight: 700
+	line-height: normal
+	letter-spacing: -0.48px
+	@media (max-width: 720px)
+		font-size: 20px
+		letter-spacing: -0.4px
+	span
+		color: rgba(255, 255, 255, 0.50)
+		font-size: 18px
+		font-style: normal
+		font-weight: 400
+		line-height: normal
+		letter-spacing: -0.36px
+		@media (max-width: 720px)
+			font-size: 16px
+			letter-spacing: -0.32px
+.investors-descr
+	display: inline-block
+	color: rgba(255, 255, 255, 0.50)
+	font-size: 18px
+	font-style: normal
+	text-align: center
+	font-weight: 400
+	line-height: normal
+	letter-spacing: -0.36px
+	text-decoration-line: underline
+	@media (max-width: 720px)
+		font-size: 16px
+		letter-spacing: -0.32px
+	&:hover
+		text-decoration: none
+		color: rgba(255, 255, 255, 0.70)

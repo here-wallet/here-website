@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
+*,
+*:after,
+*before
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+html
+	width: 100%
+	height: 100%
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+body
+	width: 100%
+	height: 100%
+	background-color: #0E0F12
+	font-family: "Nunito Sans", sans-serif
+	overflow-x: hidden
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	text-size-adjust: 100%
+	text-rendering: optimizeLegibility
+	font-optical-sizing: auto
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin: 0
+:root
+	--width-wrapper: calc( 1200px + 64px )
+	--padding-wrapper: 32px
+	--icon-light-light: #fff
+	@media (max-width: 720px)
+		--padding-wrapper: 16px
+span.dot
+	font-family: CabinetGrotesk
+	color: rgba(253, 132, 227, 1)
+	font-weight: 800
+.overflow-hidden
+	overflow: hidden
+.wrapper
+	max-width: var(--width-wrapper)
+	margin: 0 auto
+	padding: 0 var(--padding-wrapper)
+
+	@media (max-width: 1000px)
+
+.btn
+	display: inline-flex
+	padding: 16px 64px
+	border-radius: 16px
+	font-size: 18px
+	color: var(--icon-light-light, #FFF)
+	font-style: normal
+	font-weight: 700
+	line-height: 140%
+	text-align: center
+	cursor: pointer
+	text-decoration: none
+	@media (max-width: 720px)
+		font-size: 16px
+	
+	&_dark
+		background-color: #0E0F12
+		border: 1px solid var(--icon-light-light, #FFF)
+		&:hover
+			background: transparent
+	&_gradient
+		padding: 24px 80px
+		background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%)
+		font-weight: 800
+		text-transform: uppercase
+.link
+	position: relative
+	color: var(--icon-light-light, #FFF)
+	text-align: center
+	font-size: 18px
+	font-style: normal
+	font-weight: 400
+	line-height: normal
+	text-decoration: none
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%), #D9D9D9
+	&:hover
+		&:before
+			display: none

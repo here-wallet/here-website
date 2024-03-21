@@ -1,0 +1,161 @@
+.get-smaller__bg
+	background: rgba(255, 255, 255, 0.03)
+.get-smaller
+	display: flex
+	margin-bottom: 120px
+	padding: 160px var(--padding-wrapper)
+	@media (max-width: 1000px)
+		flex-direction: column
+		align-items: center
+		padding: 80px var(--padding-wrapper)
+	@media (max-width: 720px)
+		margin-bottom: 60px
+	&__left
+		margin: 0 135px 0 0
+		@media (max-width: 1000px)
+			display: inline-flex
+			flex-direction: column
+			align-items: center
+			margin: 0
+		h2
+			margin: 0 0 48px 0
+			color: var(--icon-light-light, #FFF)
+			font-size: 48px
+			font-style: normal
+			font-weight: 700
+			line-height: normal
+			letter-spacing: -0.96px
+			@media (max-width: 1000px)
+				margin: 0 0 32px 0
+				font-size: 40px
+				letter-spacing: -0.8px
+				text-align: center
+			@media (max-width: 720px)
+				font-size: 32px
+				letter-spacing: -0.64px
+		&-img
+			display: none
+			@media (max-width: 1000px)
+				display: block
+				width: 342px
+				margin: 0 auto 32px auto
+				-webkit-mask-image: linear-gradient(to top, rgba(14, 15, 18, 0) 0%, #0E0F12 43%)
+				mask-image: linear-gradient(to top, rgba(14, 15, 18, 0) 0%, #0E0F12 43%)
+			@media (max-width: 720px)
+				width: 269px
+	&__string
+		display: flex
+		align-items: center
+		margin: 0 0 24px 0
+		@media (max-width: 1000px)
+			display: inline-flex
+		@media (max-width: 720px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			gap: 8px
+		img
+			width: 80px
+			margin: 0 16px 0 0
+			@media (max-width: 1000px)
+				width: 64px
+		p
+			color: var(--icon-light-light, #FFF)
+			text-align: center
+			font-size: 32px
+			font-style: normal
+			font-weight: 700
+			line-height: normal
+			letter-spacing: -0.64px
+			@media (max-width: 1000px)
+				font-size: 24px
+				letter-spacing: -0.48px
+			span
+				background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%)
+				background-clip: text
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+	&__text
+		margin: 0 0 64px 0
+		@media (max-width: 1000px)
+			margin: 0 0 32px 0
+		p
+			max-width: 400px
+			color: rgba(255, 255, 255, 0.75)
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 1000px)
+				text-align: center
+			@media (max-width: 720px)
+				font-size: 16px
+				letter-spacing: -0.32px
+	&__btns
+		display: flex
+		align-items: center
+		gap: 48px
+		@media (max-width: 1000px)
+			flex-direction: column
+			gap: 24px
+	&__right
+		position: relative
+		width: 535px
+		@media (max-width: 1000px)
+			display: none
+		img
+			width: 100%
+			-webkit-mask-image: linear-gradient(to top, rgba(14, 15, 18, 0) 0%, #0E0F12 43%)
+			mask-image: linear-gradient(to top, rgba(14, 15, 18, 0) 0%, #0E0F12 43%)
+
+.digital-assets
+	padding-bottom: 160px
+	@media (max-width: 1000px)
+		padding-bottom: 100px
+	@media (max-width: 720px)
+		padding-bottom: 60px
+	h2
+		color: var(--icon-light-light, #FFF)
+		text-align: center
+		font-size: 120px
+		font-style: normal
+		font-weight: 700
+		line-height: normal
+		letter-spacing: -2.4px
+		@media (max-width: 1000px)
+			font-size: 72px
+			letter-spacing: -1.44px
+	p
+		margin: 0 0 40px 0
+		color: rgba(255, 255, 255, 0.75)
+		text-align: center
+		font-size: 48px
+		font-style: normal
+		font-weight: 400
+		line-height: normal
+		letter-spacing: -0.96px
+		@media (max-width: 1000px)
+			font-size: 24px
+			letter-spacing: -0.48px
+	ul
+		display: flex
+		justify-content: center
+		gap: 40px
+		list-style: none
+		-webkit-mask-image: linear-gradient(to right, transparent 14%, black 50%, transparent 86%)
+		mask-image: linear-gradient(to right, transparent 14%, black 50%, transparent 86%)
+		@media (max-width: 1000px)
+			gap: 16px
+			-webkit-mask-image: linear-gradient(to right, transparent 5%, black 50%, transparent 95%)
+			mask-image: linear-gradient(to right, transparent 5%, black 50%, transparent 95%)
+		@media (max-width: 720px)
+			flex-wrap: wrap
+		li
+			width: 56px
+			height: 56px
+			@media (max-width: 1000px)
+				width: 32px
+				height: 32px
+			img
+				width: 100%

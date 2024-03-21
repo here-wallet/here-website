@@ -1,0 +1,95 @@
+.future-list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 160px var(--padding-wrapper)
+	@media (max-width: 1000px)
+		flex-direction: column
+		gap: 60px
+		padding: 80px var(--padding-wrapper) 40px var(--padding-wrapper)
+	@media (max-width: 720px)
+		padding: 60px var(--padding-wrapper) 40px var(--padding-wrapper)
+	&_desc
+		display: block
+		@media (max-width: 720px)
+			display: none
+	&_mobi
+		display: none
+		@media (max-width: 720px)
+			display: block
+	&__column
+		width: 50%
+		@media (max-width: 1000px)
+			width: 100%
+		h4
+			text-align: center
+			font-size: 24px
+			font-style: normal
+			font-weight: 800
+			line-height: normal
+			text-transform: uppercase
+			background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@media (max-width: 1000px)
+				font-size: 18px
+			@media (max-width: 720px)
+				font-size: 16px
+		h3
+			margin: 0 0 32px 0
+			color: var(--icon-light-light, #FFF)
+			text-align: center
+			font-size: 48px
+			font-style: normal
+			font-weight: 700
+			line-height: normal
+			letter-spacing: -0.96px
+			@media (max-width: 1000px)
+				font-size: 40px
+				letter-spacing: -0.8px
+			@media (max-width: 720px)
+				margin: 0 0 24px 0
+				font-size: 32px
+				letter-spacing: -0.64px
+		img
+			width: 100%
+			margin-top: -229px
+			@media (max-width: 1200px)
+				margin-top: -40%
+.future-text
+	margin-bottom: 160px
+	@media (max-width: 1000px)
+		margin-bottom: 80px
+	h2
+		margin: 0 0 12px 0
+		color: rgba(255, 255, 255, 0.75)
+		text-align: center
+		font-size: 60px
+		font-style: normal
+		font-weight: 700
+		line-height: normal
+		letter-spacing: -1.2px
+		@media (max-width: 1000px)
+			font-size: 40px
+			letter-spacing: -0.8px
+		@media (max-width: 720px)
+			font-size: 32px
+			letter-spacing: -0.64px
+		span
+			display: inline-block
+			margin: 0 16px
+			color: var(--icon-light-light, #FFF)
+			@media (max-width: 1000px)
+				display: block
+	p
+		color: var(--icon-light-light, #FFF)
+		text-align: center
+		font-size: 24px
+		font-style: normal
+		font-weight: 400
+		line-height: normal
+		letter-spacing: -0.48px
+		opacity: 0.75
+		@media (max-width: 1000px)
+			font-size: 16px
