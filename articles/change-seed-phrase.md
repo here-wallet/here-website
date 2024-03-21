@@ -29,7 +29,7 @@ Now, let's proceed with changing the seed phrase using the web version:
 
 ![](https://storage.herewallet.app/upload/cc3d61dd-a432-429a-80e7-73aea1790141.PNG)
 
-Go to [this link](https://beta.herewallet.app/settings/passphrase?change-seed) to initiate the seed phrase change process and click *generate new seed phrase*. Make sure to note and save the new seed phrase.
+Go to [this link](https://my.herewallet.app/settings/passphrase?change-seed) to initiate the seed phrase change process and click *generate new seed phrase*. Make sure to note and save the new seed phrase.
 
 After successful generation, log in again to the mobile app and Telegram wallet using the **new seed phrase**. Remember, never disclose your seed phrase and avoid importing it into untrusted wallets.
 
