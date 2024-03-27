@@ -570,15 +570,6 @@
         "href": "HERE_wallet_NFT"
       },
       {
-        "title": "NEAR TELEGRAM WALLET: Complete Guide",
-        "cover": "https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png",
-        "tag": "Tutorial",
-        "text": "The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.",
-        "timeToRead": "3 min",
-        "date": "16.01.2024",
-        "href": "Near-Telegram-Wallet"
-      },
-      {
         "title": "How to mine HOT",
         "cover": "https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64ed.png",
         "tag": "Tutorial",
@@ -586,6 +577,15 @@
         "timeToRead": "7 min",
         "date": "16.01.2024",
         "href": "how-to-mine-HOT"
+      },
+      {
+        "title": "NEAR TELEGRAM WALLET: Complete Guide",
+        "cover": "https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png",
+        "tag": "Tutorial",
+        "text": "The NEAR Telegram Wallet is a fully decentralized crypto wallet designed for the NEAR Protocol. In this article, we will provide detailed instructions on how to use it.",
+        "timeToRead": "3 min",
+        "date": "16.01.2024",
+        "href": "Near-Telegram-Wallet"
       },
       {
         "title": "December recap",
@@ -719,7 +719,7 @@
         "text": "In the HERE update 1.3.0 you can connect Binance to your non-custodial wallet. In this article, we’ll explain in detail what it is, and how dose Binance connect works.",
         "timeToRead": "3 min",
         "date": "24.07.2023",
-        "href": "binance connect"
+        "href": "binance-connect"
       },
       {
         "title": "Binance connect: security",
@@ -756,6 +756,15 @@
         "timeToRead": "5 min",
         "date": "03.06.2023",
         "href": "here-score-29ce3537e225"
+      },
+      {
+        "title": "How to Change Your Seed Phrase",
+        "cover": null,
+        "tag": "Tutorial",
+        "text": "Hello, dear HERE wallet users! We've noticed that with the influx of new participants, many tend to ignore warnings about changing their seed phrase, leading to issues with wallet functionality. As a temporary measure, we've hidden the seed phrase change feature in the mobile version of HERE wallet. But worry not, we have a solution!",
+        "timeToRead": "5 min",
+        "date": "23.02.2023",
+        "href": "change-seed-phrase"
       },
       {
         "title": "How to use NEAR on Mobile",

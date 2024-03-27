@@ -1,0 +1,157 @@
+.nfc-nft__bg
+	background-color: rgba(255, 255, 255, 0.03)
+	background-image: url(./images/stroke-bg.svg)
+	background-position: 50%
+	background-size: 100% auto
+	@media (max-width: 1000px)
+		background-size: 220% auto
+.nfc-nft
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 160px var(--padding-wrapper)
+	@media (max-width: 1000px)
+		flex-direction: column
+		padding: 72px var(--padding-wrapper)
+		&__title-main
+			display: inline-flex
+			align-items: center
+			gap: 16px
+			margin: 0 0 24px 0
+	&__left
+		width: calc( 50% - 16px )
+		@media (max-width: 1000px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+			max-width: 448px
+			margin: 0 auto 16px auto
+		img
+			display: block
+			width: 88px
+			margin: 0 auto 16px auto
+			@media (max-width: 1000px)
+				width: 64px
+				margin: 0
+		h2
+			margin: 0 0 32px 0
+			color: var(--icon-light-light, #FFF)
+			text-align: center
+			font-size: 48px
+			font-style: normal
+			font-weight: 700
+			line-height: normal
+			letter-spacing: -0.96px
+			@media (max-width: 1000px)
+				margin: 0
+				font-size: 32px
+				letter-spacing: -0.64px
+				span
+					display: none
+			@media (max-width: 720px)
+				font-size: 24px
+		p
+			max-width: 400px
+			margin: 0 auto 32px auto
+			color: rgba(255, 255, 255, 0.90)
+			text-align: center
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 1000px)
+				font-size: 16px
+				letter-spacing: -0.32px
+			strong
+				font-weight: 700
+	&__right
+		width: calc( 50% - 16px )
+		@media (max-width: 1000px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+	&__open-source
+		margin: 0 0 32px 0
+		@media (max-width: 1000px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+			margin: 0 0 48px 0
+		p
+			max-width: 400px
+			color: rgba(255, 255, 255, 0.90)
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 1000px)
+				text-align: center
+			strong
+				font-weight: 700
+	&__title
+		display: flex
+		align-items: center
+		gap: 16px
+		margin: 0 0 24px 0
+		@media (max-width: 1000px)
+			display: inline-flex
+		h3
+			color: var(--icon-light-light, #FFF)
+			font-size: 32px
+			font-weight: 700
+			line-height: 64px
+			letter-spacing: -0.64px
+			@media (max-width: 720px)
+				font-size: 24px
+				letter-spacing: -0.48px
+		img
+			display: inline-block
+			width: 64px
+	&__in-usa
+		margin: 0 0 32px 0
+		@media (max-width: 1000px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+			margin: 0
+		p
+			max-width: 400px
+			color: rgba(255, 255, 255, 0.90)
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 1000px)
+				max-width: 448px
+				text-align: center
+			@media (max-width: 720px)
+				font-size: 16px
+				letter-spacing: -0.32px
+			strong
+				font-weight: 700
+	&__title
+		display: flex
+		align-items: center
+		gap: 16px
+		margin: 0 0 24px 0
+		@media (max-width: 1000px)
+			display: inline-flex
+		h3
+			color: var(--icon-light-light, #FFF)
+			font-size: 32px
+			font-weight: 700
+			line-height: 64px
+			letter-spacing: -0.64px
+			@media (max-width: 720px)
+				font-size: 24px
+				letter-spacing: -0.48px
+		img
+			display: inline-block
+			width: 64px

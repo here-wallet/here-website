@@ -1,0 +1,82 @@
+.faq
+	padding: 160px var(--padding-wrapper)
+	@media (max-width: 1000px)
+		padding: 80px var(--padding-wrapper)
+	&-header
+		h2
+			margin: 0 0 12px 0
+			color: var(--icon-light-light, #FFF)
+			font-size: 48px
+			font-style: normal
+			font-weight: 700
+			line-height: normal
+			letter-spacing: -0.96px
+			@media (max-width: 1000px)
+				font-size: 40px
+				letter-spacing: -0.8px
+			@media (max-width: 720px)
+				font-size: 32px
+				letter-spacing: -0.64px
+		p
+			margin: 0 0 32px 0
+			color: var(--icon-light-light, #FFF)
+			font-size: 24px
+			font-style: normal
+			font-weight: 400
+			line-height: normal
+			letter-spacing: -0.48px
+			@media (max-width: 1000px)
+				font-size: 18px
+				letter-spacing: -0.36px
+	&-content
+		display: flex
+		flex-direction: column
+		padding: 0 32px
+		@media (max-width: 1000px)
+			padding: 0
+	&-block
+		max-width: 552px
+		cursor: pointer
+		background: #ffffff1a
+		border: 1px solid #ffffff1a
+		border-radius: 16px
+		width: 100%
+		margin: 0 0 16px 0
+		transition: height .2s, background .2s
+		overflow: hidden
+		@media (max-width: 1000px)
+			max-width: unset
+		&-header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			gap: 16px
+			padding: 16px 12px 16px 24px
+			p
+				color: rgba(255, 255, 255, 0.90)
+				font-size: 18px
+				font-style: normal
+				font-weight: 600
+				line-height: 150%
+				letter-spacing: -0.36px
+				@media (max-width: 720px)
+					font-size: 16px
+					letter-spacing: -0.32px
+			img
+				transition: transform .35s
+		&-body
+			padding: 0 24px 32px
+			display: none
+			p
+				color: rgba(255, 255, 255, 0.90)
+				font-size: 18px
+				font-style: normal
+				font-weight: 400
+				line-height: 150%
+				letter-spacing: -0.36px
+				@media (max-width: 720px)
+					font-size: 16px
+					letter-spacing: -0.32px
+	&-block.open
+		img
+			transform: rotateZ(-90deg)
