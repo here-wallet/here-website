@@ -33,11 +33,11 @@ sustainable and independent.
 HOT Wallet is a wallet created on top of HOT Protocol. Unlike regular wallets, 
 its seed phrase is stored distributed in a network of validators. This allows 
 you to give limited access to your account, transfer ownership of wallets, 
-replace the cid-phrase, customize 2FA and more. HOT is an open protocol, such 
+replace the seed phrase, customize 2FA and more. HOT is an open protocol, such 
 wallets can be used through any compatible crypto wallet. For example, 
 HERE Wallet and HOT Cli.
 
-# NEAR Chain Abstraction
+## NEAR Chain Abstraction
 
 NEAR Chain Abstraction is a set of tools that allow you to create open MPC 
 networks. The main problem that NEAR Chain Abstraction solves is decentralized 
@@ -53,7 +53,7 @@ A non-custodial wallet is a wallet where the user has full control over the secu
 
 ## What problems does HOT Protocol solve
 
-1. Cid Phrase Replacement. Accounts created on top of HOT Protocol can have 
+1. Seed Phrase Replacement. Accounts created on top of HOT Protocol can have 
 their seed phrases changed. This not only increases the security of such wallets, 
 but also gives access to transfer accounts with their reputation and locked tokens.
 
