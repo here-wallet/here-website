@@ -27,7 +27,7 @@ the protocol to be even more decentralized.
 
 HOT will be staked by validators as collateral for their participation in 
 transaction signing, also users and projects will burn HOT when making transactions 
-on wallets on top of the HOT Protocol. This economy will make the HOT network 
+on wallets on top of the HOT Protocol. This economy will make the HOT Protocol 
 sustainable and independent.
 
 HOT Wallet is a wallet created on top of HOT Protocol. Unlike regular wallets, 
