@@ -10,9 +10,9 @@ date: 20.04.2024
 We are excited to announce the launch of HOT Protocol, 
 an open protocol for creating decentralized MPC wallets.
 
-## What is an MPC wallet
+## What is MPC wallet
 
-An MPC wallet is a type of cryptocurrency wallet that divides the private 
+MPC wallet is a type of cryptocurrency wallet that divides the private 
 key into multiple parts and stores them in different locations for increased 
 security. Usually access to such servers is controlled centrally, such as Coinbase, 
 Binance, OKX or ByBit. In HOT Protocol, the key is stored with a large number of 
