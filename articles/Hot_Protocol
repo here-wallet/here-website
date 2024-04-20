@@ -54,8 +54,8 @@ A non-custodial wallet is a wallet where the user has full control over the secu
 ## What problems does HOT Protocol solve
 
 1. Cid Phrase Replacement. Accounts created on top of HOT Protocol can have 
-their cid-phrases changed. This not only increases the security of such wallets, 
-but also gives access to transfer accounts with their reputation and tokenized tokens.
+their seed phrases changed. This not only increases the security of such wallets, 
+but also gives access to transfer accounts with their reputation and locked tokens.
 
 2. 2FA. Thanks to the flexible access system, you can set up 2FA via SMS or mail to 
 sign transactions. At the same time, 2FA can always be waived after waiting a few 
@@ -67,5 +67,5 @@ network and pay for gas in HOT.
 
 Also HOT is a universal SDK for third party developers. Any project can create 
 non-custodial and secure wallets for users. This enables seamless onboarding of 
-web2 users. Users can change the cid-phrase if they want and use them as normal 
+web2 users. Users can change the seed phrase if they want and use them as normal 
 wallets.
