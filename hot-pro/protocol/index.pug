@@ -1,0 +1,55 @@
+.protocol
+	.protocol-grad
+	.protocol-wrapper
+		.protocol-header
+			.protocol-header__title
+				h2 HOT Protocol
+				p.inter-font is a decentralized network of validators for MPC wallets
+
+			.protocol-header__list
+				.protocol-header__list-column
+					h3.icon-shield Secure
+					p.inter-font Each validator stores a small part of the private key. The network is resistant to disclosure and sabotage.
+				.protocol-header__list-column
+					h3.icon-scale Scalable
+					p.inter-font New nodes can join the network and to improve decentralization and security.
+				.protocol-header__list-column
+					h3.icon-decentral Decentralized
+					p.inter-font Each validator is independent and gives access to the entire network
+
+		.protocol-map
+			h2.for_desktop
+				span HOT Wallet 
+				| - MPC wallet on HOT Protocol
+			h2.for_mobile HOT Wallet is an MPC wallet created on&nbsp;top&nbsp;of&nbsp;the HOT&nbsp;Protocol
+			p.map-1.inter-font.for_desktop Wallet ownerships are stored in the Smart Contract on NEAR Blockchain
+			p.map-2.inter-font.for_desktop Each validator checks proof of wallet ownership and sign transaction
+			p.map-3.inter-font.for_desktop User builds the signature on-device
+			p.map-1.inter-font.for_mobile 1. Wallet ownership proofs are stored on the blockchain
+			p.map-2.inter-font.for_mobile 2. Each validator checks proof of wallet ownership
+			p.map-3.inter-font.for_mobile 3. User locally builds the signature
+			picture
+				source(media="(min-width: 1001px)", srcset="./images/protocol-full.png 1x, ./images/protocol-full-2x.png 2x")
+				source(media="(min-width: 720px)", srcset="./images/protocol-full-744.png 1x, ./images/protocol-full-744-2x.png 2x")
+				source(media="(min-width: 260px)", srcset="./images/protocol-full-375.png 1x, ./images/protocol-full-375-2x.png 2x")
+				img(src="./images/protocol-full.png", alt="Wallet apps").map-bg
+			
+			picture
+				source(media="(min-width: 400px)", srcset="./images/sign-dragon-1.png 1x, ./images/sign-dragon-1x2.png 2x")
+				source(media="(min-width: 260px)", srcset="./images/sign-dragon-1-375.png 1x, ./images/sign-dragon-1-375x2.png 2x")
+				img(src="./images/sign-dragon-1.png", alt="").map-drag-1
+
+			picture
+				source(media="(min-width: 400px)", srcset="./images/sign-dragon-2.png 1x, ./images/sign-dragon-2x2.png 2x")
+				source(media="(min-width: 260px)", srcset="./images/sign-dragon-2-375.png 1x, ./images/sign-dragon-2-375x2.png 2x")
+				img(src="./images/sign-dragon-1.png", alt="").map-drag-2
+			.map__list
+				.map__item.map__item_access
+					h3 Recover access
+					p.inter-font Set up quick login by email, sms or fingerprint.
+				.map__item.map__item_2fa
+					h3 2FA
+					p.inter-font Add 2FA as an additional requirement when signing transactions
+				.map__item.map__item_wallet
+					h3 Transferable wallets
+					p.inter-font Share wallet ownership with its reputation and locked tokens

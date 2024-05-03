@@ -1,0 +1,203 @@
+.mpc
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto 72px auto
+	padding: 120px 32px 0 32px
+	@media (max-width: 1000px)
+		padding: 80px 32px 0 32px
+		text-align: center
+	@media (max-width: 720px)
+		margin: 0 auto 0 auto
+		padding: 60px 16px 0 16px
+	h2
+		font-size: 48px
+		font-weight: 600
+		line-height: 114%
+		letter-spacing: -1.44px
+		background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 1000px)
+			margin: 0 0 20px 0
+			font-size: 32px
+			letter-spacing: -0.96px
+	p
+		max-width: 488px
+		margin: 0 0 80px 0
+		color: rgba(255, 255, 255, 0.80)
+		font-size: 24px
+		font-weight: 400
+		line-height: 150%
+		letter-spacing: -0.48px
+		@media (max-width: 1000px)
+			margin: 0 auto 34px auto
+			font-size: 20px
+			letter-spacing: -0.4px
+	
+	&-param
+		display: flex
+		gap: 96px
+		position: relative
+		@media (max-width: 1000px)
+			gap: 40px
+		@media (max-width: 720px)
+			flex-direction: column
+		&::before
+			content: "VS"
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			text-transform: uppercase
+			text-align: center
+			font-size: 40px
+			font-weight: 300
+			line-height: 114%
+			letter-spacing: -1.2px
+			opacity: 0.75
+			background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@media (max-width: 1000px)
+				font-size: 24px
+				letter-spacing: -0.72px
+			@media (max-width: 720px)
+				display: none
+		&__item
+			position: relative
+			padding: 32px 16px 32px 16px
+			border-radius: 16px
+			h3
+				margin: 0 0 16px 0
+				font-size: 32px
+				font-weight: 400
+				line-height: 114%
+				text-align: center
+				letter-spacing: -0.96px
+				@media (max-width: 1000px)
+					font-size: 24px
+					letter-spacing: -0.72px
+			img
+				width: 100%
+				margin: 0 0 32px 0
+				@media (max-width: 720px)
+					margin: 0 0 8px 0
+			&_usual
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 27.5%, rgba(255, 255, 255, 0.00) 100%)
+				&::before
+					content: ""
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					width: calc(100% - 3px)
+					height: 100%
+					border-radius: 16px
+					border: 1px solid #FFF
+					-webkit-mask-image: linear-gradient(to top, transparent 5%, black 96%)
+					mask-image: linear-gradient(to top, transparent 5%, black 96%)
+					@media (max-width: 720px)
+						border-radius: 24px
+				h3
+					background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(153, 153, 153, 0.75) 154.52%)
+					background-clip: text
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+			&_hot
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 27.5%, rgba(255, 255, 255, 0.00) 100%)
+				&::before
+					content: ""
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					width: calc(100% - 3px)
+					height: 100%
+					border-radius: 16px
+					border: 1px #FDBF1E solid
+					-webkit-mask-image: linear-gradient(to top, transparent 5%, black 96%)
+					mask-image: linear-gradient(to top, transparent 5%, black 96%)
+					@media (max-width: 720px)
+						border-radius: 24px
+				h3
+					background: linear-gradient(90deg, #FFC000 0%, #FF5300 100%)
+					background-clip: text
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					font-weight: 600
+		&__list-usual
+			padding: 0 16px
+			list-style: none
+			@media (max-width: 1000px)
+				padding: 0 4px
+				text-align: left
+			li
+				display: flex
+				align-items: center
+				gap: 16px
+				margin: 0 0 20px 0
+				color: rgba(255, 255, 255, 0.75)
+				font-family: 'Inter', sans-serif
+				font-size: 24px
+				font-weight: 500
+				letter-spacing: -0.48px
+				@media (max-width: 1000px)
+					font-size: 20px
+					letter-spacing: -0.4px
+				@media (max-width: 720px)
+					gap: 8px
+					margin: 0 0 12px 0
+					font-size: 16px
+					letter-spacing: -0.32px
+				&::before
+					content: ""
+					display: block
+					width: 32px
+					height: 32px
+					background-image: url(./images/usual-list.svg)
+					background-position: 50%
+					background-repeat: no-repeat
+					background-size: 100% auto
+					@media (max-width: 720px)
+						width: 24px
+						height: 24px
+		&__list-hot
+			padding: 0 16px
+			list-style: none
+			@media (max-width: 1000px)
+				padding: 0 4px
+				text-align: left
+			li
+				display: flex
+				align-items: center
+				gap: 16px
+				margin: 0 0 20px 0
+				color: rgba(255, 255, 255, 0.9)
+				font-family: 'Inter', sans-serif
+				font-size: 24px
+				font-weight: 500
+				letter-spacing: -0.48px
+				@media (max-width: 720px)
+					gap: 8px
+					margin: 0 0 12px 0
+					font-size: 16px
+					letter-spacing: -0.32px
+				&::before
+					content: ""
+					display: block
+					width: 32px
+					height: 32px
+					background-image: url(./images/hot-list.svg)
+					background-position: 50%
+					background-repeat: no-repeat
+					background-size: 100% auto
+					@media (max-width: 720px)
+						width: 24px
+						height: 24px
+			.mpc-param__list_unic
+				&::before
+					background-image: url(./images/hot-hot-list.svg)

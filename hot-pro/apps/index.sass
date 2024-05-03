@@ -1,0 +1,135 @@
+.apps
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.00) 100%)
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		width: 1264px
+		margin: 0 auto
+		padding: 120px 0 0 0
+		@media (max-width: 1000px)
+			width: 100%
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+			padding: 80px 0 80px 0
+		@media (max-width: 780px)
+			padding: 60px 0 60px 0
+	h2
+		width: 420px
+		margin: 0 0 24px 0
+		font-size: 48px
+		font-weight: 600
+		line-height: 114%
+		letter-spacing: -1.44px
+		background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 1000px)
+			margin: 0 auto 20px auto
+			text-align: center
+		@media (max-width: 780px)
+			width: 100%
+			margin: 0 0 16px 0
+			font-size: 32px
+			letter-spacing: -0.96px
+	p
+		width: 420px
+		margin: 0 0 40px 0
+		color: rgba(255, 255, 255, 0.80)
+		font-size: 24px
+		font-weight: 500
+		line-height: 150%
+		letter-spacing: -0.48px
+		@media (max-width: 1000px)
+			max-width: 448px
+			margin: 0 auto 40px auto
+			text-align: center
+			font-size: 20px
+			letter-spacing: -0.4px
+		@media (max-width: 780px)
+			width: 100%
+			padding: 0 16px
+	ul
+		margin: 0 0 212px 0
+		@media (max-width: 1000px)
+			margin: 0 0 68px 0
+		@media (max-width: 720px)
+			margin: 0 0 88px 0
+		li
+			display: flex
+			align-items: center
+			gap: 12px
+			margin: 0 0 12px 0
+			color: rgba(255, 255, 255, 0.80)
+			font-size: 24px
+			font-weight: 500
+			line-height: 150%
+			letter-spacing: -0.48px
+			@media (max-width: 1000px)
+				justify-content: center
+				font-size: 20px
+				letter-spacing: -0.4px
+			span
+				align-self: end
+				color: rgba(255, 255, 255, 0.60)
+				font-size: 20px
+				letter-spacing: -0.4px
+			&::before
+				content: ""
+				display: block
+				width: 32px
+				height: 32px
+				background-position: 50%
+				background-repeat: no-repeat
+				background-size: 100% auto
+			&:nth-child(1)::before
+				background-image: url(./images/list-wallet.svg)
+			&:nth-child(2)::before
+				background-image: url(./images/list-hot.png)
+				background-size: 30px auto
+			&:nth-child(3)::before
+				background-image: url(./images/list-metamask.png)
+	&-left
+		padding: 0 0 0 64px
+		@media (max-width: 1000px)
+			padding: 0
+			text-align: center
+	&-right
+		@media (max-width: 720px)
+			width: 100%
+		img
+			width: 100%
+			margin: -48px 0 0 0
+			@media (max-width: 1000px)
+				margin: 0
+		.btn
+			margin: 0 auto
+			@media (max-width: 1000px)
+				font-size: 18px
+			@media (max-width: 720px)
+				font-size: 16px
+	&-links
+		@media (max-width: 1000px)
+			display: flex
+			flex-wrap: wrap
+			gap: 16px
+			width: 312px
+			max-width: 100%
+			margin: 0 auto
+			@media (max-width: 320px)
+				width: calc( 100% - 16px )
+				justify-content: center
+			img
+				width: 100%
+			a
+				display: block
+				&:nth-child(1)
+					width: 141px
+				&:nth-child(2)
+					width: 155px
+				&:nth-child(3)
+					width: 100%
+				
+

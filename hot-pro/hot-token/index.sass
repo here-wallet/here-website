@@ -1,0 +1,290 @@
+.hot-token
+	position: relative
+	z-index: 5
+	width: 1264px
+	max-width: calc(100% - 48px)
+	margin: -440px auto 308px auto
+	padding: 64px 200px 64px 200px
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 27.5%, rgba(255, 255, 255, 0.00) 50%)
+	backdrop-filter: blur(32px)
+	border-radius: 32px
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		width: calc(100% - 3px)
+		height: 100%
+		border-radius: 32px
+		border: 1px solid #FFF
+		-webkit-mask-image: linear-gradient(to top, transparent 50%, black 96%)
+		mask-image: linear-gradient(to top, transparent 50%, black 96%)
+		@media (max-width: 720px)
+			border-radius: 24px
+	@media (max-width: 1300px)
+		padding: 64px 120px 64px 120px
+	@media (max-width: 1000px)
+		margin: -290px auto 194px auto
+		padding: 48px 32px 0 32px
+		text-align: center
+	@media (max-width: 720px)
+		max-width: calc(100% - 32px)
+		margin: -292px auto 144px auto
+		padding: 32px 16px 0 16px
+		overflow: hidden
+		border-radius: 24px
+	&__hide
+		@media (max-width: 720px)
+			display: none
+	&__header
+		margin: 0 0 188px 0
+		text-align: center
+		@media (max-width: 1000px)
+			margin: 0 0 128px 0
+		@media (max-width: 720px)
+			margin: 0 0 72px 0
+		h2
+			margin: 0 0 32px 0
+			text-align: center
+			font-size: 120px
+			font-weight: 600
+			line-height: 114%
+			letter-spacing: -6px
+			background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@media (max-width: 1000px)
+				margin: 0 0 20px 0
+				font-size: 100px
+				letter-spacing: -5px
+			@media (max-width: 720px)
+				font-size: 56px
+				letter-spacing: -2.8px
+		h4
+			max-width: 560px
+			margin: 0 auto 72px auto
+			color: rgba(255, 255, 255, 0.80)
+			text-align: center
+			font-size: 24px
+			font-weight: 500
+			letter-spacing: -0.48px
+			@media (max-width: 1000px)
+				margin: 0 auto 48px auto
+			@media (max-width: 720px)
+				font-size: 20px
+				letter-spacing: -0.4px
+		.btn
+			margin: 0 auto
+			@media (max-width: 720px)
+				font-size: 16px
+				letter-spacing: -0.32px
+	&_fire
+		position: relative
+		z-index: 4
+		width: 100%
+		height: 900px
+		padding: 120px 0 0 0
+		background-image: url(./images/hot-token-fire.png)
+		background-position: 50%
+		background-repeat: no-repeat
+		background-size: 900px auto
+		@media (max-width: 1000px)
+			height: 604px
+			background-size: 604px auto
+
+	&__middle
+		display: flex
+		justify-content: space-between
+		position: relative
+		h3
+			margin: 0 0 16px 0
+			font-size: 32px
+			font-style: normal
+			font-weight: 500
+			letter-spacing: -0.64px
+			background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			&.no-margin
+				margin: 0
+		p
+			margin: 0 0 20px 0
+			color: rgba(255, 255, 255, 0.90)
+			font-family: 'Inter', sans-serif
+			font-size: 18px
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 720px)
+				margin: 0 0 64px 0
+				font-size: 16px
+				letter-spacing: -0.32px
+	&__left
+		position: relative
+		z-index: 5
+		width: 388px
+		@media (max-width: 1000px)
+			text-align: left
+		@media (max-width: 720px)
+			margin: 0 auto
+			text-align: center
+	&__right
+		position: absolute
+		right: -140px
+		top: 0
+		z-index: 4
+		@media (max-width: 1000px)
+			top: 128px
+			right: -120px
+		img
+			width: 592px
+			@media (max-width: 1000px)
+				width: 484px
+
+.cost-list
+	margin: 20px 0 72px 0
+	@media (max-width: 1000px)
+		margin: 50px 0 164px 0
+	@media (max-width: 720px)
+		text-align: left
+		margin: 50px 0 64px 0
+	li
+		display: flex
+		align-items: center
+		gap: 12px
+		margin: 0 0 22px 0
+		color: rgba(255, 255, 255, 0.90)
+		font-family: 'Inter', sans-serif
+		font-size: 18px
+		font-weight: 400
+		line-height: 150%
+		letter-spacing: -0.36px
+		&.for_desktop
+			@media (max-width: 720px)
+				display: none
+		&.for_mobile
+			display: none
+			@media (max-width: 720px)
+				display: flex
+		&::before
+			content: ""
+			display: block
+			width: 32px
+			height: 32px
+			border-radius: 8px
+	&_1::before
+		border: 1px solid rgba(255, 255, 255, 0.50)
+		background: linear-gradient(180deg, #F5DF6E -22.92%, #EACB00 106.25%)
+	&_2::before
+		border: 1px solid rgba(255, 255, 255, 0.15)
+		background: linear-gradient(180deg, #FFC000 0%, #FF5300 100%), linear-gradient(0deg, #161616 -16.72%, #3B3B3B 100%)
+	&_3::before
+		border: 1px solid rgba(255, 255, 255, 0.15)
+		background: linear-gradient(0deg, #161616 0%, #3B3B3B 100%)
+
+.token-list
+	list-style: none
+	@media (max-width: 720px)
+		max-width: 310px
+		margin: 0 auto
+		padding: 20px 0
+	@media (max-width: 320px)
+		max-width: 100%
+		width: 100%
+	li
+		width: 480px
+		margin: 0 0 18px 0
+		padding: 24px
+		border-radius: 16px
+		border: 1px solid rgba(255, 255, 255, 0.15)
+		background: rgba(255, 255, 255, 0.05)
+		backdrop-filter: blur(40px)
+		text-align: left
+		@media (max-width: 720px)
+			width: 240px
+			margin: 0 0 12px 0
+			padding: 20px 16px
+		@media (max-width: 374px)
+			width: 100%
+		&.token-list_2
+			margin-left: 184px
+			@media (max-width: 1200px)
+				margin-left: 120px
+			@media (max-width: 1000px)
+				margin-left: 68px
+			@media (max-width: 720px)
+				margin-left: 36px
+			@media (max-width: 374px)
+				margin-left: 0
+		&.token-list_3
+			margin-left: 368px
+			@media (max-width: 1200px)
+				margin-left: 240px
+			@media (max-width: 1000px)
+				margin-left: 136px
+			@media (max-width: 720px)
+				margin-left: 70px
+			@media (max-width: 374px)
+				margin-left: 0
+		h3
+			display: flex
+			align-items: center
+			gap: 16px
+			margin: 0 0 8px 0
+			font-size: 24px
+			font-weight: 500
+			letter-spacing: -0.48px
+			background: linear-gradient(180deg, #FFF 0%, #999 154.52%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@media (max-width: 720px)
+				font-size: 20px
+				letter-spacing: -0.4px
+			&::before
+				content: ""
+				display: block
+				width: 32px
+				height: 32px
+				background-position: 50%
+				background-size: 100% auto
+				background-repeat: no-repeat
+		p
+			color: rgba(255, 255, 255, 0.80)
+			font-family: 'Inter', sans-serif
+			font-size: 18px
+			font-weight: 400
+			line-height: 150%
+			letter-spacing: -0.36px
+			@media (max-width: 720px)
+				font-size: 16px
+				letter-spacing: -0.32px
+	&_1 h3::before
+		background-image: url(./images/stake.svg)
+	&_2 h3::before
+		background-image: url(./images/earn.svg)
+	&_3 h3::before
+		background-image: url(./images/do-it.svg)
+.hide-in-375
+	@media (max-width: 720px)
+		display: none
+.show-in-375
+	display: none
+	@media (max-width: 720px)
+		display: block
+		position: relative
+		z-index: -1
+		width: 100%
+		height: 264px
+		img
+			position: absolute
+			left: 50%
+			top: 0
+			transform: translateX(-50%)
+			width: 480px
+.align-center
+	text-align: left		

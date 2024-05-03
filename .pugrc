@@ -525,6 +525,15 @@
     },
     "blogs": [
       {
+        "title": "HOT Protocol",
+        "cover": "https://storage.herewallet.app/upload/63d8cd7c-3120-4e44-9f66-522d7569f2f3.jpg",
+        "tag": "FAQ",
+        "text": "In this article we will answer basic questions related to HOT Protocol. What is MPC, Chain Abstraction and what advantages they provide.",
+        "timeToRead": "7 min",
+        "date": "20.04.2024",
+        "href": "Hot_Protocol"
+      },
+      {
         "title": "How mining works",
         "cover": "https://storage.herewallet.app/upload/07fa8801-bb5c-4d04-b56f-02de992cbbbc.png",
         "tag": "HOT",

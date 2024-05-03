@@ -1,0 +1,45 @@
+.header
+	.header__wrapper
+		.header__menu-wrapper
+			.icon-burger
+				img(src="./images/menu-burger.svg", alt="Mobile menu").burger-closet
+				img(src="./images/menu-close.svg", alt="Mobile menu").burger-open
+			.header__logo.logo
+				img(src="./images/logo.svg")
+		.header__menu.menu
+			div.menu-link_children
+				span.menu-link Ecosystem
+				.for-ecosystem 
+					.for-ecosystem__menu-wallet
+						h2 Wallets
+						.menu-wallet
+							a(href="#").menu-wallet__item
+								img(src="./images/menu-wallet.png", alt="Wallet")
+								.menu-wallet__item-content
+									h3 HERE Wallet
+									p.inter-font Self-custodial wallet on HOT Protocol
+							.menu-wallet__item.menu-wallet__item-coming
+								p Coming soon…
+							.menu-wallet__item.menu-wallet__item-coming
+								p Coming soon…
+
+					.for-ecosystem__menu-wallet
+						h2 Cold wallets
+						.menu-wallet
+							a(href="#").menu-wallet__item
+								img(src="./images/menu-wallet.png", alt="Wallet")
+								.menu-wallet__item-content
+									h3 HOLD Wallet
+									p.inter-font Cold wallet for holding crypto
+			a(href="/").menu-link For developers
+			a(href="/").menu-link FAQ
+			a(href="/").menu-link.menu-link_external Blog
+		.header__btn
+			a(href="/").btn.btn_dark Create account
+		.header__social
+			a(href="/", target="_blank").social-x
+				img(src="./images/soc-x.svg")
+			a(href="/", target="_blank").social-tel
+				img(src="./images/soc-tel.svg")
+			a(href="/", target="_blank").social-inst
+				img(src="./images/soc-inst.svg")
