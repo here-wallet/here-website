@@ -4,7 +4,7 @@ cover: https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64e
 tag: Tutorial
 text: В этой статье вы узнаете все о том, что такое HOT, как его майнить, как увеличить скорость майнинга и какие миссии вас ждут.
 timeToRead: 7 min
-date: 18.01.2024
+date: 16.01.2024
 ---
 
 ## HOT
