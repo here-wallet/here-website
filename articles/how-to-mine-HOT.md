@@ -44,7 +44,7 @@ There are a total of 6 levels of Storage:
 
 ![How to increase HOT mining speed](https://storage.herewallet.app/upload/c4134a24-b40a-4ef1-b6fc-1c5cb4e49fda.png)
 
-The more HOT you have, the better!  So the most important thing is the speed of mining. There are 3 ways to increase it:
+The more HOT you have, the better! So the most important thing is the speed of mining. There are 3 ways to increase it:
 
 ### Fireplace
 
