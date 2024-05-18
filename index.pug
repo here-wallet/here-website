@@ -36,26 +36,26 @@ html(lang="en")
             gtag('js', new Date());
             gtag('config', 'G-J76SQ67RJB');
 
-        link(href="../assets/cabinet-grotesk/index.css", rel="stylesheet")
-        link(href="./index.sass", rel="stylesheet")
+        link(href="./assets/cabinet-grotesk/index.css", rel="stylesheet")
+        link(href="./near-landing/index.sass", rel="stylesheet")
     body 
-        include header/index.pug
+        include near-landing/header/index.pug
         +header("/")
 
-        include section-main/index.pug
+        include near-landing/section-main/index.pug
 
         .page-minus
             .page
                 .page-background
-                include section-features/index.pug
-                include section-binance/index.pug
-                include section-security/index.pug
-                include section-download/index.pug
-                include section-news/index.pug
-                include section-asks/index.pug
-                include section-partners/index.pug
+                include near-landing/section-features/index.pug
+                include near-landing/section-binance/index.pug
+                include near-landing/section-security/index.pug
+                include near-landing/section-download/index.pug
+                include near-landing/section-news/index.pug
+                include near-landing/section-asks/index.pug
+                include near-landing/section-partners/index.pug
 
-            include footer/index.pug
-            include waitlist-join/index.pug
+            include near-landing/footer/index.pug
+            include near-landing/waitlist-join/index.pug
 
-            script(type="module", src="./index.js")
+            script(type="module", src="./near-landing/index.js")

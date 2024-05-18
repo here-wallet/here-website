@@ -570,15 +570,6 @@
         "href": "HERE_wallet_NFT"
       },
       {
-        "title": "How to mine HOT",
-        "cover": "https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64ed.png",
-        "tag": "Tutorial",
-        "text": "In this article you will learn all about what HOT is, how to mine it, how to increase the mining speed and what missions await you.",
-        "timeToRead": "7 min",
-        "date": "16.01.2024",
-        "href": "how-to-mine-HOT"
-      },
-      {
         "title": "NEAR TELEGRAM WALLET: Complete Guide",
         "cover": "https://storage.herewallet.app/upload/f588d0f7-57e5-4525-b116-5ea4acda7d91.png",
         "tag": "Tutorial",
@@ -586,6 +577,15 @@
         "timeToRead": "3 min",
         "date": "16.01.2024",
         "href": "Near-Telegram-Wallet"
+      },
+      {
+        "title": "How to mine HOT",
+        "cover": "https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64ed.png",
+        "tag": "Tutorial",
+        "text": "In this article you will learn all about what HOT is, how to mine it, how to increase the mining speed and what missions await you.",
+        "timeToRead": "7 min",
+        "date": "16.01.2024",
+        "href": "how-to-mine-HOT"
       },
       {
         "title": "December recap",
