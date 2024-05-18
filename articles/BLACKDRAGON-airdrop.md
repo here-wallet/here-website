@@ -3,7 +3,7 @@ title: BLACKDRAGON TOKENS AIRDROP
 cover: https://storage.herewallet.app/upload/c649e120-92ee-4fc4-9f00-205b106a7cef.jpeg
 tag: NFT
 text: HERE wallet now supports NEAT exchange swaps. Read about it in the blog.
-timeToRead: 1 min
+timeToRead: 2 min
 date: 25.12.2023
 -----
 
