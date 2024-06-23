@@ -63,7 +63,7 @@ There are 6 levels of Fireplace in total:
 - Level 3 -  Gas Fireplace - 0.01 HOT/hour - 1 HOT;
 - Level 4 -  Neon Fireplace - 0.0125 HOT/hour - 2 HOT;
 - Level 5 -  Neon Multi-Fireplace - 0.015 HOT/hour - 5 HOT;
-- Level 6 -  Gold Fireplace - 0.025 HOT/hour - 15 HOT.
+- Level 6 -  Gold Fireplace - 0.025 HOT/hour - 15 HOT
 
 ### Wood
 
