@@ -1,6 +1,6 @@
 ---
 title: "How to mine HOT"
-cover: https://storage.herewallet.app/upload/445f61bf-19d7-4bb5-8b0a-8f4b2c2c64ed.png
+cover: https://storage.herewallet.app/upload/1a440f35e108f4ff32fbc0a50c7258f2e5445e75864d4785e7cf40534ef2b628.webp
 tag: Tutorial
 text: In this article you will learn all about what HOT is, how to mine it, how to increase the mining speed and what missions await you.
 timeToRead: 7 min
@@ -21,21 +21,21 @@ In the future, HOT will not be exclusively tied to the NEAR ecosystem. After the
 
 The blockchain helps to create a truly fair and transparent distribution system, where every transaction or action can be traced.
 
-![blockchain explorer](https://storage.herewallet.app/upload/2f96e3cc-1f88-451f-a92b-3b13fd649a3b.png)
+![blockchain explorer](https://storage.herewallet.app/upload/9673357bd1a42021883dda8debdf1cc6ef9ee0d051e0c92f0fbf31ded9106ed4.png)
 To view the data, you can use [nearblocks.io](https://nearblocks.io) or [pikespeak.ai](https://pikespeak.ai/), entering your wallet address into the search bar.
 
 ## How to start mining HOT
 
 The mining process starts as soon as you create a wallet and get your first free HOT when you click "Claim".
 
-![How to start mining HOT](https://storage.herewallet.app/upload/50122551-4cad-419a-a3f2-70aebc5ea5bf.png)
+![How to start mining HOT](https://storage.herewallet.app/upload/3300bb60458bdf44b68d265db99990f3df666692d70356328adb4236164a0f15.png)
 After receiving the initial HOT, the mining process begins, but it stops once your Storage is filled.
 
 ## Storage
 
 At the beginning, there's a small-capacity Storage, and it's important to ensure it's not completely filled. There's a storage indicator for this purpose. Once this indicator is full, mining will stop until HOT is claimed.
 
-![storage hot mining](https://storage.herewallet.app/upload/00b7f8c6-b357-44cc-924d-94e6306484bb.png)
+![storage hot mining](https://storage.herewallet.app/upload/efc0e887e9aaa2251e72f47234701d211877641c509029894b3fe7f7eb3c505c.png)
 Initially Storage is only enough for 2 hours of mining, but you can pump it up by using HOTs to increase the time of uninterrupted mining.
 
 There are 6 levels of Storage in total:
@@ -49,7 +49,7 @@ There are 6 levels of Storage in total:
 
 ## Mining Speed
 
-![How to increase HOT mining speed](https://storage.herewallet.app/upload/c4134a24-b40a-4ef1-b6fc-1c5cb4e49fda.png)
+![How to increase HOT mining speed](https://storage.herewallet.app/upload/25cc5a91796543bd03469bb63f1d90c5763c9f08292c90b95a75fd732cfa08c2.png)
 The more HOT you have, the better! So the most important thing is the speed of mining. There are 3 ways to increase it:
 
 ### Fireplace
@@ -63,7 +63,7 @@ There are 6 levels of Fireplace in total:
 - Level 3 -  Gas Fireplace - 0.01 HOT/hour - 1 HOT;
 - Level 4 -  Neon Fireplace - 0.0125 HOT/hour - 2 HOT;
 - Level 5 -  Neon Multi-Fireplace - 0.015 HOT/hour - 5 HOT;
-- Level 6 -  Gold Fireplace - 0.025 HOT/hour - 15 HOT.
+- Level 6 -  Gold Fireplace - 0.025 HOT/hour - 15 HOT
 
 ### Wood
 
@@ -79,14 +79,14 @@ Each completed mission grants a new level of Wood and a multiplier to HOT mining
 
 ### Referral system
 
-![How to increase HOT mining speed](https://storage.herewallet.app/upload/5a3be264-c338-4f5e-a70e-6df1fdac8100.png)
+![How to increase HOT mining speed](https://storage.herewallet.app/upload/527e659a329f6e904382279f9db21df9e0c1c01e739abf25fef4ed43b31e944c.png)
 The most effective way to mine HOT is by inviting friends. We've set up a two-level referral system. You get an extra 20% after each claim made by your direct referral and 5% after each claim made by those invited by your referral.
 
 To invite a friend, click on "Friends" and send the link to your friend.
 
 ## Claim HOT
 
-![How to claim HOT](https://storage.herewallet.app/upload/0ed39d13-03ea-4c22-bd03-0165113ba69c.png)
+![How to claim HOT](https://storage.herewallet.app/upload/8fc25350365040aaf4bb78642b17f98c687705cc4e8a61ef7519d3a6c8544de6.png)
 HOT is indeed recorded on the blockchain (on-chain) once you claim it. For each HOT claim, you need to pay a network fee, also known as gas. However, since we use the NEAR Protocol, network fees are very low (around $0.005) and are deducted for each transaction in the $NEAR token.
 
 Initially, you have 3 free transactions (we cover the gas for you). However, afterward, to claim HOT, you have 3 options:
