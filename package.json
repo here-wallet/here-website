@@ -7,7 +7,8 @@
     "articles": "node blog-builder.js",
     "build:pager": "parcel build ./pager/index.pug --dist-dir dist-pager",
     "build:near": "parcel build ./near-landing/index.pug --dist-dir dist-near",
-    "build": "parcel build ./index.pug ./blog/*.html ./blog/ru/*.html ./stream/index.pug ./binance-waitlist/index.pug ./aurora/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug ./mint/index.pug ./pager/index.pug ./hito-hot/index.pug",
+    "move": "cp -r privacypolicy ./dist/privacypolicy",
+    "build": "parcel build ./index.pug ./blog/*.html ./blog/ru/*.html ./stream/index.pug ./binance-waitlist/index.pug ./aurora/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug ./mint/index.pug ./pager/index.pug ./hito-hot/index.pug && yarn move",
     "parcel:watch": "parcel ./index.pug ./blog/*.html ./blog/ru/*.html ./stream/index.pug ./binance-waitlist/index.pug ./aurora/index.pug ./pager/index.pug ./nft/index.pug ./landing/index.pug ./blog/index.pug ./mint/index.pug ./hito-hot/index.pug",
     "start": "concurrently --kill-others \"yarn parcel:watch\" \"npm-watch\""
   },
